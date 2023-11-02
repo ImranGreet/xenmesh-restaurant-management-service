@@ -7,6 +7,8 @@
   </div>
   <profile />
   <notifications />
+
+  <Placing />
 </template>
 
 <script>
@@ -14,7 +16,8 @@ import Topbarfirst from "../Sidebar/Topbarfirst.vue";
 import Topbarsecond from "../Sidebar/Topbarsecond.vue";
 import profile from "../Dropdown/Profile.vue";
 import notifications from "../Dropdown/Notifications.vue";
-
+import SettingButton from "../Utilities/SettingButton.vue";
+import Placing from "../Settings/Placing.vue";
 export default {
   name: "Admin",
   components: {
@@ -22,6 +25,8 @@ export default {
     Topbarsecond,
     profile,
     notifications,
+    SettingButton,
+    Placing,
   },
   setup() {
     return {};

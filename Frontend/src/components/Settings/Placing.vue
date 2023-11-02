@@ -1,0 +1,87 @@
+<template>
+  <div class="w-[700px] bg-inherit">
+    <div class="w-full border border-blue-300 rounded-md space-y-6">
+      <div class="w-full px-4 py-2 bg-blue-700 text-white">
+        <div class="w-full flex justify-between items-center">
+          <h1 class="text-xl tracking-wider leading-relaxed">Theme Setting</h1>
+          <button>
+            <XMarkIcon class="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="text-start">
+          <h1>Chose Layout</h1>
+        </div>
+        <div class="flex justify-start items-center py-3 gap-x-8">
+          <SettingButton />
+          <SettingButton />
+          <SettingButton />
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="text-start">
+          <h1>Chose Layout</h1>
+        </div>
+        <div class="flex justify-start items-center py-3 gap-x-8">
+          <SettingButton />
+          <SettingButton />
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="text-start">
+          <h1>Chose Layout</h1>
+        </div>
+        <div class="flex justify-start items-center py-3 gap-x-8">
+          <SettingButton />
+          <SettingButton />
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="text-start">
+          <h1>Chose Layout</h1>
+        </div>
+        <div class="flex justify-start items-center py-3 gap-x-8">
+          <SettingButton />
+          <SettingButton />
+          <SettingButton />
+          <SettingButton />
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="text-start">
+          <h1>Layout Position</h1>
+        </div>
+        <div class="flex justify-start items-center py-3 gap-x-8">
+          <button class="px-5 py-2 bg-blue-500 text-white">Fixed</button>
+          <button class="bg-rose-300 text-gray-950 px-3 py-2">Scroll</button>
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="text-start flex">
+          <h1>Side User Info</h1>
+          <div class="flex justify-start items-center py-3 gap-x-8">
+            <input
+              type="checkbox"
+              class="px-3 py-2 w-14 bg-green-700"
+              value="Boat"
+            />
+            <label for="vehicle3" class="sr-only"> I have a boat</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { XMarkIcon } from "@heroicons/vue/24/solid";
+import SettingButton from "../Utilities/SettingButton.vue";
+export default {
+  name: "Placing",
+  components: {
+    XMarkIcon,
+    SettingButton,
+  },
+};
+</script>

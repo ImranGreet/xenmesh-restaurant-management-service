@@ -1,42 +1,73 @@
 <template>
-  <div class="w-96 px-3 py-2 space-y-5">
-    <div class="flex justify-between items-center">
+  <div class="w-80 py-2 space-y-5 border border-gray-600/20">
+    <div
+      class="flex justify-between items-center border-b border-dotted border-gray-700 py-2 px-2"
+    >
       <h1 class="text-2xl font-semibold">Notifications</h1>
       <button class="text-blue-600">Clear All</button>
     </div>
     <div class="text-start">
-      <small>Today</small>
+      <small class="text-base tracking-wide">Today</small>
     </div>
     <div class="w-full">
       <ul class="flex flex-col justify-center items-start gap-y-2 w-full">
         <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
           <router-link to="#"
-            ><CreditCardIcon class="inline-block w-5 h-5 mr-2" /> My
-            Account</router-link
+            ><CreditCardIcon
+              class="inline-block w-10 h-10 rounded-full border border-gray-300 p-3 bg-blue-800/20 mr-2"
+            />
+            My Account</router-link
           >
         </li>
-        <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
-          <router-link to="#" class=""
-            ><Cog6ToothIcon
-              class="inline-block w-5 h-5 mr-2"
-            />Settings</router-link
-          >
-        </li>
+
         <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
           <router-link to="#"
-            ><UsersIcon class="inline-block w-5 h-5 mr-2" />Support</router-link
+            ><UsersIcon
+              class="inline-block w-10 h-10 rounded-full border border-gray-300 p-3 bg-blue-800/20 mr-2"
+            />Support</router-link
           >
         </li>
-        <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
+
+        <li>
+          <div class="text-start">
+            <small class="text-base tracking-wide">Yestarday</small>
+          </div>
+        </li>
+        <li
+          class="lg:hover:bg-gray-500/20 w-full px-4 py-2 flex justify-start gap-x-2 items-center"
+        >
+          <img
+            :src="reviewrProfile.profileImage"
+            alt=""
+            class="w-12 h-12 rounded-full object-center"
+          />
           <router-link to="#" class=""
-            ><LockClosedIcon class="inline-block w-5 h-5 mr-2" />Lock
-            Screen</router-link
+            ><LockClosedIcon class="inline-block w-5 h-5 mr-2" />{{
+              reviewrProfile.name
+            }}</router-link
           >
         </li>
+
         <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
           <router-link to="#"
-            ><GlobeEuropeAfricaIcon class="inline-block w-5 h-5 mr-2" />Log
-            Out</router-link
+            ><GlobeEuropeAfricaIcon
+              class="inline-block w-10 h-10 rounded-full border border-gray-300 p-3 bg-blue-800/20 mr-2"
+            />Support</router-link
+          >
+        </li>
+
+        <li
+          class="lg:hover:bg-gray-500/20 w-full px-4 py-2 flex justify-start gap-x-2 items-center"
+        >
+          <img
+            :src="commentarProfile.profileImage"
+            alt=""
+            class="w-12 h-12 rounded-full object-center"
+          />
+          <router-link to="#" class=""
+            ><LockClosedIcon class="inline-block w-5 h-5 mr-2" />{{
+              commentarProfile.name
+            }}</router-link
           >
         </li>
       </ul>

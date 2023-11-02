@@ -27,7 +27,7 @@
           Screen</router-link
         >
       </li>
-      <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
+      <li class="lg:hover:bg-rose-800 lg:hover:text-white block w-full px-4 py-2">
         <router-link to="#"
           ><PowerIcon class="inline-block w-5 h-5 mr-2" />Log Out</router-link
         >
