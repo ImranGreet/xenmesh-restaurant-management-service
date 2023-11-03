@@ -1,7 +1,11 @@
 <template>
   <div class="flex justify-end items-center gap-x-5">
-    <button><BellIcon class="w-6 h-6 text-gray-800" /></button>
-    <button><Cog6ToothIcon class="w-6 h-6 text-gray-800" /></button>
+    <button>
+      <BellIcon class="w-6 h-6 text-gray-800" />
+    </button>
+    <button @click="toggleRightSidebar()">
+      <Cog6ToothIcon class="w-6 h-6 text-gray-800" />
+    </button>
 
     <button><MoonIcon class="w-6 h-6 text-gray-800" /></button>
 
@@ -12,7 +16,7 @@
         alt=""
         class="w-12 h-12 rounded-full object-center"
       />
-      <div class="space-y-2">
+      <div class="space-y-1">
         <a href="#" role="button" class="text-gray-800 font-semibold"
           >John Doe</a
         >
@@ -23,6 +27,7 @@
 </template>
 
 <script>
+import { toggleRightSidebar } from "../../composables/layout";
 import { Cog6ToothIcon } from "@heroicons/vue/24/solid";
 
 import {
@@ -32,6 +37,7 @@ import {
   ArrowsPointingOutIcon,
 } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
+
 export default {
   components: {
     BellIcon,
@@ -46,6 +52,7 @@ export default {
     );
     return {
       profileImage,
+      toggleRightSidebar,
     };
   },
 };

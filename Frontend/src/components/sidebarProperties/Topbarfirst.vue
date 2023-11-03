@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between items-center gap-x-4">
-    <button class="h-12">
+    <button @click="toggleSidebar()" class="h-12">
       <AdjustmentsHorizontalIcon
         class="w-12 h-12 border p-1 rounded-lg focus:outline-none"
       />
@@ -13,7 +13,7 @@
       />
 
       <MagnifyingGlassCircleIcon
-        class="flex flex-col justify-center items-center absolute left-4 top-3 w-6 h-6"
+        class="flex flex-col justify-center items-center text-blue-700 absolute left-4 top-3 w-6 h-6"
       />
       <button
         class="h-12 bg-blue-600 text-white px-6 rounded-r-lg focus:outline-none"
@@ -25,15 +25,22 @@
 </template>
 
 <script>
+import { toggleSidebar } from "../../composables/layout";
 import {
   AdjustmentsHorizontalIcon,
   MagnifyingGlassCircleIcon,
 } from "@heroicons/vue/24/solid";
+
 export default {
   name: "Topbarfirst",
   components: {
     AdjustmentsHorizontalIcon,
     MagnifyingGlassCircleIcon,
+  },
+  setup() {
+    return {
+      toggleSidebar,
+    };
   },
 };
 </script>

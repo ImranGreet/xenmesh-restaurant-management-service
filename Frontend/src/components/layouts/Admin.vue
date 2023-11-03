@@ -1,35 +1,66 @@
 <template>
-  <div
-    class="w-full flex justify-between items-center shadow-md bg-blue-200/10 px-6 py-2"
+  <section
+    class="max-h-screen min-h-screen w-full flex justify-between relative"
   >
-    <Topbarfirst />
-    <Topbarsecond />
-  </div>
-  <profile />
-  <notifications />
-
-  <Placing />
+    <Placing
+      class="absolute top-16 right-0"
+      :class="{ block: rightSideBar, hidden: !rightSideBar }"
+    />
+    <Leftsidebar
+      :class="{ 'w-1/6': !sidebarController, 'w-1/12': sidebarController }"
+    />
+    <section
+      class="flex flex-col justify-between"
+      :class="{ 'w-5/6 ': !sidebarController, 'w-11/12': sidebarController }"
+    >
+      <Topbar class="w-full" />
+      <section class="w-full bg-gray-100 dark:bg-gray-800">
+        <router-view></router-view>
+      </section>
+      <Footer />
+    </section>
+    <!-- screen absolute -->
+    <div
+      class="absolute inset-x-0 inset-y-0 bg-gray-400/50"
+      :class="{ block: rightSideBar, hidden: !rightSideBar }"
+    ></div>
+  </section>
 </template>
 
 <script>
-import Topbarfirst from "../Sidebar/Topbarfirst.vue";
-import Topbarsecond from "../Sidebar/Topbarsecond.vue";
-import profile from "../Dropdown/Profile.vue";
-import notifications from "../Dropdown/Notifications.vue";
-import SettingButton from "../Utilities/SettingButton.vue";
+/*composables*/
+
+import {
+  sidebarController,
+  toggleSidebar,
+  rightSideBar,
+  toggleRightSidebar,
+} from "../../composables/layout";
+
+/*components*/
+import Footer from "../Footer/Footer.vue";
 import Placing from "../Settings/Placing.vue";
+import Leftsidebar from "../Sidebar/Leftsidebar.vue";
+import Topbar from "../Sidebar/Topbar.vue";
+
 export default {
   name: "Admin",
   components: {
-    Topbarfirst,
-    Topbarsecond,
-    profile,
-    notifications,
-    SettingButton,
+    Topbar,
+    Leftsidebar,
+    Footer,
     Placing,
   },
   setup() {
-    return {};
+    return {
+      /*properties*/
+      sidebarController,
+      rightSideBar,
+      /*methods*/
+      toggleSidebar,
+
+      toggleRightSidebar,
+    };
   },
 };
 </script>
