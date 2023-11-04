@@ -3,9 +3,11 @@
     <button
       class="w-full flex justify-evenly items-center text-gray-950 py-3 text-xl"
     >
-      <span class="inline-block"> <BookOpenIcon class="w-4 h-4" /></span>
+      <span class="inline-block">
+         <BookOpenIcon class="w-4 h-4" /></span>
       <span>Order</span>
-      <span class="inline-block"> <ChevronRightIcon class="w-4 h-4" /></span>
+      <span class="inline-block">
+         <ChevronRightIcon class="w-4 h-4" /></span>
     </button>
 
     <ul class="flex flex-col justify-center items-start gap-y-0.5 w-full px-8">

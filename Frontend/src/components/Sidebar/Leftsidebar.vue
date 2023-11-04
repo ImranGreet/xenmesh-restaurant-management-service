@@ -1,42 +1,41 @@
 <template>
   <section>
     <div
-      class="flex flex-col bg-inherit min-h-[93vh] max-h-[93vh] overflow-x-hidden overflow-custome z-0 mt-[61px]"
-    >
+      class="flex flex-col bg-inherit min-h-[93vh] max-h-[93vh] overflow-x-hidden overflow-custome z-0 mt-[61px]">
       <Logo />
       <div class="mt-5"></div>
-      <Dashboard />
-      <Accounting />
-      <authoraization />
-      <Socialmedia />
-      <Order />
+      <div
+        v-for="sidebarLink in useLeftSideBarRouterLink"
+        :key="sidebarLink.id">
+        <Navigations
+          :routerLink="sidebarLink.paths"
+          :componentText="sidebarLink.largeIcon">
+          {{ sidebarLink.name }}
+        </Navigations>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from "../sidebarProperties/Logo.vue";
-import Accounting from "../sidebarProperties/Accounting.vue";
-import Authoraization from "../sidebarProperties/Authoraization.vue";
-import Dashboard from "../sidebarProperties/Dashboard.vue";
-import Socialmedia from "../sidebarProperties/Socialmedia.vue";
-import Order from "../sidebarProperties/Order.vue";
+/*composables*/
+import useLeftSideBarRouterLink from "../../composables/router-link";
 
+import Logo from "../sidebarProperties/Logo.vue";
 import Footer from "../Footer/Footer.vue";
+import Navigations from "../Dropdown/Navigations.vue";
 
 export default {
   name: "Admin",
   components: {
     Logo,
-    Dashboard,
-    Accounting,
-    Authoraization,
-    Socialmedia,
-    Order,
     Footer,
+    Navigations,
   },
   setup() {
-    return {};
+    return {
+      useLeftSideBarRouterLink,
+    };
   },
 };
 </script>
