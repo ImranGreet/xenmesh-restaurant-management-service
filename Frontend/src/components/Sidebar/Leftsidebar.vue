@@ -1,13 +1,14 @@
 <template>
   <section>
     <div
-      class="flex flex-col bg-inherit min-h-[93vh] max-h-[93vh] overflow-x-hidden overflow-custome z-0 mt-[61px]">
+      class="w-full flex flex-col bg-inherit min-h-[93vh] max-h-[93vh] overflow-x-hidden overflow-custome z-0 mt-[61px]">
       <Logo />
       <div class="mt-5"></div>
       <div
-        v-for="sidebarLink in useLeftSideBarRouterLink"
-        :key="sidebarLink.id">
+        v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
+        :key="index">
         <Navigations
+          :routerLinkId="sidebarLink.id"
           :routerLink="sidebarLink.paths"
           :componentText="sidebarLink.largeIcon">
           {{ sidebarLink.name }}

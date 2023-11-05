@@ -58,7 +58,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 3,
     name: "Expenses",
-    largeIcon: "HomeIcon",
+    largeIcon: "Battery50Icon",
 
     paths: [
       {
@@ -111,7 +111,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 4,
     name: "Accounts Payable",
-    largeIcon: "HomeIcon",
+    largeIcon: "CalculatorIcon",
 
     paths: [
       {

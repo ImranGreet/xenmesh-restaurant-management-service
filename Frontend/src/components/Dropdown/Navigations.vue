@@ -1,6 +1,8 @@
 <template>
   <div class="w-full">
-    <button class="w-full flex justify-evenly items-center text-gray-950 py-3 text-xl">
+    <button
+      @click="toggleDropdownMenu()"
+      class="w-full flex justify-evenly items-center text-gray-950 py-3 text-xl">
       <span class="inline-block">
         <component
           :is="getTheComponent"
@@ -11,7 +13,7 @@
       </span>
       <span
         :class="{
-          'inline-block': !sidebarController,
+          'inline-block ': !sidebarController,
           hidden: sidebarController,
         }"
         ><slot></slot
@@ -22,12 +24,24 @@
           class="w-4 h-4"
           :class="{
             'inline-block': !sidebarController,
+            hidden: sidebarController || showDropDown,
+          }">
+        </ChevronRightIcon>
+
+        <ChevronDownIcon
+          v-if="showDropDown"
+          name="chevron"
+          class="w-4 h-4"
+          :class="{
+            'inline-block': !sidebarController,
             hidden: sidebarController,
-          }"></ChevronRightIcon
-      ></span>
+          }">
+        </ChevronDownIcon>
+      </span>
     </button>
 
     <ul
+      v-if="showDropDown"
       class="flex flex-col justify-center items-start gap-y-0.5 w-full px-8"
       :class="{
         flex: !sidebarController,
@@ -39,7 +53,7 @@
         class="lg:hover:bg-gray-500/20 w-full">
         <router-link
           to="#"
-          class="w-full block py-2 px-2">
+          class="w-full block py-2 px-2 capitalize text-base tracking-wide">
           {{ track.params }}</router-link
         >
       </li>
@@ -48,12 +62,19 @@
 </template>
 
 <script>
-import { sidebarController } from "../../composables/layout";
+import {
+  sidebarController,
+  toggleRightSidebar,
+  showDropDown,
+  toggleDropdownMenu,
+} from "../../composables/layout";
 import {
   HomeIcon,
   ChevronRightIcon,
   ChevronDownIcon,
   BanknotesIcon,
+  Battery50Icon,
+  CalculatorIcon,
 } from "@heroicons/vue/24/outline";
 
 export default {
@@ -63,6 +84,8 @@ export default {
     ChevronRightIcon,
     ChevronDownIcon,
     BanknotesIcon,
+    Battery50Icon,
+    CalculatorIcon,
   },
   props: {
     routerLink: {
@@ -73,16 +96,24 @@ export default {
       type: String,
       required: false,
     },
+    routerLinkId: {
+      type: Number,
+      required: false,
+    },
   },
   setup(props) {
     const urlTag = props.routerLink;
     const compotext = props.componentText;
+    const DropdownRouterLinkId = props.routerLinkId;
+    console.log(DropdownRouterLinkId);
 
     const componentsContainer = [
       "HomeIcon",
       "ChevronRightIcon",
       "ChevronDownIcon",
       "BanknotesIcon",
+      "Battery50Icon",
+      "CalculatorIcon",
     ];
     const getTheIcon = function (comp) {
       if (componentsContainer.includes(comp)) {
@@ -96,6 +127,10 @@ export default {
       urlTag,
       compotext,
       getTheComponent,
+      showDropDown,
+      DropdownRouterLinkId,
+      toggleRightSidebar,
+      toggleDropdownMenu,
     };
   },
 };

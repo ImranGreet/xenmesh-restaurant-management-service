@@ -1,18 +1,12 @@
 <template>
-  <section
-    class="max-h-screen min-h-screen w-full flex justify-between relative"
-  >
+  <section class="max-h-screen min-h-screen w-full flex justify-between relative">
     <Placing
       class="absolute top-16 right-0"
-      :class="{ block: rightSideBar, hidden: !rightSideBar }"
-    />
-    <Leftsidebar
-      :class="{ 'w-1/6': !sidebarController, 'w-1/12': sidebarController }"
-    />
+      :class="{ block: rightSideBar, hidden: !rightSideBar }" />
+    <Leftsidebar :class="{ 'w-1/6': !sidebarController, 'w-1/12': sidebarController }" />
     <section
       class="flex flex-col justify-between"
-      :class="{ 'w-5/6 ': !sidebarController, 'w-11/12': sidebarController }"
-    >
+      :class="{ 'w-5/6 ': !sidebarController, 'w-11/12': sidebarController }">
       <Topbar class="w-full" />
       <section class="w-full bg-gray-100 dark:bg-gray-800">
         <router-view></router-view>
@@ -22,8 +16,7 @@
     <!-- screen absolute -->
     <div
       class="absolute inset-x-0 inset-y-0 bg-gray-400/50"
-      :class="{ block: rightSideBar, hidden: !rightSideBar }"
-    ></div>
+      :class="{ block: rightSideBar, hidden: !rightSideBar }"></div>
   </section>
 </template>
 
