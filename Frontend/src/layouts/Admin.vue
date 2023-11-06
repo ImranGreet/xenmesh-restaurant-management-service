@@ -8,7 +8,7 @@
       class="flex flex-col justify-between"
       :class="{ 'w-5/6 ': !sidebarController, 'w-11/12': sidebarController }">
       <Topbar class="w-full" />
-      <section class="w-full bg-gray-100 dark:bg-gray-800">
+      <section class="w-full bg-gray-100">
         <router-view></router-view>
       </section>
       <Footer />
@@ -28,13 +28,13 @@ import {
   toggleSidebar,
   rightSideBar,
   toggleRightSidebar,
-} from "../../composables/layout";
+} from "../composables/layout";
 
 /*components*/
-import Footer from "../Footer/Footer.vue";
-import Placing from "../Settings/Placing.vue";
-import Leftsidebar from "../Sidebar/Leftsidebar.vue";
-import Topbar from "../Sidebar/Topbar.vue";
+import Footer from "../components/Footer/Footer.vue";
+import Placing from "../components/Settings/Placing.vue";
+import Leftsidebar from "../components/Sidebar/Leftsidebar.vue";
+import Topbar from "../components/Sidebar/Topbar.vue";
 
 export default {
   name: "Admin",

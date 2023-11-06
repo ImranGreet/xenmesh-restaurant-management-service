@@ -3,7 +3,20 @@
     <button>
       <BellIcon class="w-6 h-6 text-gray-800" />
     </button>
-    <button @click="toggleRightSidebar()">
+    <button
+      class="box"
+      v-wave="{
+        color: 'rgb(59 130 246 / 0.5)',
+        easing: 'ease-out',
+        duration: 0.7,
+        dissolveDuration: 0.15,
+        initialOpacity: 0.2,
+        finalOpacity: 0.1,
+        cancellationPeriod: 75,
+        trigger: 'auto',
+        tagName: 'button',
+      }"
+      @click="toggleRightSidebar()">
       <Cog6ToothIcon class="w-6 h-6 text-gray-800" />
     </button>
 
@@ -14,10 +27,12 @@
       <img
         :src="profileImage"
         alt=""
-        class="w-12 h-12 rounded-full object-center"
-      />
+        class="w-12 h-12 rounded-full object-center" />
       <div class="space-y-1">
-        <a href="#" role="button" class="text-gray-800 font-semibold"
+        <a
+          href="#"
+          role="button"
+          class="text-gray-800 font-semibold"
           >John Doe</a
         >
         <p class="text-gray-800 text-sm">Admin</p>

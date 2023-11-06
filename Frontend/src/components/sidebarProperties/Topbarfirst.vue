@@ -3,7 +3,7 @@
     <button
       class="box h-12"
       v-wave="{
-        color: 'red',
+        color: 'rgb(59 130 246 / 0.5)',
         easing: 'ease-out',
         duration: 0.7,
         dissolveDuration: 0.15,

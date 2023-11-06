@@ -3,7 +3,7 @@
     <div class="px-6 py-4 w-full">
       <div class="w-full flex justify-between items-center">
         <div class="text-center inline-flex justify-center items-center gap-x-3">
-          <p class="text-sm text-gray-500 ">2021</p>
+          <p class="text-sm text-gray-500">2020-{{ currentYear }}</p>
           <p>Xenmesh</p>
           <p class="text-sm text-gray-500">All Rights Reserved</p>
         </div>
@@ -18,7 +18,15 @@
 </template>
 
 <script>
-export default {};
+import { currentYear } from "../../composables/date";
+
+export default {
+  setup() {
+    return {
+      currentYear,
+    };
+  },
+};
 </script>
 
 <style></style>
