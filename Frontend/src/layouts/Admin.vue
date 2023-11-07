@@ -1,7 +1,11 @@
 <template>
     <section
-        class="max-h-screen min-h-screen w-full flex justify-between relative"
-        :class="{ 'w-3/4 mx-auto': boxModel, 'w-full': !boxModel }"
+        class="max-h-screen min-h-screen flex justify-between relative"
+        :class="{
+            'w-3/4 mx-auto': boxModel,
+            'w-full': !boxModel,
+            'w-[90%] mx-auto ': ditachedModel,
+        }"
         ref="fullscreenElement">
         <Placing
             class="absolute top-16 right-0"
@@ -35,6 +39,7 @@ import {
     toggleFullScreen,
     boxToggler,
     boxModel,
+    ditachedModel,
 } from '../composables/layout';
 
 import { adminHeight } from '../composables/screen';
@@ -61,6 +66,7 @@ export default {
             rightSideBar,
             fullscreenElement,
             boxModel,
+            ditachedModel,
             /*methods*/
             toggleSidebar,
             toggleFullScreen,
