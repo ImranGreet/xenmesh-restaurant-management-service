@@ -2,7 +2,7 @@
     <div class="w-full">
         <button
             @click="toggleDropdownMenu()"
-            class="w-full flex justify-evenly items-center text-gray-950 py-3 text-xl">
+            class="w-full flex justify-evenly items-center text-inherit py-3 text-xl">
             <span class="inline-block">
                 <component
                     :is="compotext"

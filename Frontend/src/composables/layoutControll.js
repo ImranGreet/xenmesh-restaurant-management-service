@@ -1,4 +1,16 @@
 import { ref } from 'vue';
+import { darkColorSeter, brandColorSeter, lightColorSeter } from './topbar';
+import layoutPosition from './position';
+
+import {
+    lightColorSeter as menuLight,
+    brandColorSeter as menuBrand,
+    darkColorSeter as menuDark,
+} from '../composables/menu';
+
+/*fixed and scroller layout start*/
+const { fixedLayout, scrollLayout } = layoutPosition;
+/*fixed and scroller layout end*/
 
 const boxModel = ref(false);
 
@@ -68,6 +80,20 @@ export {
     boxToggler,
     fluidToggler,
     detachToggler,
+    /*topbar*/
+    brandColorSeter,
+    lightColorSeter,
+    darkColorSeter,
+    /*end topbar*/
+    /*sidebar menu*/
+    menuBrand,
+    menuLight,
+    menuDark,
+    /*sidebar menu end*/
+    /*fixed and scroller layout start*/
+    fixedLayout,
+    scrollLayout,
+    /*fixed and scroller layout end*/
     /*properties*/
     sidebarController,
     showDropDown,

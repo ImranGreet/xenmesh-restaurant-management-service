@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-end items-center gap-x-5">
         <button>
-            <BellIcon class="w-6 h-6 text-gray-800" />
+            <BellIcon class="w-6 h-6 text-inherit" />
         </button>
         <button
             class="box"
@@ -17,10 +17,10 @@
                 tagName: 'button',
             }"
             @click="toggleRightSidebar()">
-            <Cog6ToothIcon class="w-6 h-6 text-gray-800" />
+            <Cog6ToothIcon class="w-6 h-6 text-inherit" />
         </button>
 
-        <button><MoonIcon class="w-6 h-6 text-gray-800" /></button>
+        <button><MoonIcon class="w-6 h-6 text-inherit" /></button>
 
         <button
             @click="toggleFullScreen()"
@@ -38,10 +38,10 @@
             }">
             <ArrowsPointingInIcon
                 v-if="fullScreen"
-                class="w-6 h-6 text-gray-800" />
+                class="w-6 h-6 text-inherit" />
             <ArrowsPointingOutIcon
                 v-if="!fullScreen"
-                class="w-6 h-6 text-gray-800" />
+                class="w-6 h-6 text-inherit" />
         </button>
         <div class="flex justify-center items-center gap-x-3 cursor-pointer">
             <img
@@ -52,10 +52,10 @@
                 <a
                     href="#"
                     role="button"
-                    class="text-gray-800 font-semibold"
+                    class="text-inherit font-semibold"
                     >John Doe</a
                 >
-                <p class="text-gray-800 text-sm">Admin</p>
+                <p class="text-inherit text-sm">Admin</p>
             </div>
         </div>
     </div>

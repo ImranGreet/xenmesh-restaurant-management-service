@@ -25,7 +25,7 @@
                 placeholder="Search" />
 
             <MagnifyingGlassCircleIcon
-                class="flex flex-col justify-center items-center text-blue-700 absolute left-4 top-3 w-6 h-6" />
+                class="flex flex-col justify-center items-center text-gray-600 absolute left-4 top-3 w-6 h-6" />
             <button class="h-12 bg-blue-600 text-white px-6 rounded-r-lg focus:outline-none">
                 Search
             </button>
