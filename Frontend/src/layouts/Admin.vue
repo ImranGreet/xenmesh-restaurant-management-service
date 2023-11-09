@@ -48,6 +48,7 @@ import {
     boxModel,
     ditachedModel,
 } from '../composables/layout';
+import { hideDropDown } from '../composables/DropdownMenu/ProfileDrop';
 
 import { fixed } from '../composables/position';
 

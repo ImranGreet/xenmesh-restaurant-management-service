@@ -1,15 +1,13 @@
 import { ref } from 'vue';
-import { fullscreenElement } from '../fullscreen';
+
+const showDropDown = ref(null);
 
 const dropDown = ref(false);
 const profileMenuDropDown = function () {
     dropDown.value = !dropDown.value;
 };
-const hideDropDown = function () {
-    if (dropDown.value) {
-        dropDown.value = false;
-    }
-};
-//window.addEventListener('click', hideDropDown);
+const hideDropDown = function (event) {};
 
-export { dropDown, profileMenuDropDown };
+window.addEventListener('click', hideDropDown);
+
+export { dropDown, profileMenuDropDown, showDropDown, hideDropDown };

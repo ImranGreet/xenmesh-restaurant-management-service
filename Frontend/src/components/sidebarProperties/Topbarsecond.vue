@@ -61,7 +61,8 @@
                 <p class="text-inherit text-sm">Admin</p>
             </div>
             <Profile
-                class="w-24 absolute -right-[2.1rem] top-14 z-50"
+                class="w-24 absolute -right-[2.1rem] top-14 z-50 dropdownClass"
+                
                 :class="{ hidden: !dropDown, block: dropDown }" />
         </div>
         <Notifications
@@ -78,6 +79,7 @@ import {
     profileMenuDropDown,
     dropDown,
     notificationsDropDown,
+    showDropDown,
 } from '../../composables/DropdownMenu/dropdownController';
 /*components*/
 import { Cog6ToothIcon } from '@heroicons/vue/24/solid';
@@ -110,6 +112,7 @@ export default {
             fullScreen,
             dropDown,
             notificationsDropDown,
+            showDropDown,
             /*methods*/
             toggleRightSidebar,
             toggleFullScreen,
