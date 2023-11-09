@@ -6,7 +6,7 @@
       <h1 class="text-2xl font-semibold">Notifications</h1>
       <button class="text-blue-600">Clear All</button>
     </div>
-    <div class="text-start">
+    <div class="text-start px-3">
       <small class="text-base tracking-wide">Today</small>
     </div>
     <div class="w-full">
@@ -29,7 +29,7 @@
         </li>
 
         <li>
-          <div class="text-start">
+          <div class="text-start px-3">
             <small class="text-base tracking-wide">Yestarday</small>
           </div>
         </li>

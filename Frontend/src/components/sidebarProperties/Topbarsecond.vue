@@ -1,6 +1,6 @@
 <template>
-    <div class="flex justify-end items-center gap-x-5">
-        <button>
+    <div class="flex justify-end items-center gap-x-5 relative">
+        <button @click="notificationsDrop()">
             <BellIcon class="w-6 h-6 text-inherit" />
         </button>
         <button
@@ -43,7 +43,10 @@
                 v-if="!fullScreen"
                 class="w-6 h-6 text-inherit" />
         </button>
-        <div class="flex justify-center items-center gap-x-3 cursor-pointer">
+        <div
+            class="flex justify-center items-center gap-x-3 cursor-pointer relative"
+            role="button"
+            @click="profileMenuDropDown()">
             <img
                 :src="profileImage"
                 alt=""
@@ -57,13 +60,29 @@
                 >
                 <p class="text-inherit text-sm">Admin</p>
             </div>
+            <Profile
+                class="w-24 absolute -right-[2.1rem] top-14 z-50"
+                :class="{ hidden: !dropDown, block: dropDown }" />
         </div>
+        <Notifications
+            class="absolute top-14 right-36 z-50 bg-white"
+            :class="{ hidden: !notificationsDropDown, block: notificationsDropDown }" />
     </div>
 </template>
 
 <script>
+import { ref } from 'vue';
 import { toggleRightSidebar, toggleFullScreen, fullScreen } from '../../composables/layout';
+import {
+    notificatiosDropdownController as notificationsDrop,
+    profileMenuDropDown,
+    dropDown,
+    notificationsDropDown,
+} from '../../composables/DropdownMenu/dropdownController';
+/*components*/
 import { Cog6ToothIcon } from '@heroicons/vue/24/solid';
+import Profile from '../Dropdown/Profile.vue';
+import Notifications from '../Dropdown/Notifications.vue';
 
 import {
     BellIcon,
@@ -71,7 +90,6 @@ import {
     ArrowsPointingInIcon,
     ArrowsPointingOutIcon,
 } from '@heroicons/vue/24/outline';
-import { ref } from 'vue';
 
 export default {
     components: {
@@ -80,6 +98,8 @@ export default {
         Cog6ToothIcon,
         ArrowsPointingInIcon,
         ArrowsPointingOutIcon,
+        Profile,
+        Notifications,
     },
     setup() {
         const profileImage = ref(
@@ -88,8 +108,13 @@ export default {
         return {
             profileImage,
             fullScreen,
+            dropDown,
+            notificationsDropDown,
+            /*methods*/
             toggleRightSidebar,
             toggleFullScreen,
+            profileMenuDropDown,
+            notificationsDrop,
         };
     },
 };

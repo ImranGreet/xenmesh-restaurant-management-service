@@ -1,5 +1,7 @@
 import { computed, ref } from 'vue';
 import { fullscreenElement } from './layout';
+import { fixed } from './position';
+
 
 const innerHeightOfAdminLayout = ref(0);
 const innerWidthOfAdminLayout = ref(0);

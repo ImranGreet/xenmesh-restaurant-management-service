@@ -5,7 +5,8 @@
             'w-3/4 mx-auto': boxModel,
             'w-full': !boxModel,
             'w-[90%] mx-auto ': ditachedModel,
-        }">
+        }"
+        ref="fullscreenElement">
         <Placing
             class="absolute inset-y-0 right-0"
             :class="{ block: rightSideBar, hidden: !rightSideBar }" />

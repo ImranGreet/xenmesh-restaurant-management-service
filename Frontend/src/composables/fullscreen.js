@@ -1,9 +1,11 @@
 import { ref } from 'vue';
+import { fixed } from './position';
 
 const fullscreenElement = ref();
 const fullScreen = ref(false);
 
 const enterFullScreen = () => {
+    fixed.value = false;
     const element = fullscreenElement.value;
 
     if (element.requestFullscreen) {
@@ -22,6 +24,7 @@ const enterFullScreen = () => {
 };
 
 const exitFullScreen = () => {
+    fixed.value = true;
     if (document.exitFullscreen) {
         document.exitFullscreen();
     } else if (document.mozCancelFullScreen) {
