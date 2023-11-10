@@ -76,7 +76,6 @@ export default {
             ditachedModel,
             /*scroller properties*/
             fixed,
-
             /*methods*/
             toggleSidebar,
             toggleFullScreen,

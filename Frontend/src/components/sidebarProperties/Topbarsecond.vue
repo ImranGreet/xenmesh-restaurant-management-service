@@ -1,10 +1,12 @@
 <template>
     <div class="flex justify-end items-center gap-x-5 relative">
-        <button @click="notificationsDrop()">
+        <button
+            @click="notificationsDrop()"
+            class="notificationsComponent">
             <BellIcon class="w-6 h-6 text-inherit" />
         </button>
         <button
-            class="box"
+            class="box rightSideBarControllerMenu"
             v-wave="{
                 color: 'rgb(59 130 246 / 0.5)',
                 easing: 'ease-out',
@@ -44,7 +46,7 @@
                 class="w-6 h-6 text-inherit" />
         </button>
         <div
-            class="flex justify-center items-center gap-x-3 cursor-pointer relative"
+            class="flex justify-center items-center gap-x-3 cursor-pointer relative dropdownClass"
             role="button"
             @click="profileMenuDropDown()">
             <img
@@ -61,9 +63,8 @@
                 <p class="text-inherit text-sm">Admin</p>
             </div>
             <Profile
-                class="w-24 absolute -right-[2.1rem] top-14 z-50 dropdownClass"
-                
-                :class="{ hidden: !dropDown, block: dropDown }" />
+                class="w-24 absolute -right-[2.1rem] top-14 z-50"
+                :class="{ hidden: !dropDown, 'block ': dropDown }" />
         </div>
         <Notifications
             class="absolute top-14 right-36 z-50 bg-white"

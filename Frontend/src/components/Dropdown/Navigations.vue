@@ -40,24 +40,32 @@
             </span>
         </button>
 
-        <ul
-            v-if="showDropDown"
-            class="flex flex-col justify-center items-start gap-y-0.5 w-full px-8"
-            :class="{
-                flex: !sidebarController,
-                hidden: sidebarController,
-            }">
-            <li
-                v-for="track in urlTag"
-                :key="track.id"
-                class="lg:hover:bg-gray-500/20 w-full">
-                <router-link
-                    to="#"
-                    class="w-full block py-2 px-2 capitalize text-base tracking-wide">
-                    {{ track.params }}</router-link
-                >
-            </li>
-        </ul>
+        <transition
+            enter-active-class="transition ease-out duration-100"
+            enter-from-class="transform opacity-0 scale-95"
+            enter-to-class="transform opacity-100 scale-100"
+            leave-active-class="transition ease-in duration-75"
+            leave-from-class="transform opacity-100 scale-100"
+            leave-to-class="transform opacity-0 scale-95">
+            <ul
+                v-if="showDropDown"
+                class="flex flex-col justify-center items-start gap-y-0.5 w-full px-8"
+                :class="{
+                    flex: !sidebarController,
+                    hidden: sidebarController,
+                }">
+                <li
+                    v-for="track in urlTag"
+                    :key="track.id"
+                    class="lg:hover:bg-gray-500/20 w-full">
+                    <router-link
+                        to="#"
+                        class="w-full block py-2 px-2 capitalize text-base tracking-wide">
+                        {{ track.params }}</router-link
+                    >
+                </li>
+            </ul>
+        </transition>
     </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
-    <div class="w-[700px] h-auto bg-white absolute top-16 right-0 z-50 rounded-sm">
+    <div
+        class="w-[700px] h-auto bg-white absolute top-16 right-0 z-50 rounded-sm rightSideBarControllerMenu">
         <div class="w-full border border-blue-300 rounded-md space-y-2">
             <div class="w-full px-4 py-2 bg-blue-700 text-white">
                 <div class="w-full flex justify-between items-center">

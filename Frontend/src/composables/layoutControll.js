@@ -12,22 +12,29 @@ import {
 const { fixedLayout, scrollLayout } = layoutPosition;
 /*fixed and scroller layout end*/
 
+/*right side bar controller*/
+const rightSideBar = ref(false);
+
+const toggleRightSidebar = () => {
+    rightSideBar.value = !rightSideBar.value;
+};
+window.addEventListener('click', function (event) {
+    if (rightSideBar.value && !event.target.closest('.rightSideBarControllerMenu')) {
+        rightSideBar.value = false;
+    }
+});
+/*end right sidebar controller*/
 const boxModel = ref(false);
 
 const fluidModel = ref(false);
 const ditachedModel = ref(false);
 
-const rightSideBar = ref(false);
 const sidebarController = ref(false);
 
 const showDropDown = ref(false);
 
 const toggleSidebar = () => {
     sidebarController.value = !sidebarController.value;
-};
-
-const toggleRightSidebar = () => {
-    rightSideBar.value = !rightSideBar.value;
 };
 
 const toggleDropdownMenu = () => {
