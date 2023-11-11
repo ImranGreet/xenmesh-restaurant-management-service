@@ -1,29 +1,21 @@
 {
-  "name": "xenmesh-rest",
+  "name": "frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=3000",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@animxyz/vue3": "^0.6.7",
-    "@heroicons/vue": "^2.0.18",
-    "@vueuse/core": "^10.5.0",
-    "chart.js": "^4.4.0",
-    "v-wave": "^1.5.1",
     "vue": "^3.3.4",
-    "vue-chartjs": "^5.2.0",
-    "vue-router": "^4.2.5"
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.5",
     "vite": "^4.4.5"
   }
