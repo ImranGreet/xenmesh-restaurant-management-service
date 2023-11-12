@@ -22,9 +22,12 @@ import {
   faGlobe,
   faLock,
   faPowerOff,
+  faComment,
+  faCircleUser,
+  
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faBell } from "@fortawesome/free-regular-svg-icons";
+import { faBell, faCreditCard } from "@fortawesome/free-regular-svg-icons";
 
 /* add icons to the library */
 library.add(
@@ -39,7 +42,10 @@ library.add(
   faUser,
   faGlobe,
   faLock,
-  faPowerOff
+  faPowerOff,
+  faCreditCard,
+  faComment,
+  faCircleUser
 );
 
 const app = createApp(App);

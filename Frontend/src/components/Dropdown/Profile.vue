@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 border border-gray-200/60 rounded-md bg-white shadow-md">
+  <div class="py-4 border border-gray-200/60 rounded-b-md bg-white shadow-md">
     <ul class="w-full flex flex-col justify-center items-start gap-y-2">
       <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
         <router-link to="#"
