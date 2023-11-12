@@ -1,5 +1,49 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "../src/assets/tailwind.css";
+import router from "./routes";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+/* import specific icons */
+import {
+  faUserSecret,
+  faBars,
+  faMagnifyingGlass,
+  faGear,
+  faMoon,
+  faExpand,
+  faCompress,
+  faUser,
+  faGlobe,
+  faLock,
+  faPowerOff,
+} from "@fortawesome/free-solid-svg-icons";
+
+import { faBell } from "@fortawesome/free-regular-svg-icons";
+
+/* add icons to the library */
+library.add(
+  faUserSecret,
+  faBars,
+  faMagnifyingGlass,
+  faBell,
+  faGear,
+  faMoon,
+  faExpand,
+  faCompress,
+  faUser,
+  faGlobe,
+  faLock,
+  faPowerOff
+);
+
+const app = createApp(App);
+
+app.use(router);
+app.component("font-awesome-icon", FontAwesomeIcon);
+app.mount("#app");
