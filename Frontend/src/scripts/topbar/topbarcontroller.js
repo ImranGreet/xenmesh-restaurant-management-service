@@ -3,6 +3,7 @@ import { ref } from "vue";
 const profileDropDown = ref(false);
 const notificationsDropDown = ref(false);
 const searchDropDown = ref(false);
+const seetingsView = ref(false);
 
 const profileToggler = function () {
   profileDropDown.value = !profileDropDown.value;
@@ -14,6 +15,10 @@ const notificationsToggler = function () {
 
 const toggleSearchForm = function () {
   searchDropDown.value = !searchDropDown.value;
+};
+
+const settingsViewToggler = function () {
+  seetingsView.value = !seetingsView.value;
 };
 
 window.addEventListener("click", function (event) {
@@ -36,12 +41,19 @@ window.addEventListener("click", function (event) {
     //searchDropDown.value = false;
   }
 });
+window.addEventListener("click", function (event) {
+  if (seetingsView.value && !event.target.closest(".settingsViews")) {
+   // seetingsView.value = false;
+  }
+});
 
 export {
   profileDropDown,
   notificationsDropDown,
   searchDropDown,
+  seetingsView,
   profileToggler,
   notificationsToggler,
   toggleSearchForm,
+  settingsViewToggler,
 };

@@ -5,3 +5,24 @@
 :fullscreen {
   background: #ffffff;
 }
+
+
+
+.custom-overflowscroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.custom-overflowscroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+.custom-overflowscroll::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+
+.custom-overflowscroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

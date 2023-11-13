@@ -1,6 +1,6 @@
 <template>
   <div class="w-full relative">
-    <div class="w-full px-4 py-2">
+    <div class="w-full px-4">
       <div
         class="w-full flex justify-end items-center space-x-3 md:space-x-5 lg:space-x-8">
         <button @click="toggleSearchForm()" class="smallSearch">
@@ -14,7 +14,9 @@
             <font-awesome-icon icon="fa-regular fa-bell" />
           </i>
         </button>
-        <button class="p-1">
+        <button
+          @click="settingsViewToggler()"
+          class="p-1 hidden sm:inline settingsViews">
           <i class="text-xl">
             <font-awesome-icon icon="fa-solid fa-gear" />
           </i>
@@ -36,7 +38,10 @@
         </button>
         <div role="button" class="p-1 profileView" @click="profileToggler()">
           <div class="flex justify-between items-center space-x-5">
-            <img :src="profileImage" alt="" class="w-8 h-8 rounded-full" />
+            <img
+              :src="profileImage"
+              alt=""
+              class="w-5 md:w-8 h-5 md:h-8 rounded-full" />
             <div class="space-y-1 text-start hidden lg:block">
               <h1 class="text-xl">John Doe</h1>
               <small>Admin</small>
@@ -68,7 +73,7 @@
 import { ref } from "vue";
 import Profile from "../Dropdown/Profile.vue";
 import Notifications from "../Dropdown/Notifications.vue";
-
+import Setting from "../Settings/Setting.vue";
 /*scripts*/
 import {
   profileDropDown,
@@ -77,6 +82,8 @@ import {
   notificationsToggler,
   searchDropDown,
   toggleSearchForm,
+  seetingsView,
+  settingsViewToggler,
 } from "../../scripts/topbar/topbarcontroller";
 import { toggleFullScreen, fullScreen } from "../../scripts/screen/Fullscreen";
 import Dropsearchform from "../Dropdown/Dropsearchform.vue";
@@ -87,6 +94,7 @@ export default {
     Profile,
     Notifications,
     Dropsearchform,
+    Setting,
   },
   setup() {
     const profileImage = ref(
@@ -97,11 +105,13 @@ export default {
       profileDropDown,
       notificationsDropDown,
       fullScreen,
+      seetingsView,
       searchDropDown,
       notificationsToggler,
       profileToggler,
       toggleFullScreen,
       toggleSearchForm,
+      settingsViewToggler,
     };
   },
 };
