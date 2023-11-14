@@ -1,16 +1,16 @@
 <template>
   <section
     ref="fullscreenElement"
-    class="relative h-screen"
+    class="h-screen"
     :class="{
       'overflow-hidden': seetingsView,
       'overflow-auto': !seetingsView,
     }">
     <Topbardesktop
-      class="fixed w-[84%] float-right top-0 right-0 z-[999] bg-white" />
-    <Rightsidebar class="w-[15%] float-left" />
+      class="fixed topbarLayout float-right top-0 right-0 z-[999] bg-white" />
+    <Rightsidebar class="w-[1/6vw] float-left" />
     <!-- main -->
-    <div class="w-[84%] float-right mt-[60px] pl-0 pr-2">
+    <div class="w-5/6 float-right mt-[60px] pl-0 pr-2">
       <div class="pl-4">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita

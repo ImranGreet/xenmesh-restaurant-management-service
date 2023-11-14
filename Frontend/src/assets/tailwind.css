@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.topbarLayout {
+  max-width: 83.3333% !important;
+}
+
 :fullscreen {
   background: #ffffff;
 }

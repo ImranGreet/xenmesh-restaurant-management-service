@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-200 w-[15%] flex flex-col justify-center items-center z-50 py-[15.75px] shadow-sm">
+    class="bg-gray-200 w-1/6 flex flex-col justify-center items-center z-50 py-[15.75px] shadow-sm">
     <router-link to="#" class="w-full flex justify-center items-center">
       <div class="flex justify-center items-center -space-x-2">
         <div

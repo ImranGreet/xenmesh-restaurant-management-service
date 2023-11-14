@@ -1,8 +1,8 @@
 <template>
-  <div class="w-[16%] py-3">
-    <Logo class="fixed left-0 w-[16%] top-0" />
+  <div class="w-1/6 py-3">
+    <Logo class="fixed left-0 w-1/6 top-0" />
     <div
-      class="w-[16%] mt-[52.5px] fixed float-right h-screen overflow-y-scroll custom-overflowscroll px-3">
+      class="w-1/6 mt-[52.5px] fixed float-right h-screen overflow-y-scroll custom-overflowscroll px-3">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
       voluptatem natus numquam ratione illo ipsum velit? Nisi reprehenderit
       recusandae soluta atque laudantium provident tempore quasi, placeat,
