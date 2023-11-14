@@ -166,7 +166,9 @@
           </div>
           <!-- sidebar info -->
           <div class="flex justify-between px-8 md:py-20 lg:py-5">
-            <h1>Sidebar user info</h1>
+            <h1 class="text-xl tracking-wide leading-normal font-semibold capitalize text-emerald-700">
+              Sidebar user info
+            </h1>
             <toogleswitch />
           </div>
         </div>
