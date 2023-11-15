@@ -5,11 +5,14 @@
       :class="{ 'w-1/6': !sidebarView, 'w-1/12': sidebarView }" />
     <div
       class="mt-[52.5px] fixed float-right h-screen overflow-y-scroll custom-overflowscroll px-3"
-      :class="{ 'w-1/6': !sidebarView, 'w-1/12': sidebarView }"></div>
+      :class="{ 'w-1/6': !sidebarView, 'w-1/12': sidebarView }">
+      <Menu />
+    </div>
   </div>
 </template>
 
 <script>
+import { Menu } from "@headlessui/vue";
 import Logo from "../components/Topbar/Logo.vue";
 import { sidebarView } from "../scripts/leftsidebar/layoutcontroller";
 
@@ -17,6 +20,7 @@ export default {
   name: "Rightsidebar",
   components: {
     Logo,
+    Menu,
   },
   setup() {
     return {
