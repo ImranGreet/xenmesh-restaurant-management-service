@@ -8,7 +8,7 @@
     }">
     <Topbardesktop
       class="fixed topbarLayout float-right top-0 right-0 z-[999] bg-white" />
-    <Rightsidebar class="w-[1/6vw] float-left" />
+    <Rightsidebar class="float-left" :style="{ width: customWidth }" />
     <!-- main -->
     <div class="w-5/6 float-right mt-[60px] pl-0 pr-2">
       <div class="pl-4">
@@ -36,6 +36,10 @@ import Logo from "../components/Topbar/Logo.vue";
 /*script*/
 import { fullscreenElement } from "../scripts/screen/Fullscreen";
 import { seetingsView } from "../scripts/topbar/topbarcontroller";
+import {
+  resizeController,
+  customWidth,
+} from "../scripts/Layout/layoutonresize";
 
 export default {
   name: "Admin",
@@ -49,13 +53,8 @@ export default {
     return {
       fullscreenElement,
       seetingsView,
+      customWidth,
     };
   },
 };
 </script>
-
-<style></style>
-
-<!--   -->
-
-<!--  -->
