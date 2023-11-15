@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 .topbarLayout {
-  max-width: 83.3333% !important;
+  max-width: 83.333333% !important;
 }
-
+.topbarLayoutSidebar {
+  max-width: 91.666667% !important;
+}
 :fullscreen {
   background: #ffffff;
 }

@@ -1,15 +1,26 @@
 <template>
   <div
-    class="bg-gray-200 w-1/6 flex flex-col justify-center items-center z-50 py-[15.75px] shadow-sm">
+    class="bg-gray-200 flex flex-col justify-center items-center py-[7.5px] md:py-[10px] lg:py-[12px] xl:py-[17px] shadow-md"
+    :class="{
+      'w-1/6': !sidebarView,
+      'w-1/12': sidebarView,
+      '[z-999]': seetingsView,
+      'z-0': !seetingsView,
+    }">
     <router-link to="#" class="w-full flex justify-center items-center">
       <div class="flex justify-center items-center -space-x-2">
         <div
-          class="mix-blend-multiply bg-blue-400 w-6 h-6 rounded-full animate-pulse"></div>
+          class="mix-blend-multiply bg-blue-400 w-4 h-4 md:w-6 md:h-6 rounded-full animate-pulse"></div>
         <div
-          class="mix-blend-multiply bg-pink-400 w-6 h-6 rounded-full animate-pulse"></div>
+          class="mix-blend-multiply bg-pink-400 w-4 h-4 md:w-6 md:h-6 rounded-full animate-pulse"></div>
       </div>
-      <div class="text-center">
-        <h1 class="text-xl tracking-wide font-semibold">Xenmesh</h1>
+      <div
+        class="text-center"
+        :class="{
+          'hidden 2xl:hidden': sidebarView,
+          'hidden 2xl:block': !sidebarView,
+        }">
+        <h1 class="tracking-wide font-semibold lg:text-base">Xenmesh</h1>
       </div>
     </router-link>
     <button class="inline-block md:hidden">
@@ -19,12 +30,17 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
+import { sidebarView } from "../../scripts/leftsidebar/layoutcontroller";
+import { seetingsView } from "../../scripts/topbar/topbarcontroller";
+
 export default {
   name: "Logo",
   components: {},
   setup() {
-    return {};
+    return {
+      sidebarView,
+      seetingsView,
+    };
   },
 };
 </script>

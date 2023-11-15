@@ -42,7 +42,7 @@
               :src="profileImage"
               alt=""
               class="w-5 md:w-8 h-5 md:h-8 rounded-full" />
-            <div class="space-y-1 text-start hidden lg:block">
+            <div class="space-y-1 text-start hidden xl:block">
               <h1 class="text-xl">John Doe</h1>
               <small>Admin</small>
             </div>

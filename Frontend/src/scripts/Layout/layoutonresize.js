@@ -8,7 +8,7 @@ const resizeController = function () {
   innerwidth.value = window.innerWidth;
 
   if (innerwidth.value < screenSizes.value[0]) {
-    innerwidth.value = "150px";
+    innerwidth.value = "0px";
   } else if (
     innerwidth.value >= screenSizes.value[0] &&
     innerwidth.value < screenSizes.value[1]
