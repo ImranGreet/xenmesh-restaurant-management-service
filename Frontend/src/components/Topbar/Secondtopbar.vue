@@ -16,7 +16,7 @@
         </button>
         <button
           @click="settingsViewToggler()"
-          class="p-1 hidden sm:inline settingsViews">
+          class="p-1 hidden md:inline settingsViews">
           <i class="text-xl">
             <font-awesome-icon icon="fa-solid fa-gear" />
           </i>

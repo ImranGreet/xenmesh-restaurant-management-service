@@ -1,4 +1,5 @@
 import { ref } from "vue";
+import { seetingsView } from "../topbar/topbarcontroller";
 
 const sidebarView = ref(false);
 const mobileView = ref(false);
@@ -21,6 +22,13 @@ sidebarController();
 window.addEventListener("resize", function () {
   if (mobileView.value) {
     mobileView.value = false;
+  }
+  if (this.window.innerWidth <= 768) {
+    seetingsView.value = false;
+  } else {
+    if (seetingsView.value) {
+      seetingsView.value = false;
+    }
   }
   sidebarController();
 });

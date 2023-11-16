@@ -37,7 +37,7 @@
     <Setting
       class="fixed top-0 right-0 md:w-2/4 lg:w-1/4 h-full"
       :class="{
-        'hidden xl:block z-[999]': seetingsView,
+        'hidden md:block z-[999]': seetingsView,
         hidden: !seetingsView,
       }"></Setting>
     <div

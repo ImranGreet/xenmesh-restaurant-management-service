@@ -14,10 +14,12 @@
         'w-0 hidden': sidebarView && mobileView,
       }" />
     <div
-      class="mt-[52.5px] fixed float-right h-screen px-3"
+      class="mt-[40px] md:mt-[45px] lg:mt-[48px] xl:mt-[52.5px] fixed float-right h-screen px-3"
       :class="{
-        'w-1/6 overflow-y-scroll custom-overflowscroll': !sidebarView,
-        'w-1/12 overflow-y-scroll custom-overflowscroll': sidebarView,
+        'w-1/6 overflow-y-scroll custom-overflowscroll':
+          !sidebarView && !mobileView,
+        'w-1/12 overflow-y-scroll custom-overflowscroll':
+          sidebarView && !mobileView,
         'w-0 hidden': sidebarView && mobileView,
       }">
       <Menu />
