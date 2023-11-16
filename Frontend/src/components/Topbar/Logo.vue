@@ -2,8 +2,9 @@
   <div
     class="bg-gray-200 flex flex-col justify-center items-center py-[7.5px] md:py-[10px] lg:py-[12px] xl:py-[17px] shadow-md"
     :class="{
-      'w-1/6': !sidebarView,
-      'w-1/12': sidebarView,
+      'w-1/6': !sidebarView && !mobileView,
+      'w-1/12': sidebarView && !mobileView,
+      'w-0 hidden': sidebarView && mobileView,
       '[z-999]': seetingsView,
       'z-0': !seetingsView,
     }">
@@ -30,7 +31,10 @@
 </template>
 
 <script>
-import { sidebarView } from "../../scripts/leftsidebar/layoutcontroller";
+import {
+  mobileView,
+  sidebarView,
+} from "../../scripts/leftsidebar/layoutcontroller";
 import { seetingsView } from "../../scripts/topbar/topbarcontroller";
 
 export default {
@@ -40,6 +44,7 @@ export default {
     return {
       sidebarView,
       seetingsView,
+      mobileView,
     };
   },
 };

@@ -9,18 +9,27 @@
     <Topbardesktop
       class="fixed float-right top-0 right-0 bg-white"
       :class="{
-        topbarLayout: !sidebarView,
-        topbarLayoutSidebar: sidebarView,
+        topbarLayout: !sidebarView && !mobileView,
+        topbarLayoutSidebar: sidebarView && !mobileView,
+        'w-full': sidebarView && mobileView,
         'z-0': seetingsView,
         'z-[999]': !seetingsView,
       }" />
     <Rightsidebar
       class="float-left"
-      :class="{ 'w-1/6': !sidebarView, 'w-1/12': sidebarView }" />
+      :class="{
+        'w-1/6': !sidebarView && !mobileView,
+        'w-1/12': sidebarView && !mobileView,
+        'w-0 hidden': sidebarView && mobileView,
+      }" />
     <!-- main -->
     <div
       class="float-right mt-[60px] pl-0 pr-2"
-      :class="{ 'w-5/6': !sidebarView, 'w-11/12': sidebarView }">
+      :class="{
+        'w-5/6': !sidebarView,
+        'w-11/12': sidebarView,
+        'w-0 hidden': sidebarView && mobileView,
+      }">
       <div class="pl-4">
         <router-view />
       </div>
@@ -49,6 +58,7 @@ import { seetingsView } from "../scripts/topbar/topbarcontroller";
 import {
   sidebarController,
   sidebarView,
+  mobileView,
 } from "../scripts/leftsidebar/layoutcontroller";
 import {
   resizeController,
@@ -69,6 +79,7 @@ export default {
       seetingsView,
       customWidth,
       sidebarView,
+      mobileView,
       /*compose function*/
       sidebarController,
     };
