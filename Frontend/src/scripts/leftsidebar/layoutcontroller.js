@@ -1,13 +1,19 @@
 import { ref } from "vue";
 import { seetingsView } from "../topbar/topbarcontroller";
 
-const sidebarView = ref(false);
+const sidebarView = ref(true);
 const mobileView = ref(false);
+
+const sidebarNavigations = ref(false);
+
+const sidebarNavTextController = function () {
+  sidebarNavigations.value = !sidebarNavigations.value;
+};
 
 const sidebarController = function () {
   const viewPortInnerWidth = window.innerWidth;
   if (viewPortInnerWidth <= 640) {
-    mobileView.value = !mobileView.value;
+    mobileView.value = true;
   } else if (viewPortInnerWidth > 640) {
     if (mobileView.value) {
       mobileView.value = false;
@@ -33,4 +39,10 @@ window.addEventListener("resize", function () {
   sidebarController();
 });
 
-export { sidebarController, sidebarView, mobileView };
+export {
+  sidebarController,
+  sidebarView,
+  mobileView,
+  sidebarNavTextController,
+  sidebarNavigations,
+};

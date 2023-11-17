@@ -4,20 +4,17 @@
       class="fixed left-0 top-0"
       :class="{
         hidden: mobileView,
-        'w-[30%] xl:w-[15%]': !mobileView && !sidebarView,
-        'w-[10%] xl:w-[5%]': !mobileView && sidebarView,
+        topbarWithSide: !mobileView && !sidebarView,
+        topbarWithoutSide: !mobileView && sidebarView,
       }" />
     <div
-      class="mt-[20px] md:mt-[45px] lg:mt-[48px] xl:mt-[45.5px] fixed float-right h-screen border-r-2 border-red-700/50"
-      :class="{
-        'w-[30%] xl:w-[15%]': !sidebarView,
-        'w-[10%] xl:w-[5%]': sidebarView,
-      }">
+      class="mt-[20px] md:mt-[45px] lg:mt-[48px] xl:mt-[32.5px] fixed float-right h-screen border-r-2 border-red-700/50"
+      :class="{ topbarWithSide: !sidebarView, topbarWithoutSide: sidebarView }">
       <router-link to="#" class="w-full px-3 py-2 space-y-4">
         <Userprofile />
       </router-link>
       <div
-        class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4">
+        class="w-full overflow-x-hidden custom-overflowscroll max-h-[92.5vh] min-h-[92.5h]">
         <div
           v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
           :key="index">

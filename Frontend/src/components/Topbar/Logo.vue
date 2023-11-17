@@ -1,26 +1,19 @@
 <template>
   <div
-    class="bg-gray-200 flex flex-col justify-center items-center py-[7.5px] md:py-[10px] lg:py-[12px] xl:py-[17px] shadow-md"
+    class="flex flex-col justify-center items-center py-[9px] md:py-[10px] lg:py-[12px] xl:py-[17px]"
     :class="{
-      'w-1/6': !sidebarView && !mobileView,
-      'w-1/12': sidebarView && !mobileView,
-      'w-0 hidden': sidebarView && mobileView,
-      '[z-999]': seetingsView,
-      'z-0': !seetingsView,
+      'bg-inherit': mobileView,
+      'bg-gray-200 shadow-md  w-[30%] xl:w-[15%]': !sidebarView && !mobileView,
+      'bg-gray-200 shadow-md w-[10%] xl:w-[5%]': sidebarView && !mobileView,
     }">
     <router-link to="#" class="w-full flex justify-center items-center">
       <div class="flex justify-center items-center -space-x-2">
         <div
-          class="mix-blend-multiply bg-blue-400 w-4 h-4 md:w-6 md:h-6 rounded-full animate-pulse"></div>
+          class="mix-blend-multiply bg-blue-400 w-5 h-5 md:w-6 md:h-6 rounded-full animate-pulse"></div>
         <div
-          class="mix-blend-multiply bg-pink-400 w-4 h-4 md:w-6 md:h-6 rounded-full animate-pulse"></div>
+          class="mix-blend-multiply bg-pink-400 w-5 h-5 md:w-6 md:h-6 rounded-full animate-pulse"></div>
       </div>
-      <div
-        class="text-center"
-        :class="{
-          'hidden 2xl:hidden': sidebarView,
-          'hidden 2xl:block': !sidebarView,
-        }">
+      <div class="text-center" :class="{ hidden: mobileView || sidebarView }">
         <h1 class="tracking-wide font-semibold lg:text-base">Xenmesh</h1>
       </div>
     </router-link>

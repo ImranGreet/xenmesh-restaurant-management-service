@@ -1,36 +1,22 @@
 <template>
-  <section
-    ref="fullscreenElement"
-    class="h-screen"
-    :class="{
-      'overflow-hidden': seetingsView,
-      'overflow-auto': !seetingsView,
-    }">
+  <section ref="fullscreenElement" class="h-screen">
     <Topbardesktop
-      class="fixed float-right top-0 right-0 bg-white"
+      class="float-right top-0 right-0 bg-white"
       :class="{
-        topbarLayout: !sidebarView && !mobileView,
-        topbarLayoutSidebar: sidebarView && !mobileView,
-        'w-full': sidebarView && mobileView,
-        'z-0': seetingsView,
-        'z-[999]': !seetingsView,
+        'w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
+        'w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
+        'w-full static px-2': mobileView,
       }" />
     <Rightsidebar
-      class="float-left"
+      class="fixed float-left h-full"
       :class="{
-        'w-1/6': !sidebarView && !mobileView,
-        'w-1/12': sidebarView && !mobileView,
-        'w-0 hidden': sidebarView && mobileView,
+        hidden: mobileView,
+        ' w-[30%] xl:w-[10%]': !sidebarView && !mobileView,
+        'w-[10%] xl:w-[5%]': sidebarView && !mobileView,
       }" />
     <!-- main -->
-    <div
-      class="float-right mt-[60px] pl-0 pr-2"
-      :class="{
-        'w-5/6': !sidebarView,
-        'w-11/12': sidebarView,
-        'w-0 hidden': sidebarView && mobileView,
-      }">
-      <div class="pl-4">
+    <div class="float-right mt-[60px] px-1">
+      <div class="pl-4 bg-red-600">
         <router-view />
       </div>
     </div>

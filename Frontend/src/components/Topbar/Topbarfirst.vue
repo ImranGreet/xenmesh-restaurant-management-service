@@ -1,6 +1,7 @@
 <template>
   <div
-    class="w-full flex justify-start items-center space-x-2 sm:space-x-0.5 md:space-x-3 lg:space-x-5">
+    class="w-full flex justify-start items-center space-x-5 sm:space-x-0.5 md:space-x-3 lg:space-x-5">
+    <Logo :class="{ hidden: !mobileView, 'block ': mobileView }" />
     <button @click="sidebarController()" class="p-1 sm:p-2">
       <i class="text-xl lg:text-2xl fonr-semibold">
         <font-awesome-icon icon="fa-solid fa-bars " />
@@ -26,13 +27,20 @@
 </template>
 
 <script>
-import { sidebarController } from "../../scripts/leftsidebar/layoutcontroller";
+import Logo from "./Logo.vue";
+
+import {
+  mobileView,
+  sidebarController,
+} from "../../scripts/leftsidebar/layoutcontroller";
 
 export default {
   name: "Firsttopbar",
+  components: { Logo },
   setup() {
     return {
       sidebarController,
+      mobileView,
     };
   },
 };
