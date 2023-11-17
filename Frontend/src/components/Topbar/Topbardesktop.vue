@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-between items-center shadow-md px-0 lg:px-5">
+  <div class=" flex justify-between items-center shadow-md px-0 lg:px-5">
     <Topbarfirst />
     <Secondtopbar />
   </div>
