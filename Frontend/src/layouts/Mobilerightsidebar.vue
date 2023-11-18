@@ -1,9 +1,8 @@
 <template>
   <div class="py-3">
     <Logo
-      class="fixed left-0 top-0"
+      class="fixed left-0 top-0 hidden sm:block"
       :class="{
-        hidden: mobileView,
         topbarWithSide: !mobileView && !sidebarView,
         topbarWithoutSide: !mobileView && sidebarView,
       }" />

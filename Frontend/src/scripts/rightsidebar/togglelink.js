@@ -16,3 +16,5 @@ const routeToggling = function (index) {
 };
 
 export { routeToggling };
+
+class Toggling {}

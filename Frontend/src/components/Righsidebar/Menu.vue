@@ -1,7 +1,7 @@
 <template>
   <div class="w-full text-center">
     <button
-      @click="sidebarNavTextController()"
+      @click="toggler()"
       class="w-full flex items-center text-inherit py-3 text-xl text-center"
       :class="{
         'justify-between': !sidebarView,
@@ -103,6 +103,9 @@ export default {
     const compotext = props.componentText;
     const DropdownRouterLinkId = props.routerLinkId;
     console.log(compotext);
+    const toggler = function () {
+      console.log("Toggler");
+    };
 
     return {
       urlTag,
@@ -111,7 +114,7 @@ export default {
       sidebarNavigations,
       sidebarView,
       mobileView,
-      sidebarNavTextController,
+      toggler,
     };
   },
 };
