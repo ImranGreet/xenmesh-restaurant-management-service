@@ -22,17 +22,33 @@
           <div class="px-8 py-6 space-y-5">
             <Settingtitle>Choose Layout</Settingtitle>
             <div class="w-full flex justif-start items-center gap-6">
-              <button>
+              <button class="relative">
                 <img
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
             </div>
           </div>
@@ -45,12 +61,28 @@
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
             </div>
           </div>
@@ -65,42 +97,77 @@
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
             </div>
           </div>
 
           <div class="px-8 py-6 space-y-5">
-            <Settingtitle>Topbar Mode</Settingtitle>
+            <Settingtitle>Topbar Color</Settingtitle>
             <div class="w-full flex justif-start items-center flex-wrap gap-6">
-              <button>
+              <button @click="setTopbarColor('light')" class="relative">
                 <img
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  id="light"
+                  class="text-blue-700 bottom-2 right-1 absolute hidden"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
-              <button>
+              <button @click="setTopbarColor('brand')" class="relative">
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small class="text-blue-700 bottom-2 right-1 absolute"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
-              <button>
+              <button @click="setTopbarColor('dark')" class="relative">
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small class="text-blue-700 bottom-2 right-1 absolute"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
             </div>
           </div>
@@ -113,18 +180,42 @@
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
             </div>
           </div>
@@ -137,36 +228,77 @@
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
               <button>
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
+                <small
+                  class="text-blue-700 bottom-2 right-1 absolute"
+                  :class="{
+                    hidden: foundColor !== 'light',
+                    ineline: foundColor == 'light',
+                  }"
+                  ><CheckBadgeIcon class="w-6 h-6"
+                /></small>
               </button>
             </div>
           </div>
           <!-- sidebar info -->
           <div class="flex justify-between px-8 md:py-20 lg:py-5">
-            <h1 class="text-xl tracking-wide leading-normal font-semibold capitalize text-emerald-700">
+            <h1
+              class="text-xl tracking-wide leading-normal font-semibold capitalize text-emerald-700">
               Sidebar user info
             </h1>
             <toogleswitch />
@@ -185,15 +317,25 @@
 
 <script>
 import { settingsViewToggler } from "../../scripts/topbar/topbarcontroller";
+import {
+  setTopbarColor,
+  foundColor,
+  topbarDefault,
+} from "../../scripts/Settings/topbar";
 import Toogleswitch from "../Utilities/Toogleswitch.vue";
 import Settingicon from "./Settingicon.vue";
 import Settingtitle from "./Settingtitle.vue";
+/*heroicons*/
+import { CheckBadgeIcon } from "@heroicons/vue/24/solid";
 
 export default {
   name: "Setting",
-  components: { Settingicon, Settingtitle, Toogleswitch },
+  components: { Settingicon, Settingtitle, Toogleswitch, CheckBadgeIcon },
   setup() {
     return {
+      foundColor,
+      topbarDefault,
+      setTopbarColor,
       settingsViewToggler,
     };
   },

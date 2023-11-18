@@ -1,16 +1,16 @@
 import { ref } from "vue";
 
 const topbarColor = ref(["default", "light", "dark", "brand"]);
+const topbarColorIds = ref([]);
 
-let foundColor = ref(false);
+let foundColor = ref(true);
+let topbarDefault = ref(true);
 
-const setTopbarColor = function (colorPalet) {
-  const colorToSet = topbarColor.value.find((color) => color == colorPalet);
-  if (colorToSet) {
-    foundColor = colorToSet;
-  } else {
-    foundColor = topbarColor.value.at(0);
-  }
+const setTopbarColor = function (colorPaletId) {
+  const iconHolder = document.getElementById(colorPaletId);
+   if(topbarColorIds.value.length !==0){
+    
+   }
 };
 
-export { setTopbarColor, foundColor };
+export { setTopbarColor, foundColor, topbarColor, topbarDefault };
