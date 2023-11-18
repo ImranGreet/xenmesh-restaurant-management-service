@@ -54,7 +54,7 @@
       class="fixed left-0 sm:right-2 sm:left-auto w-[100%] mx-auto sm:max-w-[200px]"
       :class="{ block: profileDropDown, hidden: !profileDropDown }" />
     <Notifications
-      class="fixed left-0 right-auto sm:right-[11.5rem] md:right-52 lg:right-96 sm:left-auto w-[100%] mx-auto sm:w-[300px]"
+      class="fixed left-0 right-auto sm:right-[11.5rem] md:right-52 lg:right-96 sm:left-auto w-[100%] z-[999] mx-auto sm:w-[300px]"
       :class="{
         block: notificationsDropDown,
         hidden: !notificationsDropDown,

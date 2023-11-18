@@ -131,6 +131,53 @@ const useLeftSideBarRouterLink = ref([
       },
     ],
   },
+
+  {
+    id: 5,
+    name: "Settings",
+    largeIcon: "CalculatorIcon",
+
+    paths: [
+      {
+        id: 1,
+        params: "settingassets",
+        uri: "settingassets",
+      },
+      {
+        id: 2,
+        params: "Controller Icon",
+        uri: "#",
+      },
+      {
+        id: 3,
+        params: "Owner Profile",
+        uri: "#",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Products",
+    largeIcon: "CalculatorIcon",
+
+    paths: [
+      {
+        id: 1,
+        params: "Running Products",
+        uri: "settingassets",
+      },
+      {
+        id: 2,
+        params: "Treanding Products",
+        uri: "#",
+      },
+      {
+        id: 3,
+        params: "Upcomming Products",
+        uri: "#",
+      },
+    ],
+  },
 ]);
 
 export default useLeftSideBarRouterLink;

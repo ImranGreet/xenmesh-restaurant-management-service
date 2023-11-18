@@ -1,7 +1,12 @@
 import { createApp } from "vue";
 import "../src/assets/tailwind.css";
 import router from "./routes";
+import { plugin, defaultConfig } from "@formkit/vue";
 import App from "./App.vue";
+
+/*Global Components*/
+import Submitbutton from "../src/components/Auth/Submitbutton.vue";
+/*Global Components*/
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -53,4 +58,6 @@ const app = createApp(App);
 
 app.use(router);
 app.component("font-awesome-icon", FontAwesomeIcon);
+app.component("authsubmitBtn", Submitbutton);
+app.use(plugin, defaultConfig);
 app.mount("#app");

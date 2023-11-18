@@ -1,5 +1,5 @@
 <template>
-  <section ref="fullscreenElement" class="h-screen">
+  <section ref="fullscreenElement" class="h-screen bg-gray-50">
     <Topbardesktop
       class="float-right top-0 right-0 bg-white w-full static px-2"
       :class="{
@@ -13,8 +13,14 @@
         'w-[10%] xl:w-[5%]': sidebarView && !mobileView,
       }" />
     <!-- main -->
-    <div class="float-right mt-[60px] px-1">
-      <div class="pl-4 bg-red-600">
+    <div
+      class="float-right mt-[60px] px-1 w-full right-0 h-full z-0"
+      :class="{
+        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
+        'sm:w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
+      }">
+      <div
+        class="w-full flex flex-col justify-between items-center h-full overflow-y-scroll z-0">
         <router-view />
       </div>
     </div>

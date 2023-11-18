@@ -1,5 +1,5 @@
 <template>
-  <div class="w-80 z-50 bg-white py-2 space-y-5 border border-gray-600/20">
+  <div class="w-80 bg-white py-2 space-y-5 border border-gray-600/20">
     <div
       class="flex justify-between items-center border-b border-dotted border-gray-700 py-2 px-2">
       <h1 class="text-2xl font-semibold">Notifications</h1>
