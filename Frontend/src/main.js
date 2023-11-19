@@ -3,10 +3,13 @@ import "../src/assets/tailwind.css";
 import router from "./routes";
 import { createPinia } from "pinia";
 import { plugin, defaultConfig } from "@formkit/vue";
+import VueAnimXyz from "@animxyz/vue3";
+import "@animxyz/core"; //
 import App from "./App.vue";
 
 /*Global Components*/
 import Submitbutton from "../src/components/Auth/Submitbutton.vue";
+import FormHeadLine from "../src/components/Auth/FormHeadLine.vue";
 /*Global Components*/
 
 /* import the fontawesome core */
@@ -60,6 +63,8 @@ const app = createApp(App);
 app.use(router);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.component("authsubmitBtn", Submitbutton);
+app.component("formTitle", FormHeadLine);
+app.use(VueAnimXyz);
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));
 app.mount("#app");

@@ -16,7 +16,7 @@
         <Userprofile />
       </router-link>
       <div
-        class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4">
+        class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative">
         <div
           v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
           :key="index">

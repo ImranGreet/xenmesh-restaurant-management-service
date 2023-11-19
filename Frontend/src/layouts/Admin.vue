@@ -3,21 +3,21 @@
     <Topbardesktop
       class="float-right top-0 right-0 bg-white w-full static px-2"
       :class="{
-        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
-        'sm:w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
+        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
+        'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
       }" />
     <Rightsidebar
       class="fixed float-left h-full hidden sm:block"
       :class="{
-        ' w-[30%] xl:w-[10%]': !sidebarView && !mobileView,
-        'w-[10%] xl:w-[5%]': sidebarView && !mobileView,
+        ' w-[30%] xl:w-[10%]': !sidebarView,
+        'w-[10%] xl:w-[5%]': sidebarView,
       }" />
     <!-- main -->
     <div
       class="float-right mt-[60px] px-1 w-full right-0 h-full z-0 overflow-y-auto"
       :class="{
-        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
-        'sm:w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
+        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
+        'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
       }">
       <div
         class="w-full flex flex-col justify-between items-center z-0 h-full overflow-y-scroll">
@@ -35,10 +35,10 @@
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
 
     <Footer
-      class="w-full fixed bottom-0 z-[999] bg-white float-right right-0"
+      class="w-full fixed bottom-0 z-[599] bg-white float-right right-0"
       :class="{
-        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
-        'sm:w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
+        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
+        'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
       }" />
   </section>
 </template>
@@ -62,6 +62,7 @@ import {
   resizeController,
   customWidth,
 } from "../scripts/Layout/layoutonresize";
+import { discloseMenuBarOnHover } from "../scripts/rightsidebar/togglelink";
 
 export default {
   name: "Admin",
@@ -81,6 +82,7 @@ export default {
       mobileView,
       /*compose function*/
       sidebarController,
+      discloseMenuBarOnHover,
     };
   },
 };

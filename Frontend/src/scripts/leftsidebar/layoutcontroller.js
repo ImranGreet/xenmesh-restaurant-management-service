@@ -1,5 +1,6 @@
 import { ref } from "vue";
 import { seetingsView } from "../topbar/topbarcontroller";
+import { ulLinkCloser } from "../rightsidebar/togglelink";
 
 const sidebarView = ref(true);
 const mobileView = ref(false);
@@ -20,6 +21,7 @@ const sidebarController = function () {
     }
   }
   sidebarView.value = !sidebarView.value;
+  ulLinkCloser();
 };
 
 /*call it in initaila state*/

@@ -2,7 +2,7 @@
   <div class="w-full text-center">
     <button
       @click="routeToggling(DropdownRouterLinkId)"
-      class="w-full flex items-center text-inherit py-3 text-xl text-center"
+      class="w-full flex items-center text-inherit py-3 text-xl text-center relative"
       :class="{
         'justify-between': !sidebarView,
         'justify-center': sidebarView,
@@ -33,16 +33,10 @@
       </span>
     </button>
 
-    <transition
-      enter-active-class="transition ease-out duration-100"
-      enter-from-class="transform opacity-0 scale-95"
-      enter-to-class="transform opacity-100 scale-100"
-      leave-active-class="transition ease-in duration-75"
-      leave-from-class="transform opacity-100 scale-100"
-      leave-to-class="transform opacity-0 scale-95">
+    <XyzTransition appear xyz="fade rotate-right ease-out-back">
       <ul
         :id="`routes-` + DropdownRouterLinkId"
-        class="flex-col justify-between items-start text-start gap-y-0.5 w-full px-8 hidden">
+        class="space-y-2 text-start gap-y-0.5 w-full px-8 hidden ul-link square">
         <li
           v-for="track in urlTag"
           :key="track.id"
@@ -54,7 +48,7 @@
           >
         </li>
       </ul>
-    </transition>
+    </XyzTransition>
   </div>
 </template>
 
@@ -63,7 +57,11 @@ import {
   sidebarNavigations,
   sidebarView,
 } from "../../scripts/leftsidebar/layoutcontroller";
-import { routeToggling } from "../../scripts/rightsidebar/togglelink";
+import {
+  routeToggling,
+  mouseOutUlLinkCloser,
+  mouseOverUlLinkDiscloser,
+} from "../../scripts/rightsidebar/togglelink";
 
 import {
   HomeIcon,
@@ -111,6 +109,8 @@ export default {
       sidebarView,
       /*methods*/
       routeToggling,
+      mouseOverUlLinkDiscloser,
+      mouseOutUlLinkCloser,
     };
   },
 };
