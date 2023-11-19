@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import "../src/assets/tailwind.css";
 import router from "./routes";
+import { createPinia } from "pinia";
 import { plugin, defaultConfig } from "@formkit/vue";
 import App from "./App.vue";
 
@@ -60,4 +61,5 @@ app.use(router);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.component("authsubmitBtn", Submitbutton);
 app.use(plugin, defaultConfig);
+app.use(createPinia(App));
 app.mount("#app");

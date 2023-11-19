@@ -31,7 +31,7 @@
 
 <script>
 import Logo from "../components/Topbar/Logo.vue";
-import Userprofile from "../components/Utilities/Userprofile.vue";
+import Userprofile from "../components/Profile/Userprofile.vue";
 import Menu from "../components/Righsidebar/Menu.vue";
 
 import {

@@ -14,13 +14,13 @@
       }" />
     <!-- main -->
     <div
-      class="float-right mt-[60px] px-1 w-full right-0 h-full z-0"
+      class="float-right mt-[60px] px-1 w-full right-0 h-full z-0 overflow-y-auto"
       :class="{
         'sm:w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
         'sm:w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
       }">
       <div
-        class="w-full flex flex-col justify-between items-center h-full overflow-y-scroll z-0">
+        class="w-full flex flex-col justify-between items-center z-0 h-full overflow-y-scroll">
         <router-view />
       </div>
     </div>
@@ -33,6 +33,13 @@
     <div
       class="fixed right-0 inset-y-0 bg-gray-900/30 w-full h-screen"
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
+
+    <Footer
+      class="w-full fixed bottom-0 z-[999] bg-white float-right right-0"
+      :class="{
+        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView && !mobileView,
+        'sm:w-[90%] xl:w-[95%] fixed': sidebarView && !mobileView,
+      }" />
   </section>
 </template>
 
@@ -41,6 +48,7 @@ import Setting from "../components/Settings/Setting.vue";
 import Topbardesktop from "../components/Topbar/Topbardesktop.vue";
 import Rightsidebar from "./Rightsidebar.vue";
 import Logo from "../components/Topbar/Logo.vue";
+import Footer from "../components/Footer/Footer.vue";
 
 /*script*/
 import { fullscreenElement } from "../scripts/screen/Fullscreen";
@@ -62,6 +70,7 @@ export default {
     Setting,
     Rightsidebar,
     Logo,
+    Footer,
   },
   setup() {
     return {

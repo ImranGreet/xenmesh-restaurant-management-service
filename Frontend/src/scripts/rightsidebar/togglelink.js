@@ -1,20 +1,18 @@
 import { sidebarView } from "../leftsidebar/layoutcontroller";
 
 const routeToggling = function (index) {
-  const toggler = document.getElementById("routeToggler" + `${index}`);
-  const routesToToggle = document.getElementById("routes" + `${index}`);
+  const routesToToggle = document.getElementById("routes-" + `${index}`);
 
-  if (!sidebarView && routesToToggle.classList.contains("hidden")) {
+  if (!sidebarView.value && routesToToggle.classList.contains("hidden")) {
     routesToToggle.classList.remove("hidden");
     routesToToggle.classList.add("block");
-  }
-
-  if (!sidebarView && routesToToggle.classList.contains("block")) {
-    routesToToggle.classList.remove("block");
+  } else if (!sidebarView.value && routesToToggle.classList.contains("block")) {
     routesToToggle.classList.add("hidden");
+    routesToToggle.classList.remove("block");
   }
+  console.log(sidebarView.value);
+
+  console.log(index);
 };
 
 export { routeToggling };
-
-class Toggling {}

@@ -2,7 +2,7 @@
   <div class="w-full">
     <div class="w-full px-5 py-6 bg-gray-500/10 text-white">
       <div
-        class="w-full xl:w-3/4 mx-auto flex justify-between items-center gap-x-0.5 md:gap-x-0">
+        class="w-full xl:w-3/4 mx-auto flex justify-between flex-wrap items-center gap-x-0.5 md:gap-x-0 gap-y-2 sm:gap-y-0">
         <Tab
           @click="tabcontroller(index)"
           v-for="(compoTitle, index) in componentsTitle"
@@ -36,14 +36,25 @@ import {
 import Settingicon from "../../components/Auth/Settingicon.vue";
 import Shoplogo from "../../components/Auth/Shoplogo.vue";
 import UserProfile from "../../components/Auth/UserProfile.vue";
+import ContactDetails from "../../components/Auth/ContactDetails.vue";
 import Tab from "../../components/Utilities/Tab.vue";
 
 export default {
   name: "Storesettingicons",
-  components: { Settingicon, UserProfile, Shoplogo, Tab },
+  components: { Settingicon, UserProfile, Shoplogo, ContactDetails, Tab },
   setup() {
-    const componentsTitle = ref(["Setting icon", "User Profile", "Shop logo"]);
-    const componentContainer = ref(["Settingicon", "UserProfile", "Shoplogo"]);
+    const componentsTitle = ref([
+      "Setting icon",
+      "User Profile",
+      "Shop logo",
+      "Contact Details",
+    ]);
+    const componentContainer = ref([
+      "Settingicon",
+      "UserProfile",
+      "Shoplogo",
+      "ContactDetails",
+    ]);
     return {
       componentsTitle,
       componentContainer,

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full text-center">
+  <div class="w-full text-center relative">
     <button
       @click="routeToggling(DropdownRouterLinkId)"
       class="w-full flex items-center text-inherit py-3 text-xl text-center"
@@ -55,6 +55,10 @@
         </li>
       </ul>
     </transition>
+
+    <button class="absolute top-2 right-2 p-1 bg-gray-700 text-white">
+      <XMarkIcon class="w-2 h-2"></XMarkIcon>
+    </button>
   </div>
 </template>
 
@@ -72,6 +76,7 @@ import {
   BanknotesIcon,
   Battery50Icon,
   CalculatorIcon,
+  XMarkIcon,
 } from "@heroicons/vue/24/outline";
 
 export default {
@@ -83,6 +88,7 @@ export default {
     BanknotesIcon,
     Battery50Icon,
     CalculatorIcon,
+    XMarkIcon,
   },
   props: {
     routerLink: {
