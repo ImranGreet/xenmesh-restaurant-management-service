@@ -45,6 +45,18 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/public",
+    name: "public",
+    component: () => import("../layouts/Public.vue"),
+    children: [
+      {
+        path: "/public",
+        name: "public home",
+        component: () => import("../pages/Public/Index.vue"),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
