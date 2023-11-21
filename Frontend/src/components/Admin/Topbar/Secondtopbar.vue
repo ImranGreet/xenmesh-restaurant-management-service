@@ -72,6 +72,7 @@
 <script>
 import { ref } from "vue";
 import Profile from "../Dropdown/Profile.vue";
+
 import Notifications from "../Dropdown/Notifications.vue";
 import Setting from "../Settings/Setting.vue";
 /*scripts*/
@@ -84,9 +85,11 @@ import {
   toggleSearchForm,
   seetingsView,
   settingsViewToggler,
-} from "../../scripts/topbar/topbarcontroller";
-import { toggleFullScreen, fullScreen } from "../../scripts/screen/Fullscreen";
-import Dropsearchform from "../Dropdown/Dropsearchform.vue";
+} from "../../../scripts/Admin/topbar/topbarcontroller";
+
+import Dropsearchform from "../dropdown/dropsearchform.vue";
+
+import { toggleFullScreen, fullScreen } from "../../../scripts/Admin/screen/Fullscreen";
 
 export default {
   name: "Secondtopbar",

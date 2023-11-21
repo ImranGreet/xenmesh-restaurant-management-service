@@ -8,8 +8,8 @@ import "@animxyz/core"; //
 import App from "./App.vue";
 
 /*Global Components*/
-import Submitbutton from "../src/components/Auth/Submitbutton.vue";
-import FormHeadLine from "../src/components/Auth/FormHeadLine.vue";
+import Submitbutton from "../src/components/Admin/Auth/Submitbutton.vue";
+import FormHeadLine from "../src/components/Admin/Auth/FormHeadLine.vue";
 /*Global Components*/
 
 /* import the fontawesome core */

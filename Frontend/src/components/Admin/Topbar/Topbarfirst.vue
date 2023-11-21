@@ -27,12 +27,9 @@
 </template>
 
 <script>
-import Logo from "./Logo.vue";
 
-import {
-  mobileView,
-  sidebarController,
-} from "../../scripts/leftsidebar/layoutcontroller";
+import Logo from "../Topbar/Logo.vue"
+import {sidebarController,mobileView} from "../../../scripts/Admin/leftsidebar/layoutcontroller"
 
 export default {
   name: "Firsttopbar",

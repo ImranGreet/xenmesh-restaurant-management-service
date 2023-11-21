@@ -14,15 +14,14 @@
       }" />
     <!-- main -->
     <div
-      class="float-right mt-[60px] px-1 w-full right-0 h-full z-0 overflow-y-auto"
+      class="float-right mt-[60px] px-1  right-0 h-full z-0 overflow-y-auto"
       :class="{
-        'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
-        'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
+        'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto': !sidebarView,
+        'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto': sidebarView,
       }">
-      <div
-        class="w-full flex flex-col justify-between items-center z-0 h-full overflow-y-scroll">
+      
         <router-view />
-      </div>
+      
     </div>
     <Setting
       class="fixed top-0 right-0 md:w-2/4 lg:w-1/4 h-full"
@@ -44,25 +43,25 @@
 </template>
 
 <script>
-import Setting from "../components/Settings/Setting.vue";
-import Topbardesktop from "../components/Topbar/Topbardesktop.vue";
+import Setting from "../components/Admin/Settings/Setting.vue";
+import Topbardesktop from "../components/Admin/Topbar/Topbardesktop.vue";
 import Rightsidebar from "./Rightsidebar.vue";
-import Logo from "../components/Topbar/Logo.vue";
-import Footer from "../components/Footer/Footer.vue";
+import Logo from "../components/Admin/Topbar/Logo.vue";
+import Footer from "../components/Admin/Footer/Footer.vue";
 
 /*script*/
-import { fullscreenElement } from "../scripts/screen/Fullscreen";
-import { seetingsView } from "../scripts/topbar/topbarcontroller";
+import { fullscreenElement } from "../scripts/Admin/screen/Fullscreen";
+import { seetingsView } from "../scripts/Admin/topbar/topbarcontroller";
 import {
   sidebarController,
   sidebarView,
   mobileView,
-} from "../scripts/leftsidebar/layoutcontroller";
+} from "../scripts/Admin/leftsidebar/layoutcontroller";
 import {
   resizeController,
   customWidth,
-} from "../scripts/Layout/layoutonresize";
-import { discloseMenuBarOnHover } from "../scripts/rightsidebar/togglelink";
+} from "../scripts/Admin/Layout/layoutonresize";
+import { discloseMenuBarOnHover } from "../scripts/Admin/rightsidebar/togglelink";
 
 export default {
   name: "Admin",

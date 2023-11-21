@@ -27,8 +27,10 @@
 import {
   mobileView,
   sidebarView,
-} from "../../scripts/leftsidebar/layoutcontroller";
-import { seetingsView } from "../../scripts/topbar/topbarcontroller";
+} from "../../../scripts/Admin/leftsidebar/layoutcontroller";
+
+
+import {seetingsView} from "../../../scripts/Admin/topbar/topbarcontroller"
 
 export default {
   name: "Logo",

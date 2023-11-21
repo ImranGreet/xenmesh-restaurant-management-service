@@ -316,13 +316,17 @@
 </template>
 
 <script>
-import { settingsViewToggler } from "../../scripts/topbar/topbarcontroller";
+import { settingsViewToggler } from "../../../scripts/Admin/topbar/topbarcontroller";
 import {
   setTopbarColor,
   foundColor,
   topbarDefault,
-} from "../../scripts/Settings/topbar";
-import Toogleswitch from "../Utilities/Toogleswitch.vue";
+} from "../../../scripts/Admin/Settings/topbar";
+
+
+
+
+import Toogleswitch from "../../../components/Utilities/Toogleswitch.vue";
 import Settingicon from "./Settingicon.vue";
 import Settingtitle from "./Settingtitle.vue";
 /*heroicons*/

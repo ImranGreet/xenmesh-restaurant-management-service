@@ -33,15 +33,16 @@
 </template>
 
 <script>
-import Logo from "../components/Topbar/Logo.vue";
-import Userprofile from "../components/Profile/Userprofile.vue";
-import Menu from "../components/Righsidebar/Menu.vue";
+import Logo from "../components/Admin/Topbar/Logo.vue";
+import Userprofile from "../components/Admin/Profile/Userprofile.vue";
+import Menu from "../components/Admin/Righsidebar/Menu.vue";
 
-import {
-  mobileView,
-  sidebarView,
-} from "../scripts/leftsidebar/layoutcontroller";
-import useLeftSideBarRouterLink from "../scripts/rightsidebar/menuitems";
+
+import {mobileView,sidebarView} from "../scripts/Admin/leftsidebar/layoutcontroller"
+
+import useLeftSideBarRouterLink from "../scripts/Admin/rightsidebar/menuitems"
+
+
 
 export default {
   name: "Rightsidebar",

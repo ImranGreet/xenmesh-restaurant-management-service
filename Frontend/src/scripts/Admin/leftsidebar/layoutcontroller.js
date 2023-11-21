@@ -1,6 +1,9 @@
 import { ref } from "vue";
-import { seetingsView } from "../topbar/topbarcontroller";
-import { ulLinkCloser } from "../rightsidebar/togglelink";
+
+import {seetingsView} from "../../../scripts/Admin/topbar/topbarcontroller";
+
+import {ulLinkCloser} from "../../../scripts/Admin/rightsidebar/togglelink"
+
 
 const sidebarView = ref(true);
 const mobileView = ref(false);
@@ -42,9 +45,9 @@ window.addEventListener("resize", function () {
 });
 
 export {
-  sidebarController,
   sidebarView,
   mobileView,
-  sidebarNavTextController,
   sidebarNavigations,
+  sidebarController,
+  sidebarNavTextController,
 };

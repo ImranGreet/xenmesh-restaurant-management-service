@@ -31,13 +31,19 @@ import { ref } from "vue";
 import {
   tabcontroller,
   activeIndex,
-} from "../../scripts/Settings/authoritysetting";
+} from "../../../scripts/Admin/Settings/authoritysetting";
 
-import Settingicon from "../../components/Auth/Settingicon.vue";
-import Shoplogo from "../../components/Auth/Shoplogo.vue";
-import UserProfile from "../../components/Auth/UserProfile.vue";
-import ContactDetails from "../../components/Auth/ContactDetails.vue";
-import Tab from "../../components/Utilities/Tab.vue";
+
+
+import Settingicon from "../../../components/Admin/Auth/Settingicon.vue";
+import Shoplogo from "../../../components/Admin/Auth/Shoplogo.vue";
+import UserProfile from "../../../components/Admin/Auth/UserProfile.vue";
+import ContactDetails from "../../../components/Admin/Auth/ContactDetails.vue";
+import Tab from "../../../components/Utilities/Tab.vue"
+
+
+
+
 
 export default {
   name: "Storesettingicons",

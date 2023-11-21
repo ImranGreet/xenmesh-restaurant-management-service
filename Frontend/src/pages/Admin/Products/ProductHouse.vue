@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Products from "../../components/Tables/Products.vue";
+import Products from "../../../components/Admin/Tables/Products/Productlist.vue";
 export default {
   name: "ProductHouse",
   components: {

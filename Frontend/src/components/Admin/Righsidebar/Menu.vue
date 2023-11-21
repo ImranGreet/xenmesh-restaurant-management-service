@@ -56,12 +56,16 @@
 import {
   sidebarNavigations,
   sidebarView,
-} from "../../scripts/leftsidebar/layoutcontroller";
+} from "../../../scripts/Admin/leftsidebar/layoutcontroller";
+
+
 import {
   routeToggling,
   mouseOutUlLinkCloser,
   mouseOverUlLinkDiscloser,
-} from "../../scripts/rightsidebar/togglelink";
+} from "../../../scripts/Admin/rightsidebar/togglelink";
+
+
 
 import {
   HomeIcon,

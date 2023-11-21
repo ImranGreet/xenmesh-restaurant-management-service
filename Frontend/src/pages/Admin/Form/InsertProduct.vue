@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AddProduct from "../../components/Form/AddProduct.vue";
+import AddProduct from "../../../components/Admin/Form/AddProduct.vue"
 export default {
   name: "InsertProduct",
   components: {

@@ -12,7 +12,7 @@
 
 <script>
 import { ref } from "vue";
-import { sidebarView } from "../../scripts/leftsidebar/layoutcontroller";
+import { sidebarView } from "../../../scripts/Admin/leftsidebar/layoutcontroller";
 
 export default {
   name: "Userprofile",

@@ -21,13 +21,7 @@
             name="icon"
             placeholder="Enter Icon Category" />
         </div>
-        <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Icon Image</label>
-          <input
-            type="file"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-600 rounded-lg px-4 py-2"
-            name="icon" />
-        </div>
+        <ProductImage/>
         <div class="px-2 py-1 w-full">
           <authsubmitBtn>Submit</authsubmitBtn>
         </div>
@@ -37,8 +31,14 @@
 </template>
 
 <script>
+import ProductImage from '../../../pages/Admin/Form/ProductImage.vue';
+
+
 export default {
   name: "AddProduct",
+  components:{
+    ProductImage
+  },
   setup() {
     return {};
   },
