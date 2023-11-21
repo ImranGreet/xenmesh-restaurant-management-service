@@ -3,12 +3,16 @@
     <div class="w-full">
       <ul class="flex justify-end items-center space-x-4">
         <li>
-          <form class="inline-bloc">
+          <form class="inline-block relative">
             <input
               type="text"
               name=""
               id=""
-              class="px-2 py-1 text-start pl-12 rounded-lg border border-gray-300 focus:outline-none" />
+              class="px-2 py-1 text-start pl-8 rounded-full border border-gray-300 focus:outline-none" />
+            <MagnifyingGlassIcon class="w-4 h-4 absolute top-2 left-3"/>
+            <button class="absolute top-2 right-3 hidden">
+              <XMarkIcon class="w-4 h-4 border border-gray-700 text-red-500 rounded-full "/>
+            </button>
           </form>
         </li>
         <li>
@@ -36,7 +40,13 @@
 </template>
 
 <script>
+import { MagnifyingGlassIcon,XMarkIcon } from '@heroicons/vue/24/solid';
+
 export default {
   name: "Firsttopbar",
+  components:{
+    MagnifyingGlassIcon,
+    XMarkIcon
+  }
 };
 </script>

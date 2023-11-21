@@ -34,9 +34,12 @@ import {
   faComment,
   faCircleUser,
   faX,
+  
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faBell, faCreditCard } from "@fortawesome/free-regular-svg-icons";
+import { faBell, faCreditCard} from "@fortawesome/free-regular-svg-icons";
+import { faFacebook ,faTwitter,faYoutube,faInstagram} from "@fortawesome/free-brands-svg-icons";
+
 
 /* add icons to the library */
 library.add(
@@ -55,7 +58,9 @@ library.add(
   faCreditCard,
   faComment,
   faCircleUser,
-  faX
+  faX,
+  faFacebook,
+  faTwitter,faYoutube,faInstagram
 );
 
 const app = createApp(App);
