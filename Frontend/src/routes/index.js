@@ -43,6 +43,47 @@ const routes = [
         name: "insert stuff",
         component: () => import("../pages/Admin/Form/InsertStuff.vue"),
       },
+      /*start expense*/
+      {
+        path:"expenses",
+        name:"expense",
+        component:()=>import("../pages/Admin/Expense/Expenselist.vue"),
+      },
+      {
+        path:"expenses-types",
+        name:"expense types",
+        component:()=>import("../pages/Admin/Expense/ExpenseTypeList.vue"),
+      },
+      /*end expense*/
+     /*order start*/
+     {
+      path:"order-list",
+      name:"order house",
+      component:()=>import("../pages/Admin/Order/OrderHouse.vue")
+     },
+     {
+      path:"inkitchen",
+      name:"orderin_kitchen",
+      component:()=>import("../pages/Admin/Order/InKitchen.vue")
+     },
+     {
+      path:"website",
+      name:"weborder",
+      component:()=>import("../pages/Admin/Order/PublicOrder.vue")
+     },
+     {
+      path:"completed-order",
+      name:"completed",
+      component:()=>import("../pages/Admin/Order/Completed.vue")
+     },
+     /*order end*/ 
+    /*stuff start*/
+    {
+      path:"stuff",
+      name:"stuff",
+      component:()=>import("../pages/Admin/Stuff/Stufflist.vue")
+     },
+    /*stuff end*/  
     ],
   },
   {
