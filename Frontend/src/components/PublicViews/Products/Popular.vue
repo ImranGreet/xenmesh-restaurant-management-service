@@ -1,17 +1,17 @@
 <template>
   <div
-    class="w-full bg-inherit max-w-md shadow-sm lg:hover:shadow-2xl lg:hover:shadow-slate-800/20 rounded-xl overflow-hidden border border-gray-500/10">
-    <div class="w-full h-36 flex justify-between items-center space-x-3">
+    class="w-full bg-inherit border border-gray-400/10 sapce-y-2 max-w-lg shadow-sm shadow-slate-200 rounded-2xl lg:hover:shadow-lg overflow-hidden lg:hover:delay-500 lg:hover:duration-300 lg:hover:ease-in-out">
+    <div class="w-full h-auto flex justify-between items-center space-x-3">
       <div class="w-2/5 flex flex-col justify-center items-center rounded-t-xl">
         <img
           :src="productInformation.image"
           alt=""
-          class="w-full h-full rounded-t-xl object-cover" />
+          class="w-full h-32 rounded-l-xl object-cover" />
       </div>
-      <div class="w-3/5 h-full flex flex-col justify-between py-2">
-        <div class="py-2 space-y-2">
-          <div class="w-full flex justify-start items-center gap-x-0.5">
-            <h1 class="text-base tracking-wide font-semibold text-gray-800">
+      <div class="w-3/5 h-auto flex flex-col justify-between space-y-2">
+        
+          <div class="w-full flex justify-start items-center gap-x-2">
+            <h1 class="text-sm tracking-wide font-semibold text-gray-800">
               {{ productInformation.title }}
             </h1>
             <button
@@ -19,10 +19,10 @@
               !
             </button>
           </div>
-          <p class="text-sm tracking-wide leading-relaxed">
+          <p class="text-xs tracking-wide leading-relaxed">
             {{ productInformation.description }}
           </p>
-        </div>
+        
 
         <div class="w-full flex justify-between items-center px-2">
           <Price>${{ productInformation.price }}</Price>
@@ -48,11 +48,11 @@ export default {
       title: "Pear Salad Drinks",
       price: 20,
       image:
-        "https://images.unsplash.com/photo-1506395308321-904a71783d60?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://demo.foodking.dev/storage/48/conversions/vegan_hum-burger_with_cheese-thumb.png",
       description:
-        "Enjoy the sweet pickings from the fruit trees around our new home. ",
+        "With a side of fried rice or supreme soy noodles, and steamed chi. ",
       composition:
-        "Slid my cart over for checkout, the attendant peeked inside and said “having a party, eh?” Indeed. Wine, cheese, crackers and berries. What more could a party ask for?",
+        "Slid my cart over for checkout, the attendant peeked inside and said  ",
     });
     return {
       productInformation,

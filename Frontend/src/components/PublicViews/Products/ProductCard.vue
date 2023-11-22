@@ -1,15 +1,15 @@
 <template>
   <div
-    class="w-full bg-inherit sapce-y-2 max-w-xs shadow-xl shadow-slate-200 rounded-xl overflow-hidden">
-    <div class="w-full flex flex-col justify-center items-center rounded-t-xl">
+    class="w-full bg-inherit sapce-y-2 max-w-lg shadow-sm shadow-slate-200 rounded-2xl lg:hover:shadow-lg overflow-hidden lg:hover:delay-500 lg:hover:duration-300 lg:hover:ease-in-out">
+    <div class="w-full flex flex-col justify-center items-center rounded-t-2xl">
       <img
         :src="productInformation.image"
         alt=""
-        class="w-full h-48 rounded-t-xl object-cover" />
+        class="w-full h-[182px] rounded-t-xl object-cover" />
     </div>
-    <div class="space-y-2 py-4">
+    <div class="space-y-2 py-4 px-3">
       <div class="py-2 space-y-2">
-        <div class="w-full flex justify-start items-center gap-x-0.5">
+        <div class="w-full flex justify-start items-center gap-x-2">
           <h1 class="text-base tracking-wide font-semibold text-gray-800">
             {{ productInformation.title }}
           </h1>
@@ -23,7 +23,7 @@
         </p>
       </div>
 
-      <div class="w-full flex justify-between items-center px-2">
+      <div class="w-full flex justify-between items-center ">
         <Price>${{ productInformation.price }}</Price>
         <addToCart />
       </div>
@@ -46,9 +46,9 @@ export default {
       title: "Pear Salad Drinks",
       price: 20,
       image:
-        "https://images.unsplash.com/photo-1506395308321-904a71783d60?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://demo.foodking.dev/storage/70/conversions/mix_vegetables_salad-cover.png",
       description:
-        "Enjoy the sweet pickings from the fruit trees around our new home. It’s been a renovation nightmare, but this bounty may be enough to make it okay",
+        "Enjoy the sweet pickings from the fruit trees around our new home. It’s been a renovation nightmare.",
       composition:
         "Slid my cart over for checkout, the attendant peeked inside and said “having a party, eh?” Indeed. Wine, cheese, crackers and berries. What more could a party ask for?",
     });
