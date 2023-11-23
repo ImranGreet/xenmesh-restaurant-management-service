@@ -34,6 +34,8 @@ import {
   faComment,
   faCircleUser,
   faX,
+  faTableCells,
+  faBarsProgress
   
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -60,7 +62,11 @@ library.add(
   faCircleUser,
   faX,
   faFacebook,
-  faTwitter,faYoutube,faInstagram
+  faTwitter,
+  faYoutube,
+  faInstagram,
+  faTableCells,
+  faBarsProgress
 );
 
 const app = createApp(App);

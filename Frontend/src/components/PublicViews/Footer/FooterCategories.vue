@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full space-y-3">
+  <div class="w-full space-y-5">
     <h1 class="text-xl tracking-wide leading-relaxed font-semibold">
       {{ subCat }}
     </h1>
-    <ul class="w-full flex flex-col justify-between items-start space-y-4">
+    <ul class="w-full flex flex-col justify-between items-start">
       <li v-for="(category, index) in categoryStore" :key="index">
         <router-link to="#" class="lg:hover:underline lg:hover:underline-offset-8">
           {{ category.subcategoryLabel }}

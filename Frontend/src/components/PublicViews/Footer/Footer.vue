@@ -1,31 +1,35 @@
 <template>
-  
-
-  <section >
-    <div class="w-full bg-gray-200 grid grid-cols-2 xl:grid-cols-4  py-5 px-8">
-      <div class="w-full " v-for="(cat, index) in categories" :key="index">
+  <footer class="w-full bg-inherit space-y-6">
+   
+       <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-10 py-10">
         <FooterCategories 
+        
+        v-for="(cat, index) in categories" :key="index"
           :subCategory="cat.label"
           :categories="cat.subcategories" />
-      </div>
-    </div>
-    <div class="w-full flex flex-col md:flex-row justify-between items-center bg-gray-800 py-8 px-8">
+       </div>
+      
+    <div class="w-full flex flex-col md:flex-row justify-between items-center py-8 ">
        <Social/>
        <Terms/>
     </div>
-  </section>
+
+  </footer>
 </template>
 
 <script>
+import Footer from '../../Admin/Footer/Footer.vue';
 import FooterCategories from "./FooterCategories.vue";
 import Social from "./Social.vue";
 import Terms from "./Terms.vue";
 
-
 export default {
   name: "Footer",
   components: {
-    FooterCategories,Terms,Social
+    FooterCategories,
+    Terms,
+    Social,
+    Footer
   },
   setup() {
     const categories = [
