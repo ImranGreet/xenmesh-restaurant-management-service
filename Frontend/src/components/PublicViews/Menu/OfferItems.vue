@@ -26,7 +26,7 @@
 
 <script>
 import ProductCard from '../Products/ProductCard.vue';
-
+import { ref } from 'vue';
 export default {
       name:"OfferItems",
       components:{

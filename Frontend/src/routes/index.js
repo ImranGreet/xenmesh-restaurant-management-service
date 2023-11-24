@@ -100,6 +100,16 @@ const routes = [
         path:"/menu/:category",
         name:"category",
         component:()=>import("../pages/Public/Menu.vue"),
+      },
+      {
+        path:"/offer",
+        name:"offer",
+        component:()=>import("../pages/Public/OfferInCat.vue"),
+      },
+      {
+        path:"/offeritems/:cat",
+        name:"catoffer",
+        component:()=>import("../pages/Public/RunningOffer.vue"),
       }
     ],
   },
