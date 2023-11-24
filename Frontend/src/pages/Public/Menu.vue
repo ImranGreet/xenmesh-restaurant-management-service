@@ -1,10 +1,18 @@
 <template>
-  
+  <div class="w-full bg-inherit">
+      <MeunItemsByCat/>
+  </div>
 </template>
 
 <script>
-export default {
+import MeunItemsByCat from '../../components/PublicViews/Menu/MeunItemsByCat.vue';
 
+
+export default {
+      name:"Menu",
+      components:{
+            MeunItemsByCat
+      }
 }
 </script>
 

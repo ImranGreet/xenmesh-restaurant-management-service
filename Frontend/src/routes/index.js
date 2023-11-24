@@ -96,6 +96,11 @@ const routes = [
         name: "public home",
         component: () => import("../pages/Public/Index.vue"),
       },
+      {
+        path:"/menu/:category",
+        name:"category",
+        component:()=>import("../pages/Public/Menu.vue"),
+      }
     ],
   },
 ];
