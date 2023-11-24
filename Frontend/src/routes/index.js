@@ -54,6 +54,11 @@ const routes = [
         name:"expense types",
         component:()=>import("../pages/Admin/Expense/ExpenseTypeList.vue"),
       },
+      {
+        path:"transaction",
+        name:"banktransaction",
+        component:()=>import("../pages/Admin/Accounce/Transaction.vue"),
+      },
       /*end expense*/
      /*order start*/
      {

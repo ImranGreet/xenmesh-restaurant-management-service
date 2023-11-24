@@ -23,6 +23,7 @@
         </li>
         <li>
           <button
+          @click="showOrderItems()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white">
             Order
           </button>
@@ -42,11 +43,19 @@
 <script>
 import { MagnifyingGlassIcon,XMarkIcon } from '@heroicons/vue/24/solid';
 
+import { showOrderItems } from '../../../scripts/public/Utility';
+
+
 export default {
   name: "Firsttopbar",
   components:{
     MagnifyingGlassIcon,
     XMarkIcon
+  },
+  setup() {
+    return {
+      showOrderItems
+    }
   }
 };
 </script>

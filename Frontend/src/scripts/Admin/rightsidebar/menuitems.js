@@ -118,16 +118,25 @@ const useLeftSideBarRouterLink = ref([
         id: 1,
         params: "Vendor Payments",
         uri: "#",
+        name:"payments"
       },
       {
         id: 2,
         params: "Invoices",
         uri: "#",
+        name:"purchase Invoce",
       },
       {
         id: 3,
         params: "Purchase Orders",
         uri: "#",
+        name:"purchase",
+      },
+      {
+        id: 4,
+        params: "transaction",
+        uri: "#",
+        name:"transaction"
       },
     ],
   },

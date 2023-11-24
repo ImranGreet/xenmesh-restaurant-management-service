@@ -9,7 +9,7 @@
               class="w-full h-24 rounded-l-xl object-cover" />
           </div>
          
-          <div class="w-2/3 h-auto flex items-center justify-between px-2">
+          <div class="w-2/3 h-auto flex items-center justify-between pr-2">
             <div class="w-full space-y-3">
                   <h1 class="text-sm tracking-wide font-semibold text-gray-800">
                     {{ productInformation.title }}

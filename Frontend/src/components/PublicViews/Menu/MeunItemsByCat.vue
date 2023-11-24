@@ -9,13 +9,13 @@
                   </div>
       
                   <div class="space-x-2">
-                        <button><font-awesome-icon icon="fa-solid fa-bars-progress" /></button>
-                        <button><font-awesome-icon icon="fa-solid fa-table-cells" /></button>
+                        <button @click="showGridItems()"><font-awesome-icon icon="fa-solid fa-bars-progress" /></button>
+                        <button @click="showGridItems()"><font-awesome-icon icon="fa-solid fa-table-cells" /></button>
                   </div>
                </div>
    
                <div
-                 class="w-full bg-inherit border border-gray-400/10 sapce-y-2   grid grid-cols-2 xl:grid-cols-4 gap-6">
+                 class="w-full bg-inherit border border-gray-400/10 sapce-y-2   grid grid-cols-2  gap-6" :class="{'xl:grid-cols-3':gridView,'xl:grid-cols-4':!gridView}">
                   
                    <ProductCard v-for="product in itemsByCategory.foodItems" :key="product.id" />
               
@@ -27,6 +27,8 @@
    <script>
 import { ref } from 'vue'
 import ProductCard from '../Products/ProductCard.vue';
+import { gridView, showGridItems } from '../../../scripts/public/Utility';
+
    
    export default {
    name:"Menuitemsbycat",
@@ -76,7 +78,9 @@ import ProductCard from '../Products/ProductCard.vue';
       });
 
       return {
-            itemsByCategory
+            itemsByCategory,
+            showGridItems,
+            gridView
       }
    }
    }
