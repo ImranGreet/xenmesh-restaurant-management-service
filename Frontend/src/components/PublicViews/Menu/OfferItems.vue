@@ -1,7 +1,7 @@
 <template>
       <div class="bg-inherit w-full space-y-5">
             <div class="w-full flex flex-col justify-between items-center">
-                  <div class="w-full flex justify-between  items-center  py-3">
+                  <div class="w-full flex justify-between  items-center  py-5">
                      <div class="text-center">
                            <h1 class="text-gray-800 tracking-wider leading-7 text-xl font-semibold">
                                  <slot>{{itemsByCategory.category}}</slot>
@@ -15,7 +15,7 @@
                   </div>
       
                   <div
-                    class="w-full bg-inherit border border-gray-400/10 sapce-y-2   grid grid-cols-2 xl:grid-cols-4 gap-6">
+                    class="w-full bg-inherit  sapce-y-2   grid grid-cols-2 xl:grid-cols-4 gap-6">
                      
                       <ProductCard v-for="product in itemsByCategory.foodItems" :key="product.id" />
                  

@@ -8,14 +8,14 @@
                         </h1>
                   </div>
       
-                  <div class="space-x-2">
+                  <div class="space-x-2 hidden lg:block">
                         <button @click="showGridItems()"><font-awesome-icon icon="fa-solid fa-bars-progress" /></button>
                         <button @click="showGridItems()"><font-awesome-icon icon="fa-solid fa-table-cells" /></button>
                   </div>
                </div>
    
                <div
-                 class="w-full bg-inherit border border-gray-400/10 sapce-y-2   grid grid-cols-2  gap-6" :class="{'xl:grid-cols-3':gridView,'xl:grid-cols-4':!gridView}">
+                 class="w-full bg-inherit  sapce-y-2   grid grid-cols-1 sm:grid-cols-2  gap-6" :class="{'xl:grid-cols-3':gridView,'xl:grid-cols-4':!gridView}">
                   
                    <ProductCard v-for="product in itemsByCategory.foodItems" :key="product.id" />
               

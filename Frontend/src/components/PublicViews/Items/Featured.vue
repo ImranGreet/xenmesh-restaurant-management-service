@@ -4,7 +4,7 @@
         <div class="text-start">
             <h1 class="text-xl tracking-wide leading-relaxed">Featured Items</h1>
         </div>
-        <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 xl:gap-8">
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>

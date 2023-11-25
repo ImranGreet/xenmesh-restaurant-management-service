@@ -1,8 +1,8 @@
 <template>
     <div class="w-full bg-inherit">
-        <div class="w-full flex justify-between items-center space-x-8">
-              <router-link to="#" class="w-full"><Offer/></router-link>
-              <router-link to="#" class="w-full"><Offer/></router-link>
+        <div class="w-full flex flex-col md:flex-row justify-between items-center mt-6 gap-y-6 sm:gap-y-0 gap-x-0 sm:gap-x-6">
+              <router-link :to="{name:'catoffer',params:{cat:'vegetables'}}" class="w-full"><Offer/></router-link>
+              <router-link :to="{name:'catoffer',params:{cat:'appetizer'}}"  class="w-full"><Offer/></router-link>
         </div>
      </div>
       

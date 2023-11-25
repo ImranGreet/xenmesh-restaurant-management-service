@@ -2,14 +2,14 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: "/admin",
+    name: "admin-home",
     component: () => import("../layouts/Admin.vue"),
 
     children: [
       {
-        path: "/",
-        name: "home",
+        path: "/admin",
+        name: "admin",
         component: () => import("../pages/Admin/Dashboard/Dashboard.vue"),
       },
       {
@@ -92,13 +92,12 @@ const routes = [
     ],
   },
   {
-    path: "/public",
-    name: "public",
+    path: "/",
     component: () => import("../layouts/Public.vue"),
     children: [
       {
-        path: "/public",
-        name: "public home",
+        path: "/",
+        name: "public-home",
         component: () => import("../pages/Public/Index.vue"),
       },
       {

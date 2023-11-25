@@ -1,10 +1,12 @@
 <template>
   
       <div class="w-full bg-inherit">
-          <div class="w-full flex flex-col lg:flex-row flex-wrap justify-between items-center gap-8 ">
+            <div class="text-start mt-5">
+                  <h1 class="text-gray-800 tracking-wider leading-7 text-xl font-semibold">
+                        Offer In Category
+                  </h1>
+            </div>
              <OfferAd/>
-             <OfferAd/>
-          </div>
       </div>
     </template>
     
