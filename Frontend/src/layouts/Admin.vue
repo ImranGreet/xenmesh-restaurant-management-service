@@ -1,5 +1,5 @@
 <template>
-  <section ref="fullscreenElement" class="h-screen bg-gray-50">
+  <section ref="fullscreenElement" class="h-screen bg-gray-100">
     <Topbardesktop
       class="float-right top-0 right-0 bg-white w-full static px-2"
       :class="{

@@ -1,6 +1,6 @@
 <template>
   <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
-  <TotalSales />
+ 
 </template>
 
 <script>
