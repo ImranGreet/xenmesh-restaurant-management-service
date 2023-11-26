@@ -7,8 +7,8 @@
           </div>
         </div>
         <!-- report annual -->
-         <div class="w-full border border-slate-500/20 shadow-sm py-5">
-          <IncomeExpenseMonthlyReport class="w-full"/>
+         <div class="w-full border border-slate-500/20 shadow-sm py-5 ">
+          <IncomeExpenseMonthlyReport />
          </div>
         <!-- report annual -->
         <!-- top selling Product -->

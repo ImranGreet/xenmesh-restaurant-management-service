@@ -10,6 +10,12 @@ import App from "./App.vue";
 /*Global Components*/
 import Submitbutton from "../src/components/Admin/Auth/Submitbutton.vue";
 import FormHeadLine from "../src/components/Admin/Auth/FormHeadLine.vue";
+
+// import DeleteBtn from "../src/components/Admin/Utilities/actionButtons/DeleteBtn.vue";
+// import EditBtn from "../src/components/Admin/Utilities/actionButtons/EditBtn.vue";
+// import publishBtn from "../src/components/Admin/Utilities/actionButtons/PublishedBtn.vue";
+// import publishNotBtn from "../src/components/Admin/Utilities/actionButtons/PublishedNot.vue";
+
 /*Global Components*/
 
 /* import the fontawesome core */
