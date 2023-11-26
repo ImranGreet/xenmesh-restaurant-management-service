@@ -48,9 +48,9 @@ export default {
         ],
         datasets: [
           {
-            data: [40, 20, 12, 20, 30, 50, 60, 80, 100, 45, 32, 48.5],
+            data: [40, 20, 12, 20, 30, 50, 60, 80, 85, 45, 32, 48.5],
             label: "Monthly Income",
-            backgroundColor: ["#0891b2", "#d1d5db"],
+            backgroundColor: ["#65a30d"],
           },
         ],
       },

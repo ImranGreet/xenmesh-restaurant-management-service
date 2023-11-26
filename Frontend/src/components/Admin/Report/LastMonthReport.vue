@@ -1,5 +1,5 @@
 <template>
-   <div class="w-full grid grid-cols-2 gap-4 px-2 py-7">
+   <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 px-2 py-7">
       <Card v-for="record in lastMonthReport" 
       :key="record.id" :lastMonthRecord="record"/>
    </div>

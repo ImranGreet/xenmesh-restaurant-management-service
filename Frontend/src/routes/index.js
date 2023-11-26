@@ -23,8 +23,8 @@ const routes = [
         component: () => import("../pages/Admin/Products/ProductHouse.vue"),
       },
       {
-        path: "insert-product",
-        name: "insert product",
+        path: "insert_product",
+        name: "insert_product",
         component: () => import("../pages/Admin/Form/InsertProduct.vue"),
       },
       {
@@ -62,8 +62,13 @@ const routes = [
       /*end expense*/
      /*order start*/
      {
+      path:"create_order",
+      name:"order_creation",
+      component:()=>import("../pages/Admin/Order/OrderCreation.vue")
+     },
+     {
       path:"order-list",
-      name:"order house",
+      name:"order_house",
       component:()=>import("../pages/Admin/Order/OrderHouse.vue")
      },
      {
@@ -77,7 +82,7 @@ const routes = [
       component:()=>import("../pages/Admin/Order/PublicOrder.vue")
      },
      {
-      path:"completed-order",
+      path:"completed_order",
       name:"completed",
       component:()=>import("../pages/Admin/Order/Completed.vue")
      },
@@ -89,8 +94,33 @@ const routes = [
       component:()=>import("../pages/Admin/Stuff/Stufflist.vue")
      },
     /*stuff end*/  
+    /*insertions and deletations*/
+    {
+      path:"/add_category",
+      name:"add_cat",
+      component:()=>import("../pages/Admin/Form/AddCategories.vue"),
+    },
+    {
+      path:"/add_role",
+      name:"add_role",
+      component:()=>import("../pages/Admin/Form/InsertRole.vue"),
+    },
+
+    {
+      path:"/add_stuff",
+      name:"add_stuff",
+      component:()=>import("../pages/Admin/Form/InsertStuff.vue"),
+    },
+    {
+      path:"/add_role",
+      name:"add_role",
+      component:()=>import("../pages/Admin/Form/InsertRole.vue"),
+    },
+    
+
     ],
   },
+
   {
     path: "/",
     component: () => import("../layouts/Public.vue"),

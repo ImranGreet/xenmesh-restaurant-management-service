@@ -6,7 +6,7 @@
       'bg-gray-200 shadow-md  w-[30%] xl:w-[15%]': !sidebarView && !mobileView,
       'bg-gray-200 shadow-md w-[10%] xl:w-[5%]': sidebarView && !mobileView,
     }">
-    <router-link to="#" class="w-full flex justify-center items-center">
+    <router-link :to="{name:'admin'}" class="w-full flex justify-center items-center">
       <div class="flex justify-center items-center -space-x-2">
         <div
           class="mix-blend-multiply bg-blue-400 w-5 h-5 md:w-6 md:h-6 rounded-full animate-pulse"></div>

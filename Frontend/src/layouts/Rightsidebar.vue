@@ -15,8 +15,13 @@
       <router-link to="#" class="w-full px-3 py-2 space-y-4">
         <Userprofile />
       </router-link>
+
+    
+        
+      
       <div
         class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative">
+        <router-link :to="{name:'order_creation'}" class="w-full px-3 py-5 ">Create Order</router-link>
         <div
           v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
           :key="index">

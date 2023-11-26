@@ -34,6 +34,7 @@
     </button>
 
     <XyzTransition appear xyz="fade rotate-right ease-out-back">
+      
       <ul
         :id="`routes-` + DropdownRouterLinkId"
         class="space-y-2 text-start gap-y-0.5 w-full px-8 hidden ul-link square">
@@ -42,7 +43,7 @@
           :key="track.id"
           class="lg:hover:bg-gray-100/80 w-full">
           <router-link
-            to="#"
+            :to="{name:track.name}"
             class="w-full block py-2 px-2 capitalize text-base tracking-wide">
             {{ track.params }}</router-link
           >

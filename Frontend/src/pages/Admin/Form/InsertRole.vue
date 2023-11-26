@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import AddRole from "../../components/Form/AddRole.vue";
+import AddRole from '../../../components/Admin/Form/AddRole.vue';
+
 
 export default {
   name: "InsertRole",

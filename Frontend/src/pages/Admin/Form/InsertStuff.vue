@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import AddStuff from "../../components/Form/AddStuff.vue";
+import AddStuff from '../../../components/Admin/Form/AddStuff.vue';
+
 
 export default {
   name: "InsertStuff",

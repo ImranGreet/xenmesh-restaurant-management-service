@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import InsertCategories from "../../components/Form/InsertCategories.vue";
+import InsertCategories from '../../../components/Admin/Form/InsertCategories.vue';
+
 
 export default {
   name: "InsertProduct",

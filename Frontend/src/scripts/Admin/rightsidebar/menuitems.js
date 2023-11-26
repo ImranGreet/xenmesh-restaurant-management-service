@@ -1,59 +1,7 @@
 import { ref } from "vue";
 
 const useLeftSideBarRouterLink = ref([
-  {
-    id: 1,
-    name: "Dashboard",
-    largeIcon: "HomeIcon",
 
-    paths: [
-      {
-        id: 1,
-        params: "my account",
-        uri: "#",
-      },
-      {
-        id: 2,
-        params: "settings",
-        uri: "#",
-      },
-      {
-        id: 3,
-        params: "support",
-        uri: "#",
-      },
-      {
-        id: 4,
-        params: "balance",
-
-        uri: "#",
-      },
-      {
-        id: 5,
-        params: "bill sheet",
-        uri: "#",
-      },
-    ],
-  },
-
-  {
-    id: 2,
-    name: "Income",
-    largeIcon: "BanknotesIcon",
-
-    paths: [
-      {
-        id: 1,
-        params: "Sales",
-        uri: "#",
-      },
-      {
-        id: 2,
-        params: "Other Revunue",
-        uri: "#",
-      },
-    ],
-  },
 
   {
     id: 3,
@@ -63,81 +11,33 @@ const useLeftSideBarRouterLink = ref([
     paths: [
       {
         id: 1,
-        params: "Food Costs",
+        params: "Expenses",
         uri: "#",
+        name:"expense"
       },
       {
         id: 2,
-        params: "Labor Costs",
+        params: "expense types",
         uri: "#",
+        name:"expense types"
       },
-      {
-        id: 3,
-        params: "Rent and Lease",
-        uri: "#",
-      },
-      {
-        id: 4,
-        params: "Utilities",
-        uri: "#",
-      },
-      {
-        id: 5,
-        params: "Supplies",
-        uri: "#",
-      },
-      {
-        id: 6,
-        params: "Marketing and Advertising",
-        uri: "#",
-      },
-      {
-        id: 7,
-        params: "Maintenance and Repairs",
-        uri: "#",
-      },
-      {
-        id: 8,
-        params: "Insurance",
-        uri: "#",
-      },
-      {
-        id: 9,
-        params: "Taxes",
-        uri: "#",
-      },
+      
     ],
   },
+
   {
     id: 4,
-    name: "Accounts Payable",
+    name: "Accounts ",
     largeIcon: "CalculatorIcon",
 
     paths: [
       {
         id: 1,
-        params: "Vendor Payments",
-        uri: "#",
-        name:"payments"
-      },
-      {
-        id: 2,
-        params: "Invoices",
-        uri: "#",
-        name:"purchase Invoce",
-      },
-      {
-        id: 3,
-        params: "Purchase Orders",
-        uri: "#",
-        name:"purchase",
-      },
-      {
-        id: 4,
         params: "transaction",
         uri: "#",
-        name:"transaction"
+        name:"banktransaction"
       },
+      
     ],
   },
 
@@ -149,19 +49,11 @@ const useLeftSideBarRouterLink = ref([
     paths: [
       {
         id: 1,
-        params: "settingassets",
+        params: "settingasset",
         uri: "settingassets",
+        name:"setting"
       },
-      {
-        id: 2,
-        params: "Controller Icon",
-        uri: "#",
-      },
-      {
-        id: 3,
-        params: "Owner Profile",
-        uri: "#",
-      },
+     
     ],
   },
   {
@@ -172,21 +64,99 @@ const useLeftSideBarRouterLink = ref([
     paths: [
       {
         id: 1,
-        params: "Running Products",
-        uri: "settingassets",
+        params: " Products",
+        uri: "products",
+        name:"products house"
       },
       {
         id: 2,
-        params: "Treanding Products",
-        uri: "#",
+        params: "Add Products",
+        uri: "insert_product",
+        name:"insert_product"
+      },
+      
+
+    ],
+  },
+
+  {
+    id: 7,
+    name: "Order",
+    largeIcon: "CalculatorIcon",
+
+    paths: [
+      {
+        id: 1,
+        params: "Order",
+        uri: "order-list",
+        name:"order_house"
       },
       {
+        id: 2,
+        params: "Order In Kitchen",
+        uri: "inkitchen",
+        name:"orderin_kitchen"
+      },
+
+      {
         id: 3,
-        params: "Upcomming Products",
-        uri: "#",
+        params: "Order from Web",
+        uri: "website",
+        name:"weborder"
+      },
+      {
+        id: 4,
+        params: "Completed Order",
+        uri: "completed_order",
+        name:"completed"
       },
     ],
   },
+
+  {
+    id: 8,
+    name: "Stuff And Role",
+    largeIcon: "CalculatorIcon",
+
+    paths: [
+      {
+        id: 1,
+        params: "stuff",
+        uri: "stuff",
+        name:"stuff"
+      },
+
+    ],
+  },
+  {
+    id: 9,
+    name: "Insert & Delete",
+    largeIcon: "CalculatorIcon",
+
+    paths: [
+      {
+        id: 1,
+        params: "Add Category",
+        uri: "add_category",
+        name:"add_cat"
+      },
+      {
+        id: 2,
+        params: "Add Stuff",
+        uri: "add_stuff",
+        name:"add_stuff"
+      },
+      {
+        id: 3,
+        params: "Add Role",
+        uri: "add_role",
+        name:"add_role"
+      },
+      
+
+    ],
+  },
+
 ]);
 
 export default useLeftSideBarRouterLink;
