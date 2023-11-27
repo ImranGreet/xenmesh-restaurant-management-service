@@ -1,10 +1,17 @@
 <template>
-      <div class="bg-white w-full">
-            <div class="p-2 w-full">
-                <div class="w-36 border border-grauy-200 rounded-sm">
+      <div class=" w-full">
+            <div class=" w-full">
+                <div class="max-w-sm  border border-grauy-200 rounded-md">
                   <div class="w-full flex flex-col justify-center items-start">
-                        <div class="w-full flex flex-col justify-center items-center">
-                              <img :src="itemImage" alt="">
+                        <div class="w-full flex flex-col justify-center items-center rounded-t-md">
+                              <img :src="itemImage" alt="" class="rounded-t-md" loading="lazy">
+                        </div>
+                        <!-- description -->
+                        <div class="space-y-1 bg-gray-100 text-gray-950 text-start w-full py-0.5 px-1">
+                                    <h1 class="text-base tracking-wider leading-relax ">Americano Coffe  
+                                          <span class=""><button class="bg-gray-700 text-white w-5 h-5 p-1 inline-flex flex-col justify-center items-center rounded-full">i</button></span>
+                                    </h1>
+                              <h3 class="text-base"><span class="pl-0.5">$</span> 450</h3>
                         </div>
                   </div>
                 </div>
