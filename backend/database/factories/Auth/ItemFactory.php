@@ -17,7 +17,9 @@ class ItemFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id'=>1,
+            'categories_id'=>1,
+            
         ];
     }
 }

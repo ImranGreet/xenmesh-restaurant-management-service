@@ -17,7 +17,11 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id'=>fake()->numberBetween(0,10),
+            'title' =>fake()->title(),
+            'category_thumbnail'=>fake()->image().IMG_PNG,
+            'status'=>0,
+            'discount'=>5,
         ];
     }
 }
