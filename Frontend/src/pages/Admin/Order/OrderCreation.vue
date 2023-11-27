@@ -4,10 +4,11 @@
     <div class="w-full flex justify-between">
         
         <div class=" lg:w-3/4 xl:w-4/5 flex justify-between">
-            <div class="w-1/2 space-y-3 ">
+            <div class="w-1/2 space-y-6 ">
                     <div class="w-full ">
                         <SelectCategory/>
                     </div>
+                    
                 <div class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[600px] overflow-y-scroll custom-overflowscroll rounded-md">
                     <button><AvailableItems/></button>
                     <button><AvailableItems/></button>
