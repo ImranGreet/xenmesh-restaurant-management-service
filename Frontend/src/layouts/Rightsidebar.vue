@@ -6,6 +6,7 @@
         'w-[30%] xl:w-[15%]': !mobileView && !sidebarView,
         'w-[10%] xl:w-[5%]': !mobileView && sidebarView,
       }" />
+      
     <div
       class="mt-[20px] md:mt-[45px] lg:mt-[48px] xl:mt-[45.5px] fixed float-right h-screen border-r-2 border-red-700/50"
       :class="{
@@ -17,11 +18,12 @@
       </router-link>
 
     
-        
-      
       <div
         class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative">
-        <router-link :to="{name:'order_creation'}" class="w-full px-3 py-5 ">Create Order</router-link>
+        <router-link :to="{name:'order_creation'}" class="w-full  py-5 ">
+           <font-awesome-icon icon="fa-solid fa-utensils" class="w-5 h-5 text-gary-900 tracking-wider text-3xl font-semibold " />
+            <span :class="{'inline-block':!sidebarView,'hidden':sidebarView}">Create Order</span>
+            </router-link>
         <div
           v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
           :key="index">

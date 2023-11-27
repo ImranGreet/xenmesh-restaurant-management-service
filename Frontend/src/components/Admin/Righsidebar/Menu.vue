@@ -32,10 +32,17 @@
         </ChevronDownIcon>
       </span>
     </button>
-
-    <XyzTransition appear xyz="fade rotate-right ease-out-back">
+   
       
-      <ul
+      <transition
+            enter-active-class="transition duration-200 ease-out"
+            enter-from-class="translate-y-1 opacity-0"
+            enter-to-class="translate-y-0 opacity-100"
+            leave-active-class="transition duration-150 ease-in"
+            leave-from-class="translate-y-0 opacity-100"
+            leave-to-class="translate-y-1 opacity-0"
+          >
+          <ul
         :id="`routes-` + DropdownRouterLinkId"
         class="space-y-2 text-start gap-y-0.5 w-full px-8 hidden ul-link square">
         <li
@@ -49,7 +56,8 @@
           >
         </li>
       </ul>
-    </XyzTransition>
+      </transition>
+    
   </div>
 </template>
 

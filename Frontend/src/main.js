@@ -42,12 +42,10 @@ import {
   faX,
   faTableCells,
   faBarsProgress,
-  
-  
-  
+  faUtensils
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faBell, faCreditCard} from "@fortawesome/free-regular-svg-icons";
+import { faBell, faCreditCard,} from "@fortawesome/free-regular-svg-icons";
 import { faFacebook ,faTwitter,faYoutube,faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 
@@ -74,7 +72,8 @@ library.add(
   faYoutube,
   faInstagram,
   faTableCells,
-  faBarsProgress
+  faBarsProgress,
+  faUtensils
 );
 
 const app = createApp(App);
