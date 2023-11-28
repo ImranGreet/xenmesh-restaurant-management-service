@@ -31,6 +31,12 @@
               </div>
 
 
+              <XyzTransition xyz="fade">
+                <div class="square" v-if="searchForm"></div>
+              </XyzTransition>
+              
+
+
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
 
@@ -517,6 +523,7 @@
                         </tbody>
                     </table>
                 </div>
+
                 <nav class="flex flex-col items-start justify-between p-4 space-y-3 md:flex-row md:items-center md:space-y-0" aria-label="Table navigation">
                     <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
                         Showing
