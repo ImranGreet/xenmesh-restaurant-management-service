@@ -10,6 +10,7 @@ import App from "./App.vue";
 /*Global Components*/
 import Submitbutton from "../src/components/Admin/Auth/Submitbutton.vue";
 import FormHeadLine from "../src/components/Admin/Auth/FormHeadLine.vue";
+import ShowButton from "../src/components/Utilities/FormUtility/ShowButton.vue"
 
 // import DeleteBtn from "../src/components/Admin/Utilities/actionButtons/DeleteBtn.vue";
 // import EditBtn from "../src/components/Admin/Utilities/actionButtons/EditBtn.vue";
@@ -82,6 +83,7 @@ app.use(router);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.component("authsubmitBtn", Submitbutton);
 app.component("formTitle", FormHeadLine);
+app.component("ShowButton", ShowButton);
 app.use(VueAnimXyz);
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));

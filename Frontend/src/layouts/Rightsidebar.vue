@@ -20,10 +20,11 @@
     
       <div
         class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative">
-        <router-link :to="{name:'order_creation'}" class="w-full  py-5 ">
+        <router-link :to="{name:'order_creation'}" class="w-full  h-5 flex items-center" :class="{'justify-center':!sidebarView,'justify-center':sidebarView}">
            <font-awesome-icon icon="fa-solid fa-utensils" class="w-5 h-5 text-gary-900 tracking-wider text-3xl font-semibold " />
-            <span :class="{'inline-block':!sidebarView,'hidden':sidebarView}">Create Order</span>
+            <span :class="{'inline-block text-xl ml-5':!sidebarView,'hidden':sidebarView}">Create Order</span>
             </router-link>
+            <span></span>
         <div
           v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
           :key="index">

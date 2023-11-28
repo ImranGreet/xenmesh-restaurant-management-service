@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-between items-center mt-5">
+  <div class="w-full flex flex-col justify-between items-center mt-5 space-y-3">
         <div class="w-full flex flex-col lg:flex-row justify-between items-center">
           <LastMonthReport class="w-full"/>
           <div class="w-full">
@@ -7,17 +7,17 @@
           </div>
         </div>
         <!-- report annual -->
-         <div class="w-full border border-slate-500/20 shadow-sm py-5 ">
+         <div class="w-full border border-inherit shadow-sm py-5 ">
           <IncomeExpenseMonthlyReport />
          </div>
         <!-- report annual -->
         <!-- top selling Product -->
-        <div class="w-full flex flex-col xl:flex-row justify-between items-center">
+        <div class="w-full h-full flex flex-col xl:flex-row justify-between items-center border border-inherit">
           <TopSellingProducts class="w-full xl:w-2/5"/>
-          <div class="w-full xl:w-1/5">
+          <div class="w-full h-full xl:w-1/5 border border-inherit">
             <TotalSales/>
           </div>
-          <CurrentWebOrder class="w-full xl:w-2/5"/>
+          <CurrentWebOrder class="w-full h-full xl:w-2/5"/>
         </div>
   </div>
 </template>
