@@ -156,6 +156,40 @@ const useLeftSideBarRouterLink = ref([
 
     ],
   },
+  {
+    id: 10,
+    name: "Stock",
+    largeIcon: "CalculatorIcon",
+
+    paths: [
+      {
+        id: 1,
+        params: "Add stock Category",
+        uri: "add_stock_category",
+        name:"add_stock_cat"
+      },
+      {
+        id: 2,
+        params: "Add Stock",
+        uri: "add_stock_store",
+        name:"add_stock_store"
+      },
+      {
+        id: 3,
+        params: "Add Unit",
+        uri: "add_unit",
+        name:"add_items_unit"
+      },
+      {
+        id: 4,
+        params: "Stocks",
+        uri: "stocks",
+        name:"stock_check"
+      },
+      
+
+    ],
+  },
 
 ]);
 

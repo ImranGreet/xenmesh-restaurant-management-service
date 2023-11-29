@@ -116,6 +116,27 @@ const routes = [
       name:"add_role",
       component:()=>import("../pages/Admin/Form/InsertRole.vue"),
     },
+    /*stocks*/
+    {
+      path:"/add_stock_category",
+      name:"add_stock_cat",
+      component :()=>import("../pages/Admin/Stock/AddStockCategory.vue"),
+    }, 
+    {
+      path:"/add_stock",
+      name:"add_stock_store",
+      component :()=>import("../pages/Admin/Stock/AddStockToStore.vue"),
+    }, 
+    {
+      path:"/add_unit",
+      name:"add_items_unit",
+      component :()=>import("../pages/Admin/Stock/AddItemUnit.vue"),
+    }, 
+    {
+      path:"/stocks",
+      name:"stock_check",
+      component :()=>import("../pages/Admin/Stock/StocksCheck.vue"),
+    }, 
     
 
     ],
