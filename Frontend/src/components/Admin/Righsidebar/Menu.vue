@@ -33,12 +33,7 @@
       </span>
     </button>
    
-      
-
-  
-    
-
-     
+         
       <ul
         :id="`routes-` + DropdownRouterLinkId"
         class="space-y-2 text-start gap-y-0.5 w-full px-8 hidden ul-link square">

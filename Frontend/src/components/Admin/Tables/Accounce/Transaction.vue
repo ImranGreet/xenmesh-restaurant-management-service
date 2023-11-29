@@ -4,19 +4,9 @@
               <div class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
 
                 
-                   
-                  
-                    <XyzTransition xyz="fade flip-left perspective-1">
-                        <div class="square" v-if="!searchForm">
                             <ShowButton @click="searchFormShower()" class="my-3 ml-2" :class="{'inline':!searchForm,'hidden':searchForm}">Search</ShowButton>
-                        </div>
-                      </XyzTransition>
-                      
-                      
-                      
-
-                <XyzTransition  xyz="fade ">
-                    <div class="square" v-if="searchForm">
+                       
+               
                         <div class="w-full flex flex-col py-3  bg-gary-800/50 lg:bg-gray-600/50 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4 relative" :class="{'':searchForm,'hidden':!searchForm}">
                             <div class="w-full lg:w-4/5 mx-auto border border-pink-500/30 rounded-lg py-5 px-5 shadow-sm shadow-white">
                                 <form class="w-full  flex flex-col lg:flex-row justify-between items-center gap-y-3 gap-x-0 lg:gap-x-3 lg:gap-y-0 ">
@@ -41,8 +31,7 @@
                             </div>
                             <button @click="searchFormShower()" class="w-8 h-8 flex flex-col justify-center items-center absolute top-2 right-2 text-white bg-red-500 rounded-full">X</button>
                         </div>
-                    </div>
-                  </XyzTransition>
+                   
                   
                  
 
