@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-sm px-5 py-3 bg-white shadow space-y-3 rounded-sm">
+    <div class="w-full px-5 py-3 bg-white shadow space-y-3 rounded-sm">
         <div class="w-full flex justify-between items-stretch ">
           <h2 class="text-base xl:text-lg tracking-wider leading-relaxed capitalize w-full">
             {{title}}</h2>

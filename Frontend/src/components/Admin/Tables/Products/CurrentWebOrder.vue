@@ -6,8 +6,8 @@
                   <div class="overflow-x-auto">
                       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
 
-                        <caption class="caption-top py-5 bg-blue-500 text-gray-950 text-xl">
-                              Table 3.1: Professional wrestlers and their signature moves.
+                        <caption class="caption-top py-5 bg-lime-600 text-white text-xl">
+                              Table 2: Current Order From Website.
                             </caption>
   
                           

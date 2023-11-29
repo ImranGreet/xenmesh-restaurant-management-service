@@ -1,9 +1,9 @@
 export const data = {
-  labels: ["VueJs", "EmberJs", "ReactJs", "AngularJs"],
+  labels: ["Direct Order", "Web Order", "Delivery Serices", "References"],
   datasets: [
     {
-      backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#DD1B16"],
-      data: [40, 20, 80, 10],
+      backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#475569"],
+      data: [60, 40, 80, 50],
     },
   ],
 };

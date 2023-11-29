@@ -7,8 +7,13 @@
           </div>
         </div>
         <!-- report annual -->
-         <div class="w-full border border-inherit shadow-sm py-5 ">
-          <IncomeExpenseMonthlyReport />
+         <div class="w-full flex flex-col lg:flex-row justify-between items-center border border-inherit/20 shadow-sm px-3 py-5 lg:gap-x-3">
+          <div class="w-full xl:w-2/3 border border-inherit">
+            <IncomeExpenseMonthlyReport />
+          </div>
+          <div class="w-full h-full xl:w-4/12  ">
+            <TotalSales/>
+          </div>
          </div>
         <!-- report annual -->
         <!-- top selling Product -->
