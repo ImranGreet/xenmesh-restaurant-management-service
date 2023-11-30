@@ -11,6 +11,7 @@ import App from "./App.vue";
 import Submitbutton from "../src/components/Admin/Auth/Submitbutton.vue";
 import FormHeadLine from "../src/components/Admin/Auth/FormHeadLine.vue";
 import ShowButton from "../src/components/Utilities/FormUtility/ShowButton.vue"
+import { PencilSquareIcon, ShieldCheckIcon, TrashIcon } from '@heroicons/vue/24/outline';
 
 // import DeleteBtn from "../src/components/Admin/Utilities/actionButtons/DeleteBtn.vue";
 // import EditBtn from "../src/components/Admin/Utilities/actionButtons/EditBtn.vue";
@@ -84,6 +85,10 @@ app.component("font-awesome-icon", FontAwesomeIcon);
 app.component("authsubmitBtn", Submitbutton);
 app.component("formTitle", FormHeadLine);
 app.component("ShowButton", ShowButton);
+app.component("PencilSquareIcon", PencilSquareIcon );
+app.component("ShieldCheckIcon", ShieldCheckIcon );
+app.component("TrashIcon",  TrashIcon );
+
 app.use(VueAnimXyz);
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));
