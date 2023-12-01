@@ -25,7 +25,7 @@
 
       <div class="w-full flex justify-between items-center ">
         <Price >${{ productInformation.price }}</Price>
-        <addToCart />
+        <addToCart @click="addProductToCart(productInformation)" />
       </div>
     </div>
   </div>
@@ -37,6 +37,8 @@ import Price from "../../Utilities/Price.vue";
 import addToCart from "../../Utilities/addToCart.vue";
 /* composables */
 import {gridView,showGridItems} from "../../../scripts/public/utility";
+import { addProductToCart } from "../../../scripts/public/Order/publicorder";
+
 export default {
   name: "ProductCard",
   components: {
@@ -57,7 +59,8 @@ export default {
     return {
       productInformation,
       gridView,
-      showGridItems
+      showGridItems,
+      addProductToCart
     };
   },
 };

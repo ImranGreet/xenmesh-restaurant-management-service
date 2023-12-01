@@ -25,7 +25,7 @@
           <button
           @click="showOrderItems()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white">
-            Order
+           <ShoppingCartIcon class="w-4 h-4 inline-block"/> {{ totalPrice }}  
           </button>
         </li>
         <li>
@@ -41,20 +41,26 @@
 </template>
 
 <script>
-import { MagnifyingGlassIcon,XMarkIcon } from '@heroicons/vue/24/solid';
+import { MagnifyingGlassIcon,XMarkIcon,ShoppingCartIcon } from '@heroicons/vue/24/solid';
+
 
 import { showOrderItems } from '../../../scripts/public/Utility';
+import {totalPrice} from '../../../scripts/public/Order/publicorder';
+
 
 
 export default {
   name: "Firsttopbar",
   components:{
     MagnifyingGlassIcon,
-    XMarkIcon
+    XMarkIcon,
+    ShoppingCartIcon
   },
   setup() {
+    
     return {
-      showOrderItems
+      showOrderItems,
+      totalPrice
     }
   }
 };

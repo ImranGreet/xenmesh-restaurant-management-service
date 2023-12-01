@@ -9,13 +9,23 @@
                   </div>
       
                   <div class="space-x-2 hidden lg:block">
-                        <button @click="showGridItems()"><font-awesome-icon icon="fa-solid fa-bars-progress" /></button>
-                        <button @click="showGridItems()"><font-awesome-icon icon="fa-solid fa-table-cells" /></button>
+
+                        <button @click="showGridItems('flex')" id="flexViweres" 
+                        :class="{'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md':flexColor,'bg-auto ':!flexColor}">
+                              <font-awesome-icon icon="fa-solid fa-bars-progress" />
+                        </button>
+
+                        <button @click="showGridItems('grid')" id="gridViewres"
+                         :class="{'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md':gridColor,'bg-auto':!gridColor}">
+                              <font-awesome-icon icon="fa-solid fa-table-cells" />
+                        </button>
+
                   </div>
                </div>
    
                <div
-                 class="w-full bg-inherit  sapce-y-2   grid grid-cols-1 sm:grid-cols-2  gap-6" :class="{'xl:grid-cols-3':gridView,'xl:grid-cols-4':!gridView}">
+                 class="w-full bg-inherit  sapce-y-2   grid grid-cols-1 sm:grid-cols-2  gap-6"
+                  :class="{'xl:grid-cols-3':gridView,'xl:grid-cols-4':!gridView}">
                   
                    <ProductCard v-for="product in itemsByCategory.foodItems" :key="product.id" />
               
@@ -25,15 +35,25 @@
    </template>
    
    <script>
-import { ref } from 'vue'
+import { onMounted, ref ,onUnmounted} from 'vue'
 import ProductCard from '../Products/ProductCard.vue';
-import { gridView, showGridItems } from '../../../scripts/public/Utility';
+import { gridView, showGridItems,flexColor,
+      gridColor } from '../../../scripts/public/Utility';
 
    
    export default {
    name:"Menuitemsbycat",
    components:{ProductCard},
    setup(){
+
+      onMounted(()=>{
+            showGridItems('grid');
+      });
+
+      onUnmounted(()=>{
+                  gridView.value= false;
+            });
+
       let itemsByCategory = ref({
             category:"Beef and Vegetables",
       foodItems : [
@@ -79,8 +99,10 @@ import { gridView, showGridItems } from '../../../scripts/public/Utility';
 
       return {
             itemsByCategory,
+            gridView,
+            flexColor,
+            gridColor,
             showGridItems,
-            gridView
       }
    }
    }

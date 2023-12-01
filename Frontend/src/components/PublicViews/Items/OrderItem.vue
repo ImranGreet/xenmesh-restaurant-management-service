@@ -4,7 +4,7 @@
         <div class="w-full h-auto flex justify-between  space-x-3">
           <div class="w-2/6 flex flex-col justify-center items-center rounded-t-xl">
             <img
-              :src="productInformation.image"
+              :src="image"
               alt=""
               class="w-full h-24 rounded-l-xl object-cover" />
           </div>
@@ -12,9 +12,9 @@
           <div class="w-2/3 h-auto flex items-center justify-between pr-2">
             <div class="w-full space-y-3">
                   <h1 class="text-sm tracking-wide font-semibold text-gray-800">
-                    {{ productInformation.title }}
+                    {{ title }}
                   </h1>
-                  <Price>${{ productInformation.price }}</Price>
+                  <Price>${{ price }}</Price>
             </div>
               
             
@@ -40,19 +40,23 @@
         Price,
         addToCart,
       },
-      setup() {
-        const productInformation = ref({
-          title: "Pear Salad Drinks Time to clean up the diet.",
-          price: 20,
-          image:
-            "https://demo.foodking.dev/storage/48/conversions/vegan_hum-burger_with_cheese-thumb.png",
-          description:
-            "With a side of fried rice or supreme soy noodles, and steamed chi. ",
-          composition:
-            "Slid my cart over for checkout, the attendant peeked inside and said  ",
-        });
+
+      props:{
+        itemsPurchased:{
+          type:Object,
+          required:true
+        }
+      },
+      setup(props) {
+        console.log(props.itemsPurchased);
+        
+
+        const {title,price,image,description,composition} = props.itemsPurchased;
+
+
         return {
-          productInformation,
+          
+          title,price,image,description,composition
         };
       },
     };

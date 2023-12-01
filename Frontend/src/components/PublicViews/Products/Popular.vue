@@ -26,7 +26,7 @@
 
         <div class="w-full flex justify-between items-center px-2">
           <Price>${{ productInformation.price }}</Price>
-          <addToCart />
+          <addToCart @click="addProductToCart(productInformation)"/>
         </div>
       </div>
     </div>
@@ -37,6 +37,8 @@
 import { ref } from "vue";
 import Price from "../../Utilities/Price.vue";
 import addToCart from "../../Utilities/addToCart.vue";
+import {addProductToCart} from "../../../scripts/public/Order/publicorder"
+
 export default {
   name: "popular",
   components: {
@@ -56,6 +58,7 @@ export default {
     });
     return {
       productInformation,
+      addProductToCart
     };
   },
 };

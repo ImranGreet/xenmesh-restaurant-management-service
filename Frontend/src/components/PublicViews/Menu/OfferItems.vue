@@ -9,13 +9,21 @@
                      </div>
          
                      <div class="space-x-2">
-                           <button><font-awesome-icon icon="fa-solid fa-bars-progress" /></button>
-                           <button><font-awesome-icon icon="fa-solid fa-table-cells" /></button>
+                        <button @click="showGridItems('flex')" id="flexViweres" 
+                        :class="{'bg-gray-600 text-pink-200 px-1 animate-pulse rounded-md':flexColor,'bg-auto ':!flexColor}">
+                              <font-awesome-icon icon="fa-solid fa-bars-progress" />
+                        </button>
+
+                        <button @click="showGridItems('grid')" id="gridViewres"
+                         :class="{'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md':gridColor,'bg-auto':!gridColor}">
+                              <font-awesome-icon icon="fa-solid fa-table-cells" />
+                        </button>
                      </div>
                   </div>
       
                   <div
-                    class="w-full bg-inherit  sapce-y-2   grid grid-cols-2 xl:grid-cols-4 gap-6">
+                 class="w-full bg-inherit  sapce-y-2   grid grid-cols-1 sm:grid-cols-2  gap-6"
+                  :class="{'xl:grid-cols-3':gridView,'xl:grid-cols-4':!gridView}">
                      
                       <ProductCard v-for="product in itemsByCategory.foodItems" :key="product.id" />
                  
@@ -25,8 +33,11 @@
 </template>
 
 <script>
+import { gridView,flexColor,gridColor,showGridItems } from '../../../scripts/public/utility';
+
 import ProductCard from '../Products/ProductCard.vue';
-import { ref } from 'vue';
+
+import { onMounted, onUnmounted, ref } from 'vue';
 export default {
       name:"OfferItems",
       components:{
@@ -34,6 +45,13 @@ export default {
       },
 
       setup(){
+
+            onMounted(()=>showGridItems('grid'));
+
+            onUnmounted(()=>{
+                  gridView.value= false;
+            });
+
       let itemsByCategory = ref({
             category:"Beef and Vegetables",
       foodItems : [
@@ -78,7 +96,11 @@ export default {
       });
 
       return {
-            itemsByCategory
+            showGridItems,
+            itemsByCategory,
+            gridView,
+            flexColor,
+            gridColor
       }
    }
 

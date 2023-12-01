@@ -9,22 +9,16 @@
                @click="showOrderItems()"
                class="absolute top-1 right-2 text-base rounded-full lg:hover:border lg:hover:border-gray-500 text-red-500 w-6 h-6">X</button>
             </div>
-            <div class="w-full h-[75vh] overflow-y-auto custom-overflowscroll flex flex-col justify-between  items-start gap-y-3 ">
-              <OrderItem/>
-              <OrderItem/>
-              <OrderItem/>
-              <OrderItem/>
-              <OrderItem/>
-              <OrderItem/>
-              <OrderItem/>
-              <OrderItem/>
-              
-            </div>
+            <ul class="w-full h-[75vh] overflow-y-auto custom-overflowscroll flex flex-col justify-between  items-start gap-y-3 ">
+              <li v-for="purchased in purchasedItems" :key="purchased.id" >
+                <OrderItem  :itemsPurchased="purchased"/>
+              </li>
+            </ul>
 
           <div class="w-full space-y-3">
             <div class="w-full flex justify-between items-center px-3 py-2 rounded-xl border border-gray-600">
               <h1>Subtotal</h1>
-              <h2>$400</h2>
+              <h2>${{totalPrice}}</h2>
             </div>
             <button class="w-full h-10 rounded-2xl text-center border border-pink-600 text-white bg-rose-600">Proccesed To Check</button>
           </div>    
@@ -33,8 +27,12 @@
 </template>
 
 <script>
+
 import { showOrderItems } from '../../../scripts/public/Utility';
 import OrderItem from '../../PublicViews/Items/OrderItem.vue';
+import {purchasedItemsPrice,totalPrice,getPriceFromStorage,purchasedItems} from "../../../scripts/public/Order/publicorder"
+import { computed, onMounted } from 'vue';
+
 
 
 export default {
@@ -43,8 +41,18 @@ export default {
     OrderItem
   },
   setup(){
+
+     onMounted(()=>{
+      getPriceFromStorage();
+       
+     });
+
     return {
-      showOrderItems
+      showOrderItems,
+      purchasedItemsPrice,
+      getPriceFromStorage,
+      purchasedItems,
+      totalPrice
     }
   }
 }
