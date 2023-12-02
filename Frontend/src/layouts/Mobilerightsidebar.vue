@@ -9,7 +9,9 @@
     <div
       class="mt-[20px] md:mt-[45px] lg:mt-[48px] xl:mt-[32.5px] fixed float-right h-screen border-r-2 border-red-700/50"
       :class="{ topbarWithSide: !sidebarView, topbarWithoutSide: sidebarView }">
-      <router-link to="#" class="w-full px-3 py-2 space-y-4">
+      <router-link
+        to="#"
+        class="w-full px-3 py-2 space-y-4">
         <Userprofile />
       </router-link>
       <div
@@ -30,18 +32,18 @@
 </template>
 
 <script>
-import Logo from "../components/Topbar/Logo.vue";
-import Userprofile from "../components/Profile/Userprofile.vue";
-import Menu from "../components/Righsidebar/Menu.vue";
+import Logo from '../components/Topbar/Logo.vue';
+import Userprofile from '../components/Profile/Userprofile.vue';
+import Menu from '../components/Righsidebar/Menu.vue';
 
 import {
   mobileView,
   sidebarView,
-} from "../scripts/leftsidebar/layoutcontroller";
-import useLeftSideBarRouterLink from "../scripts/rightsidebar/menuitems";
+} from '../scripts/leftsidebar/layoutcontroller';
+import useLeftSideBarRouterLink from '../scripts/rightsidebar/menuitems';
 
 export default {
-  name: "Rightsidebar",
+  name: 'Rightsidebar',
   components: {
     Logo,
     Menu,

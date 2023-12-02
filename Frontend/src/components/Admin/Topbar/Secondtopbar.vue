@@ -3,13 +3,17 @@
     <div class="w-full px-1">
       <div
         class="w-full flex justify-end items-center space-x-3 md:space-x-5 lg:space-x-8">
-        <button @click="toggleSearchForm()" class="smallSearch">
+        <button
+          @click="toggleSearchForm()"
+          class="smallSearch">
           <i class="inline sm:hidden"
             ><font-awesome-icon icon="fa-solid fa-magnifying-glass"
           /></i>
         </button>
 
-        <button @click="notificationsToggler()" class="p-1 notificationsView">
+        <button
+          @click="notificationsToggler()"
+          class="p-1 notificationsView">
           <i class="text-xl">
             <font-awesome-icon icon="fa-regular fa-bell" />
           </i>
@@ -26,7 +30,9 @@
             <font-awesome-icon icon="fa-solid fa-moon" />
           </i>
         </button>
-        <button @click="toggleFullScreen()" class="p-1">
+        <button
+          @click="toggleFullScreen()"
+          class="p-1">
           <i class="text-xl">
             <font-awesome-icon
               icon="fa-solid fa-compress"
@@ -36,7 +42,10 @@
               :class="{ inline: !fullScreen, hidden: fullScreen }" />
           </i>
         </button>
-        <div role="button" class="p-1 profileView" @click="profileToggler()">
+        <div
+          role="button"
+          class="p-1 profileView"
+          @click="profileToggler()">
           <div class="flex justify-between items-center space-x-5">
             <img
               :src="profileImage"
@@ -70,11 +79,11 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import Profile from "../Dropdown/Profile.vue";
+import { ref } from 'vue';
+import Profile from '../Dropdown/Profile.vue';
 
-import Notifications from "../Dropdown/Notifications.vue";
-import Setting from "../Settings/Setting.vue";
+import Notifications from '../Dropdown/Notifications.vue';
+import Setting from '../Settings/Setting.vue';
 /*scripts*/
 import {
   profileDropDown,
@@ -85,14 +94,17 @@ import {
   toggleSearchForm,
   seetingsView,
   settingsViewToggler,
-} from "../../../scripts/Admin/topbar/topbarcontroller";
+} from '../../../scripts/Admin/topbar/topbarcontroller';
 
-import Dropsearchform from "../dropdown/dropsearchform.vue";
+import Dropsearchform from '../dropdown/dropsearchform.vue';
 
-import { toggleFullScreen, fullScreen } from "../../../scripts/Admin/screen/Fullscreen";
+import {
+  toggleFullScreen,
+  fullScreen,
+} from '../../../scripts/Admin/screen/Fullscreen';
 
 export default {
-  name: "Secondtopbar",
+  name: 'Secondtopbar',
   components: {
     Profile,
     Notifications,
@@ -101,7 +113,7 @@ export default {
   },
   setup() {
     const profileImage = ref(
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     );
     return {
       profileImage,

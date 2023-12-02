@@ -3,7 +3,10 @@
     <div class="px-5 py-6 space-y-5">
       <div class="w-full flex justif-center items-center">
         <button>
-          <img :src="iconSource" alt="" class="w-[100px] h-[70px]" />
+          <img
+            :src="iconSource"
+            alt=""
+            class="w-[100px] h-[70px]" />
         </button>
       </div>
     </div>
@@ -12,7 +15,7 @@
 
 <script>
 export default {
-  name: "Settingicon",
+  name: 'Settingicon',
   props: {
     iconResource: {
       type: String,

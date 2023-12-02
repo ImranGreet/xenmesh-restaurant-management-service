@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "Tab",
+  name: 'Tab',
   props: {
     tabId: {
       type: Number,

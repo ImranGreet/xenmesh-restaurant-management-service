@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
   setup() {
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();

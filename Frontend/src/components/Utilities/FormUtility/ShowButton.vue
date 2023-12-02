@@ -1,13 +1,11 @@
 <template>
   <button class="px-3 py-2 bg-blue-600 text-white rounded-xl">
-      <slot></slot>
- </button>
+    <slot></slot>
+  </button>
 </template>
 
 <script>
 export default {
-      name:"ShowButton",
-
-}
+  name: 'ShowButton',
+};
 </script>
-

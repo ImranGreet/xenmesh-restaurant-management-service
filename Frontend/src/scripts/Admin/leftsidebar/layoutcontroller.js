@@ -1,9 +1,8 @@
-import { ref } from "vue";
+import { ref } from 'vue';
 
-import {seetingsView} from "../../../scripts/Admin/topbar/topbarcontroller";
+import { seetingsView } from '../../../scripts/Admin/topbar/topbarcontroller';
 
-import {ulLinkCloser} from "../../../scripts/Admin/rightsidebar/togglelink"
-
+import { ulLinkCloser } from '../../../scripts/Admin/rightsidebar/togglelink';
 
 const sidebarView = ref(true);
 const mobileView = ref(false);
@@ -30,7 +29,7 @@ const sidebarController = function () {
 /*call it in initaila state*/
 sidebarController();
 
-window.addEventListener("resize", function () {
+window.addEventListener('resize', function () {
   if (mobileView.value) {
     mobileView.value = false;
   }

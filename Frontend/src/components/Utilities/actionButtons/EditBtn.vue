@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import { PencilSquareIcon } from "@heroicons/vue/24/outline";
+import { PencilSquareIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  name: "EditBtn",
+  name: 'EditBtn',
   components: { PencilSquareIcon },
   setup() {},
 };

@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import AddProduct from "../../../components/Admin/Form/AddProduct.vue"
+import AddProduct from '../../../components/Admin/Form/AddProduct.vue';
 export default {
-  name: "InsertProduct",
+  name: 'InsertProduct',
   components: {
     AddProduct,
   },

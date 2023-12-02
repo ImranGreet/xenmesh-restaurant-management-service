@@ -9,9 +9,10 @@
               name=""
               id=""
               class="px-2 py-1 text-start pl-8 rounded-full border border-gray-300 focus:outline-none" />
-            <MagnifyingGlassIcon class="w-4 h-4 absolute top-2 left-3"/>
+            <MagnifyingGlassIcon class="w-4 h-4 absolute top-2 left-3" />
             <button class="absolute top-2 right-3 hidden">
-              <XMarkIcon class="w-4 h-4 border border-gray-700 text-red-500 rounded-full "/>
+              <XMarkIcon
+                class="w-4 h-4 border border-gray-700 text-red-500 rounded-full" />
             </button>
           </form>
         </li>
@@ -23,9 +24,9 @@
         </li>
         <li>
           <button
-          @click="showOrderItems()"
+            @click="showOrderItems()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white">
-           <ShoppingCartIcon class="w-4 h-4 inline-block"/> {{ totalPrice }}  
+            <ShoppingCartIcon class="w-4 h-4 inline-block" /> {{ totalPrice }}
           </button>
         </li>
         <li>
@@ -41,27 +42,27 @@
 </template>
 
 <script>
-import { MagnifyingGlassIcon,XMarkIcon,ShoppingCartIcon } from '@heroicons/vue/24/solid';
-
+import {
+  MagnifyingGlassIcon,
+  XMarkIcon,
+  ShoppingCartIcon,
+} from '@heroicons/vue/24/solid';
 
 import { showOrderItems } from '../../../scripts/public/Utility';
-import {totalPrice} from '../../../scripts/public/Order/publicorder';
-
-
+import { totalPrice } from '../../../scripts/public/Order/publicorder';
 
 export default {
-  name: "Firsttopbar",
-  components:{
+  name: 'Firsttopbar',
+  components: {
     MagnifyingGlassIcon,
     XMarkIcon,
-    ShoppingCartIcon
+    ShoppingCartIcon,
   },
   setup() {
-    
     return {
       showOrderItems,
-      totalPrice
-    }
-  }
+      totalPrice,
+    };
+  },
 };
 </script>

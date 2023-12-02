@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import { CheckBadgeIcon } from "@heroicons/vue/24/outline";
+import { CheckBadgeIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  name: "EditBtn",
+  name: 'EditBtn',
   components: { CheckBadgeIcon },
   setup() {},
 };

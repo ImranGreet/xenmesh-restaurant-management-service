@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const fullscreenElement = ref();
 const fullScreen = ref(false);

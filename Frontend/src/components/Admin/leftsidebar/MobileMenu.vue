@@ -28,7 +28,9 @@
           :class="{ hidden: sidebarView }">
         </ChevronRightIcon>
 
-        <ChevronDownIcon name="chevron" class="w-5 h-5 hidden">
+        <ChevronDownIcon
+          name="chevron"
+          class="w-5 h-5 hidden">
         </ChevronDownIcon>
       </span>
     </button>
@@ -66,8 +68,8 @@
 import {
   sidebarNavigations,
   sidebarView,
-} from "../../scripts/leftsidebar/layoutcontroller";
-import { routeToggling } from "../../scripts/rightsidebar/togglelink";
+} from '../../scripts/leftsidebar/layoutcontroller';
+import { routeToggling } from '../../scripts/rightsidebar/togglelink';
 
 import {
   HomeIcon,
@@ -77,10 +79,10 @@ import {
   Battery50Icon,
   CalculatorIcon,
   XMarkIcon,
-} from "@heroicons/vue/24/outline";
+} from '@heroicons/vue/24/outline';
 
 export default {
-  name: "Navigations",
+  name: 'Navigations',
   components: {
     HomeIcon,
     ChevronRightIcon,

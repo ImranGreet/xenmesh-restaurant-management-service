@@ -7,9 +7,8 @@
 <script>
 import AddRole from '../../../components/Admin/Form/AddRole.vue';
 
-
 export default {
-  name: "InsertRole",
+  name: 'InsertRole',
   components: {
     AddRole,
   },

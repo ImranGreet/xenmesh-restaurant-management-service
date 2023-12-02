@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "Inputelement",
+  name: 'Inputelement',
   props: {
     placeholder: {
       type: String,
@@ -12,7 +12,6 @@ export default {
       type: String,
       required: false,
     },
-    
   },
 };
 </script>

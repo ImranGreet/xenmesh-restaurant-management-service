@@ -17,15 +17,15 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 export default {
-  name: "FilterButton",
+  name: 'FilterButton',
 
   setup() {
     const categoryInformation = ref({
-      title: "Vegetables and spices",
+      title: 'Vegetables and spices',
       poster:
-        "https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        'https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     });
     return {
       categoryInformation,

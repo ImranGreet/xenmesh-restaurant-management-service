@@ -1,5 +1,3 @@
 class CreateOrder {
-      constructor(){
-            
-      }
+  constructor() {}
 }

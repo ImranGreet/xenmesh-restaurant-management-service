@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import { ShieldCheckIcon } from "@heroicons/vue/24/outline";
+import { ShieldCheckIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  name: "PublishedNotBtn",
+  name: 'PublishedNotBtn',
   components: { ShieldCheckIcon },
   setup() {},
 };

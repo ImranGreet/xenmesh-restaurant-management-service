@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import { XMarkIcon } from "@heroicons/vue/24/outline";
+import { XMarkIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  name: "DeleteBtn",
+  name: 'DeleteBtn',
   components: { XMarkIcon },
   setup() {},
 };

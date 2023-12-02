@@ -1,17 +1,16 @@
 <template>
-    <section>
-      <OrderList />
-    </section>
-  </template>
-  
-  <script>
+  <section>
+    <OrderList />
+  </section>
+</template>
+
+<script>
 import OrderList from '../../../components/Admin/Tables/Order/OrderList.vue';
-  
-  export default {
-    name: "Order House",
-    components: {
-        OrderList,
-    },
-  };
-  </script>
-  
+
+export default {
+  name: 'Order House',
+  components: {
+    OrderList,
+  },
+};
+</script>

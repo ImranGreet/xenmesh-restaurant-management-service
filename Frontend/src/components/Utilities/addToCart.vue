@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import { ShoppingBagIcon } from "@heroicons/vue/24/outline";
+import { ShoppingBagIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  name: "addToCart",
+  name: 'addToCart',
   components: {
     ShoppingBagIcon,
   },

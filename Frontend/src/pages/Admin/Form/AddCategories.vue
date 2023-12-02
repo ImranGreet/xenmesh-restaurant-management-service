@@ -7,9 +7,8 @@
 <script>
 import InsertCategories from '../../../components/Admin/Form/InsertCategories.vue';
 
-
 export default {
-  name: "InsertProduct",
+  name: 'InsertProduct',
   components: {
     InsertCategories,
   },

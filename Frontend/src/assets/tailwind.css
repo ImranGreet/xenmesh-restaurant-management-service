@@ -2,18 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap');
 
-#app{
+#app {
   font-family: 'Work Sans', sans-serif;
 }
 
 /* components of tailwindcss */
 @layer components {
-  .product-hover{
-    @apply lg:hover:shadow-lg overflow-hidden lg:hover:delay-100 lg:hover:duration-200 lg:hover:ease-in-out ;
+  .product-hover {
+    @apply lg:hover:shadow-lg overflow-hidden lg:hover:delay-100 lg:hover:duration-200 lg:hover:ease-in-out;
   }
 }
 
@@ -55,5 +53,3 @@
 .custom-overflowscroll::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-

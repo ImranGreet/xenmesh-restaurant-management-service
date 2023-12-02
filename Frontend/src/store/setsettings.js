@@ -1,5 +1,5 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 
-const useSettingsStore = defineStore("settingsStore", () => {});
+const useSettingsStore = defineStore('settingsStore', () => {});
 
 export { useSettingsStore };

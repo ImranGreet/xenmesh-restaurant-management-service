@@ -24,7 +24,9 @@
         >
       </li>
       <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
-        <router-link to="#" class=""
+        <router-link
+          to="#"
+          class=""
           ><i class="px-1 sm:px-1.5 lg:px-2"
             ><font-awesome-icon icon="fa-solid fa-lock" /></i
           >Lock Screen</router-link
@@ -44,6 +46,6 @@
 
 <script>
 export default {
-  name: "Profile",
+  name: 'Profile',
 };
 </script>

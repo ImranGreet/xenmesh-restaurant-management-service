@@ -1,5 +1,7 @@
 <template>
-  <section ref="fullscreenElement" class="h-screen bg-gray-100">
+  <section
+    ref="fullscreenElement"
+    class="h-screen bg-gray-100">
     <Topbardesktop
       class="float-right top-0 right-0 bg-white w-full static px-2"
       :class="{
@@ -14,14 +16,12 @@
       }" />
     <!-- main -->
     <div
-      class="float-right mt-[60px] px-1  right-0 h-full z-0 overflow-y-auto"
+      class="float-right mt-[60px] px-1 right-0 h-full z-0 overflow-y-auto"
       :class="{
         'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto': !sidebarView,
         'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto': sidebarView,
       }">
-      
-        <router-view />
-      
+      <router-view />
     </div>
     <Setting
       class="fixed top-0 right-0 md:w-2/4 lg:w-1/4 h-full"
@@ -43,28 +43,28 @@
 </template>
 
 <script>
-import Setting from "../components/Admin/Settings/Setting.vue";
-import Topbardesktop from "../components/Admin/Topbar/Topbardesktop.vue";
-import Rightsidebar from "./Rightsidebar.vue";
-import Logo from "../components/Admin/Topbar/Logo.vue";
-import Footer from "../components/Admin/Footer/Footer.vue";
+import Setting from '../components/Admin/Settings/Setting.vue';
+import Topbardesktop from '../components/Admin/Topbar/Topbardesktop.vue';
+import Rightsidebar from './Rightsidebar.vue';
+import Logo from '../components/Admin/Topbar/Logo.vue';
+import Footer from '../components/Admin/Footer/Footer.vue';
 
 /*script*/
-import { fullscreenElement } from "../scripts/Admin/screen/Fullscreen";
-import { seetingsView } from "../scripts/Admin/topbar/topbarcontroller";
+import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
+import { seetingsView } from '../scripts/Admin/topbar/topbarcontroller';
 import {
   sidebarController,
   sidebarView,
   mobileView,
-} from "../scripts/Admin/leftsidebar/layoutcontroller";
+} from '../scripts/Admin/leftsidebar/layoutcontroller';
 import {
   resizeController,
   customWidth,
-} from "../scripts/Admin/Layout/layoutonresize";
-import { discloseMenuBarOnHover } from "../scripts/Admin/rightsidebar/togglelink";
+} from '../scripts/Admin/Layout/layoutonresize';
+import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink';
 
 export default {
-  name: "Admin",
+  name: 'Admin',
   components: {
     Topbardesktop,
     Setting,

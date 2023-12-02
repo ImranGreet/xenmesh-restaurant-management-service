@@ -28,28 +28,27 @@
           :class="{ hidden: sidebarView }">
         </ChevronRightIcon>
 
-        <ChevronDownIcon name="chevron" class="w-5 h-5 hidden">
+        <ChevronDownIcon
+          name="chevron"
+          class="w-5 h-5 hidden">
         </ChevronDownIcon>
       </span>
     </button>
-   
-         
-      <ul
-        :id="`routes-` + DropdownRouterLinkId"
-        class="space-y-2 text-start gap-y-0.5 w-full px-8 hidden ul-link square">
-        <li
-          v-for="track in urlTag"
-          :key="track.id"
-          class="lg:hover:bg-gray-100/80 w-full">
-          <router-link
-            :to="{name:track.name}"
-            class="w-full block py-2 px-2 capitalize text-base tracking-wide">
-            {{ track.params }}</router-link
-          >
-        </li>
-      </ul>
-      
-    
+
+    <ul
+      :id="`routes-` + DropdownRouterLinkId"
+      class="space-y-2 text-start gap-y-0.5 w-full px-8 hidden ul-link square">
+      <li
+        v-for="track in urlTag"
+        :key="track.id"
+        class="lg:hover:bg-gray-100/80 w-full">
+        <router-link
+          :to="{ name: track.name }"
+          class="w-full block py-2 px-2 capitalize text-base tracking-wide">
+          {{ track.params }}</router-link
+        >
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -57,16 +56,13 @@
 import {
   sidebarNavigations,
   sidebarView,
-} from "../../../scripts/Admin/leftsidebar/layoutcontroller";
-
+} from '../../../scripts/Admin/leftsidebar/layoutcontroller';
 
 import {
   routeToggling,
   mouseOutUlLinkCloser,
   mouseOverUlLinkDiscloser,
-} from "../../../scripts/Admin/rightsidebar/togglelink";
-
-
+} from '../../../scripts/Admin/rightsidebar/togglelink';
 
 import {
   HomeIcon,
@@ -75,10 +71,10 @@ import {
   BanknotesIcon,
   Battery50Icon,
   CalculatorIcon,
-} from "@heroicons/vue/24/outline";
+} from '@heroicons/vue/24/outline';
 
 export default {
-  name: "Navigations",
+  name: 'Navigations',
   components: {
     HomeIcon,
     ChevronRightIcon,

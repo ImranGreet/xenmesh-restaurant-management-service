@@ -5,7 +5,8 @@
       <FormHeadLine>Add Setting Image</FormHeadLine>
       <form
         class="w-full flex flex-col justify-between items-center gap-y-5 shadow-sm shadow-gray-300 p-5">
-        <div class="px-2  w-full space-y-3 border border-gray-200 py-3 rounded-md">
+        <div
+          class="px-2 w-full space-y-3 border border-gray-200 py-3 rounded-md">
           <label for="icon">Icon Name</label>
           <input
             type="text"
@@ -13,7 +14,8 @@
             name="icon"
             placeholder="Enter Icon Name" />
         </div>
-        <div class="px-2  w-full space-y-3 border border-gray-200 py-3 rounded-md">
+        <div
+          class="px-2 w-full space-y-3 border border-gray-200 py-3 rounded-md">
           <label for="icon">Category</label>
           <input
             type="text"
@@ -21,7 +23,8 @@
             name="icon"
             placeholder="Enter Icon Category" />
         </div>
-        <div class="px-2 py-3 w-full space-y-3 border border-gray-200  rounded-md">
+        <div
+          class="px-2 py-3 w-full space-y-3 border border-gray-200 rounded-md">
           <label for="icon">Icon Image</label>
           <input
             type="file"
@@ -37,9 +40,9 @@
 </template>
 
 <script>
-import FormHeadLine from "./FormHeadLine.vue";
+import FormHeadLine from './FormHeadLine.vue';
 export default {
-  name: "Settingicon",
+  name: 'Settingicon',
   components: { FormHeadLine },
   setup() {
     return {};

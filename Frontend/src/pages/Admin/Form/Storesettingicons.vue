@@ -27,39 +27,33 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 import {
   tabcontroller,
   activeIndex,
-} from "../../../scripts/Admin/Settings/authoritysetting";
+} from '../../../scripts/Admin/Settings/authoritysetting';
 
-
-
-import Settingicon from "../../../components/Admin/Auth/Settingicon.vue";
-import Shoplogo from "../../../components/Admin/Auth/Shoplogo.vue";
-import UserProfile from "../../../components/Admin/Auth/UserProfile.vue";
-import ContactDetails from "../../../components/Admin/Auth/ContactDetails.vue";
-import Tab from "../../../components/Utilities/Tab.vue"
-
-
-
-
+import Settingicon from '../../../components/Admin/Auth/Settingicon.vue';
+import Shoplogo from '../../../components/Admin/Auth/Shoplogo.vue';
+import UserProfile from '../../../components/Admin/Auth/UserProfile.vue';
+import ContactDetails from '../../../components/Admin/Auth/ContactDetails.vue';
+import Tab from '../../../components/Utilities/Tab.vue';
 
 export default {
-  name: "Storesettingicons",
+  name: 'Storesettingicons',
   components: { Settingicon, UserProfile, Shoplogo, ContactDetails, Tab },
   setup() {
     const componentsTitle = ref([
-      "Setting icon",
-      "User Profile",
-      "Shop logo",
-      "Contact Details",
+      'Setting icon',
+      'User Profile',
+      'Shop logo',
+      'Contact Details',
     ]);
     const componentContainer = ref([
-      "Settingicon",
-      "UserProfile",
-      "Shoplogo",
-      "ContactDetails",
+      'Settingicon',
+      'UserProfile',
+      'Shoplogo',
+      'ContactDetails',
     ]);
     return {
       componentsTitle,

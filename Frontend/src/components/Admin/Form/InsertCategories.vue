@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: "InsertCategories",
+  name: 'InsertCategories',
   setup() {
     return {};
   },

@@ -1,18 +1,12 @@
-<template>
-  
-</template>
+<template></template>
 
 <script>
 export default {
-name:"Pending",
-setup(){
-    return {
-        
-    }
-}
-}
+  name: 'Pending',
+  setup() {
+    return {};
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const profileDropDown = ref(false);
 const notificationsDropDown = ref(false);
@@ -21,29 +21,29 @@ const settingsViewToggler = function () {
   seetingsView.value = !seetingsView.value;
 };
 
-window.addEventListener("click", function (event) {
-  if (profileDropDown.value && !event.target.closest(".profileView")) {
+window.addEventListener('click', function (event) {
+  if (profileDropDown.value && !event.target.closest('.profileView')) {
     profileDropDown.value = false;
   }
 });
 
-window.addEventListener("click", function (event) {
+window.addEventListener('click', function (event) {
   if (
     notificationsDropDown.value &&
-    !event.target.closest(".notificationsView")
+    !event.target.closest('.notificationsView')
   ) {
     notificationsDropDown.value = false;
   }
 });
 
-window.addEventListener("click", function (event) {
-  if (searchDropDown.value && !event.target.closest(".smallSearch")) {
+window.addEventListener('click', function (event) {
+  if (searchDropDown.value && !event.target.closest('.smallSearch')) {
     //searchDropDown.value = false;
   }
 });
-window.addEventListener("click", function (event) {
-  if (seetingsView.value && !event.target.closest(".settingsViews")) {
-   // seetingsView.value = false;
+window.addEventListener('click', function (event) {
+  if (seetingsView.value && !event.target.closest('.settingsViews')) {
+    // seetingsView.value = false;
   }
 });
 

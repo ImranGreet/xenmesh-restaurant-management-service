@@ -7,9 +7,8 @@
 <script>
 import AddStuff from '../../../components/Admin/Form/AddStuff.vue';
 
-
 export default {
-  name: "InsertStuff",
+  name: 'InsertStuff',
   components: {
     AddStuff,
   },

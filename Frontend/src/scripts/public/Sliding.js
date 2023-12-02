@@ -1,58 +1,29 @@
-import slides from "./SlideshowItems";
+import { ref } from 'vue';
+import slides from './SlideshowItems';
 
-let currentSlideElement = 0;
-let itemIndex = 0;
+let currentSlideElement = ref(0);
+let itemIndex = ref(0);
 
-class SlideShow {
+const nextSlideImage = () => {
+  if (currentSlideElement.value < slides.value.length - 1) {
+    currentSlideElement.value++;
+  } else {
+    currentSlideElement.value = 0;
+  }
+};
 
-   constructor(slidesProperties){
-      this.slidesContainer = slidesProperties.value;
-      this.propertyLength = slidesProperties.value.length;
-      this.currentSlide = this.slidesContainer.at(itemIndex);
-      this.currentSlider();
-   }  
+const previusSlideImage = () => {
+  if (currentSlideElement.value > 0) {
+    currentSlideElement.value--;
+  } else {
+    currentSlideElement.value = slides.value.length - 1;
+  }
+};
 
-    currentSlider (){
-      currentSlideElement= this.currentSlide;
-      return currentSlideElement;
-    }
-
-   nextSlider(){
-    
-      if(itemIndex<this.propertyLength){
-            itemIndex+=1;
-            currentSlideElement = this.slidesContainer[itemIndex];
-            return currentSlideElement;
-      }
-
-      if(itemIndex>this.propertyLength){
-            itemIndex-=1;
-            currentSlideElement = this.slidesContainer[itemIndex];
-            return currentSlideElement;
-      }
-
-   }
-
-   previusSlider(){
-
-      if(itemIndex<this.propertyLength){
-            itemIndex-=1;
-            currentSlideElement = this.slidesContainer[itemIndex];
-            return currentSlideElement;
-      }
-
-      if(itemIndex>this.propertyLength){
-            itemIndex+=1;
-            currentSlideElement = this.slidesContainer[itemIndex];
-            return currentSlideElement;
-      }
-      
-   }
-   
-}
-
-
-const slidingController = new SlideShow(slides);
-
-
-export  {slidingController,currentSlideElement};
+export {
+  currentSlideElement,
+  itemIndex,
+  slides,
+  nextSlideImage,
+  previusSlideImage,
+};

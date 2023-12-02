@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: "AddRole",
+  name: 'AddRole',
   setup() {
     return {};
   },

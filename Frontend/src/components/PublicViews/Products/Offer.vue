@@ -34,18 +34,18 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
-  name: "Offer",
+  name: 'Offer',
 
   setup() {
     const offerInformation = ref({
-      title: "Pear Salad Drinks",
+      title: 'Pear Salad Drinks',
       image:
-        "https://images.unsplash.com/photo-1506395308321-904a71783d60?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        'https://images.unsplash.com/photo-1506395308321-904a71783d60?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       percentage: 5,
-      category: "drinks",
+      category: 'drinks',
     });
     return {
       offerInformation,

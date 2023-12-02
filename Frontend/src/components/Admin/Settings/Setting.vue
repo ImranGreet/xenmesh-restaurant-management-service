@@ -140,7 +140,9 @@
           <div class="px-8 py-6 space-y-5">
             <Settingtitle>Topbar Color</Settingtitle>
             <div class="w-full flex justif-start items-center flex-wrap gap-6">
-              <button @click="setTopbarColor('light')" class="relative">
+              <button
+                @click="setTopbarColor('light')"
+                class="relative">
                 <img
                   src="../../assets/images/controllericons/Light.png"
                   alt=""
@@ -151,7 +153,9 @@
                   ><CheckBadgeIcon class="w-6 h-6"
                 /></small>
               </button>
-              <button @click="setTopbarColor('brand')" class="relative">
+              <button
+                @click="setTopbarColor('brand')"
+                class="relative">
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
@@ -160,7 +164,9 @@
                   ><CheckBadgeIcon class="w-6 h-6"
                 /></small>
               </button>
-              <button @click="setTopbarColor('dark')" class="relative">
+              <button
+                @click="setTopbarColor('dark')"
+                class="relative">
                 <img
                   src="../../assets/images/controllericons/brand.png"
                   alt=""
@@ -316,24 +322,21 @@
 </template>
 
 <script>
-import { settingsViewToggler } from "../../../scripts/Admin/topbar/topbarcontroller";
+import { settingsViewToggler } from '../../../scripts/Admin/topbar/topbarcontroller';
 import {
   setTopbarColor,
   foundColor,
   topbarDefault,
-} from "../../../scripts/Admin/Settings/topbar";
+} from '../../../scripts/Admin/Settings/topbar';
 
-
-
-
-import Toogleswitch from "../../../components/Utilities/Toogleswitch.vue";
-import Settingicon from "./Settingicon.vue";
-import Settingtitle from "./Settingtitle.vue";
+import Toogleswitch from '../../../components/Utilities/Toogleswitch.vue';
+import Settingicon from './Settingicon.vue';
+import Settingtitle from './Settingtitle.vue';
 /*heroicons*/
-import { CheckBadgeIcon } from "@heroicons/vue/24/solid";
+import { CheckBadgeIcon } from '@heroicons/vue/24/solid';
 
 export default {
-  name: "Setting",
+  name: 'Setting',
   components: { Settingicon, Settingtitle, Toogleswitch, CheckBadgeIcon },
   setup() {
     return {

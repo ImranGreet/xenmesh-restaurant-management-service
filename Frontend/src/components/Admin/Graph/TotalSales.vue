@@ -1,16 +1,18 @@
 <template>
-  <Doughnut :data="data" :options="options" />
+  <Doughnut
+    :data="data"
+    :options="options" />
 </template>
 
 <script>
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "vue-chartjs";
-import * as chartConfig from "../../../scripts/Admin/Chart/totalsales"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'vue-chartjs';
+import * as chartConfig from '../../../scripts/Admin/Chart/totalsales';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Doughnut,
   },
