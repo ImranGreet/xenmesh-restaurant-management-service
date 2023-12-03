@@ -13,7 +13,7 @@
         <IncomeExpenseMonthlyReport />
       </div>
       <div class="w-full h-full xl:w-4/12">
-        <div class="w-full ">
+        <div class="w-full">
           <TotalSales />
         </div>
       </div>

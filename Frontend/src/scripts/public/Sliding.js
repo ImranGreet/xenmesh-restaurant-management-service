@@ -20,6 +20,10 @@ const previusSlideImage = () => {
   }
 };
 
+setInterval(() => {
+  nextSlideImage();
+}, 50000);
+
 export {
   currentSlideElement,
   itemIndex,

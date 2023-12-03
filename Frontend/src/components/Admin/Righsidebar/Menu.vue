@@ -11,11 +11,11 @@
         <span class="inline-block">
           <component
             :is="compotext"
-            class="w-5 h-5 text-gary-900 tracking-wider text-3xl font-semibold"></component>
+            class="w-5 h-5 text-pink-900 tracking-wider text-3xl font-semibold"></component>
         </span>
 
         <span
-          class="self-start text-gray-900 text-xl font-semibold"
+          class="self-start text-gray-900 text-xl font-medium"
           :class="{ hidden: sidebarView }"
           ><slot></slot
         ></span>
@@ -71,6 +71,12 @@ import {
   BanknotesIcon,
   Battery50Icon,
   CalculatorIcon,
+  WrenchScrewdriverIcon,
+  CakeIcon,
+  TicketIcon,
+  UserGroupIcon,
+  XCircleIcon,
+  Square3Stack3DIcon
 } from '@heroicons/vue/24/outline';
 
 export default {
@@ -82,6 +88,12 @@ export default {
     BanknotesIcon,
     Battery50Icon,
     CalculatorIcon,
+    WrenchScrewdriverIcon,
+    CakeIcon,
+    TicketIcon,
+    UserGroupIcon,
+    XCircleIcon,
+    Square3Stack3DIcon
   },
   props: {
     routerLink: {

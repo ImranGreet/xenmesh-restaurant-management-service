@@ -51,8 +51,6 @@ export default {
     },
   },
   setup(props) {
-    console.log(props.itemsPurchased);
-
     const { title, price, image, description, composition } =
       props.itemsPurchased;
 

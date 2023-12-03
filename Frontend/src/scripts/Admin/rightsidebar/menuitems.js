@@ -40,7 +40,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 5,
     name: 'Settings',
-    largeIcon: 'CalculatorIcon',
+    largeIcon: 'WrenchScrewdriverIcon',
 
     paths: [
       {
@@ -54,7 +54,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 6,
     name: 'Products',
-    largeIcon: 'CalculatorIcon',
+    largeIcon: 'CakeIcon',
 
     paths: [
       {
@@ -75,7 +75,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 7,
     name: 'Order',
-    largeIcon: 'CalculatorIcon',
+    largeIcon: 'TicketIcon',
 
     paths: [
       {
@@ -109,7 +109,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 8,
     name: 'Stuff And Role',
-    largeIcon: 'CalculatorIcon',
+    largeIcon: 'UserGroupIcon',
 
     paths: [
       {
@@ -123,7 +123,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 9,
     name: 'Insert & Delete',
-    largeIcon: 'CalculatorIcon',
+    largeIcon: 'XCircleIcon',
 
     paths: [
       {
@@ -149,7 +149,7 @@ const useLeftSideBarRouterLink = ref([
   {
     id: 10,
     name: 'Stock',
-    largeIcon: 'CalculatorIcon',
+    largeIcon: 'Square3Stack3DIcon',
 
     paths: [
       {

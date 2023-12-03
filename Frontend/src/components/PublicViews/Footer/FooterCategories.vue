@@ -34,7 +34,7 @@ export default {
   setup(props) {
     const subCat = props.subCategory;
     const categoryStore = props.categories;
-    console.log(categoryStore);
+
     return {
       subCat,
       categoryStore,

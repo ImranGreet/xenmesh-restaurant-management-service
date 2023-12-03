@@ -30,7 +30,7 @@
           }">
           <font-awesome-icon
             icon="fa-solid fa-utensils"
-            class="w-5 h-5 text-gary-900 tracking-wider text-3xl font-semibold" />
+            class="w-5 h-5 text-pink-900 tracking-wider text-3xl font-semibold" />
           <span
             :class="{
               'inline-block text-xl ml-5': !sidebarView,
