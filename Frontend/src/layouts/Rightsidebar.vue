@@ -23,14 +23,14 @@
         class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative">
         <router-link
           :to="{ name: 'order_creation' }"
-          class="w-full h-5 flex items-center"
+          class="w-full h-5 flex items-center mb-4"
           :class="{
             'justify-center': !sidebarView,
             'justify-center': sidebarView,
           }">
           <font-awesome-icon
             icon="fa-solid fa-utensils"
-            class="w-5 h-5 text-pink-900 tracking-wider text-3xl font-semibold" />
+            class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-semibold" />
           <span
             :class="{
               'inline-block text-xl ml-5': !sidebarView,

@@ -11,7 +11,7 @@
         <span class="inline-block">
           <component
             :is="compotext"
-            class="w-5 h-5 text-pink-900 tracking-wider text-3xl font-semibold"></component>
+            class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-semibold"></component>
         </span>
 
         <span
@@ -76,7 +76,7 @@ import {
   TicketIcon,
   UserGroupIcon,
   XCircleIcon,
-  Square3Stack3DIcon
+  Square3Stack3DIcon,
 } from '@heroicons/vue/24/outline';
 
 export default {
@@ -93,7 +93,7 @@ export default {
     TicketIcon,
     UserGroupIcon,
     XCircleIcon,
-    Square3Stack3DIcon
+    Square3Stack3DIcon,
   },
   props: {
     routerLink: {

@@ -1,8 +1,6 @@
 import { ref } from 'vue';
 import { useCategoryRoutes as categories } from '../Navs/categoryNav';
 
-
-
 const useRoutesSlider = function () {
   const routesPerview = ref(0);
   const initailIndex = ref(0);
@@ -32,13 +30,11 @@ const useRoutesSlider = function () {
     }
   };
 
-  const playWithRoutes = function(){
-      routesPerview.value = categories.value.length;
-      setRoutes();
-      console.log("Clicked");
-  }
-
- 
+  const playWithRoutes = function () {
+    routesPerview.value = categories.value.length;
+    setRoutes();
+    console.log('Clicked');
+  };
 
   return {
     routesPerview,
@@ -48,7 +44,6 @@ const useRoutesSlider = function () {
     setRoutes,
     routesInDevices,
     playWithRoutes,
-    
   };
 };
 
