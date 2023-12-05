@@ -11,6 +11,8 @@ const foodCategories = uniqueCategoriesArray.map(category => {
 });
 
 
-export const useCategoryRoutes = ref(foodCategories);
+
+ const useCategoryRoutes = ref(foodCategories);
 
 
+export {useCategoryRoutes,uniqueCategoriesArray};

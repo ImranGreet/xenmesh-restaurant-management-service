@@ -56,7 +56,6 @@ export default {
       slidesPhoto,
       slides,
       currentSlideElement,
-
       nextSlideImage,
       previusSlideImage,
     };

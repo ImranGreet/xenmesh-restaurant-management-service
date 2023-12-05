@@ -3,7 +3,7 @@
     <div
       class="w-full flex justify-between items-center gap-x-4 py-3 snap-x snap-mandatory items">
       <router-link
-        to="#"
+        :to="{name:'category',params:{category:cat.category}}"
         v-for="cat in useCategoryRoutes"
         :key="cat.id"
         class="snap-always snap-center item">

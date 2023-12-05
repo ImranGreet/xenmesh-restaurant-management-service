@@ -9,8 +9,9 @@
       class="flex flex-col justify-center items-center rounded-t-2xl"
       :class="{ 'w-full': !gridView, 'w-3/5': gridView }">
       <img
-        :src="productInformation.image"
-        alt=""
+        :src="image"
+        loading="lazy"
+        :alt="title"
         class="w-full object-cover"
         :class="{
           'h-[182px] rounded-t-xl': !gridView,
@@ -26,7 +27,7 @@
       <div class="py-0 space-y-2">
         <div class="w-full flex justify-start items-center gap-x-1 md:gap-x-2">
           <h1 class="text-base tracking-wide font-semibold text-gray-800">
-            {{ productInformation.title }}
+            {{ title }}
           </h1>
           <button
             class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full">
@@ -34,12 +35,12 @@
           </button>
         </div>
         <p class="text-sm tracking-wide leading-relaxed">
-          {{ productInformation.description }}
+          {{ description }}
         </p>
       </div>
 
       <div class="w-full flex justify-between items-center">
-        <Price>${{ productInformation.price }}</Price>
+        <Price>${{ price }}</Price>
         <addToCart @click="addProductToCart(productInformation)" />
       </div>
     </div>
@@ -60,18 +61,18 @@ export default {
     Price,
     addToCart,
   },
-  setup() {
-    const productInformation = ref({
-      title: 'Pear Salad Drinks',
-      price: 20,
-      image:
-        'https://demo.foodking.dev/storage/70/conversions/mix_vegetables_salad-cover.png',
-      description: 'Enjoy the sweet pickings from the fruit .',
-      composition:
-        'Slid my cart over for checkout, the attendant peeked inside and said “having a party, eh?',
-    });
+  props:{
+    productInformation:{
+      type:Object,
+      required:true
+    }
+  },
+  setup(props) {
+   
+
+    const {id,title,price,image,description,composition} = props.productInformation;
     return {
-      productInformation,
+      id,title,price,image,description,composition,
       gridView,
       showGridItems,
       addProductToCart,

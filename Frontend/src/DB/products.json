@@ -62,7 +62,7 @@
       {
             "id": 7,
             "title": "Falafel Salad",
-            "category": "Salads",
+            "category": "Soup",
             "image": "https://images.unsplash.com/photo-1544926206-bd2c1e248045?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.5,
             "price": 10.99,
@@ -122,7 +122,7 @@
           {
             "id": 13,
             "title": "Chicken Quesadilla",
-            "category": "Main Courses",
+            "category": "Sandwiches",
             "image": "https://images.unsplash.com/photo-1658308767269-42ac00314021?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.6,
             "price": 13.99,
@@ -162,7 +162,7 @@
           {
             "id": 17,
             "title": "Penne Arrabbiata",
-            "category": "Main Courses",
+            "category": "Sandwiches",
             "image": "https://images.unsplash.com/photo-1656056773891-4888554bdd59?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.6,
             "price": 16.99,
@@ -202,7 +202,7 @@
           {
             "id": 21,
             "title": "Chocolate Lava Cake",
-            "category": "Desserts",
+            "category": "Bevarages",
             "image": "https://images.unsplash.com/photo-1533910534207-90f31029a78e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.9,
             "price": 9.99,
@@ -222,7 +222,7 @@
           {
             "id": 23,
             "title": "Ice Cream Sundae",
-            "category": "Desserts",
+            "category": "pasta",
             "image": "https://images.unsplash.com/photo-1632154023554-c2975e9be348?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.7,
             "price": 7.99,
@@ -242,7 +242,7 @@
           {
             "id": 25,
             "title": "Mocha Frappuccino",
-            "category": "Desserts",
+            "category": "Bevarages",
             "image": "https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.8,
             "price": 5.99,
@@ -292,7 +292,7 @@
           {
             "id": 30,
             "title": "Profiteroles",
-            "category": "Desserts",
+            "category": "Bevarages",
             "image": "https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.6,
             "price": 8.99,
@@ -302,7 +302,7 @@
           {
             "id": 31,
             "title": "Cannoli",
-            "category": "Desserts",
+            "category": "pasta",
             "image": "https://images.unsplash.com/photo-1632158929413-168599fffbf7?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.8,
             "price": 6.99,
@@ -333,7 +333,7 @@
             "id": 34,
             "title": "Smores",
             "category": "Desserts",
-            "image": "https://example.com/images/smores.jpg",
+            "image": "https://images.unsplash.com/photo-1445888761652-fc13cbb0d819?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.8,
             "price": 3.99,
             "description": "Classic campfire treat consisting of graham crackers, marshmallows, and chocolate, toasted over a campfire or in an oven.",
@@ -352,7 +352,7 @@
           {
             "id": 36,
             "title": "Piña Colada",
-            "category": "Desserts",
+            "category": "pasta",
             "image": "https://images.unsplash.com/photo-1464306208223-e0b4495a5553?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "rate": 4.8,
             "price": 6.99,

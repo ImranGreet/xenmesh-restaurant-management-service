@@ -5,7 +5,7 @@
         <div class="text-center">
           <h1
             class="text-gray-800 tracking-wider leading-7 text-xl font-semibold">
-            <slot>{{ itemsByCategory.category }}</slot>
+            <slot>{{ categoryPage }}</slot>
           </h1>
         </div>
 
@@ -38,7 +38,8 @@
         class="w-full bg-inherit sapce-y-2 grid grid-cols-1 sm:grid-cols-2 gap-6"
         :class="{ 'xl:grid-cols-3': gridView, 'xl:grid-cols-4': !gridView }">
         <ProductCard
-          v-for="product in itemsByCategory.foodItems"
+          :productInformation="product"
+          v-for="product in itemsByCat"
           :key="product.id" />
       </div>
     </div>
@@ -46,8 +47,12 @@
 </template>
 
 <script>
-import { onMounted, ref, onUnmounted } from 'vue';
+import { onMounted, ref, onUnmounted, watch } from 'vue';
 import ProductCard from '../Products/ProductCard.vue';
+import { useRoute } from 'vue-router';
+
+import items from "../../../DB/products.json";
+
 import {
   gridView,
   showGridItems,
@@ -55,10 +60,16 @@ import {
   gridColor,
 } from '../../../scripts/public/Utility';
 
+
 export default {
   name: 'Menuitemsbycat',
   components: { ProductCard },
   setup() {
+    const route = useRoute();
+    
+    const categoryPage = ref();
+    const itemsByCat = ref();
+
     onMounted(() => {
       showGridItems('grid');
     });
@@ -67,50 +78,26 @@ export default {
       gridView.value = false;
     });
 
-    let itemsByCategory = ref({
-      category: 'Beef and Vegetables',
-      foodItems: [
-        {
-          id: 1,
-          foodname: 'Burger',
-          foodImage: 'https://source.unsplash.com/800x600/?burger',
-          price: 5.99,
-        },
-        {
-          id: 2,
-          foodname: 'Pizza',
-          foodImage: 'https://source.unsplash.com/800x600/?pizza',
-          price: 8.99,
-        },
-        {
-          id: 3,
-          foodname: 'Salad',
-          foodImage: 'https://source.unsplash.com/800x600/?salad',
-          price: 4.99,
-        },
-        {
-          id: 4,
-          foodname: 'Sushi',
-          foodImage: 'https://source.unsplash.com/800x600/?sushi',
-          price: 12.99,
-        },
-        {
-          id: 5,
-          foodname: 'Pasta',
-          foodImage: 'https://source.unsplash.com/800x600/?pasta',
-          price: 9.99,
-        },
-        {
-          id: 6,
-          foodname: 'Ice Cream',
-          foodImage: 'https://source.unsplash.com/800x600/?ice-cream',
-          price: 3.99,
-        },
-      ],
-    });
+    watch(
+      ()=>(categoryPage.value = route.params.category),
+      ()=>( categoryPage.value=route.params.category),
+      );
+
+     
+
+    watch(
+      ()=>itemsByCat.value = items.filter((foodItem)=>{
+       return foodItem.category == categoryPage.value;
+     }),
+     ()=>itemsByCat.value = items.filter((foodItem)=>{
+       return foodItem.category == categoryPage.value;
+     }),
+    );
+
 
     return {
-      itemsByCategory,
+      itemsByCat,
+      categoryPage, 
       gridView,
       flexColor,
       gridColor,
