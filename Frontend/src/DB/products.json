@@ -1,506 +1,815 @@
 [
-      {
-        "id": 1,
-        "title": "Tomato Basil Pizza",
-        "category": "Pizza",
-        "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "rate": 4.8,
-        "price": 12.99,
-        "description": "A classic Neapolitan pizza with a simple yet flavorful combination of tomato sauce, mozzarella cheese, and fresh basil.",
-        "composition": ["Pizza dough", "Tomato sauce", "Mozzarella cheese", "Fresh basil", "Olive oil", "Basil"]
-      },
-      {
-        "id": 2,
-        "title": "Spinach and Artichoke Dip",
-        "category": "Appetizers",
-        "image": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1547&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "rate": 4.7,
-        "price": 8.99,
-        "description": "A rich and creamy dip made with spinach, artichoke hearts, Parmesan cheese, and a hint of garlic.",
-        "composition": ["Cream cheese", "Ricotta cheese", "Spinach", "Artichoke hearts", "Parmesan cheese", "Garlic"]
-      },
-      {
-        "id": 3,
-        "title": "Calamari Fritti",
-        "category": "Appetizers",
-        "image": "https://images.unsplash.com/photo-1464219551459-ac14ae01fbe0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "rate": 4.6,
-        "price": 10.99,
-        "description": "Golden-fried calamari rings served with a tangy marinara sauce and a side of lemon wedges.",
-        "composition": ["Calamari", "Flour", "Eggs", "Breadcrumbs", "Oil", "Lemon", "Salt"]
-      },
-      {
-        "id": 4,
-        "title": "Caesar Salad",
-        "category": "Soup",
-        "image": "https://images.unsplash.com/photo-1573413754133-2a7214b289b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "rate": 4.9,
-        "price": 9.99,
-        "description": "A classic Caesar salad with romaine lettuce, shaved Parmesan cheese, croutons, and a creamy Caesar dressing.",
-        "composition": ["Romaine lettuce", "Shaved Parmesan cheese", "Croutons", "Garlic", "Egg yolks", "Olive oil", "Lemon juice", "Worcestershire sauce", "Parmesan cheese", "Salt", "Pepper"]
-      },
-      {
-        "id": 5,
-        "title": "Grilled Salmon Salad",
-        "category": "Salads",
-        "image": "https://images.unsplash.com/photo-1515948578606-e129bb3f01f4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "rate": 4.8,
-        "price": 12.99,
-        "description": "A refreshing salad with grilled salmon, mixed greens, cucumber, tomato, and a light vinaigrette dressing.",
-        "composition": ["Grilled salmon", "Mixed greens", "Cucumber", "Tomato", "Light vinaigrette dressing", "Olive oil", "White vinegar", "Lemon juice", "Salt", "Pepper"]
-      },
-      {
-        "id": 6,
-        "title": "Chicken Caesar Salad",
-        "category": "Salads",
-        "image": "https://images.unsplash.com/photo-1523314906480-8f65cbed7113?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "rate": 4.7,
-        "price": 11.99,
-        "description": "A salad with grilled chicken breast, romaine lettuce, shaved Parmesan cheese, croutons, and a creamy Caesar dressing.",
-        "composition": ["Grilled chicken breast", "Romaine lettuce", "Shaved Parmesan cheese", "Croutons", "Garlic", "Egg yolks", "Olive oil", "Lemon juice", "Worcestershire sauce", "Pepper"]
-      },
-      {
-            "id": 7,
-            "title": "Falafel Salad",
-            "category": "Soup",
-            "image": "https://images.unsplash.com/photo-1544926206-bd2c1e248045?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.5,
-            "price": 10.99,
-            "description": "A salad with falafel, mixed greens, hummus, tahini sauce, and a side of pita bread.",
-            "composition": ["Falafel", "Mixed greens", "Hummus", "Tahini sauce", "Pita bread"]
-          },
-          {
-            "id": 8,
-            "title": "Chicken Shawarma Salad",
-            "category": "Salads",
-            "image": "https://images.unsplash.com/photo-1621188988280-67c8d6e130a6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 11.99,
-            "description": "A salad with grilled marinated chicken, mixed greens, cucumber, tomato, feta cheese, and a lemon vinaigrette dressing.",
-            "composition": ["Grilled marinated chicken", "Mixed greens", "Cucumber", "Tomato", "Feta cheese", "Lemon vinaigrette dressing"]
-          },
-          {
-            "id": 9,
-            "title": "Tuna Salad Sandwich",
-            "category": "Sandwiches",
-            "image": "https://images.unsplash.com/photo-1623519004230-6c20b3b5e7d9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 9.99,
-            "description": "A classic tuna salad sandwich on toasted ciabatta bread with lettuce, tomato, and mayonnaise.",
-            "composition": ["Tuna salad", "Ciabatta bread", "Lettuce", "Tomato", "Mayonnaise", "Salt", "Pepper"]
-          },
-          {
-            "id": 10,
-            "title": "Turkey Club Sandwich",
-            "category": "Sandwiches",
-            "image": "https://images.unsplash.com/photo-1623519003708-e8ba4f691996?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 12.99,
-            "description": "A grilled turkey sandwich with bacon, lettuce, tomato, and mayonnaise on toasted sourdough bread, served with potato chips.",
-            "composition": ["Grilled turkey breast", "Bacon", "Lettuce", "Tomato", "Mayonnaise", "Sourdough bread", "Potato chips"]
-          },
-          {
-            "id": 11,
-            "title": "Reuben Sandwich",
-            "category": "pasta",
-            "image": "https://plus.unsplash.com/premium_photo-1671403964013-c214c01129cf?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 14.99,
-            "description": "A hot grilled Reuben sandwich with corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread.",
-            "composition": ["Corned beef", "Sauerkraut", "Swiss cheese", "Russian dressing", "Rye bread"]
-          },
-          {
-            "id": 12,
-            "title": "Cheeseburger",
-            "category": "Main Courses",
-            "image": "https://images.unsplash.com/photo-1668285342665-6e0c9d3d8144?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 16.99,
-            "description": "A classic cheeseburger with seasoned ground beef, melted cheese, lettuce, tomato, onion, and a sesame seed bun.",
-            "composition": ["Seasoned ground beef", "Melted cheddar cheese", "Lettuce", "Tomato", "Onion", "Sesame seed bun"]
-          },
-          {
-            "id": 13,
-            "title": "Chicken Quesadilla",
-            "category": "Sandwiches",
-            "image": "https://images.unsplash.com/photo-1658308767269-42ac00314021?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 13.99,
-            "description": "A grilled quesadilla filled with grilled chicken, melted cheese, and your choice of toppings.",
-            "composition": ["Chicken breast", "Melted cheddar cheese", "Tortilla", "Your choice of toppings: (Tomato, avocado, salsa, sour cream)"]
-          },
-          {
-            "id": 14,
-            "title": "Spaghetti and Meat Sauce",
-            "category": "Main Courses",
-            "image": "https://images.unsplash.com/photo-1638329389022-daef2efb71b3?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 15.99,
-            "description": "A classic Italian dish of spaghetti pasta served with a rich and flavorful meat sauce.",
-            "composition": ["Spaghetti pasta", "Ground beef", "Tomato sauce", "Parmesan cheese", "Oregano", "Basil", "Salt", "Pepper"]
-          },
-          {
-            "id": 15,
-            "title": "Tacos Al Pastor",
-            "category": "Main Courses",
-            "image": "https://images.unsplash.com/photo-1658308767269-42ac00314021?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 17.99,
-            "description": "Grilled marinated pork seasoned with adobo sauce, served on corn tortillas with pineapple, cilantro, and onions.",
-            "composition": ["Grilled marinated pork", "Corn tortillas", "Adobo sauce", "Pineapple", "Cilantro", "Onions"]
-          },
-          {
-            "id": 16,
-            "title": "Chicken Parmesan",
-            "category": "Main Courses",
-            "image": "https://images.unsplash.com/photo-1656056773803-2c7b9e74c1d1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 18.99,
-            "description": "Breaded and fried chicken breast coated in tomato sauce and mozzarella cheese, served with pasta.",
-            "composition": ["Chicken breast", "Eggs", "Bread crumbs", "Parmesan cheese", "Tomato sauce", "Mozzarella cheese", "Pasta"]
-          },
-          {
-            "id": 17,
-            "title": "Penne Arrabbiata",
-            "category": "Sandwiches",
-            "image": "https://images.unsplash.com/photo-1656056773891-4888554bdd59?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 16.99,
-            "description": "Spicy tomato sauce with garlic, chili flakes, and olive oil, served with penne pasta.",
-            "composition": ["Tomato sauce", "Garlic", "Chili flakes", "Olive oil", "Penne pasta"]
-          },
-          {
-            "id": 18,
-            "title": "Salmon with Lemon Butter Sauce",
-            "category": "Bevarages",
-            "image": "https://images.unsplash.com/photo-1656936637945-571e3f0893f9?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 20.99,
-            "description": "Pan-seared salmon served with a creamy lemon butter sauce, roasted vegetables, and rice pilaf.",
-            "composition": ["Salmon", "Lemon butter sauce", "Roasted vegetables (Broccoli, carrots, zucchini)", "Rice pilaf"]
-          },
-          {
-            "id": 19,
-            "title": "Vegetable Curry",
-            "category": "Main Courses",
-            "image": "https://images.unsplash.com/photo-1651993737174-6890c1daef5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 18.99,
-            "description": "A flavorful curry with a blend of vegetables (potatoes, carrots, bell peppers), coconut milk, and spices.",
-            "composition": ["Vegetables (Potatoes, carrots, bell peppers)", "Coconut milk", "Ginger, turmeric, curry powder, cumin, garam masala, salt, pepper"]
-          },
-          {
-            "id": 20,
-            "title": "Tiramisu",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1535568824865-a801351e8483?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 5.0,
-            "price": 8.99,
-            "description": "A classic Italian dessert made of ladyfingers soaked in coffee, layered with mascarpone cheese and cocoa powder, and topped with cocoa powder.",
-            "composition": ["Ladyfingers", "Mascarpone cheese", "Strong coffee", "Cocoa powder"]
-          },
-          {
-            "id": 21,
-            "title": "Chocolate Lava Cake",
-            "category": "Bevarages",
-            "image": "https://images.unsplash.com/photo-1533910534207-90f31029a78e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 9.99,
-            "description": "A warm, gooey chocolate cake with a molten center.",
-            "composition": ["Chocolate cake batter", "Chocolate chips", "Vanilla ice cream"]
-          },
-          {
-            "id": 22,
-            "title": "Apple Pie",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1628543108325-1c27cd7246b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 8.99,
-            "description": "A classic apple pie with a flaky crust, sweet apples, and a hint of cinnamon.",
-            "composition": ["Pie crust", "Apples", "Cinnamon", "Sugar", "Butter"]
-          },
-          {
-            "id": 23,
-            "title": "Ice Cream Sundae",
-            "category": "pasta",
-            "image": "https://images.unsplash.com/photo-1632154023554-c2975e9be348?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 7.99,
-            "description": "A classic ice cream sundae with your choice of ice cream, toppings, and sauces.",
-            "composition": ["Ice cream", "Your choice of toppings (Cherries, whipped cream, sprinkles, chocolate sauce, caramel sauce)"]
-          },
-          {
-            "id": 24,
-            "title": "Brownies",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1612078894671-f11ba41d713e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 6.99,
-            "description": "Rich, fudgy brownies made with chocolate, butter, eggs, and flour.",
-            "composition": ["Chocolate", "Butter", "Eggs", "Flour"]
-          },
-          {
-            "id": 25,
-            "title": "Mocha Frappuccino",
-            "category": "Bevarages",
-            "image": "https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 5.99,
-            "description": "A creamy coffee drink blended with ice, milk, and chocolate syrup.",
-            "composition": ["Ice", "Milk", "Coffee", "Chocolate syrup"]
-          },
-          {
-            "id": 26,
-            "title": "Caramel Macchiato",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1501200291289-c5a76c232e5f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 5.99,
-            "description": "A layered espresso drink with steamed milk, caramel syrup, and caramel drizzle.",
-            "composition": ["Espresso", "Steamed milk", "Caramel syrup", "Caramel drizzle"]
-          },
-          {
-            "id": 27,
-            "title": "Lemon Meringue Pie",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1598515211932-b130a728a769?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 8.99,
-            "description": "A creamy lemon pie with a fluffy meringue topping.",
-            "composition": ["Pie crust", "Lemon curd", "Meringue"]
-          },
-          {
-            "id": 28,
-            "title": "New York-Style Cheesecake",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1598511726903-ef08ef6eff94?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 9.99,
-            "description": "A dense and rich cheesecake with a graham cracker crust.",
-            "composition": ["Graham cracker crust", "Cream cheese", "Sugar", "Eggs", "Vanilla extract", "Lemon juice"]
-          },
-          {
-            "id": 29,
-            "title": "Chocolate Soufflé",
-            "category": "BBQ",
-            "image": "https://images.unsplash.com/photo-1598515213381-80d77efcdf32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 9.99,
-            "description": "A light and airy chocolate soufflé that rises to perfection and melts in your mouth.",
-            "composition": ["Egg yolks", "Chocolate", "Sugar", "Egg whites"]
-          },
-          {
-            "id": 30,
-            "title": "Profiteroles",
-            "category": "Bevarages",
-            "image": "https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 8.99,
-            "description": "Light and airy cream puffs filled with vanilla or chocolate pastry cream and topped with chocolate sauce.",
-            "composition": ["Pastry dough", "Vanilla pastry cream", "Chocolate pastry cream", "Chocolate sauce"]
-          },
-          {
-            "id": 31,
-            "title": "Cannoli",
-            "category": "pasta",
-            "image": "https://images.unsplash.com/photo-1632158929413-168599fffbf7?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 6.99,
-            "description": "Fried pastries filled with a rich and creamy ricotta filling, often flavored with chocolate chips, candied fruit, or nuts.",
-            "composition": ["Sweet pastry dough", "Ricotta cheese", "Chocolate chips", "Candied fruit", "Nuts"]
-          },
-          {
-            "id": 32,
-            "title": "Baklava",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1622665632960-aba7ac089541?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 7.99,
-            "description": "Phyllo pastry filled with chopped nuts and sweetened with honey, a traditional dessert from the Middle East.",
-            "composition": ["Phyllo pastry", "Nuts (Walnuts, pistachios, almonds)", "Honey"]
-          },
-          {
-            "id": 33,
-            "title": "Affogato",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1587094666821-7a1ecab87e70?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 5.99,
-            "description": "A warm espresso shot over a scoop of vanilla ice cream, creating a delightful contrast of hot and cold temperatures.",
-            "composition": ["Espresso", "Vanilla ice cream"]
-          },
-          {
-            "id": 34,
-            "title": "Smores",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1445888761652-fc13cbb0d819?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 3.99,
-            "description": "Classic campfire treat consisting of graham crackers, marshmallows, and chocolate, toasted over a campfire or in an oven.",
-            "composition": ["Graham crackers", "Marshmallows", "Chocolate squares"]
-          },
-          {
-            "id": 35,
-            "title": "Gelato",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 6.99,
-            "description": "A rich and creamy Italian ice cream, typically made with less air and higher milk and fat content.",
-            "composition": ["Variety of flavors, including Vanilla, Chocolate, Hazelnut, pistachio, Raspberry, Strawberry"]
-          },
-          {
-            "id": 36,
-            "title": "Piña Colada",
-            "category": "pasta",
-            "image": "https://images.unsplash.com/photo-1464306208223-e0b4495a5553?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 6.99,
-            "description": "A refreshing tropical cocktail made with rum, pineapple juice, and coconut cream, often served shaken and blended.",
-            "composition": ["Rum", "Pineapple juice", "Coconut cream"]
-          },
-          {
-            "id": 37,
-            "title": "Irish Coffee",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1535567465397-7523840f2ae9?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 7.99,
-            "description": "A decadent coffee beverage made with hot coffee, Irish whiskey, and sweetened cream, often served with whipped cream and a sprinkle of nutmeg.",
-            "composition": ["Coffee", "Irish whiskey", "Sweetened cream", "Whipped cream", "Nutmeg"]
-          },
-          {
-            "id": 38,
-            "title": "Espresso Martini",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1522180079815-d20fc0cb9e13?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 6.99,
-            "description": "A sophisticated cocktail made with vodka, espresso, coffee liqueur, and a splash of sugar or simple syrup, often served shaken and chilled.",
-            "composition": ["Vodka", "Espresso", "Coffee liqueur", "Sugar", "Simple syrup"]
-          },
-          {
-            "id": 39,
-            "title": "Frappe",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 5.99,
-            "description": "A blended ice cream drink typically made with coffee, chocolate, or fruit flavors, often topped with whipped cream and syrup.",
-            "composition": ["Ice cream", "Coffee", "Chocolate", "Fruit flavors", "Whipped cream", "Syrup"]
-          },
-          {
-            "id": 40,
-            "title": "Mimosa",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1553649504-60af7754bf35?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 6.99,
-            "description": "A brunch staple, a cocktail made with champagne or sparkling wine and orange juice, often garnished with a slice of orange.",
-            "composition": ["Champagne", "Sparkling wine", "Orange juice"]
-          },
-          {
-            "id": 41,
-            "title": "Apple Cider Doughnut",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1608847569619-b5602f65ffa0?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 5.0,
-            "price": 3.99,
-            "description": "A warm and fluffy doughnut filled with warm apple cider filling and topped with a cinnamon sugar coating.",
-            "composition": ["Doughnut", "Apple cider", "Cinnamon sugar"]
-          },
-          {
-            "id": 42,
-            "title": "Churros with Chocolate Sauce",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1621188988909-fbef0a88dc04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 4.99,
-            "description": "Golden-brown, crispy churros served with rich and creamy chocolate sauce for dipping.",
-            "composition": ["Churros", "Chocolate sauce"]
-          },
-          {
-            "id": 43,
-            "title": "Hot Chocolate",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1619531038896-deaff53d151a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 4.99,
-            "description": "A warm and comforting beverage made with rich chocolate and milk, often topped with whipped cream and marshmallows.",
-            "composition": ["Chocolate", "Milk", "Whipped cream", "Marshmallows"]
-          },
-          {
-            "id": 44,
-            "title": "Waffles with Fruit",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1639744093378-b2fde867b4d8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 5.99,
-            "description": "Light and fluffy waffles topped with a variety of fresh fruits, such as strawberries, blueberries, and bananas.",
-            "composition": ["Waffles", "Fresh fruit (Strawberries, blueberries, bananas)"]
-          },
-          {
-            "id": 45,
-            "title": "Pancakes with Maple Syrup",
-            "category": "Seafood",
-            "image": "https://images.unsplash.com/photo-1639744211487-b27e3551b07c?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 4.99,
-            "description": "Fluffy pancakes with a drizzle of rich maple syrup, a classic breakfast or dessert option.",
-            "composition": ["Pancakes", "Maple syrup"]
-          },
-          {
-            "id": 46,
-            "title": "Beignets",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1639747539269-6e8f51833666?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.8,
-            "price": 4.99,
-            "description": "Light and airy beignets, a French pastry similar to doughnuts, typically served with powdered sugar and a side of chocolate or caramel sauce.",
-            "composition": ["Beignets", "Powdered sugar", "Chocolate or caramel sauce"]
-          },
-          {
-            "id": 47,
-            "title": "Crème Brûlée",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1506802913710-40e2e66339c9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.7,
-            "price": 5.99,
-            "description": "A classic French dessert with a rich and creamy vanilla custard topped with a layer of caramelized sugar.",
-            "composition": ["Vanilla custard", "Caramelized sugar"]
-          },
-          {
-            "id": 48,
-            "title": "Profiterole Sundae",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.6,
-            "price": 6.99,
-            "description": "A warm and fluffy profiterole filled with vanilla pastry cream and topped with chocolate sauce, whipped cream, and a cherry.",
-            "composition": ["Profiteroles", "Vanilla pastry cream", "Chocolate sauce", "Whipped cream", "Cherry"]
-          },
-          {
-            "id": 49,
-            "title": "Baked Alaska",
-            "category": "Desserts",
-            "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 4.9,
-            "price": 7.99,
-            "description": "A dramatic dessert consisting of a dome of ice cream encased in meringue, often flambéed with brandy or rum before serving.",
-            "composition": ["Ice cream", "Meringue", "Brandy or rum"]
-          },
-          {
-            "id": 50,
-            "title": "Cheesecake",
-            "category": "Vegetarian",
-            "image": "https://images.unsplash.com/photo-1619286311276-d8343d00ce1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rate": 5.0,
-            "price": 6.99,
-            "description": "A creamy and decadent cheesecake with a variety of flavors, such as New York-style, strawberry, or chocolate.",
-            "composition": ["Cheesecake base (Graham crackers, butter, sugar)", "Cheesecake filling", "Variety of toppings (Fresh fruit, Chocolate sauce, Caramel sauce, Whipped cream)"]
-          }
-      ]
-          
-        
-          
-    
+  {
+    "id": 1,
+    "title": "Tomato Basil Pizza",
+    "category": "Pizza",
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 12.99,
+    "description": "A classic Neapolitan pizza with a simple yet flavorful combination of tomato sauce, mozzarella cheese, and fresh basil.",
+    "composition": [
+      "Pizza dough",
+      "Tomato sauce",
+      "Mozzarella cheese",
+      "Fresh basil",
+      "Olive oil",
+      "Basil"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 2,
+    "title": "Spinach and Artichoke Dip",
+    "category": "Appetizers",
+    "image": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1547&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 8.99,
+    "description": "A rich and creamy dip made with spinach, artichoke hearts, Parmesan cheese, and a hint of garlic.",
+    "composition": [
+      "Cream cheese",
+      "Ricotta cheese",
+      "Spinach",
+      "Artichoke hearts",
+      "Parmesan cheese",
+      "Garlic"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 3,
+    "title": "Calamari Fritti",
+    "category": "Appetizers",
+    "image": "https://images.unsplash.com/photo-1464219551459-ac14ae01fbe0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 10.99,
+    "description": "Golden-fried calamari rings served with a tangy marinara sauce and a side of lemon wedges.",
+    "composition": [
+      "Calamari",
+      "Flour",
+      "Eggs",
+      "Breadcrumbs",
+      "Oil",
+      "Lemon",
+      "Salt"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 4,
+    "title": "Caesar Salad",
+    "category": "Soup",
+    "image": "https://images.unsplash.com/photo-1573413754133-2a7214b289b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 9.99,
+    "description": "A classic Caesar salad with romaine lettuce, shaved Parmesan cheese, croutons, and a creamy Caesar dressing.",
+    "composition": [
+      "Romaine lettuce",
+      "Shaved Parmesan cheese",
+      "Croutons",
+      "Garlic",
+      "Egg yolks",
+      "Olive oil",
+      "Lemon juice",
+      "Worcestershire sauce",
+      "Parmesan cheese",
+      "Salt",
+      "Pepper"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 5,
+    "title": "Grilled Salmon Salad",
+    "category": "Salads",
+    "image": "https://images.unsplash.com/photo-1515948578606-e129bb3f01f4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 12.99,
+    "description": "A refreshing salad with grilled salmon, mixed greens, cucumber, tomato, and a light vinaigrette dressing.",
+    "composition": [
+      "Grilled salmon",
+      "Mixed greens",
+      "Cucumber",
+      "Tomato",
+      "Light vinaigrette dressing",
+      "Olive oil",
+      "White vinegar",
+      "Lemon juice",
+      "Salt",
+      "Pepper"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 6,
+    "title": "Chicken Caesar Salad",
+    "category": "Salads",
+    "image": "https://images.unsplash.com/photo-1523314906480-8f65cbed7113?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 11.99,
+    "description": "A salad with grilled chicken breast, romaine lettuce, shaved Parmesan cheese, croutons, and a creamy Caesar dressing.",
+    "composition": [
+      "Grilled chicken breast",
+      "Romaine lettuce",
+      "Shaved Parmesan cheese",
+      "Croutons",
+      "Garlic",
+      "Egg yolks",
+      "Olive oil",
+      "Lemon juice",
+      "Worcestershire sauce",
+      "Pepper"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 7,
+    "title": "Falafel Salad",
+    "category": "Soup",
+    "image": "https://images.unsplash.com/photo-1544926206-bd2c1e248045?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.5,
+    "price": 10.99,
+    "description": "A salad with falafel, mixed greens, hummus, tahini sauce, and a side of pita bread.",
+    "composition": [
+      "Falafel",
+      "Mixed greens",
+      "Hummus",
+      "Tahini sauce",
+      "Pita bread"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 8,
+    "title": "Chicken Shawarma Salad",
+    "category": "Salads",
+    "image": "https://images.unsplash.com/photo-1621188988280-67c8d6e130a6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 11.99,
+    "description": "A salad with grilled marinated chicken, mixed greens, cucumber, tomato, feta cheese, and a lemon vinaigrette dressing.",
+    "composition": [
+      "Grilled marinated chicken",
+      "Mixed greens",
+      "Cucumber",
+      "Tomato",
+      "Feta cheese",
+      "Lemon vinaigrette dressing"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 9,
+    "title": "Tuna Salad Sandwich",
+    "category": "Sandwiches",
+    "image": "https://images.unsplash.com/photo-1623519004230-6c20b3b5e7d9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 9.99,
+    "description": "A classic tuna salad sandwich on toasted ciabatta bread with lettuce, tomato, and mayonnaise.",
+    "composition": [
+      "Tuna salad",
+      "Ciabatta bread",
+      "Lettuce",
+      "Tomato",
+      "Mayonnaise",
+      "Salt",
+      "Pepper"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 10,
+    "title": "Turkey Club Sandwich",
+    "category": "Sandwiches",
+    "image": "https://images.unsplash.com/photo-1623519003708-e8ba4f691996?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 12.99,
+    "description": "A grilled turkey sandwich with bacon, lettuce, tomato, and mayonnaise on toasted sourdough bread, served with potato chips.",
+    "composition": [
+      "Grilled turkey breast",
+      "Bacon",
+      "Lettuce",
+      "Tomato",
+      "Mayonnaise",
+      "Sourdough bread",
+      "Potato chips"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 11,
+    "title": "Reuben Sandwich",
+    "category": "pasta",
+    "image": "https://plus.unsplash.com/premium_photo-1671403964013-c214c01129cf?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 14.99,
+    "description": "A hot grilled Reuben sandwich with corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread.",
+    "composition": [
+      "Corned beef",
+      "Sauerkraut",
+      "Swiss cheese",
+      "Russian dressing",
+      "Rye bread"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 12,
+    "title": "Cheeseburger",
+    "category": "Main Courses",
+    "image": "https://images.unsplash.com/photo-1668285342665-6e0c9d3d8144?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 16.99,
+    "description": "A classic cheeseburger with seasoned ground beef, melted cheese, lettuce, tomato, onion, and a sesame seed bun.",
+    "composition": [
+      "Seasoned ground beef",
+      "Melted cheddar cheese",
+      "Lettuce",
+      "Tomato",
+      "Onion",
+      "Sesame seed bun"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 13,
+    "title": "Chicken Quesadilla",
+    "category": "Sandwiches",
+    "image": "https://images.unsplash.com/photo-1658308767269-42ac00314021?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 13.99,
+    "description": "A grilled quesadilla filled with grilled chicken, melted cheese, and your choice of toppings.",
+    "composition": [
+      "Chicken breast",
+      "Melted cheddar cheese",
+      "Tortilla",
+      "Your choice of toppings: (Tomato, avocado, salsa, sour cream)"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 14,
+    "title": "Spaghetti and Meat Sauce",
+    "category": "Main Courses",
+    "image": "https://images.unsplash.com/photo-1638329389022-daef2efb71b3?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 15.99,
+    "description": "A classic Italian dish of spaghetti pasta served with a rich and flavorful meat sauce.",
+    "composition": [
+      "Spaghetti pasta",
+      "Ground beef",
+      "Tomato sauce",
+      "Parmesan cheese",
+      "Oregano",
+      "Basil",
+      "Salt",
+      "Pepper"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 15,
+    "title": "Tacos Al Pastor",
+    "category": "Main Courses",
+    "image": "https://images.unsplash.com/photo-1658308767269-42ac00314021?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 17.99,
+    "description": "Grilled marinated pork seasoned with adobo sauce, served on corn tortillas with pineapple, cilantro, and onions.",
+    "composition": [
+      "Grilled marinated pork",
+      "Corn tortillas",
+      "Adobo sauce",
+      "Pineapple",
+      "Cilantro",
+      "Onions"
+    ],
+    "discount": 5,
+    "status": "regular"
+  },
+  {
+    "id": 16,
+    "title": "Chicken Parmesan",
+    "category": "Main Courses",
+    "image": "https://images.unsplash.com/photo-1656056773803-2c7b9e74c1d1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 18.99,
+    "description": "Breaded and fried chicken breast coated in tomato sauce and mozzarella cheese, served with pasta.",
+    "composition": [
+      "Chicken breast",
+      "Eggs",
+      "Bread crumbs",
+      "Parmesan cheese",
+      "Tomato sauce",
+      "Mozzarella cheese",
+      "Pasta"
+    ],
+    "discount": 5,
+    "status": "regular"
+  },
+  {
+    "id": 17,
+    "title": "Penne Arrabbiata",
+    "category": "Sandwiches",
+    "image": "https://images.unsplash.com/photo-1656056773891-4888554bdd59?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 16.99,
+    "description": "Spicy tomato sauce with garlic, chili flakes, and olive oil, served with penne pasta.",
+    "composition": [
+      "Tomato sauce",
+      "Garlic",
+      "Chili flakes",
+      "Olive oil",
+      "Penne pasta"
+    ],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 18,
+    "title": "Salmon with Lemon Butter Sauce",
+    "category": "Bevarages",
+    "image": "https://images.unsplash.com/photo-1656936637945-571e3f0893f9?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 20.99,
+    "description": "Pan-seared salmon served with a creamy lemon butter sauce, roasted vegetables, and rice pilaf.",
+    "composition": [
+      "Salmon",
+      "Lemon butter sauce",
+      "Roasted vegetables (Broccoli, carrots, zucchini)",
+      "Rice pilaf"
+    ],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 19,
+    "title": "Vegetable Curry",
+    "category": "Main Courses",
+    "image": "https://images.unsplash.com/photo-1651993737174-6890c1daef5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 18.99,
+    "description": "A flavorful curry with a blend of vegetables (potatoes, carrots, bell peppers), coconut milk, and spices.",
+    "composition": [
+      "Vegetables (Potatoes, carrots, bell peppers)",
+      "Coconut milk",
+      "Ginger, turmeric, curry powder, cumin, garam masala, salt, pepper"
+    ],
+    "discount": 0,
+    "status": "popular"
+  },
+  {
+    "id": 20,
+    "title": "Tiramisu",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1535568824865-a801351e8483?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 5.0,
+    "price": 8.99,
+    "description": "A classic Italian dessert made of ladyfingers soaked in coffee, layered with mascarpone cheese and cocoa powder, and topped with cocoa powder.",
+    "composition": [
+      "Ladyfingers",
+      "Mascarpone cheese",
+      "Strong coffee",
+      "Cocoa powder"
+    ],
+    "discount": 5,
+    "status": "featured"
+  },
+  {
+    "id": 21,
+    "title": "Chocolate Lava Cake",
+    "category": "Bevarages",
+    "image": "https://images.unsplash.com/photo-1533910534207-90f31029a78e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 9.99,
+    "description": "A warm, gooey chocolate cake with a molten center.",
+    "composition": [
+      "Chocolate cake batter",
+      "Chocolate chips",
+      "Vanilla ice cream"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 22,
+    "title": "Apple Pie",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1628543108325-1c27cd7246b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 8.99,
+    "description": "A classic apple pie with a flaky crust, sweet apples, and a hint of cinnamon.",
+    "composition": ["Pie crust", "Apples", "Cinnamon", "Sugar", "Butter"],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 23,
+    "title": "Ice Cream Sundae",
+    "category": "pasta",
+    "image": "https://images.unsplash.com/photo-1632154023554-c2975e9be348?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 7.99,
+    "description": "A classic ice cream sundae with your choice of ice cream, toppings, and sauces.",
+    "composition": [
+      "Ice cream",
+      "Your choice of toppings (Cherries, whipped cream, sprinkles, chocolate sauce, caramel sauce)"
+    ],
+    "discount": 5,
+    "status": "popular"
+  },
+  {
+    "id": 24,
+    "title": "Brownies",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1612078894671-f11ba41d713e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 6.99,
+    "description": "Rich, fudgy brownies made with chocolate, butter, eggs, and flour.",
+    "composition": ["Chocolate", "Butter", "Eggs", "Flour"],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 25,
+    "title": "Mocha Frappuccino",
+    "category": "Bevarages",
+    "image": "https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 5.99,
+    "description": "A creamy coffee drink blended with ice, milk, and chocolate syrup.",
+    "composition": ["Ice", "Milk", "Coffee", "Chocolate syrup"],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 26,
+    "title": "Caramel Macchiato",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1501200291289-c5a76c232e5f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 5.99,
+    "description": "A layered espresso drink with steamed milk, caramel syrup, and caramel drizzle.",
+    "composition": [
+      "Espresso",
+      "Steamed milk",
+      "Caramel syrup",
+      "Caramel drizzle"
+    ],
+    "discount": 0,
+    "status": "popular"
+  },
+  {
+    "id": 27,
+    "title": "Lemon Meringue Pie",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1598515211932-b130a728a769?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 8.99,
+    "description": "A creamy lemon pie with a fluffy meringue topping.",
+    "composition": ["Pie crust", "Lemon curd", "Meringue"],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 28,
+    "title": "New York-Style Cheesecake",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1598511726903-ef08ef6eff94?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 9.99,
+    "description": "A dense and rich cheesecake with a graham cracker crust.",
+    "composition": [
+      "Graham cracker crust",
+      "Cream cheese",
+      "Sugar",
+      "Eggs",
+      "Vanilla extract",
+      "Lemon juice"
+    ],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 29,
+    "title": "Chocolate Soufflé",
+    "category": "BBQ",
+    "image": "https://images.unsplash.com/photo-1598515213381-80d77efcdf32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 9.99,
+    "description": "A light and airy chocolate soufflé that rises to perfection and melts in your mouth.",
+    "composition": ["Egg yolks", "Chocolate", "Sugar", "Egg whites"],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 30,
+    "title": "Profiteroles",
+    "category": "Bevarages",
+    "image": "https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 8.99,
+    "description": "Light and airy cream puffs filled with vanilla or chocolate pastry cream and topped with chocolate sauce.",
+    "composition": [
+      "Pastry dough",
+      "Vanilla pastry cream",
+      "Chocolate pastry cream",
+      "Chocolate sauce"
+    ],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 31,
+    "title": "Cannoli",
+    "category": "pasta",
+    "image": "https://images.unsplash.com/photo-1632158929413-168599fffbf7?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 6.99,
+    "description": "Fried pastries filled with a rich and creamy ricotta filling, often flavored with chocolate chips, candied fruit, or nuts.",
+    "composition": [
+      "Sweet pastry dough",
+      "Ricotta cheese",
+      "Chocolate chips",
+      "Candied fruit",
+      "Nuts"
+    ],
+    "discount": 0,
+    "status": "popular"
+  },
+  {
+    "id": 32,
+    "title": "Baklava",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1622665632960-aba7ac089541?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 7.99,
+    "description": "Phyllo pastry filled with chopped nuts and sweetened with honey, a traditional dessert from the Middle East.",
+    "composition": [
+      "Phyllo pastry",
+      "Nuts (Walnuts, pistachios, almonds)",
+      "Honey"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 33,
+    "title": "Affogato",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1587094666821-7a1ecab87e70?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 5.99,
+    "description": "A warm espresso shot over a scoop of vanilla ice cream, creating a delightful contrast of hot and cold temperatures.",
+    "composition": ["Espresso", "Vanilla ice cream"],
+    "discount": 0,
+    "status": "popular"
+  },
+  {
+    "id": 34,
+    "title": "Smores",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1445888761652-fc13cbb0d819?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 3.99,
+    "description": "Classic campfire treat consisting of graham crackers, marshmallows, and chocolate, toasted over a campfire or in an oven.",
+    "composition": ["Graham crackers", "Marshmallows", "Chocolate squares"]
+  },
+  {
+    "id": 35,
+    "title": "Gelato",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 6.99,
+    "description": "A rich and creamy Italian ice cream, typically made with less air and higher milk and fat content.",
+    "composition": [
+      "Variety of flavors, including Vanilla, Chocolate, Hazelnut, pistachio, Raspberry, Strawberry"
+    ],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 36,
+    "title": "Piña Colada",
+    "category": "pasta",
+    "image": "https://images.unsplash.com/photo-1464306208223-e0b4495a5553?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 6.99,
+    "description": "A refreshing tropical cocktail made with rum, pineapple juice, and coconut cream, often served shaken and blended.",
+    "composition": ["Rum", "Pineapple juice", "Coconut cream"],
+    "discount": 5,
+    "status": "popular"
+  },
+  {
+    "id": 37,
+    "title": "Irish Coffee",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1535567465397-7523840f2ae9?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 7.99,
+    "description": "A decadent coffee beverage made with hot coffee, Irish whiskey, and sweetened cream, often served with whipped cream and a sprinkle of nutmeg.",
+    "composition": [
+      "Coffee",
+      "Irish whiskey",
+      "Sweetened cream",
+      "Whipped cream",
+      "Nutmeg"
+    ],
+    "discount": 0,
+    "status": "featured"
+  },
+  {
+    "id": 38,
+    "title": "Espresso Martini",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1522180079815-d20fc0cb9e13?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 6.99,
+    "description": "A sophisticated cocktail made with vodka, espresso, coffee liqueur, and a splash of sugar or simple syrup, often served shaken and chilled.",
+    "composition": [
+      "Vodka",
+      "Espresso",
+      "Coffee liqueur",
+      "Sugar",
+      "Simple syrup"
+    ],
+    "discount": 0,
+    "status": "popular"
+  },
+  {
+    "id": 39,
+    "title": "Frappe",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 5.99,
+    "description": "A blended ice cream drink typically made with coffee, chocolate, or fruit flavors, often topped with whipped cream and syrup.",
+    "composition": [
+      "Ice cream",
+      "Coffee",
+      "Chocolate",
+      "Fruit flavors",
+      "Whipped cream",
+      "Syrup"
+    ],
+    "discount": 5,
+    "status": "featured"
+  },
+  {
+    "id": 40,
+    "title": "Mimosa",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1553649504-60af7754bf35?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 6.99,
+    "description": "A brunch staple, a cocktail made with champagne or sparkling wine and orange juice, often garnished with a slice of orange.",
+    "composition": ["Champagne", "Sparkling wine", "Orange juice"],
+    "discount": 5,
+    "status": "popular"
+  },
+  {
+    "id": 41,
+    "title": "Apple Cider Doughnut",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1608847569619-b5602f65ffa0?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 5.0,
+    "price": 3.99,
+    "description": "A warm and fluffy doughnut filled with warm apple cider filling and topped with a cinnamon sugar coating.",
+    "composition": ["Doughnut", "Apple cider", "Cinnamon sugar"],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 42,
+    "title": "Churros with Chocolate Sauce",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1621188988909-fbef0a88dc04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 4.99,
+    "description": "Golden-brown, crispy churros served with rich and creamy chocolate sauce for dipping.",
+    "composition": ["Churros", "Chocolate sauce"],
+    "discount": 5,
+    "status": "popular"
+  },
+  {
+    "id": 43,
+    "title": "Hot Chocolate",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1619531038896-deaff53d151a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 4.99,
+    "description": "A warm and comforting beverage made with rich chocolate and milk, often topped with whipped cream and marshmallows.",
+    "composition": ["Chocolate", "Milk", "Whipped cream", "Marshmallows"],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 44,
+    "title": "Waffles with Fruit",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1639744093378-b2fde867b4d8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 5.99,
+    "description": "Light and fluffy waffles topped with a variety of fresh fruits, such as strawberries, blueberries, and bananas.",
+    "composition": [
+      "Waffles",
+      "Fresh fruit (Strawberries, blueberries, bananas)"
+    ],
+    "discount": 5,
+    "status": "featured"
+  },
+  {
+    "id": 45,
+    "title": "Pancakes with Maple Syrup",
+    "category": "Seafood",
+    "image": "https://images.unsplash.com/photo-1639744211487-b27e3551b07c?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 4.99,
+    "description": "Fluffy pancakes with a drizzle of rich maple syrup, a classic breakfast or dessert option.",
+    "composition": ["Pancakes", "Maple syrup"],
+    "discount": 0,
+    "status": "popular"
+  },
+  {
+    "id": 46,
+    "title": "Beignets",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1639747539269-6e8f51833666?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.8,
+    "price": 4.99,
+    "description": "Light and airy beignets, a French pastry similar to doughnuts, typically served with powdered sugar and a side of chocolate or caramel sauce.",
+    "composition": ["Beignets", "Powdered sugar", "Chocolate or caramel sauce"],
+    "discount": 5,
+    "status": "regular"
+  },
+  {
+    "id": 47,
+    "title": "Crème Brûlée",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1506802913710-40e2e66339c9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.7,
+    "price": 5.99,
+    "description": "A classic French dessert with a rich and creamy vanilla custard topped with a layer of caramelized sugar.",
+    "composition": ["Vanilla custard", "Caramelized sugar"],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 48,
+    "title": "Profiterole Sundae",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.6,
+    "price": 6.99,
+    "description": "A warm and fluffy profiterole filled with vanilla pastry cream and topped with chocolate sauce, whipped cream, and a cherry.",
+    "composition": [
+      "Profiteroles",
+      "Vanilla pastry cream",
+      "Chocolate sauce",
+      "Whipped cream",
+      "Cherry"
+    ],
+    "discount": 0,
+    "status": "regular"
+  },
+  {
+    "id": 49,
+    "title": "Baked Alaska",
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 4.9,
+    "price": 7.99,
+    "description": "A dramatic dessert consisting of a dome of ice cream encased in meringue, often flambéed with brandy or rum before serving.",
+    "composition": ["Ice cream", "Meringue", "Brandy or rum"],
+    "discount": 5,
+    "status": "regular"
+  },
+  {
+    "id": 50,
+    "title": "Cheesecake",
+    "category": "Vegetarian",
+    "image": "https://images.unsplash.com/photo-1619286311276-d8343d00ce1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "rate": 5.0,
+    "price": 6.99,
+    "description": "A creamy and decadent cheesecake with a variety of flavors, such as New York-style, strawberry, or chocolate.",
+    "composition": [
+      "Cheesecake base (Graham crackers, butter, sugar)",
+      "Cheesecake filling",
+      "Variety of toppings (Fresh fruit, Chocolate sauce, Caramel sauce, Whipped cream)"
+    ],
+    "discount": 0,
+    "status": "regular"
+  }
+]

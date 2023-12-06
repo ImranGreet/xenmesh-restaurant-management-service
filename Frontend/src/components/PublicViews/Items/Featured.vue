@@ -6,14 +6,10 @@
       </div>
       <div
         class="w-full grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 xl:gap-8">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard
+          v-for="item in featuredItems"
+          :key="item.id"
+          :productInformation="item" />
       </div>
     </div>
   </div>
@@ -21,11 +17,21 @@
 
 <script>
 import ProductCard from '../Products/ProductCard.vue';
+import Items from '../../../DB/products';
 
 export default {
   name: 'Featured',
   components: {
     ProductCard,
+  },
+  setup() {
+    const featuredItems = Items.filter(item => {
+      return item.status == 'featured';
+    });
+
+    return {
+      featuredItems,
+    };
   },
 };
 </script>

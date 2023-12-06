@@ -5,17 +5,17 @@
       <div class="py-2 space-y-2">
         <div class="w-full flex justify-between items-center gap-x-0.5">
           <h1 class="text-lg text-red-500 tracking-wide font-semibold">
-            {{ offerInformation.title }}
+            {{ title }}
           </h1>
         </div>
         <p class="text-sm tracking-wide leading-relaxed">
           Flat
           <span class="text-red-600"
-            >{{ offerInformation.percentage }}
+            >{{ discount }}
             <span class="text-red-600 -ml-0.5">% </span>
           </span>
           on
-          {{ offerInformation.category }}
+          {{ category }}
         </p>
         <p
           class="p-1 border border-gray-700 rounded-2xl text-center shadow-lg shadow-gray-400/25">
@@ -25,7 +25,7 @@
 
       <div class="w-1/3 flex flex-col justify-center items-center rounded-t-xl">
         <img
-          :src="offerInformation.image"
+          :src="image"
           alt=""
           class="w-full h-24 rounded-t-xl object-cover" />
       </div>
@@ -38,8 +38,14 @@ import { ref } from 'vue';
 
 export default {
   name: 'Offer',
+  props: {
+    offerInformation: {
+      type: Object,
+      required: true,
+    },
+  },
 
-  setup() {
+  setup(props) {
     const offerInformation = ref({
       title: 'Pear Salad Drinks',
       image:
@@ -47,8 +53,14 @@ export default {
       percentage: 5,
       category: 'drinks',
     });
+
+    const { title, image, discount, category } = props.offerInformation;
+
     return {
-      offerInformation,
+      title,
+      image,
+      discount,
+      category,
     };
   },
 };

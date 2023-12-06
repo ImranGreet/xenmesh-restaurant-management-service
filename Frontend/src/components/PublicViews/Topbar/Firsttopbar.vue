@@ -16,7 +16,8 @@
       <ul class="flex justify-between items-center gap-x-3">
         <li><router-link to="/">Home</router-link></li>
         <li>
-          <router-link :to="{ name: 'category', params: { category: category } }"
+          <router-link
+            :to="{ name: 'category', params: { category: category } }"
             >Menu</router-link
           >
         </li>
@@ -28,14 +29,14 @@
 
 <script>
 import { uniqueCategoriesArray } from '../../../scripts/public/Navs/categoryNav';
-import Items from "../../../DB/products.json";
+import Items from '../../../DB/products.json';
 export default {
   name: 'Firsttopbar',
-  setup(){
+  setup() {
     const category = uniqueCategoriesArray[0];
     return {
-      category
-    }
-  }
+      category,
+    };
+  },
 };
 </script>

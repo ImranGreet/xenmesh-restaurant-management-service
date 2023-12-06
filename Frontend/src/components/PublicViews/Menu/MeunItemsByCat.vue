@@ -51,7 +51,7 @@ import { onMounted, ref, onUnmounted, watch } from 'vue';
 import ProductCard from '../Products/ProductCard.vue';
 import { useRoute } from 'vue-router';
 
-import items from "../../../DB/products.json";
+import items from '../../../DB/products.json';
 
 import {
   gridView,
@@ -60,13 +60,12 @@ import {
   gridColor,
 } from '../../../scripts/public/Utility';
 
-
 export default {
   name: 'Menuitemsbycat',
   components: { ProductCard },
   setup() {
     const route = useRoute();
-    
+
     const categoryPage = ref();
     const itemsByCat = ref();
 
@@ -79,25 +78,24 @@ export default {
     });
 
     watch(
-      ()=>(categoryPage.value = route.params.category),
-      ()=>( categoryPage.value=route.params.category),
-      );
-
-     
-
-    watch(
-      ()=>itemsByCat.value = items.filter((foodItem)=>{
-       return foodItem.category == categoryPage.value;
-     }),
-     ()=>itemsByCat.value = items.filter((foodItem)=>{
-       return foodItem.category == categoryPage.value;
-     }),
+      () => (categoryPage.value = route.params.category),
+      () => (categoryPage.value = route.params.category),
     );
 
+    watch(
+      () =>
+        (itemsByCat.value = items.filter(foodItem => {
+          return foodItem.category == categoryPage.value;
+        })),
+      () =>
+        (itemsByCat.value = items.filter(foodItem => {
+          return foodItem.category == categoryPage.value;
+        })),
+    );
 
     return {
       itemsByCat,
-      categoryPage, 
+      categoryPage,
       gridView,
       flexColor,
       gridColor,

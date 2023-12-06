@@ -26,21 +26,54 @@
       }">
       <div class="py-0 space-y-2">
         <div class="w-full flex justify-start items-center gap-x-1 md:gap-x-2">
-          <h1 class="text-base tracking-wide font-semibold text-gray-800">
+          <h1
+            class="text-base tracking-wide font-semibold text-gray-800"
+            v-if="title.length > 20">
+            {{ title.slice(0, 20) }} ...
+          </h1>
+
+          <h1
+            class="text-base tracking-wide font-semibold text-gray-800"
+            v-else>
             {{ title }}
           </h1>
+
           <button
             class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full">
             !
           </button>
         </div>
-        <p class="text-sm tracking-wide leading-relaxed">
+
+        <p
+          class="text-sm tracking-wide leading-relaxed"
+          v-if="description.length > 50">
+          {{ description.slice(0, 50) }} ...
+        </p>
+
+        <p
+          class="text-sm tracking-wide leading-relaxed"
+          v-else>
           {{ description }}
         </p>
       </div>
 
       <div class="w-full flex justify-between items-center">
-        <Price>${{ price }}</Price>
+        <Price
+          :class="{
+            'line-through': discountAmount,
+            'no-underline': !discountAmount,
+          }"
+          >${{ Math.floor(price) }}</Price
+        >
+
+        <Price
+          :class="{
+            'no-underline block': discountAmount,
+            hidden: !discountAmount,
+          }">
+          ${{ Math.floor(price - (discountAmount * price) / 100) }}
+        </Price>
+
         <addToCart @click="addProductToCart(productInformation)" />
       </div>
     </div>
@@ -61,19 +94,29 @@ export default {
     Price,
     addToCart,
   },
-  props:{
-    productInformation:{
-      type:Object,
-      required:true
-    }
+  props: {
+    productInformation: {
+      type: Object,
+      required: true,
+    },
+    discount: {
+      type: Number,
+      required: false,
+    },
   },
   setup(props) {
-   
-
-    const {id,title,price,image,description,composition} = props.productInformation;
+    const { id, title, price, image, description, composition } =
+      props.productInformation;
+    const discountAmount = props.discount;
     return {
-      id,title,price,image,description,composition,
+      id,
+      title,
+      price,
+      image,
+      description,
+      composition,
       gridView,
+      discountAmount,
       showGridItems,
       addProductToCart,
     };

@@ -4,26 +4,44 @@
     <div class="w-full h-auto flex justify-between items-center space-x-3">
       <div class="w-2/5 flex flex-col justify-center items-center rounded-t-xl">
         <img
-          :src="productInformation.image"
+          :src="image"
           alt=""
           class="w-full h-32 rounded-l-xl object-cover" />
       </div>
       <div class="w-3/5 h-auto flex flex-col justify-between space-y-2">
         <div class="w-full flex justify-start items-center gap-x-2">
-          <h1 class="text-sm tracking-wide font-semibold text-gray-800">
-            {{ productInformation.title }}
+          <h1
+            class="text-sm tracking-wide font-semibold text-gray-800"
+            v-if="title.length > 20">
+            {{ title.slice(0, 20) }}....
           </h1>
+
+          <h1
+            class="text-sm tracking-wide font-semibold text-gray-800"
+            v-else>
+            {{ title }}
+          </h1>
+
           <button
             class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full">
             !
           </button>
         </div>
-        <p class="text-xs tracking-wide leading-relaxed">
-          {{ productInformation.description }}
+
+        <p
+          class="text-xs tracking-wide leading-relaxed"
+          v-if="description.length > 50">
+          {{ description.slice(0, 50) }} ....
+        </p>
+
+        <p
+          class="text-sm tracking-wide leading-relaxed"
+          v-else>
+          {{ description }}
         </p>
 
         <div class="w-full flex justify-between items-center px-2">
-          <Price>${{ productInformation.price }}</Price>
+          <Price>${{ price }}</Price>
           <addToCart @click="addProductToCart(productInformation)" />
         </div>
       </div>
@@ -43,19 +61,22 @@ export default {
     Price,
     addToCart,
   },
-  setup() {
-    const productInformation = ref({
-      title: 'Pear Salad Drinks',
-      price: 20,
-      image:
-        'https://demo.foodking.dev/storage/48/conversions/vegan_hum-burger_with_cheese-thumb.png',
-      description:
-        'With a side of fried rice or supreme soy noodles, and steamed chi. ',
-      composition:
-        'Slid my cart over for checkout, the attendant peeked inside and said  ',
-    });
+  props: {
+    productInformation: {
+      type: Object,
+      required: true,
+    },
+  },
+  setup(props) {
+    const { title, price, image, description, composition, id } =
+      props.productInformation;
     return {
-      productInformation,
+      title,
+      price,
+      image,
+      description,
+      composition,
+      id,
       addProductToCart,
     };
   },
