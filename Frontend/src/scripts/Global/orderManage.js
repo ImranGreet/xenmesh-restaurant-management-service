@@ -16,11 +16,13 @@ const setLocalStorage = function (item) {
   purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
   purchasedItems.value.push(item);
   localStorage.clear('publicOrder');
+
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
 };
 
 const addProductToCart = function (product) {
   const getProduct = toRaw(product);
+
   const getProductType = typeof getProduct;
 
   if (getProductType !== 'object') {

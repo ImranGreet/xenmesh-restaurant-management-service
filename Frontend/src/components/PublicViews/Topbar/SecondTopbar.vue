@@ -31,7 +31,7 @@
         </li>
         <li>
           <router-link
-            to="#"
+            :to="{ name: 'user_login' }"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-pink-600 text-white"
             >Login</router-link
           >

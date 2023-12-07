@@ -164,6 +164,16 @@ const routes = [
         name: 'catoffer',
         component: () => import('../pages/Public/RunningOffer.vue'),
       },
+      {
+        path: '/user_registration',
+        name: 'user_registration',
+        component: () => import('../pages/Public/UserRegistrationPage.vue'),
+      },
+      {
+        path: '/user_login',
+        name: 'user_login',
+        component: () => import('../pages/Public/UserLoginPage.vue'),
+      },
     ],
   },
 ];

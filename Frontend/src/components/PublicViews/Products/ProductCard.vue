@@ -39,7 +39,8 @@
           </h1>
 
           <button
-            class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full">
+            @click="getItemDetails(id)"
+            class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full lg:hover:bg-pink-700">
             !
           </button>
         </div>
@@ -63,7 +64,7 @@
             'line-through': discountAmount,
             'no-underline': !discountAmount,
           }"
-          >${{price }}</Price
+          >${{ price }}</Price
         >
 
         <Price
@@ -87,6 +88,7 @@ import addToCart from '../../Utilities/addToCart.vue';
 /* composables */
 import { gridView, showGridItems } from '../../../scripts/public/utility';
 import { addProductToCart } from '../../../scripts/public/Order/publicorder';
+import { getItemDetails } from '../../../scripts/public/modal/modal';
 
 export default {
   name: 'ProductCard',
@@ -119,6 +121,7 @@ export default {
       discountAmount,
       showGridItems,
       addProductToCart,
+      getItemDetails,
     };
   },
 };

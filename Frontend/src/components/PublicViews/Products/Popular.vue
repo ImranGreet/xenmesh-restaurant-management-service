@@ -23,6 +23,7 @@
           </h1>
 
           <button
+            @click="getItemDetails(id)"
             class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full">
             !
           </button>
@@ -54,6 +55,7 @@ import { ref } from 'vue';
 import Price from '../../Utilities/Price.vue';
 import addToCart from '../../Utilities/addToCart.vue';
 import { addProductToCart } from '../../../scripts/public/Order/publicorder';
+import { getItemDetails } from '../../../scripts/public/modal/modal';
 
 export default {
   name: 'popular',
@@ -78,6 +80,7 @@ export default {
       composition,
       id,
       addProductToCart,
+      getItemDetails,
     };
   },
 };

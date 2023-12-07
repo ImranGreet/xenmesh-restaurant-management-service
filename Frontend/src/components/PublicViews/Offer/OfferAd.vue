@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-inherit">
-    <div class="w-full grid grid-cols-2 items-center mt-6 gap-6">
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 items-center mt-6 gap-6">
       <router-link
         :to="{ name: 'catoffer', params: { cat: item.category } }"
         v-for="item in appliedDiscount"

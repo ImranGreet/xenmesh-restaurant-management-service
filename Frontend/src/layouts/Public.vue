@@ -1,5 +1,5 @@
 <template>
-  <section class="">
+  <section class="min-h-screen">
     <div
       class="w-full lg:px-4 py-2 bg-white shadow-sm fixed inset-x-0 top-0 z-[999]">
       <div
@@ -9,8 +9,7 @@
       </div>
       <MobileNav class="w-full xl:hidden" />
     </div>
-    <section
-      class="w-full bg-white antialiased min-h-screen relative overflow-y-hidden">
+    <section class="w-full bg-white antialiased min-h-screen relative">
       <section
         class="max-w-full xl:max-w-[1130px] h-auto mx-auto my-20 px-2 md:px-3 xl:px-0">
         <SlidingPhoto
@@ -36,6 +35,12 @@
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50"
       :class="{ hidden: !orderItems, block: orderItems }"></div>
+
+    <div
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
+      :class="{ hidden: !showOverlayout, block: showOverlayout }">
+      <ProductDescription />
+    </div>
   </section>
 </template>
 
@@ -53,6 +58,13 @@ import WebOrderPublic from '../components/Utilities/modal/WebOrderPublic.vue';
 
 import { orderItems, showOrderItems } from '../scripts/public/Utility';
 
+import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
+import {
+  productComposition,
+  showOverlayout,
+  showOverlayoutOnOff,
+} from '../scripts/public/modal/modal';
+
 /*router*/
 
 export default {
@@ -66,11 +78,15 @@ export default {
     CategoryNav,
     SlidingPhoto,
     WebOrderPublic,
+    ProductDescription,
   },
   setup() {
     return {
       orderItems,
+      productComposition,
+      showOverlayout,
       showOrderItems,
+      showOverlayoutOnOff,
     };
   },
 };
