@@ -295,7 +295,7 @@
       "Cilantro",
       "Onions"
     ],
-    "discount": 5,
+    "discount": 15,
     "status": "regular"
   },
   {
@@ -315,7 +315,7 @@
       "Mozzarella cheese",
       "Pasta"
     ],
-    "discount": 5,
+    "discount": 15,
     "status": "regular"
   },
   {

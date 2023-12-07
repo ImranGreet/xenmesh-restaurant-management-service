@@ -63,7 +63,7 @@
             'line-through': discountAmount,
             'no-underline': !discountAmount,
           }"
-          >${{ Math.floor(price) }}</Price
+          >${{price }}</Price
         >
 
         <Price
@@ -71,7 +71,7 @@
             'no-underline block': discountAmount,
             hidden: !discountAmount,
           }">
-          ${{ Math.floor(price - (discountAmount * price) / 100) }}
+          ${{ Math.floor(Math.abs(price - (discountAmount * price) / 100)) }}
         </Price>
 
         <addToCart @click="addProductToCart(productInformation)" />
