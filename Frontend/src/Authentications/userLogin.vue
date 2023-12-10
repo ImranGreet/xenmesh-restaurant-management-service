@@ -14,8 +14,8 @@
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form
+        @submit.prevent="setUsernameAndPassworAlogwithToken(username, password)"
         class="space-y-6"
-        action="#"
         method="POST">
         <div>
           <label
@@ -25,10 +25,12 @@
           >
           <div class="mt-2">
             <input
-              name="email"
-              type="email"
+              name="username"
+              type="text"
+              v-model="username"
               autocomplete="email"
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              readonly
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 text-center" />
           </div>
         </div>
 
@@ -51,8 +53,10 @@
             <input
               name="password"
               type="password"
+              v-model="password"
+              readonly
               autocomplete="current-password"
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 text-center" />
           </div>
         </div>
 
@@ -75,12 +79,35 @@
           Sign UP
         </router-link>
       </p>
+      <div class="w-full flex justify-between items-center">
+        <button
+          @click="setusernameAndPassword('Xennifer', 'xen789456')"
+          class="bg-teal-600 text-white px-3 py-1 rounded-sm border border-gray-800">
+          User Login
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import UseCustomerAuthentication from '../scripts/Global/Authentications/customerAuth';
 export default {
   name: 'userLogin',
+  setup() {
+    const {
+      username,
+      password,
+      setUsernameAndPassworAlogwithToken,
+      setusernameAndPassword,
+    } = UseCustomerAuthentication();
+    return {
+      username,
+      password,
+
+      setUsernameAndPassworAlogwithToken,
+      setusernameAndPassword,
+    };
+  },
 };
 </script>

@@ -22,8 +22,7 @@
         <router-view />
       </section>
       <div class="max-w-full bg-pink-500 text-white">
-        <Footer
-          class="max-w-full xl:max-w-[1130px] mx-auto xl:px-0 border border-gray-50/10" />
+        <Footer class="max-w-full xl:max-w-[1130px] mx-auto xl:px-0" />
       </div>
       <div class="my-10 block xl:hidden"></div>
     </section>
@@ -41,6 +40,22 @@
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
     </div>
+    <div
+      class="fixed right-2 top-8 z-[1000]"
+      :class="{
+        block: toasterSerial.length > 0,
+        hidden: toasterSerial.length == 0,
+      }">
+      <div class="w-full flex flex-col-reverse justify-start gap-y-2">
+        <Toaster
+          v-for="(toaster, index) in toasterSerial"
+          :key="index"
+          :itemIndex="index" />
+      </div>
+    </div>
+    <div class="fixed right-96 top-16 z-[1000] hidden">
+      <AuthModal />
+    </div>
   </section>
 </template>
 
@@ -53,17 +68,19 @@ import MobileFooter from '../components/PublicViews/Footer/MobileFooter.vue';
 import CategoryNav from '../components/PublicViews/Topbar/CategoryNav.vue';
 import SlidingPhoto from '../components/Utilities/Slideshow/SlidingPhoto.vue';
 import WebOrderPublic from '../components/Utilities/modal/WebOrderPublic.vue';
-
+import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
+import Toaster from '../components/Utilities/Notifications/Toaster.vue';
+import AuthModal from '../components/Utilities/modal/AuthModal.vue';
 /*order modal*/
 
 import { orderItems, showOrderItems } from '../scripts/public/Utility';
-
-import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
 import {
   productComposition,
   showOverlayout,
   showOverlayoutOnOff,
 } from '../scripts/public/modal/modal';
+
+import { showToaster, toasterSerial } from '../scripts/toaster';
 
 /*router*/
 
@@ -79,12 +96,16 @@ export default {
     SlidingPhoto,
     WebOrderPublic,
     ProductDescription,
+    Toaster,
+    AuthModal,
   },
   setup() {
     return {
       orderItems,
       productComposition,
       showOverlayout,
+      showToaster,
+      toasterSerial,
       showOrderItems,
       showOverlayoutOnOff,
     };

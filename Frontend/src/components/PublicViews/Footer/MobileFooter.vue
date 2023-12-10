@@ -1,10 +1,10 @@
 <template>
   <div class="w-full bg-inherit">
     <div class="w-full flex justify-between items-center h-14 px-3">
-      <router-link to="#">
+      <router-link :to="{ name: 'public-home' }">
         <HomeIcon class="w-6 h-6" />
       </router-link>
-      <router-link to="#">
+      <router-link :to="{ name: 'category', params: { category: category } }">
         <AdjustmentsHorizontalIcon class="w-6 h-6" />
       </router-link>
       <router-link
@@ -14,7 +14,7 @@
         @click="showOrderItems()">
         <ShoppingBagIcon class="w-6 h-6" />
       </router-link>
-      <router-link to="#">
+      <router-link :to="{ name: 'offer' }">
         <Squares2X2Icon class="w-6 h-6" />
       </router-link>
       <router-link to="#">
@@ -33,6 +33,8 @@ import {
   UserCircleIcon,
 } from '@heroicons/vue/24/outline';
 import { showOrderItems } from '../../../scripts/public/utility';
+import { uniqueCategoriesArray } from '../../../scripts/public/Navs/categoryNav';
+import Items from '../../../DB/products.json';
 
 export default {
   name: 'MobileFooter',
@@ -44,8 +46,10 @@ export default {
     UserCircleIcon,
   },
   setup() {
+    const category = uniqueCategoriesArray[0];
     return {
       showOrderItems,
+      category,
     };
   },
 };

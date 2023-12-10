@@ -1,0 +1,56 @@
+[
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "expense_category": "Food Costs",
+    "amount": 100,
+    "description": "Cost of food purchased for the day",
+    "payment_method": "Cash",
+    "paid_by": "John Doe"
+  },
+  {
+    "date": "Week of 10/09/2023 - 10/15/2023",
+    "period": "Weekly",
+    "expense_category": "Labor Costs",
+    "amount": 750,
+    "description": "Wages paid to employees for the week",
+    "payment_method": "Cash",
+    "paid_by": "John Doe"
+  },
+  {
+    "date": "October 2023",
+    "period": "Monthly",
+    "expense_category": "Utilities",
+    "amount": 200,
+    "description": "Cost of electricity, water, and gas for the month",
+    "payment_method": "Cash",
+    "paid_by": "John Doe"
+  },
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "expense_category": "Rent",
+    "amount": 400,
+    "description": "Monthly rent payment for the restaurant space (Daily portion)",
+    "payment_method": "Check",
+    "paid_by": "John Doe"
+  },
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "expense_category": "Marketing",
+    "amount": 25,
+    "description": "Cost of advertising and promotions for the day",
+    "payment_method": "Credit Card",
+    "paid_by": "Jane Doe"
+  },
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "expense_category": "Miscellaneous",
+    "amount": 10,
+    "description": "Cost of supplies and other miscellaneous expenses for the day",
+    "payment_method": "Cash",
+    "paid_by": "John Doe"
+  }
+]

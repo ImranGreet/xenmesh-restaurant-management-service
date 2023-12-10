@@ -174,6 +174,11 @@ const routes = [
         name: 'user_login',
         component: () => import('../pages/Public/UserLoginPage.vue'),
       },
+      {
+        path: '/processed_order',
+        name: 'processed_order',
+        component: () => import('../pages/Public/ProcessedOrder.vue'),
+      },
     ],
   },
 ];

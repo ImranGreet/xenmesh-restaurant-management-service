@@ -1,0 +1,529 @@
+[
+  {
+    "ID": 1,
+    "Date": "2023-01-01",
+    "ExpenseCategory": "Groceries",
+    "Description": "Weekly grocery shopping",
+    "Amount": 150.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Store: XYZ Mart"
+  },
+  {
+    "ID": 2,
+    "Date": "2023-01-02",
+    "ExpenseCategory": "Utilities",
+    "Description": "Electricity bill",
+    "Amount": 80.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: 123456789"
+  },
+  {
+    "ID": 3,
+    "Date": "2023-01-03",
+    "ExpenseCategory": "Transportation",
+    "Description": "Gas for car",
+    "Amount": 40.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Station: QuickFuel"
+  },
+  {
+    "ID": 4,
+    "Date": "2023-01-04",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Movie night",
+    "Amount": 25.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Movie: Action Blockbuster"
+  },
+  {
+    "ID": 5,
+    "Date": "2023-01-05",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Lunch with colleagues",
+    "Amount": 30.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: Tasty Bites"
+  },
+  {
+    "ID": 6,
+    "Date": "2023-01-06",
+    "ExpenseCategory": "Groceries",
+    "Description": "Fresh produce",
+    "Amount": 40.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Store: Green Grocers"
+  },
+  {
+    "ID": 7,
+    "Date": "2023-01-07",
+    "ExpenseCategory": "Utilities",
+    "Description": "Internet bill",
+    "Amount": 60.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: InternetCo"
+  },
+  {
+    "ID": 8,
+    "Date": "2023-01-08",
+    "ExpenseCategory": "Transportation",
+    "Description": "Bus fare",
+    "Amount": 5.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Bus route: 123"
+  },
+  {
+    "ID": 9,
+    "Date": "2023-01-09",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Concert tickets",
+    "Amount": 75.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Artist: MusicStar"
+  },
+  {
+    "ID": 10,
+    "Date": "2023-01-10",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Dinner date",
+    "Amount": 50.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: Cozy Corner"
+  },
+  {
+    "ID": 11,
+    "Date": "2023-01-11",
+    "ExpenseCategory": "Groceries",
+    "Description": "Household essentials",
+    "Amount": 120.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Store: MegaMart"
+  },
+  {
+    "ID": 12,
+    "Date": "2023-01-12",
+    "ExpenseCategory": "Utilities",
+    "Description": "Water bill",
+    "Amount": 35.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: AquaServices"
+  },
+  {
+    "ID": 13,
+    "Date": "2023-01-13",
+    "ExpenseCategory": "Transportation",
+    "Description": "Parking fee",
+    "Amount": 10.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Location: City Parking"
+  },
+  {
+    "ID": 14,
+    "Date": "2023-01-14",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Book purchase",
+    "Amount": 20.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Title: Bestseller"
+  },
+  {
+    "ID": 15,
+    "Date": "2023-01-15",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Brunch with family",
+    "Amount": 40.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: FamilyCafe"
+  },
+  {
+    "ID": 16,
+    "Date": "2023-01-16",
+    "ExpenseCategory": "Groceries",
+    "Description": "Organic produce",
+    "Amount": 50.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Variable",
+    "Notes": "Store: OrganicFoods"
+  },
+  {
+    "ID": 17,
+    "Date": "2023-01-17",
+    "ExpenseCategory": "Utilities",
+    "Description": "Gas bill",
+    "Amount": 70.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: GasCo"
+  },
+  {
+    "ID": 18,
+    "Date": "2023-01-18",
+    "ExpenseCategory": "Transportation",
+    "Description": "Train ticket",
+    "Amount": 25.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Train: ExpressLine"
+  },
+  {
+    "ID": 19,
+    "Date": "2023-01-19",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Gaming subscription",
+    "Amount": 15.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Service: GameZone"
+  },
+  {
+    "ID": 20,
+    "Date": "2023-01-20",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Pizza night",
+    "Amount": 30.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: PizzaPalace"
+  },
+  {
+    "ID": 21,
+    "Date": "2023-01-21",
+    "ExpenseCategory": "Groceries",
+    "Description": "Specialty items",
+    "Amount": 80.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Store: SpecialtyMart"
+  },
+
+  {
+    "ID": 22,
+    "Date": "2023-01-22",
+    "ExpenseCategory": "Utilities",
+    "Description": "Cable subscription",
+    "Amount": 50.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Fixed",
+    "Notes": "Service: CableVision"
+  },
+
+  {
+    "ID": 23,
+    "Date": "2023-01-23",
+    "ExpenseCategory": "Transportation",
+    "Description": "Car maintenance",
+    "Amount": 120.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Service: AutoCare"
+  },
+
+  {
+    "ID": 24,
+    "Date": "2023-01-24",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Concert tickets",
+    "Amount": 90.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Artist: MusicIcon"
+  },
+
+  {
+    "ID": 25,
+    "Date": "2023-01-25",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Dinner with friends",
+    "Amount": 40.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: FriendsCafe"
+  },
+
+  {
+    "ID": 26,
+    "Date": "2023-01-26",
+    "ExpenseCategory": "Groceries",
+    "Description": "Organic snacks",
+    "Amount": 25.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Variable",
+    "Notes": "Store: GreenSnacks"
+  },
+
+  {
+    "ID": 27,
+    "Date": "2023-01-27",
+    "ExpenseCategory": "Utilities",
+    "Description": "Internet upgrade",
+    "Amount": 60.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Fixed",
+    "Notes": "Service: SpeedyNet"
+  },
+
+  {
+    "ID": 28,
+    "Date": "2023-01-28",
+    "ExpenseCategory": "Transportation",
+    "Description": "Bus pass",
+    "Amount": 30.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Bus route: MonthlyPass"
+  },
+
+  {
+    "ID": 29,
+    "Date": "2023-01-29",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Movie night",
+    "Amount": 20.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Movie: ComedyFlick"
+  },
+
+  {
+    "ID": 30,
+    "Date": "2023-01-30",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Celebratory dinner",
+    "Amount": 75.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: CelebrationBistro"
+  },
+  {
+    "ID": 31,
+    "Date": "2023-01-31",
+    "ExpenseCategory": "Groceries",
+    "Description": "Fresh produce",
+    "Amount": 35.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Store: FreshFoods"
+  },
+
+  {
+    "ID": 32,
+    "Date": "2023-02-01",
+    "ExpenseCategory": "Utilities",
+    "Description": "Electricity bill",
+    "Amount": 90.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: PowerCo"
+  },
+
+  {
+    "ID": 33,
+    "Date": "2023-02-02",
+    "ExpenseCategory": "Transportation",
+    "Description": "Taxi ride",
+    "Amount": 15.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Service: QuickRide"
+  },
+
+  {
+    "ID": 34,
+    "Date": "2023-02-03",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Concert tickets",
+    "Amount": 60.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Artist: MusicStar"
+  },
+
+  {
+    "ID": 35,
+    "Date": "2023-02-04",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Lunch with colleagues",
+    "Amount": 30.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: Tasty Bites"
+  },
+
+  {
+    "ID": 36,
+    "Date": "2023-02-05",
+    "ExpenseCategory": "Groceries",
+    "Description": "Household essentials",
+    "Amount": 50.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Variable",
+    "Notes": "Store: MegaMart"
+  },
+
+  {
+    "ID": 37,
+    "Date": "2023-02-06",
+    "ExpenseCategory": "Utilities",
+    "Description": "Internet bill",
+    "Amount": 65.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: InternetCo"
+  },
+
+  {
+    "ID": 38,
+    "Date": "2023-02-07",
+    "ExpenseCategory": "Transportation",
+    "Description": "Gas for car",
+    "Amount": 40.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Station: QuickFuel"
+  },
+
+  {
+    "ID": 39,
+    "Date": "2023-02-08",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Book purchase",
+    "Amount": 15.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Title: Bestseller"
+  },
+
+  {
+    "ID": 40,
+    "Date": "2023-02-09",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Dinner date",
+    "Amount": 50.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: Cozy Corner"
+  },
+  {
+    "ID": 41,
+    "Date": "2023-02-10",
+    "ExpenseCategory": "Groceries",
+    "Description": "Specialty items",
+    "Amount": 75.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Store: SpecialtyMart"
+  },
+
+  {
+    "ID": 42,
+    "Date": "2023-02-11",
+    "ExpenseCategory": "Utilities",
+    "Description": "Water bill",
+    "Amount": 30.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: AquaServices"
+  },
+
+  {
+    "ID": 43,
+    "Date": "2023-02-12",
+    "ExpenseCategory": "Transportation",
+    "Description": "Parking fee",
+    "Amount": 8.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Location: City Parking"
+  },
+
+  {
+    "ID": 44,
+    "Date": "2023-02-13",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Movie night",
+    "Amount": 25.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Movie: Action Blockbuster"
+  },
+
+  {
+    "ID": 45,
+    "Date": "2023-02-14",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Brunch with family",
+    "Amount": 35.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: FamilyCafe"
+  },
+
+  {
+    "ID": 46,
+    "Date": "2023-02-15",
+    "ExpenseCategory": "Groceries",
+    "Description": "Organic produce",
+    "Amount": 45.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Variable",
+    "Notes": "Store: OrganicFoods"
+  },
+
+  {
+    "ID": 47,
+    "Date": "2023-02-16",
+    "ExpenseCategory": "Utilities",
+    "Description": "Gas bill",
+    "Amount": 60.0,
+    "PaymentMethod": "Credit Card",
+    "FixedVariable": "Fixed",
+    "Notes": "Account: GasCo"
+  },
+
+  {
+    "ID": 48,
+    "Date": "2023-02-17",
+    "ExpenseCategory": "Transportation",
+    "Description": "Train ticket",
+    "Amount": 20.0,
+    "PaymentMethod": "Cash",
+    "FixedVariable": "Variable",
+    "Notes": "Train: ExpressLine"
+  },
+
+  {
+    "ID": 49,
+    "Date": "2023-02-18",
+    "ExpenseCategory": "Entertainment",
+    "Description": "Gaming subscription",
+    "Amount": 15.0,
+    "PaymentMethod": "Debit Card",
+    "FixedVariable": "Variable",
+    "Notes": "Service: GameZone"
+  },
+
+  {
+    "ID": 50,
+    "Date": "2023-02-19",
+    "ExpenseCategory": "Dining Out",
+    "Description": "Pizza night",
+    "Amount": 30.0,
+    "PaymentMethod": "Online Banking",
+    "FixedVariable": "Variable",
+    "Notes": "Restaurant: PizzaPalace"
+  }
+]

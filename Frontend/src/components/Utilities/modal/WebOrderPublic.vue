@@ -18,16 +18,17 @@
         </li>
       </ul>
 
-      <div class="w-full space-y-3">
+      <div class="w-full space-y-4">
         <div
           class="w-full flex justify-between items-center px-3 py-2 rounded-xl border border-gray-600">
           <h1>Subtotal</h1>
-          <h2>${{ totalPrice }}</h2>
+          <h2>${{ Math.floor(totalPrice) }}</h2>
         </div>
-        <button
-          class="w-full h-10 rounded-2xl text-center border border-pink-600 text-white bg-rose-600">
+        <router-link
+          :to="{ name: 'processed_order' }"
+          class="w-full h-10 block rounded-2xl text-center border border-pink-600 text-white bg-rose-600 py-1 px-2">
           Proccesed To Check
-        </button>
+        </router-link>
       </div>
     </div>
   </div>

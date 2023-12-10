@@ -1,4 +1,5 @@
 import { onMounted, ref, toRaw } from 'vue';
+import { itemAdded } from '../toaster';
 
 let purchasedItems = ref([]);
 
@@ -33,6 +34,8 @@ const addProductToCart = function (product) {
   setLocalStorage(getProduct);
 
   totalPrice.value = purchasedItemsPrice();
+  /*showing toaster*/
+  itemAdded();
 };
 
 const removeItem = function (itemId) {

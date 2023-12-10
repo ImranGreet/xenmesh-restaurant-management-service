@@ -1,0 +1,65 @@
+[
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "income_source": "Sales",
+    "amount": 500,
+    "description": "Revenue from food and beverage sales"
+  },
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "income_source": "Tips",
+    "amount": 100,
+    "description": "Tips received from customers"
+  },
+  {
+    "date": "10/12/2023",
+    "period": "Daily",
+    "income_source": "Delivery fees",
+    "amount": 25,
+    "description": "Fees earned from delivery services"
+  },
+  {
+    "date": "Week of 10/09/2023 - 10/15/2023",
+    "period": "Weekly",
+    "income_source": "Sales",
+    "amount": 3500,
+    "description": "Revenue from food and beverage sales for the week"
+  },
+  {
+    "date": "Week of 10/09/2023 - 10/15/2023",
+    "period": "Weekly",
+    "income_source": "Tips",
+    "amount": 700,
+    "description": "Tips received from customers for the week"
+  },
+  {
+    "date": "Week of 10/09/2023 - 10/15/2023",
+    "period": "Weekly",
+    "income_source": "Delivery fees",
+    "amount": 175,
+    "description": "Fees earned from delivery services for the week"
+  },
+  {
+    "date": "October 2023",
+    "period": "Monthly",
+    "income_source": "Sales",
+    "amount": 14000,
+    "description": "Revenue from food and beverage sales for the month"
+  },
+  {
+    "date": "October 2023",
+    "period": "Monthly",
+    "income_source": "Tips",
+    "amount": 2800,
+    "description": "Tips received from customers for the month"
+  },
+  {
+    "date": "October 2023",
+    "period": "Monthly",
+    "income_source": "Delivery fees",
+    "amount": 700,
+    "description": "Fees earned from delivery services for the month"
+  }
+]

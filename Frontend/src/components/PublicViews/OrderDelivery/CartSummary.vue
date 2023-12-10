@@ -1,0 +1,32 @@
+<template>
+  <div class="w-full bg-inherit">
+    <div class="w-full bg-white space-y-3">
+      <div class="text-start font-semibold py-3">
+        <h1>Cart Summary</h1>
+      </div>
+      <!-- items to delivery -->
+
+      <div
+        class="w-full h-96 overflow-x-hidden overflow-y-scroll p-2 custom-overflowscroll border border-gray-300/20 space-y-2 rounded-sm">
+        <OrderItemAmount />
+        <OrderItemAmount />
+        <OrderItemAmount />
+        <OrderItemAmount />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue';
+import OrderItemAmount from './OrderItemAmount.vue';
+export default {
+  name: 'CartSummary',
+  components: { OrderItemAmount },
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style></style>
