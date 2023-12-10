@@ -7,22 +7,19 @@
             <SelectCategory />
           </div>
 
+          <div class="w-full">
+            <form  class="w-full">
+              <div>
+                <label for="item_title" class="sr-only">item title</label>
+                <input type="text" name="" id="" placeholder="Search Item" class="w-full p-2 focus:outline-none px-4 border border-gray-400/20">
+              </div>
+            </form>
+          </div>
+
           <div
-            class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[600px] overflow-y-scroll custom-overflowscroll rounded-md">
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
-            <button><AvailableItems /></button>
+            class="w-full ">
+            <AvailableItems />
+            
           </div>
         </div>
         <div class="w-1/2">
