@@ -53,7 +53,12 @@
           :itemIndex="index" />
       </div>
     </div>
-    <div class="fixed right-96 top-16 z-[1000] hidden">
+    <div
+      class="fixed right-96 top-16 z-[1000]"
+      :class="{
+        block: authorized && authorisedProfileShower,
+        hidden: !authorized || !authorisedProfileShower,
+      }">
       <AuthModal />
     </div>
   </section>
@@ -81,6 +86,10 @@ import {
 } from '../scripts/public/modal/modal';
 
 import { showToaster, toasterSerial } from '../scripts/toaster';
+import {
+  authorized,
+  authorisedProfileShower,
+} from '../scripts/Global/Authentications/customerAuth';
 
 /*router*/
 
@@ -106,6 +115,8 @@ export default {
       showOverlayout,
       showToaster,
       toasterSerial,
+      authorized,
+      authorisedProfileShower,
       showOrderItems,
       showOverlayoutOnOff,
     };

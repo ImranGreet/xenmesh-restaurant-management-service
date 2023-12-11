@@ -104,7 +104,6 @@ export default {
     return {
       username,
       password,
-
       setUsernameAndPassworAlogwithToken,
       setusernameAndPassword,
     };

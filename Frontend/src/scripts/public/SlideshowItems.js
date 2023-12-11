@@ -11,7 +11,7 @@ let slides = ref([
     id: 2,
     description: 'image2',
     image:
-      'https://images.unsplash.com/photo-1700514184930-d842842d08a9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://demo.foodking.dev/storage/23/conversions/slider_three-cover.png',
   },
   {
     id: 3,

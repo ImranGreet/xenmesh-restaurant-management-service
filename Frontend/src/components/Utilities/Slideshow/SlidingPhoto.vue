@@ -9,7 +9,7 @@
     </div>
 
     <div
-      class="w-full h-full absolute bg-gray-600/40 z-20 inset-x-0 inset-y-0 rounded-md">
+      class="w-full h-full absolute bg-gray-600/10 z-20 inset-x-0 inset-y-0 rounded-md">
       <div class="w-full h-full flex justify-between items-center">
         <button
           @click="previusSlideImage()"

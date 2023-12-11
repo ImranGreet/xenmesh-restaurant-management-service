@@ -40,6 +40,7 @@
         </li>
         <li>
           <button
+            @click="authorizedProfileCloseDiscloser()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white"
             :class="{ inline: authorized, hidden: !authorized }">
             Customer
@@ -68,12 +69,17 @@ import {
 
 import { showOrderItems } from '../../../scripts/public/Utility';
 import { totalPrice } from '../../../scripts/public/Order/publicorder';
-import { authorized } from '../../../scripts/Global/Authentications/customerAuth';
+import UseCustomerAuthentication, {
+  authorized,
+  authorizedProfileCloseDiscloser,
+} from '../../../scripts/Global/Authentications/customerAuth';
 import {
   searchKeywords,
   deleteKeywords,
   handleSearchInPublic,
 } from '../../../scripts/Global/Search/searchproperties';
+import { onMounted } from 'vue';
+
 export default {
   name: 'Firsttopbar',
   components: {
@@ -84,10 +90,15 @@ export default {
     ChevronDownIcon,
   },
   setup() {
+    const { getCustomerToken } = UseCustomerAuthentication();
+    onMounted(() => {
+      getCustomerToken('customerToken');
+    });
     return {
       showOrderItems,
       deleteKeywords,
       handleSearchInPublic,
+      authorizedProfileCloseDiscloser,
       totalPrice,
       authorized,
       searchKeywords,

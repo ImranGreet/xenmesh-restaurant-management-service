@@ -65,6 +65,8 @@
 
         <li class="border-b w-full py-2 border-gray-300/25">
           <router-link
+            @click="userLogOutAndClearToken()"
+            role="button"
             class="lg:hover:text-red-600"
             to="#">
             <span>
@@ -88,6 +90,7 @@ import {
   PowerIcon,
   PencilSquareIcon,
 } from '@heroicons/vue/24/outline';
+import UseCustomerAuthentication from '../../../scripts/Global/Authentications/customerAuth';
 
 export default {
   name: 'AuthModal',
@@ -99,6 +102,13 @@ export default {
     LockClosedIcon,
     PowerIcon,
     PencilSquareIcon,
+  },
+
+  setup() {
+    const { userLogOutAndClearToken } = UseCustomerAuthentication();
+    return {
+      userLogOutAndClearToken,
+    };
   },
 };
 </script>

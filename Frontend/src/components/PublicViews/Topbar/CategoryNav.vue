@@ -9,7 +9,8 @@
         class="snap-always snap-center item">
         <itemCategory
           :productPhoto="cat.image"
-          :title="cat.category" />
+          :title="cat.category"
+          :stylingParam="styleRoute" />
       </router-link>
     </div>
   </div>
@@ -27,12 +28,12 @@ export default {
     itemCategory,
   },
   setup() {
+    const styleRoute = ref(false);
     onMounted(() => {
       let isDown = false;
       let startX;
       let scrollLeft;
       const slider = document.querySelector('.items');
-      console.log(slider);
 
       const end = () => {
         isDown = false;
@@ -70,6 +71,7 @@ export default {
 
     return {
       useCategoryRoutes,
+      styleRoute,
     };
   },
 };

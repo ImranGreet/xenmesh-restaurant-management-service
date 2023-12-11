@@ -1,12 +1,12 @@
 <template>
   <div class="w-full">
-    <div class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[600px] overflow-y-scroll custom-overflowscroll rounded-md">
+    <div
+      class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[600px] overflow-y-scroll custom-overflowscroll rounded-md">
       <button
-      v-for="item,index in availabelItems" :key="index"
-      class="max-w-sm border border-grauy-200 rounded-md">
-
-        <div  
-        class="w-full flex flex-col justify-center items-start ">
+        v-for="(item, index) in availabelItems"
+        :key="index"
+        class="max-w-sm border border-grauy-200 rounded-md">
+        <div class="w-full flex flex-col justify-center items-start">
           <div
             class="w-full flex flex-col justify-center items-center rounded-t-md">
             <img
@@ -19,18 +19,19 @@
           <div
             class="space-y-1 bg-gray-100 text-gray-950 text-start w-full py-0.5 px-1">
             <h1 class="text-base tracking-wider leading-relax">
-              {{ item.title.slice(0,12) }}
+              {{ item.title.slice(0, 12) }}
               <span class=""
                 ><button
-                @click="console.log('sex')"
+                  @click="console.log('sex')"
                   class="bg-gray-700 text-white w-5 h-5 p-1 inline-flex flex-col justify-center items-center rounded-full z-[600]">
                   i
                 </button></span
               >
             </h1>
 
-            
-            <h3 class="text-base"><span class="pl-0.5">$</span> {{item.price}}</h3>
+            <h3 class="text-base">
+              <span class="pl-0.5">$</span> {{ item.price }}
+            </h3>
           </div>
         </div>
       </button>
@@ -40,7 +41,7 @@
 
 <script>
 import { ref } from 'vue';
-import products from "../../../../DB/products";
+import products from '../../../../DB/products';
 
 export default {
   name: 'AvailableItems',

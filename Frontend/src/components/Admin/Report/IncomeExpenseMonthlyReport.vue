@@ -33,7 +33,7 @@
 <script>
 import { ref } from 'vue';
 import Card from '../ReusedComps/Card.vue';
-import expenseperiod from "../../../DB/expenseperoid";
+import expenseperiod from '../../../DB/expenseperoid';
 
 export default {
   name: 'LastMonthReport',
@@ -80,7 +80,7 @@ export default {
         growing: 3.27,
       },
     ];
-    
+
     return {
       lastMonthIncomeReport,
       lastMonthExpenseReport,

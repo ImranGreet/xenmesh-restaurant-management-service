@@ -168,11 +168,24 @@ const routes = [
         path: '/user_registration',
         name: 'user_registration',
         component: () => import('../pages/Public/UserRegistrationPage.vue'),
+        beforeEnter: (to, from, next) => {
+          next({ name: 'public-home' });
+        },
       },
       {
         path: '/user_login',
         name: 'user_login',
         component: () => import('../pages/Public/UserLoginPage.vue'),
+        beforeEnter: (to, from, next) => {
+          const customerTokenCheck = JSON.parse(
+            localStorage.getItem('customerToken'),
+          );
+          if (customerTokenCheck) {
+            next({ name: 'public-home' });
+          } else {
+            next();
+          }
+        },
       },
       {
         path: '/processed_order',
