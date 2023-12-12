@@ -30,16 +30,14 @@ export default {
       type: String,
       required: false,
     },
-    
   },
   setup(props) {
     const categoryThumnail = props.productPhoto;
     const categoryTitle = props.title;
-    
+
     return {
       categoryThumnail,
       categoryTitle,
-     
     };
   },
 };

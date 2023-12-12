@@ -12,6 +12,7 @@
       <ul
         class="w-full h-[75vh] overflow-y-auto custom-overflowscroll flex flex-col justify-between items-start gap-y-3">
         <li
+          class="w-full"
           v-for="purchased in purchasedItems"
           :key="purchased.id">
           <OrderItem :itemsPurchased="purchased" />
