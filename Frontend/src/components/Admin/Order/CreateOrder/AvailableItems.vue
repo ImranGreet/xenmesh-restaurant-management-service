@@ -22,7 +22,7 @@
               {{ item.title.slice(0, 12) }}
               <span class=""
                 ><button
-                  @click="console.log('sex')"
+                  @click="getItemDetails(item.id)"
                   class="bg-gray-700 text-white w-5 h-5 p-1 inline-flex flex-col justify-center items-center rounded-full z-[600]">
                   i
                 </button></span
@@ -42,6 +42,8 @@
 <script>
 import { ref } from 'vue';
 import products from '../../../../DB/products';
+import { getItemDetails } from '../../../../scripts/public/modal/modal';
+
 
 export default {
   name: 'AvailableItems',
@@ -53,6 +55,7 @@ export default {
 
     return {
       availabelItems,
+      getItemDetails
     };
   },
 };

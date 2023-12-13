@@ -3,7 +3,7 @@
     ref="fullscreenElement"
     class="h-screen bg-gray-100">
     <Topbardesktop
-      class="float-right top-0 right-0 bg-white w-full static px-2"
+      class="float-right top-0 right-0 bg-white w-full static px-2 z-[699]"
       :class="{
         'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
         'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
@@ -21,7 +21,9 @@
         'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto': !sidebarView,
         'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto': sidebarView,
       }">
-      <router-view />
+      <div class="h-[90%] w-full overflow-y-auto">
+        <router-view />
+      </div>
     </div>
     <Setting
       class="fixed top-0 right-0 md:w-2/4 lg:w-1/4 h-full"
@@ -34,11 +36,16 @@
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
 
     <Footer
-      class="w-full fixed bottom-0 hidden z-[599] bg-white float-right right-0"
+      class="w-full fixed bottom-0  z-[599] bg-white float-right right-0"
       :class="{
         'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
         'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
       }" />
+      <div
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
+      :class="{ hidden: !showOverlayout, block: showOverlayout }">
+      <ProductDescription />
+    </div>
   </section>
 </template>
 
@@ -48,6 +55,7 @@ import Topbardesktop from '../components/Admin/Topbar/Topbardesktop.vue';
 import Rightsidebar from './Rightsidebar.vue';
 import Logo from '../components/Admin/Topbar/Logo.vue';
 import Footer from '../components/Admin/Footer/Footer.vue';
+import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
 
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
@@ -62,6 +70,8 @@ import {
   customWidth,
 } from '../scripts/Admin/Layout/layoutonresize';
 import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink';
+import { showOverlayout } from '../scripts/public/modal/modal';
+
 
 export default {
   name: 'Admin',
@@ -71,6 +81,7 @@ export default {
     Rightsidebar,
     Logo,
     Footer,
+    ProductDescription
   },
   setup() {
     return {
@@ -79,6 +90,7 @@ export default {
       customWidth,
       sidebarView,
       mobileView,
+      showOverlayout,
       /*compose function*/
       sidebarController,
       discloseMenuBarOnHover,
