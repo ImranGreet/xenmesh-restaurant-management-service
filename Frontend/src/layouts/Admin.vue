@@ -36,12 +36,12 @@
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
 
     <Footer
-      class="w-full fixed bottom-0  z-[599] bg-white float-right right-0"
+      class="w-full fixed bottom-0 z-[599] bg-white float-right right-0"
       :class="{
         'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
         'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
       }" />
-      <div
+    <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
@@ -72,7 +72,6 @@ import {
 import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink';
 import { showOverlayout } from '../scripts/public/modal/modal';
 
-
 export default {
   name: 'Admin',
   components: {
@@ -81,7 +80,7 @@ export default {
     Rightsidebar,
     Logo,
     Footer,
-    ProductDescription
+    ProductDescription,
   },
   setup() {
     return {

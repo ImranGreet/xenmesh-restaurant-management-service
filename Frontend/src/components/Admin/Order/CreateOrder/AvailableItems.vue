@@ -44,7 +44,6 @@ import { ref } from 'vue';
 import products from '../../../../DB/products';
 import { getItemDetails } from '../../../../scripts/public/modal/modal';
 
-
 export default {
   name: 'AvailableItems',
   setup() {
@@ -55,7 +54,7 @@ export default {
 
     return {
       availabelItems,
-      getItemDetails
+      getItemDetails,
     };
   },
 };
