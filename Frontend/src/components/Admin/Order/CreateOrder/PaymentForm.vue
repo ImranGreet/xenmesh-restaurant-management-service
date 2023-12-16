@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-inherit W-FULL">
+  <div class="bg-gray-700 xl:bg-inherit w-ful">
     <form class="w-full flex flex-col justify-between items-center">
       <div
         class="w-full space-y-2 border border-gray-200/25 px-2 py-1 2xl:py-3 bg-pink-600 text-white rounded-t-lg">

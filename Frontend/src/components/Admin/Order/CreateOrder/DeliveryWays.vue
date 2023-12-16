@@ -1,101 +1,113 @@
 <template>
-  <div class="w-full px-4 py-4">
-    <div class="mx-auto w-full max-w-md">
-      <RadioGroup v-model="selected">
-        <RadioGroupLabel class="sr-only">Server size</RadioGroupLabel>
-        <div class="w-full flex justify-between space-x-3">
-          <RadioGroupOption
-            as="template"
-            v-for="plan in plans"
-            :key="plan.name"
-            :value="plan"
-            v-slot="{ active, checked }">
-            <div
-              :class="[
-                active
-                  ? 'ring-2 ring-white/60 ring-offset-2 ring-offset-sky-300'
-                  : '',
-                checked ? 'bg-sky-900/75 text-white ' : 'bg-white ',
-              ]"
-              class="relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none">
-              <div class="flex w-full items-center justify-between">
-                <div class="flex items-center">
-                  <div class="text-sm">
-                    <RadioGroupLabel
-                      as="p"
-                      :class="checked ? 'text-white' : 'text-gray-900'"
-                      class="font-medium">
-                      {{ plan.name }}
-                    </RadioGroupLabel>
-                    <RadioGroupDescription
-                      as="span"
-                      :class="checked ? 'text-sky-100' : 'text-gray-500'"
-                      class="inline">
-                      <span> {{ plan.ram }}/{{ plan.cpus }}</span>
-                      <span aria-hidden="true"> &middot; </span>
-                      <span>{{ plan.disk }}</span>
-                    </RadioGroupDescription>
-                  </div>
-                </div>
-                <div
-                  v-show="checked"
-                  class="shrink-0 text-white">
-                  <svg
-                    class="h-6 w-6"
-                    viewBox="0 0 24 24"
-                    fill="none">
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="12"
-                      fill="#fff"
-                      fill-opacity="0.2" />
-                    <path
-                      d="M7 13l3 3 7-7"
-                      stroke="#fff"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </RadioGroupOption>
+  <div class="w-full flex justify-between gap-2 flex-wrap py-2 border border-gray-700/25 p-2 mb-3 rounded-sm">
+      <!-- HTML with Tailwind CSS classes -->
+<div class="flex items-center">
+      <input
+        type="radio"
+        id="foodpandaButton"
+        name="foodDelivery"
+        class="hidden"
+      />
+      <label
+        for="foodpandaButton"
+        class="cursor-pointer flex items-center space-x-2 text-gray-700"
+      >
+        <div class="w-8 h-8 border-2 border-pink-500 rounded-full flex items-center justify-center">
+          <svg
+            class="w-5 h-5 text-pink-500 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <circle cx="12" cy="12" r="10" stroke="#FF4081" stroke-width="2" />
+            <circle cx="12" cy="12" r="6" fill="#FF4081" />
+            <rect
+              x="10"
+              y="2"
+              width="4"
+              height="8"
+              rx="1"
+              fill="#FF4081"
+              transform="rotate(45 10 2)"
+            />
+          </svg>
         </div>
-      </RadioGroup>
+        <span>Foodpanda</span>
+      </label>
     </div>
+
+    <!-- uber eats -->
+
+    <!-- HTML with Tailwind CSS classes -->
+<div class="flex items-center">
+      <input
+        type="radio"
+        id="uberEatsButton"
+        name="foodDelivery"
+        class="hidden"
+      />
+      <label
+        for="uberEatsButton"
+        class="cursor-pointer flex items-center space-x-2 text-gray-700"
+      >
+        <div class="w-8 h-8 border-2 border-black rounded-full flex items-center justify-center">
+          <svg
+            class="w-5 h-5 text-black fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="2" ry="2" fill="none" stroke="#000000" stroke-width="2" />
+            <path d="M12 3v18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+            <path d="M5 12h14" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span>Uber Eats</span>
+      </label>
+    </div>
+
+    <!-- HTML with Tailwind CSS classes -->
+<div class="flex items-center">
+  <input
+    type="radio"
+    id="pathoDeliveryButton"
+    name="foodDelivery"
+    class="hidden"
+  />
+  <label
+    for="pathoDeliveryButton"
+    class="cursor-pointer flex items-center space-x-2 text-gray-700"
+  >
+    <div class="w-8 h-8 border-2 border-black rounded-full flex items-center justify-center">
+      <svg
+        class="w-5 h-5 text-black fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-14h4v8h-4z" />
+      </svg>
+    </div>
+    <span>Patho </span>
+  </label>
+</div>
+
+
+
+
+    
+    
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-import {
-  RadioGroup,
-  RadioGroupLabel,
-  RadioGroupDescription,
-  RadioGroupOption,
-} from '@headlessui/vue';
+<script>
+export default {
+name:"DeliveryWays",
+setup(){
+      return {
 
-const plans = [
-  {
-    name: 'Startup',
-    ram: '12GB',
-    cpus: '6 CPUs',
-    disk: '160 GB SSD disk',
-  },
-  {
-    name: 'Business',
-    ram: '16GB',
-    cpus: '8 CPUs',
-    disk: '512 GB SSD disk',
-  },
-  {
-    name: 'Enterprise',
-    ram: '32GB',
-    cpus: '12 CPUs',
-    disk: '1024 GB SSD disk',
-  },
-];
-
-const selected = ref(plans[0]);
+      }
+}
+}
 </script>
+
+<style>
+
+</style>

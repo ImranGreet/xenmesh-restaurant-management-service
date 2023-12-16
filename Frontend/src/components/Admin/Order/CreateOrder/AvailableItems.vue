@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <div
-      class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[600px] overflow-y-scroll custom-overflowscroll rounded-md">
+      class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[550px] overflow-y-scroll custom-overflowscroll rounded-md">
       <button
         v-for="(item, index) in availabelItems"
         :key="index"
