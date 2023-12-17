@@ -24,18 +24,22 @@
                   >Start Date</label
                 >
                 <input
+                  v-model="currentDate"
                   type="date"
                   name=""
                   id=""
+                  min="2023-01-01"
+                  max="2024-12-31"
                   class="w-full focus:outline-none px-4 py-2" />
               </div>
               <div class="space-y-2 w-full lg:w-auto">
                 <label
                   for="start_date"
                   class="text-white"
-                  >Start Date</label
+                  >End Date</label
                 >
                 <input
+                  v-model="lastdate"
                   type="date"
                   name=""
                   id=""
@@ -47,11 +51,17 @@
                   class="text-white"
                   >Category</label
                 >
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  class="w-full focus:outline-none px-4 py-2" />
+                <select
+                  id="countries"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option selected>Choose a country</option>
+                  <option
+                    :value="method"
+                    v-for="(method, index) in arrayofMethods"
+                    :key="index">
+                    {{ method }}
+                  </option>
+                </select>
               </div>
               <div class="space-y-2 w-full lg:w-auto">
                 <TableButton
@@ -289,6 +299,11 @@ import {
 
 import Expenses from '../../../../DB/expense';
 
+import {
+  currentDate,
+  lastdate,
+} from '../../../../scripts/Global/DateYearMonth/date';
+
 export default {
   name: 'Expenses',
   components: {
@@ -298,10 +313,19 @@ export default {
     onUnmounted(() => {
       searchForm.value = false;
     });
+
     const expenses = Expenses;
+    const paymentMethods = new Set(expenses.map(cat => cat.paymentMethod));
+    const arrayofMethods = Array.from(paymentMethods);
+
     return {
       searchForm,
       expenses,
+      //currentdate
+      currentDate,
+      lastdate,
+      /*categories*/
+      arrayofMethods,
       searchFormShower,
     };
   },

@@ -1,8 +1,7 @@
 <template>
   <section class="w-full dark:bg-gray-900">
     <div class="px-2 xl:px-4 mx-auto w-full">
-      <div
-        class="w-full relative overflow-hidden bg-white  dark:bg-gray-800">
+      <div class="w-full relative overflow-hidden bg-white dark:bg-gray-800">
         <div class="overflow-x-auto">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
@@ -41,7 +40,6 @@
               </tr>
             </thead>
             <tbody>
-              
               <tr
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                 <th class="w-4 px-4 py-3 border border-slate-300">1</th>

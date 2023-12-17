@@ -1,23 +1,20 @@
-<template>
-   
-</template>
+<template></template>
 
 <script>
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue';
 export default {
-name:"OrderTabs",
-components:{
-      TabGroup,TabList,Tab,TabPanels,TabPanel
-},
-setup(){
-
-      return {
-
-      }
-}
-}
+  name: 'OrderTabs',
+  components: {
+    TabGroup,
+    TabList,
+    Tab,
+    TabPanels,
+    TabPanel,
+  },
+  setup() {
+    return {};
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

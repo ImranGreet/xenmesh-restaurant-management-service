@@ -44,48 +44,48 @@
 
     <!-- tabcomponent start-->
 
-      <div class="absolue  top-2 w-full left-0 right-0  text-white z-[500]"
+    <div
+      class="absolue top-2 w-full left-0 right-0 text-white z-[500]"
       :class="{ block: mobileWidth, hidden: largeScreen }">
-        <TabGroup >
-          <TabList class="bg-red-600 w-full rounded-sm px-3 py-1.5 flex justify-start space-x-3 items-center ">
-            <Tab>Pick Item</Tab>
-            <Tab>Ordered Items</Tab>
-            <Tab>Payment Form</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <SelectCategory/>
-              <div class="w-full">
-                <form class="w-full">
-                  <div>
-                    <label
-                      for="item_title"
-                      class="sr-only"
-                      >item title</label
-                    >
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Search Item"
-                      class="w-full p-2 focus:outline-none px-4 border border-gray-400/20" />
-                  </div>
-                </form>
-              </div>
-              <AvailableItems />
-            </TabPanel>
-            <TabPanel>
-              <OrderedList/>
-            </TabPanel>
-            <TabPanel>
-              <CustomerDetails/>
-              <PaymentForm/>
-            </TabPanel>
-          </TabPanels>
-         
-        
-        </TabGroup>
-      </div>
+      <TabGroup>
+        <TabList
+          class="bg-red-600 w-full rounded-sm px-3 py-1.5 flex justify-start space-x-3 items-center">
+          <Tab>Pick Item</Tab>
+          <Tab>Ordered Items</Tab>
+          <Tab>Payment Form</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <SelectCategory />
+            <div class="w-full">
+              <form class="w-full">
+                <div>
+                  <label
+                    for="item_title"
+                    class="sr-only"
+                    >item title</label
+                  >
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Search Item"
+                    class="w-full p-2 focus:outline-none px-4 border border-gray-400/20" />
+                </div>
+              </form>
+            </div>
+            <AvailableItems />
+          </TabPanel>
+          <TabPanel>
+            <OrderedList />
+          </TabPanel>
+          <TabPanel>
+            <CustomerDetails />
+            <PaymentForm />
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
+    </div>
 
     <!-- tabcomponent end -->
     <!-- <div
@@ -104,8 +104,7 @@ import OrderedList from '../../../components/Admin/Order/CreateOrder/OrderedList
 import PaymentForm from '../../../components/Admin/Order/CreateOrder/PaymentForm.vue';
 import SelectCategory from '../../../components/Admin/Order/CreateOrder/SelectCategory.vue';
 
-
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue';
 import {
   mobileWidth,
   largeScreen,
@@ -123,7 +122,11 @@ export default {
     CustomerDetails,
     DeliveryWays,
     CreateOrderInFoot,
-    TabGroup, TabList, Tab, TabPanels, TabPanel
+    TabGroup,
+    TabList,
+    Tab,
+    TabPanels,
+    TabPanel,
   },
   setup() {
     onMounted(() => {
@@ -131,7 +134,7 @@ export default {
     });
     return {
       mobileWidth,
-  largeScreen,
+      largeScreen,
       getMobileFooter,
     };
   },
