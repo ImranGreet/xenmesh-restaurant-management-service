@@ -16,6 +16,7 @@
           <div
             class="w-full lg:w-4/5 mx-auto border border-pink-500/30 rounded-lg py-5 px-5 shadow-sm shadow-white">
             <form
+              @submit.prevent="submitForm()"
               class="w-full flex flex-col lg:flex-row justify-between items-center gap-y-3 gap-x-0 lg:gap-x-3 lg:gap-y-0">
               <div class="space-y-2 w-full lg:w-auto">
                 <label
@@ -30,6 +31,7 @@
                   id=""
                   min="2023-01-01"
                   max="2024-12-31"
+                  
                   class="w-full focus:outline-none px-4 py-2" />
               </div>
               <div class="space-y-2 w-full lg:w-auto">
@@ -43,6 +45,7 @@
                   type="date"
                   name=""
                   id=""
+                  
                   class="w-full focus:outline-none px-4 py-2" />
               </div>
               <div class="space-y-2 w-full lg:w-auto">
@@ -52,9 +55,10 @@
                   >Category</label
                 >
                 <select
+                  v-model="selectedPaymentOption"
                   id="countries"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Choose a country</option>
+                  <option selected>Select a method</option>
                   <option
                     :value="method"
                     v-for="(method, index) in arrayofMethods"
@@ -139,7 +143,7 @@
             </thead>
             <tbody>
               <tr
-                v-for="(expense, index) in expenses"
+                v-for="(expense, index) in expensesToShow"
                 :key="expense.id"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                 <th class="w-4 px-4 py-3 border border-slate-300">
@@ -290,7 +294,7 @@
 </template>
 
 <script>
-import { onUnmounted } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import TableButton from '../../../Utilities/actionButtons/TableButton.vue';
 import {
   searchForm,
@@ -300,8 +304,8 @@ import {
 import Expenses from '../../../../DB/expense';
 
 import {
-  currentDate,
-  lastdate,
+  currentDate as startDate,
+  lastdate as endDate,
 } from '../../../../scripts/Global/DateYearMonth/date';
 
 export default {
@@ -310,23 +314,66 @@ export default {
     TableButton,
   },
   setup() {
+    let expensesToShow = ref([]);
+
     onUnmounted(() => {
       searchForm.value = false;
     });
 
-    const expenses = Expenses;
+    onMounted(() => {
+      expensesToShow.value = Expenses;
+    });
+    
+
+    let expenses = Expenses;
+
     const paymentMethods = new Set(expenses.map(cat => cat.paymentMethod));
     const arrayofMethods = Array.from(paymentMethods);
+
+    const selectedPaymentOption = ref('');
+
+    const currentDate = ref(startDate);
+    const lastdate = ref(endDate);
+
+    const filterProducts = function (startDate, endDate, paymentMethod) {
+      const filteredProducts = expenses.filter(expense => {
+        const isWithinDateRange =
+          expense.date >= startDate && expense.date <= endDate
+            ? expense.paymentMethod.toLowerCase() ===
+              paymentMethod.toLowerCase()
+            : true;
+        const hasSelectedPaymentMethod =
+          !selectedPaymentOption.value ||
+          expense.paymentMethod.toLowerCase() ===
+            selectedPaymentOption.value.toLowerCase();
+
+        return isWithinDateRange && hasSelectedPaymentMethod;
+      });
+
+      expensesToShow.value = filteredProducts;
+    };
+    const submitForm = function () {
+      filterProducts(
+        currentDate.value,
+        lastdate.value,
+        selectedPaymentOption.value,
+      );
+    };
 
     return {
       searchForm,
       expenses,
-      //currentdate
       currentDate,
       lastdate,
+      expensesToShow,
+      startDate,
+      endDate,
       /*categories*/
       arrayofMethods,
+      selectedPaymentOption,
       searchFormShower,
+      filterProducts,
+      submitForm,
     };
   },
 };

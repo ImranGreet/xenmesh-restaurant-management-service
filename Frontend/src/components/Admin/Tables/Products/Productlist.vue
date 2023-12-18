@@ -37,20 +37,7 @@
             </div>
           </div>
 
-          <div
-            class="flex flex-col xl:flex-row gap-x-4 text-white bg-blue-700 px-4 py-1.5 rounded-lg">
-            <h5 class="space-x-1">
-              <span>All Products</span>
-              <span>:</span>
-              <span> 123456</span>
-            </h5>
-            <div class="bg-white w-1"></div>
-            <h5 class="space-x-1">
-              <span>Total sales</span>
-              <span>:</span>
-              <span>$88.4k</span>
-            </h5>
-          </div>
+          
           <div
             class="flex flex-col flex-shrink-0 space-y-3 md:flex-row md:items-center lg:justify-end md:space-y-0 md:space-x-3">
             <router-link
