@@ -40,6 +40,7 @@
           </button>
           <p class="text-center">{{ quantity }}</p>
           <button
+            @click="decreaseProductQuantity(itemToPurchase)"
             class="bg-inherit lg:hover:bg-pink-600 lg:hover:text-white product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
             -
           </button>
@@ -54,7 +55,8 @@ import { ref } from 'vue';
 import Price from '../../Utilities/Price.vue';
 import addToCart from '../../Utilities/addToCart.vue';
 import { getItemDetails } from '../../../scripts/public/modal/modal';
-import { increaseProductQuantity } from '../../../scripts/Global/orderManage';
+import { increaseProductQuantity,decreaseProductQuantity } from '../../../scripts/Global/orderManage';
+
 
 export default {
   name: 'OrderItem',
@@ -81,7 +83,6 @@ export default {
       quantity,
     } = props.itemsPurchased;
     const itemToPurchase = props.itemsPurchased;
-    
 
     return {
       id,
@@ -96,6 +97,7 @@ export default {
       //methods
       getItemDetails,
       increaseProductQuantity,
+      decreaseProductQuantity
     };
   },
 };

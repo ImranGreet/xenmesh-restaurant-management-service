@@ -1,15 +1,10 @@
 import {
   addProductToCart,
-  purchasedItemsPrice,
   totalPrice,
   getPriceFromStorage,
   purchasedItems,
+  increaseProductQuantity,
+  decreaseProductQuantity
 } from '../../Global/orderManage';
 
-export {
-  addProductToCart,
-  purchasedItemsPrice,
-  getPriceFromStorage,
-  totalPrice,
-  purchasedItems,
-};
+export { addProductToCart, getPriceFromStorage, totalPrice, purchasedItems,increaseProductQuantity,decreaseProductQuantity };

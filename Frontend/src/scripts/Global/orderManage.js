@@ -5,30 +5,25 @@ let purchasedItems = ref([]);
 
 let totalPrice = ref(0);
 
-const purchasedItemsPrice = function () {
-  return purchasedItems.value.reduce((index, item) => index + item.price, 0);
-};
-
 const setLocalStorage = function (item) {
   if (!localStorage.getItem('publicOrder')) {
     localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
   }
-  
-  const existingItem = purchasedItems.value.find((product)=>product.id===item.id);
-  if(existingItem){
-      existingItem.quantity = (existingItem.quantity || 0) + 1;
-  }else{
-    item.quantity =1;
+
+  const existingItem = purchasedItems.value.find(
+    product => product.id === item.id,
+  );
+  if (existingItem) {
+    existingItem.quantity = (existingItem.quantity || 0) + 1;
+  } else {
+    item.quantity = 1;
     purchasedItems.value.push(item);
   }
-  
+
   localStorage.clear('publicOrder');
 
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
   purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
-
-  getPriceFromStorage();
-  
 };
 
 const addProductToCart = function (product) {
@@ -43,7 +38,8 @@ const addProductToCart = function (product) {
 
   setLocalStorage(getProduct);
 
-  totalPrice.value = purchasedItemsPrice();
+  getPriceFromStorage();
+ 
   /*showing toaster*/
   itemAdded();
 };
@@ -52,29 +48,34 @@ const removeItem = function (itemId) {
   return purchasedItems.value.filter(item => item.id !== itemId);
 };
 
-const increaseProductQuantity = function (productId) {
+const increaseProductQuantity = function (product) {
+  
   const productToIncrease = purchasedItems.value.find(
-    item => item.id == productId,
+    item => item.id == product.id,
   );
 
   if (productToIncrease) {
-    productToIncrease.quantity++;
+    productToIncrease.quantity = (productToIncrease.quantity || 0) + 1;
   }
+  setLocalStorage(product);
+  getPriceFromStorage();
 };
 
-const decreaseProductQuantity = function (productId) {
+const decreaseProductQuantity = function (product) {
+  
   const productToDecrease = purchasedItems.value.find(
-    item => item.id == productId,
+    item => item.id == product.id,
   );
 
   if (productToDecrease) {
-    if (productToDecrease.quantity > 1) {
-      productToDecrease.quantity--;
-    }
-    if (productToDecrease.quantity == 1) {
-      return 0;
-    }
+    productToDecrease.quantity = (productToDecrease.quantity || 0) - 1;
   }
+  localStorage.clear('publicOrder');
+
+  localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
+  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+  getPriceFromStorage();
+
 };
 
 const getPriceFromStorage = function () {
@@ -86,14 +87,16 @@ const getPriceFromStorage = function () {
     let alreadyPurchased = JSON.parse(localStorage.getItem('publicOrder'));
 
     totalPrice.value = alreadyPurchased.reduce((index, item) => {
-      return index + item.price;
+      return index + item.price * item.quantity;
     }, 0);
   }
 };
 
+
+
+
 export {
   addProductToCart,
-  purchasedItemsPrice,
   removeItem,
   increaseProductQuantity,
   decreaseProductQuantity,

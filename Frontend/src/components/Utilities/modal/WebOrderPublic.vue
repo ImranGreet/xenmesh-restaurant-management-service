@@ -10,7 +10,7 @@
         </button>
       </div>
       <ul
-        class="w-full h-[75vh] overflow-y-auto custom-overflowscroll flex flex-col justify-between items-start gap-y-3">
+        class="w-full h-[75vh] overflow-y-auto custom-overflowscroll flex flex-col justify-start items-start gap-y-3">
         <li
           class="w-full"
           v-for="purchased in purchasedItems"
@@ -39,7 +39,7 @@
 import { showOrderItems } from '../../../scripts/public/Utility';
 import OrderItem from '../../PublicViews/Items/OrderItem.vue';
 import {
-  purchasedItemsPrice,
+  
   totalPrice,
   getPriceFromStorage,
   purchasedItems,
@@ -57,13 +57,14 @@ export default {
       if (localStorage.getItem('publicOrder')) {
         purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
       }
+      
     });
 
     
 
     return {
       showOrderItems,
-      purchasedItemsPrice,
+      
       getPriceFromStorage,
       purchasedItems,
       totalPrice,

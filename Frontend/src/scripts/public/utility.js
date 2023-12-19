@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 
+
 const orderItems = ref(false);
 
 const gridView = ref(false);
@@ -8,6 +9,7 @@ const flexColor = ref(false);
 
 const showOrderItems = function () {
   orderItems.value = !orderItems.value;
+
 };
 
 const showGridItems = function (displayProperty) {
@@ -38,3 +40,4 @@ export {
   showGridItems,
   showOrderItems,
 };
+

@@ -31,7 +31,6 @@
                   id=""
                   min="2023-01-01"
                   max="2024-12-31"
-                  
                   class="w-full focus:outline-none px-4 py-2" />
               </div>
               <div class="space-y-2 w-full lg:w-auto">
@@ -45,7 +44,6 @@
                   type="date"
                   name=""
                   id=""
-                  
                   class="w-full focus:outline-none px-4 py-2" />
               </div>
               <div class="space-y-2 w-full lg:w-auto">
@@ -323,7 +321,6 @@ export default {
     onMounted(() => {
       expensesToShow.value = Expenses;
     });
-    
 
     let expenses = Expenses;
 
