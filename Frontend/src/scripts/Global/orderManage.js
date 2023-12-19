@@ -13,12 +13,22 @@ const setLocalStorage = function (item) {
   if (!localStorage.getItem('publicOrder')) {
     localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
   }
-
-  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
-  purchasedItems.value.push(item);
+  
+  const existingItem = purchasedItems.value.find((product)=>product.id===item.id);
+  if(existingItem){
+      existingItem.quantity = (existingItem.quantity || 0) + 1;
+  }else{
+    item.quantity =1;
+    purchasedItems.value.push(item);
+  }
+  
   localStorage.clear('publicOrder');
 
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
+  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+
+  getPriceFromStorage();
+  
 };
 
 const addProductToCart = function (product) {

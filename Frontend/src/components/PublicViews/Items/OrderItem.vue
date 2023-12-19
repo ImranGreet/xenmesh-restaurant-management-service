@@ -81,6 +81,7 @@ export default {
       quantity,
     } = props.itemsPurchased;
     const itemToPurchase = props.itemsPurchased;
+    
 
     return {
       id,

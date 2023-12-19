@@ -44,7 +44,7 @@ import {
   getPriceFromStorage,
   purchasedItems,
 } from '../../../scripts/public/Order/publicorder';
-import { computed, onMounted } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 
 export default {
   name: 'WebOrder',
@@ -58,6 +58,8 @@ export default {
         purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
       }
     });
+
+    
 
     return {
       showOrderItems,
