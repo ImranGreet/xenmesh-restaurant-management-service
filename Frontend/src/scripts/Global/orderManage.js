@@ -45,7 +45,12 @@ const addProductToCart = function (product) {
 };
 
 const removeItem = function (itemId) {
-  return purchasedItems.value.filter(item => item.id !== itemId);
+  purchasedItems.value =  purchasedItems.value.filter(item => item.id !== itemId);
+  localStorage.clear('publicOrder');
+
+  localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
+  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+  getPriceFromStorage();
 };
 
 const increaseProductQuantity = function (product) {

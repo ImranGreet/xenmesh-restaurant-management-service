@@ -9,6 +9,7 @@ const flexColor = ref(false);
 
 const showOrderItems = function () {
   orderItems.value = !orderItems.value;
+  
 
 };
 

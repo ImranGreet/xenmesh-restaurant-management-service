@@ -15,7 +15,7 @@ export default {
     onMounted(() => {
       // Load the Google Maps JavaScript API
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCxgFXXZZxArswlgzfwPEC59rNP1cD7N44&callback=initMap`;
       script.defer = true;
       script.async = true;
       window.initMap = initMap; // Callback function when the script is loaded
