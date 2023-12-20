@@ -8,10 +8,8 @@
 
       <div
         class="w-full h-96 overflow-x-hidden overflow-y-scroll p-2 custom-overflowscroll border border-gray-300/20 space-y-2 rounded-sm">
-        <OrderItemAmount />
-        <OrderItemAmount />
-        <OrderItemAmount />
-        <OrderItemAmount />
+        <OrderItemAmount v-for="cartedProduct in purchasedItems" :key="cartedProduct.id" :purchedItemsInfo="cartedProduct" :totalItems="purchasedItems.length" />
+        
       </div>
     </div>
   </div>
@@ -20,11 +18,15 @@
 <script>
 import { ref } from 'vue';
 import OrderItemAmount from './OrderItemAmount.vue';
+import { purchasedItems } from '../../../scripts/public/Order/publicorder';
+
 export default {
   name: 'CartSummary',
   components: { OrderItemAmount },
   setup() {
-    return {};
+    return {
+      purchasedItems
+    };
   },
 };
 </script>
