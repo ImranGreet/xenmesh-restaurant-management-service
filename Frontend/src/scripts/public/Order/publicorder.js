@@ -4,7 +4,14 @@ import {
   getPriceFromStorage,
   purchasedItems,
   increaseProductQuantity,
-  decreaseProductQuantity
+  decreaseProductQuantity,
 } from '../../Global/orderManage';
 
-export { addProductToCart, getPriceFromStorage, totalPrice, purchasedItems,increaseProductQuantity,decreaseProductQuantity };
+export {
+  addProductToCart,
+  getPriceFromStorage,
+  totalPrice,
+  purchasedItems,
+  increaseProductQuantity,
+  decreaseProductQuantity,
+};

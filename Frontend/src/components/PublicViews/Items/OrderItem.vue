@@ -40,16 +40,20 @@
           </button>
           <p class="text-center">{{ quantity }}</p>
           <button
-          :class="{'hidden':quantity===1,'inline':quantity>1}"
+            :class="{ hidden: quantity === 1, inline: quantity > 1 }"
             @click="decreaseProductQuantity(itemToPurchase)"
             class="bg-inherit lg:hover:bg-pink-600 lg:hover:text-white product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
             -
           </button>
           <button
-           :class="{'hidden':quantity>1,'inline bg-pink-600 text-white lg:hover:bg-rose-700':quantity===1}"
+            :class="{
+              hidden: quantity > 1,
+              'inline bg-pink-600 text-white lg:hover:bg-rose-700':
+                quantity === 1,
+            }"
             @click="removeItem(id)"
-            class="bg-inherit  product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
-            <TrashIcon class="w-3 h-3 inline"/>
+            class="bg-inherit product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
+            <TrashIcon class="w-3 h-3 inline" />
           </button>
         </div>
       </div>
@@ -62,18 +66,19 @@ import { ref } from 'vue';
 import Price from '../../Utilities/Price.vue';
 import addToCart from '../../Utilities/addToCart.vue';
 import { getItemDetails } from '../../../scripts/public/modal/modal';
-import { increaseProductQuantity,decreaseProductQuantity,removeItem } from '../../../scripts/Global/orderManage';
+import {
+  increaseProductQuantity,
+  decreaseProductQuantity,
+  removeItem,
+} from '../../../scripts/Global/orderManage';
 import { TrashIcon } from '@heroicons/vue/24/solid';
-
-
-
 
 export default {
   name: 'OrderItem',
   components: {
     Price,
     addToCart,
-    TrashIcon
+    TrashIcon,
   },
 
   props: {
@@ -109,7 +114,7 @@ export default {
       getItemDetails,
       increaseProductQuantity,
       decreaseProductQuantity,
-      removeItem
+      removeItem,
     };
   },
 };

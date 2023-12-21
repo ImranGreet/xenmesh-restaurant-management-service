@@ -39,7 +39,6 @@
 import { showOrderItems } from '../../../scripts/public/Utility';
 import OrderItem from '../../PublicViews/Items/OrderItem.vue';
 import {
-  
   totalPrice,
   getPriceFromStorage,
   purchasedItems,
@@ -57,14 +56,11 @@ export default {
       if (localStorage.getItem('publicOrder')) {
         purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
       }
-      
     });
-
-    
 
     return {
       showOrderItems,
-      
+
       getPriceFromStorage,
       purchasedItems,
       totalPrice,

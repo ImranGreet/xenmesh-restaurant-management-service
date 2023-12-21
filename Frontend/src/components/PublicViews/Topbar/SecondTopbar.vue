@@ -35,7 +35,7 @@
             @click="showOrderItems()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white">
             <ShoppingCartIcon class="w-4 h-4 inline-block" />
-            {{ Math.floor(totalPrice) }} 
+            {{ Math.floor(totalPrice) }}
           </button>
         </li>
         <li>

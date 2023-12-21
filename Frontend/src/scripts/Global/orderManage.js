@@ -39,13 +39,15 @@ const addProductToCart = function (product) {
   setLocalStorage(getProduct);
 
   getPriceFromStorage();
- 
+
   /*showing toaster*/
   itemAdded();
 };
 
 const removeItem = function (itemId) {
-  purchasedItems.value =  purchasedItems.value.filter(item => item.id !== itemId);
+  purchasedItems.value = purchasedItems.value.filter(
+    item => item.id !== itemId,
+  );
   localStorage.clear('publicOrder');
 
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
@@ -54,7 +56,6 @@ const removeItem = function (itemId) {
 };
 
 const increaseProductQuantity = function (product) {
-  
   const productToIncrease = purchasedItems.value.find(
     item => item.id == product.id,
   );
@@ -67,7 +68,6 @@ const increaseProductQuantity = function (product) {
 };
 
 const decreaseProductQuantity = function (product) {
-  
   const productToDecrease = purchasedItems.value.find(
     item => item.id == product.id,
   );
@@ -80,7 +80,6 @@ const decreaseProductQuantity = function (product) {
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
   purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
   getPriceFromStorage();
-
 };
 
 const getPriceFromStorage = function () {
@@ -96,9 +95,6 @@ const getPriceFromStorage = function () {
     }, 0);
   }
 };
-
-
-
 
 export {
   addProductToCart,

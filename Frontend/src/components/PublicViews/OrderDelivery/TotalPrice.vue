@@ -4,7 +4,7 @@
       class="w-full flex flex-col justify-between items-start border border-gray-400/25 rounded-md px-4 py-3">
       <div class="w-full flex justify-between items-center">
         <p>Total Items</p>
-        <p><span></span>{{purchasedItems.length}}</p>
+        <p><span></span>{{ purchasedItems.length }}</p>
       </div>
       <div class="w-full flex justify-between items-center">
         <p>Subtotal</p>
@@ -32,11 +32,10 @@ import { purchasedItems } from '../../../scripts/public/Order/publicorder';
 
 export default {
   name: 'TotalPrice',
-  setup(){
-    
+  setup() {
     return {
-      purchasedItems
-    }
-  }
+      purchasedItems,
+    };
+  },
 };
 </script>
