@@ -53,10 +53,7 @@ export default {
   setup() {
     onMounted(() => {
       getPriceFromStorage();
-     
     });
-
-  
 
     return {
       showOrderItems,

@@ -6,7 +6,6 @@ const routeToSend = 'https://www.sandbox.shurjopayment.com/api/secret-pay';
 
 export const getCustomerInformation = defineStore('customerInfo', () => {
   async function forwardCustomerInfo(generatedCode) {
-
     const customerInformation = {
       prefix: 'sp',
       token: generatedCode,
@@ -31,11 +30,10 @@ export const getCustomerInformation = defineStore('customerInfo', () => {
           Accept: 'application/json',
           Vary: Origin,
           Authorization: `Bearer ${generatedCode}`,
-          withCredentials:false,
-          
+          withCredentials: false,
         },
       });
-      
+
       console.log(response);
       console.log(generatedCode);
     } catch (error) {}

@@ -40,7 +40,10 @@
           </button>
           <p class="text-center">{{ itemToPurchase.quantity }}</p>
           <button
-            :class="{ hidden: itemToPurchase.quantity === 1, inline: itemToPurchase.quantity > 1 }"
+            :class="{
+              hidden: itemToPurchase.quantity === 1,
+              inline: itemToPurchase.quantity > 1,
+            }"
             @click="decreaseProductQuantityIndex()"
             class="bg-inherit lg:hover:bg-pink-600 lg:hover:text-white product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
             -
@@ -49,7 +52,7 @@
             :class="{
               hidden: itemToPurchase.quantity > 1,
               'inline bg-pink-600 text-white lg:hover:bg-rose-700':
-              itemToPurchase.quantity === 1,
+                itemToPurchase.quantity === 1,
             }"
             @click="removeItem(id)"
             class="bg-inherit product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
@@ -100,21 +103,19 @@ export default {
     } = props.itemsPurchased;
     const itemToPurchase = ref(props.itemsPurchased);
 
-    const increaseProductQuantityIndex = function(){
-      if(quantity>=1){
+    const increaseProductQuantityIndex = function () {
+      if (quantity >= 1) {
         itemToPurchase.value.quantity++;
       }
-      increaseProductQuantity(itemToPurchase.value)
-    }
+      increaseProductQuantity(itemToPurchase.value);
+    };
 
-    const decreaseProductQuantityIndex = function(){
-      if(quantity>=1){
+    const decreaseProductQuantityIndex = function () {
+      if (quantity >= 1) {
         itemToPurchase.value.quantity--;
       }
       decreaseProductQuantity(itemToPurchase.value);
-    }
-
-
+    };
 
     return {
       id,
@@ -132,7 +133,7 @@ export default {
       decreaseProductQuantity,
       removeItem,
       increaseProductQuantityIndex,
-      decreaseProductQuantityIndex
+      decreaseProductQuantityIndex,
     };
   },
 };

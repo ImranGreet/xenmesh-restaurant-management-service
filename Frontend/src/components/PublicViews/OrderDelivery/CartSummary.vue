@@ -15,7 +15,29 @@
           :totalItems="purchasedItems.length" />
       </div>
     </div>
-    <button @click="getGeneratedCode()">Surjopay</button>
+    <div class="my-3 text-center border border-inherit rounded-sm shadow-md">
+      <h1 class="text-xl underline underline-offset-8">
+        Complete your payemnt With
+      </h1>
+      <div class="w-full flex justify-evenly items-center gap-x-2">
+        <button
+          @click="getGeneratedCode()"
+          class="my-3 border border-red-500 rounded p-3">
+          <img
+            src="../../../assets/shurjoPay_.jpg"
+            alt=""
+            class="w-20 h-20 rounded-md" />
+        </button>
+        <button
+          @click="createPaymentId()"
+          class="my-3 border border-red-500 rounded p-3">
+          <img
+            src="../../../assets/BKash_logo.svg.png"
+            alt=""
+            class="w-20 h-20 rounded-md" />
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,7 +47,10 @@ import OrderItemAmount from './OrderItemAmount.vue';
 import { purchasedItems } from '../../../scripts/public/Order/publicorder';
 import { useGeneratedToken } from '../../../store/surjopay/tokengenerate';
 
+import { useBkashPaymnetId } from '../../../store/bkash/createpayment';
+
 const { getGeneratedCode } = useGeneratedToken();
+const { createPaymentId } = useBkashPaymnetId();
 export default {
   name: 'CartSummary',
   components: { OrderItemAmount },
@@ -33,6 +58,7 @@ export default {
     return {
       purchasedItems,
       getGeneratedCode,
+      createPaymentId,
     };
   },
 };

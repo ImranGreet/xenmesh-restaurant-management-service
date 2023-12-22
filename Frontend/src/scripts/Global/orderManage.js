@@ -1,5 +1,5 @@
 import { onMounted, ref, toRaw } from 'vue';
-import { itemAdded ,alreadyHave} from '../toaster';
+import { itemAdded, alreadyHave } from '../toaster';
 
 let purchasedItems = ref([]);
 
@@ -14,16 +14,15 @@ const setLocalStorage = function (item) {
     product => product.id === item.id,
   );
   if (existingItem) {
-    // existingItem.quantity = (existingItem.quantity || 0) + 1;
     alreadyHave();
-    return ;
+    return;
   } else {
     item.quantity = 1;
     purchasedItems.value.push(item);
     itemAdded();
   }
 
- resetLocalStorage();
+  resetLocalStorage();
 };
 
 const addProductToCart = function (product) {
@@ -41,15 +40,19 @@ const addProductToCart = function (product) {
   getPriceFromStorage();
 
   /*showing toaster*/
- 
 };
 
 const removeItem = function (itemId) {
-  purchasedItems.value = purchasedItems.value.filter(
-    item => item.id !== itemId,
-  );
-  resetLocalStorage();
-  getPriceFromStorage();
+  let confirmToDelete = window.confirm('Are you sure ?');
+  if (confirmToDelete) {
+    purchasedItems.value = purchasedItems.value.filter(
+      item => item.id !== itemId,
+    );
+    resetLocalStorage();
+    getPriceFromStorage();
+  } else {
+    return;
+  }
 };
 
 const increaseProductQuantity = function (product) {
@@ -59,9 +62,8 @@ const increaseProductQuantity = function (product) {
 
   if (productToIncrease) {
     productToIncrease.quantity = (productToIncrease.quantity || 0) + 1;
-    
   }
-  
+
   getPriceFromStorage();
   resetLocalStorage();
 };
@@ -76,8 +78,6 @@ const decreaseProductQuantity = function (product) {
   }
   resetLocalStorage();
   getPriceFromStorage();
-
- 
 };
 
 const getPriceFromStorage = function () {
@@ -94,20 +94,19 @@ const getPriceFromStorage = function () {
   }
 };
 
-const resetLocalStorage = ()=>{
+const resetLocalStorage = () => {
   localStorage.clear('publicOrder');
-
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
-  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder')); 
+  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
   initialLoad();
-}
+};
 
-const initialLoad = function(){
+const initialLoad = function () {
   if (localStorage.getItem('publicOrder')) {
     purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
     getPriceFromStorage();
   }
-}
+};
 
 initialLoad();
 
