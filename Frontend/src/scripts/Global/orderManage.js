@@ -58,7 +58,7 @@ const increaseProductQuantity = function (product) {
     productToIncrease.quantity = (productToIncrease.quantity || 0) + 1;
     
   }
-  setLocalStorage(product);
+  
   getPriceFromStorage();
 };
 
