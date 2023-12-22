@@ -34,22 +34,22 @@
 
         <div class="flex flex-col space-y-1">
           <button
-            @click="increaseProductQuantity(itemToPurchase)"
+            @click="increaseProductQuantityIndex()"
             class="bg-inherit lg:hover:bg-pink-600 lg:hover:text-white product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
             +
           </button>
-          <p class="text-center">{{ quantity }}</p>
+          <p class="text-center">{{ itemToPurchase.quantity }}</p>
           <button
-            :class="{ hidden: quantity === 1, inline: quantity > 1 }"
-            @click="decreaseProductQuantity(itemToPurchase)"
+            :class="{ hidden: itemToPurchase.quantity === 1, inline: itemToPurchase.quantity > 1 }"
+            @click="decreaseProductQuantityIndex()"
             class="bg-inherit lg:hover:bg-pink-600 lg:hover:text-white product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
             -
           </button>
           <button
             :class="{
-              hidden: quantity > 1,
+              hidden: itemToPurchase.quantity > 1,
               'inline bg-pink-600 text-white lg:hover:bg-rose-700':
-                quantity === 1,
+              itemToPurchase.quantity === 1,
             }"
             @click="removeItem(id)"
             class="bg-inherit product-hover border border-red-500 rounded-full w-6 h-6 text-center flex flex-col justify-center items-center">
@@ -98,7 +98,23 @@ export default {
       category,
       quantity,
     } = props.itemsPurchased;
-    const itemToPurchase = props.itemsPurchased;
+    const itemToPurchase = ref(props.itemsPurchased);
+
+    const increaseProductQuantityIndex = function(){
+      if(quantity>=1){
+        itemToPurchase.value.quantity++;
+      }
+      increaseProductQuantity(itemToPurchase.value)
+    }
+
+    const decreaseProductQuantityIndex = function(){
+      if(quantity>=1){
+        itemToPurchase.value.quantity--;
+      }
+      decreaseProductQuantity(itemToPurchase.value);
+    }
+
+
 
     return {
       id,
@@ -115,6 +131,8 @@ export default {
       increaseProductQuantity,
       decreaseProductQuantity,
       removeItem,
+      increaseProductQuantityIndex,
+      decreaseProductQuantityIndex
     };
   },
 };

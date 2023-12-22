@@ -60,6 +60,7 @@ const increaseProductQuantity = function (product) {
   }
   
   getPriceFromStorage();
+  resetLocalStorage();
 };
 
 const decreaseProductQuantity = function (product) {
@@ -95,6 +96,7 @@ const resetLocalStorage = ()=>{
 
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
   purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder')); 
+  initialLoad();
 }
 
 const initialLoad = function(){
