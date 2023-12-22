@@ -6,6 +6,8 @@ const textShowing = ref('');
 
 const toasterSerial = ref([]);
 
+const inCart = ref(false);
+
 const itemAdded = function () {
   textShowing.value = 'Item added Successfully';
   let index = toasterSerial.value.length;
@@ -24,4 +26,11 @@ setInterval(() => {
   closeToasterInChronologicalOrder();
 }, 5 * 1000);
 
-export { showToaster, textShowing, toasterSerial, itemAdded, corkedToaster };
+const alreadyHave = function(){
+  
+  textShowing.value = 'Item already have ';
+  let index = toasterSerial.value.length;
+  toasterSerial.value.push(index + 1);
+}
+
+export { showToaster, textShowing, toasterSerial, itemAdded, corkedToaster ,alreadyHave,inCart};

@@ -18,7 +18,7 @@
 
 <script>
 import { XMarkIcon, CheckIcon } from '@heroicons/vue/24/solid';
-import { textShowing, corkedToaster } from '../../../scripts/toaster';
+import { textShowing, corkedToaster,inCart } from '../../../scripts/toaster';
 
 export default {
   name: 'Toaster',
@@ -35,6 +35,7 @@ export default {
       textShowing,
       corkedToaster,
       index,
+      inCart
     };
   },
 };

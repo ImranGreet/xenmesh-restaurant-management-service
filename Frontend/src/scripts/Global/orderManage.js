@@ -1,5 +1,5 @@
 import { onMounted, ref, toRaw } from 'vue';
-import { itemAdded } from '../toaster';
+import { itemAdded ,alreadyHave} from '../toaster';
 
 let purchasedItems = ref([]);
 
@@ -14,10 +14,13 @@ const setLocalStorage = function (item) {
     product => product.id === item.id,
   );
   if (existingItem) {
-    existingItem.quantity = (existingItem.quantity || 0) + 1;
+    // existingItem.quantity = (existingItem.quantity || 0) + 1;
+    alreadyHave();
+    return ;
   } else {
     item.quantity = 1;
     purchasedItems.value.push(item);
+    itemAdded();
   }
 
  resetLocalStorage();
@@ -38,7 +41,7 @@ const addProductToCart = function (product) {
   getPriceFromStorage();
 
   /*showing toaster*/
-  itemAdded();
+ 
 };
 
 const removeItem = function (itemId) {
