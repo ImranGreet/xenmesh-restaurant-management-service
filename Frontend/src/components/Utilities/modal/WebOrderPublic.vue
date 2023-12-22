@@ -53,10 +53,10 @@ export default {
   setup() {
     onMounted(() => {
       getPriceFromStorage();
-      if (localStorage.getItem('publicOrder')) {
-        purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
-      }
+     
     });
+
+  
 
     return {
       showOrderItems,

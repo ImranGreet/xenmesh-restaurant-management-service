@@ -20,10 +20,7 @@ const setLocalStorage = function (item) {
     purchasedItems.value.push(item);
   }
 
-  localStorage.clear('publicOrder');
-
-  localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
-  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+ resetLocalStorage();
 };
 
 const addProductToCart = function (product) {
@@ -48,10 +45,7 @@ const removeItem = function (itemId) {
   purchasedItems.value = purchasedItems.value.filter(
     item => item.id !== itemId,
   );
-  localStorage.clear('publicOrder');
-
-  localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
-  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+  resetLocalStorage();
   getPriceFromStorage();
 };
 
@@ -62,6 +56,7 @@ const increaseProductQuantity = function (product) {
 
   if (productToIncrease) {
     productToIncrease.quantity = (productToIncrease.quantity || 0) + 1;
+    
   }
   setLocalStorage(product);
   getPriceFromStorage();
@@ -75,11 +70,10 @@ const decreaseProductQuantity = function (product) {
   if (productToDecrease) {
     productToDecrease.quantity = (productToDecrease.quantity || 0) - 1;
   }
-  localStorage.clear('publicOrder');
-
-  localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
-  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+  resetLocalStorage();
   getPriceFromStorage();
+
+ 
 };
 
 const getPriceFromStorage = function () {
@@ -95,6 +89,22 @@ const getPriceFromStorage = function () {
     }, 0);
   }
 };
+
+const resetLocalStorage = ()=>{
+  localStorage.clear('publicOrder');
+
+  localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
+  purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder')); 
+}
+
+const initialLoad = function(){
+  if (localStorage.getItem('publicOrder')) {
+    purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
+    getPriceFromStorage();
+  }
+}
+
+initialLoad();
 
 export {
   addProductToCart,
