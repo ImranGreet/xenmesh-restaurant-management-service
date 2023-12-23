@@ -80,6 +80,7 @@ const decreaseProductQuantity = function (product) {
   getPriceFromStorage();
 };
 
+/*price of product those has been included in cart*/
 const getPriceFromStorage = function () {
   if (!localStorage.getItem('publicOrder')) {
     totalPrice.value = 0;
@@ -93,14 +94,14 @@ const getPriceFromStorage = function () {
     }, 0);
   }
 };
-
+/*reset local storage */
 const resetLocalStorage = () => {
   localStorage.clear('publicOrder');
   localStorage.setItem('publicOrder', JSON.stringify(purchasedItems.value));
   purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
   initialLoad();
 };
-
+/*price in initial time*/
 const initialLoad = function () {
   if (localStorage.getItem('publicOrder')) {
     purchasedItems.value = JSON.parse(localStorage.getItem('publicOrder'));
@@ -108,8 +109,9 @@ const initialLoad = function () {
   }
 };
 
-initialLoad();
+initialLoad();/*call initialload at initial time*/
 
+/*export to use in multiple pages*/
 export {
   addProductToCart,
   removeItem,

@@ -8,7 +8,7 @@
 import { ref, onMounted } from 'vue';
 import useLocationProperties from '../scripts/Googlemap/map';
 const { lat: latitude, long: longitude } = useLocationProperties();
-console.log(latitude);
+
 
 export default {
   setup() {
@@ -28,7 +28,7 @@ export default {
     function initMap() {
       // Create a new Google Map instance
       map = new google.maps.Map(mapContainer.value, {
-        center: { lat: latitude.value, lng: longitude.value },
+        center: { lat: Number(latitude.value), lng: Number(longitude.value) },
         zoom: 12,
       });
     }
