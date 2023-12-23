@@ -28,9 +28,9 @@
     </section>
     <MobileFooter
       class="w-full fixed inset-x-0 bottom-0 bg-white block xl:hidden z-[200]" />
-    <WebOrderPublic
+    <!-- <WebOrderPublic
       class="w-[380px] fixed top-12 bottom-0 z-[100] bg-white right-0"
-      :class="{ hidden: !orderItems, block: orderItems }" />
+      :class="{ hidden: !orderItems, block: orderItems }" /> -->
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50"
       :class="{ hidden: !orderItems, block: orderItems }"></div>
@@ -61,6 +61,9 @@
       }">
       <AuthModal />
     </div>
+
+    <!-- weborderview in mobile or sminiscreen -->
+    <MobileWebOrderView class="w-11/12 float-right top-20 fixed right-0 bottom-14 bg-white  z-[200]" :class="{ hidden: !orderItems, 'block xl:hidden': orderItems }"/>
   </section>
 </template>
 
@@ -76,6 +79,7 @@ import WebOrderPublic from '../components/Utilities/modal/WebOrderPublic.vue';
 import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
 import Toaster from '../components/Utilities/Notifications/Toaster.vue';
 import AuthModal from '../components/Utilities/modal/AuthModal.vue';
+import MobileWebOrderView from '../components/Utilities/modal/mobileWebOrder.vue';
 /*order modal*/
 
 import { orderItems, showOrderItems } from '../scripts/public/Utility';
@@ -107,6 +111,7 @@ export default {
     ProductDescription,
     Toaster,
     AuthModal,
+    MobileWebOrderView
   },
   setup() {
     return {
