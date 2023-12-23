@@ -1,9 +1,9 @@
 <template>
   <div class="w-full bg-inherit">
-    <div class="w-full space-y-4 px-4">
+    <div class="w-full space-y-0 lg:space-y-4 px-4">
       <div class="w-full flex justify-between items-center">
         <router-link to="/">
-          <h1 class="text-xl tracking-wide leading-normal">Xenmesh</h1>
+          <h1 class="text-base tracking-wide leading-normal">Xenmesh</h1>
         </router-link>
       </div>
 
