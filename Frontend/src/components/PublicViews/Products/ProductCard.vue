@@ -28,8 +28,22 @@
         <div class="w-full flex justify-start items-center gap-x-1 md:gap-x-2">
           <h1
             class="text-base tracking-wide font-semibold text-gray-800"
-            v-if="title.length > 20">
-            {{ title.slice(0, 20) }} ...
+            v-if="title.length > 10 && innerWidth>=300 && innerWidth<=767">
+            {{ title.slice(0, 8) }} ...
+          </h1>
+
+          <h1
+            class="text-base tracking-wide font-semibold text-gray-800"
+            v-else-if="title.length > 20 && innerWidth>=768 && innerWidth<=1023 ">
+            {{ title.slice(0, 15) }} ...
+          </h1>
+
+         
+
+          <h1
+            class="text-base tracking-wide font-semibold text-gray-800"
+            v-else-if="title.length >= 20 && innerWidth>=1025 ">
+            {{ title.slice(0, 18) }} ...
           </h1>
 
           <h1
@@ -89,7 +103,8 @@ import addToCart from '../../Utilities/addToCart.vue';
 import { gridView, showGridItems } from '../../../scripts/public/utility';
 import { addProductToCart } from '../../../scripts/public/Order/publicorder';
 import { getItemDetails } from '../../../scripts/public/modal/modal';
-
+/*inner height and window*/
+import {innerHeight,innerWidth} from "../../../scripts/Global/innerheightwidth";
 export default {
   name: 'ProductCard',
   components: {
@@ -119,6 +134,8 @@ export default {
       composition,
       gridView,
       discountAmount,
+      innerHeight,
+      innerWidth,
       showGridItems,
       addProductToCart,
       getItemDetails,

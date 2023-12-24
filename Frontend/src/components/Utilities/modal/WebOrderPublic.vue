@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import { computed, onMounted, ref, watch } from 'vue';
 import { showOrderItems } from '../../../scripts/public/Utility';
 import OrderItem from '../../PublicViews/Items/OrderItem.vue';
 import {
@@ -50,7 +51,10 @@ import {
   getPriceFromStorage,
   purchasedItems,
 } from '../../../scripts/public/Order/publicorder';
-import { computed, onMounted, ref, watch } from 'vue';
+
+import {innerHeight} from "../../../scripts/Global/innerheightwidth"
+
+
 
 
 
@@ -65,15 +69,9 @@ export default {
     });
 
   
-let innerHeight =ref();
-
-onMounted(()=>{
+    onMounted(()=>{
   innerHeight.value = window.innerHeight;
   console.log(innerHeight.value);
-});
-
-window.addEventListener("resize",()=>{
-  innerHeight.value = window.innerHeight; 
 });
   
 

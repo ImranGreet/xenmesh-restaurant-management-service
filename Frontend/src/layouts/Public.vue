@@ -29,14 +29,14 @@
     <MobileFooter
       class="w-full fixed inset-x-0 bottom-0 bg-white block xl:hidden z-[200]" />
     <WebOrderPublic
-      class="w-11/12 sm:w-[380px] h-full fixed top-16 xl:top-12   bottom-0   bg-white "
+      class="w-11/12 sm:w-[380px] h-full fixed top-12   bottom-0   bg-white "
       :class="{ 'hidden': !orderItems, 'block  right-0 float-right z-[699]': orderItems }" />
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50"
       :class="{ hidden: !orderItems, block: orderItems }"></div>
 
     <div
-      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen [z-999]"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
     </div>
