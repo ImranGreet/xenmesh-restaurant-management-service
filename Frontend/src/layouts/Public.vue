@@ -29,7 +29,7 @@
     <MobileFooter
       class="w-full fixed inset-x-0 bottom-0 bg-white block xl:hidden z-[200]" />
     <WebOrderPublic
-      class="w-11/12 sm:w-[380px] h-full fixed top-14 lg:top-16 xl:top-14   bottom-0   bg-white "
+      class="w-11/12 sm:w-[380px] h-full fixed top-14 lg:top-16 xl:top-14   bottom-0    bg-white "
       :class="{ 'hidden': !orderItems, 'block  right-0 float-right z-[699]': orderItems }" />
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50"
@@ -128,3 +128,5 @@ export default {
   },
 };
 </script>
+
+

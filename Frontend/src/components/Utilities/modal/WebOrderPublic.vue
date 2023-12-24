@@ -12,7 +12,7 @@
       
       <ul
 
-        class="w-full 2xl:h-[75vh] h-[68vh]  overflow-y-auto custom-overflowscroll flex flex-col justify-start items-start gap-y-3"  :class="{'sm:h-[32vh]':innerHeight<=500,'sm:h-[58vh]':innerHeight>=601}">
+        class="w-full 2xl:h-[75vh] h-[58vh]  overflow-y-auto custom-overflowscroll flex flex-col justify-start items-start gap-y-3"  :class="{'sm:h-[24vh]':innerHeight<=500,'sm:h-[58vh]':innerHeight>=601}">
         <li
           class="w-full"
           v-for="purchased in purchasedItems"
