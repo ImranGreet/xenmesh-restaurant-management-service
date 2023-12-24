@@ -2,14 +2,10 @@
   <div class="w-full border h-96 border-gray-100 rounded-md relative">
     <div
       class="w-full h-full flex flex-col justify-center items-center rounded-md">
-      
-        <Transition name="slide-fade" >
-          <img
-        
+      <img
         :src="slidesPhoto"
         alt=""
-        class="w-full h-full object-fill object-center rounded-md square " />
-        </Transition>
+        class="w-full h-full object-fill object-center rounded-md square" />
     </div>
 
     <div
@@ -39,7 +35,6 @@ import {
   currentSlideElement,
   previusSlideImage,
   slides,
- 
 } from '../../../scripts/public/Sliding';
 
 export default {
@@ -61,31 +56,9 @@ export default {
       slidesPhoto,
       slides,
       currentSlideElement,
-      
       nextSlideImage,
       previusSlideImage,
     };
   },
 };
 </script>
-
-
-<style>
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}
-</style>
