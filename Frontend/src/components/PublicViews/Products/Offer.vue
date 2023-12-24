@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full bg-inherit sapce-y-2 max-w-2xl shadow-xl shadow-slate-200 bg-lime-200 rounded-2xl overflow-hidden">
+    class="w-full bg-inherit sapce-y-2 max-w-full lg:max-w-2xl shadow-xl shadow-slate-200 bg-lime-200 rounded-2xl overflow-hidden">
     <div class="w-full flex justify-around items-center px-4 h-40">
       <div class="py-2 space-y-2">
         <div class="w-full flex justify-between items-center gap-x-0.5">

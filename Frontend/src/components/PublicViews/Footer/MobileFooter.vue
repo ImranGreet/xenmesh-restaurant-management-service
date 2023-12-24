@@ -1,23 +1,22 @@
 <template>
   <div class="w-full bg-inherit">
-    <div class="w-full flex justify-between items-center h-14 px-3">
+    <div class="w-full flex justify-between items-center h-14 px-3 activeIdentity">
       <router-link :to="{ name: 'public-home' }">
         <HomeIcon class="w-6 h-6" />
       </router-link>
       <router-link :to="{ name: 'category', params: { category: category } }">
         <AdjustmentsHorizontalIcon class="w-6 h-6" />
       </router-link>
-      <router-link
-        to="#"
-        role="button"
+      <button
+        
         class="self-start bg-rose-700/80 rounded-full p-3 text-white"
         @click="showOrderItems()">
         <ShoppingBagIcon class="w-6 h-6" />
-      </router-link>
+      </button>
       <router-link :to="{ name: 'offer' }">
         <Squares2X2Icon class="w-6 h-6" />
       </router-link>
-      <router-link to="#">
+      <router-link :to="{ name: 'user_login' }">
         <UserCircleIcon class="w-6 h-6" />
       </router-link>
     </div>
@@ -55,4 +54,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+.activeIdentity> .router-link-exact-active {
+   background-color: rgb(190 18 60 / 0.5);
+  color: white;
+  
+  border: 0.5px solid gray;
+   
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <footer class="w-full bg-inherit space-y-6">
-    <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-10 py-10">
+    <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-10 py-10  px-4 xl:px-0">
       <FooterCategories
         v-for="(cat, index) in categories"
         :key="index"
@@ -9,7 +9,7 @@
     </div>
 
     <div
-      class="w-full flex flex-col md:flex-row justify-between items-center py-8">
+      class="w-full flex flex-col md:flex-row justify-between items-center py-8 px-4 xl:px-0">
       <Social />
       <Terms />
     </div>
