@@ -109,7 +109,7 @@ const initialLoad = function () {
   }
 };
 
-initialLoad();/*call initialload at initial time*/
+initialLoad(); /*call initialload at initial time*/
 
 /*export to use in multiple pages*/
 export {

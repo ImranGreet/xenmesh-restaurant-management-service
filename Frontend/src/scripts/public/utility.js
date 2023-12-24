@@ -1,8 +1,6 @@
 import { ref } from 'vue';
 
-
 const orderItems = ref(false);
-
 
 const gridView = ref(false);
 const gridColor = ref(false);
@@ -10,11 +8,11 @@ const flexColor = ref(false);
 
 const showOrderItems = function () {
   orderItems.value = !orderItems.value;
-   if(orderItems.value){
-    document.body.style.overflowY ="hidden";
-   }else{
-    document.body.style.overflow ="auto";
-   }
+  if (orderItems.value) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
 };
 
 const showGridItems = function (displayProperty) {

@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen relative" >
+  <section class="min-h-screen relative">
     <div
       class="w-full lg:px-4 py-2 bg-white shadow-sm fixed inset-x-0 top-0 z-[999]">
       <div
@@ -29,8 +29,11 @@
     <MobileFooter
       class="w-full fixed inset-x-0 bottom-0 bg-white block xl:hidden z-[200]" />
     <WebOrderPublic
-      class="w-11/12 sm:w-[380px] h-full fixed top-14 lg:top-16 xl:top-14   bottom-0    bg-white "
-      :class="{ 'hidden': !orderItems, 'block  right-0 float-right z-[699]': orderItems }" />
+      class="w-11/12 sm:w-[380px] h-full fixed top-14 lg:top-16 xl:top-14 bottom-0 bg-white"
+      :class="{
+        hidden: !orderItems,
+        'block  right-0 float-right z-[699]': orderItems,
+      }" />
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50"
       :class="{ hidden: !orderItems, block: orderItems }"></div>
@@ -62,8 +65,6 @@
       }">
       <AuthModal />
     </div>
-
-    
   </section>
 </template>
 
@@ -111,7 +112,6 @@ export default {
     ProductDescription,
     Toaster,
     AuthModal,
-    
   },
   setup() {
     return {
@@ -128,5 +128,3 @@ export default {
   },
 };
 </script>
-
-

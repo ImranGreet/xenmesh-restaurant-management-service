@@ -35,7 +35,7 @@
       </div>
 
       <div
-        class="w-full bg-inherit sapce-y-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
+        class="w-full bg-inherit sapce-y-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         :class="{ 'xl:grid-cols-3': gridView, 'xl:grid-cols-4': !gridView }">
         <ProductCard
           :productInformation="product"

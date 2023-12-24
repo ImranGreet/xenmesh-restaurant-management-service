@@ -1,6 +1,7 @@
 <template>
   <div class="w-full bg-inherit">
-    <div class="w-full flex justify-between items-center h-14 px-3 activeIdentity">
+    <div
+      class="w-full flex justify-between items-center h-14 px-3 activeIdentity">
       <router-link :to="{ name: 'public-home' }">
         <HomeIcon class="w-6 h-6" />
       </router-link>
@@ -8,7 +9,6 @@
         <AdjustmentsHorizontalIcon class="w-6 h-6" />
       </router-link>
       <button
-        
         class="self-start bg-rose-700/80 rounded-full p-3 text-white"
         @click="showOrderItems()">
         <ShoppingBagIcon class="w-6 h-6" />
@@ -55,12 +55,12 @@ export default {
 </script>
 
 <style>
-
-.activeIdentity> .router-link-exact-active {
-   background-color: rgb(190 18 60 / 0.5);
+.activeIdentity > .router-link-exact-active {
+  background-color: rgb(190 18 60 / 0.9);
   color: white;
-  
   border: 0.5px solid gray;
-   
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-color: transparent;
+  padding: 0.25px;
 }
 </style>

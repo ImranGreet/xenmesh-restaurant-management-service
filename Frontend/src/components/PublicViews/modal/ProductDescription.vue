@@ -1,5 +1,10 @@
 <template>
-  <div class="w-11/12 lg:w-[500px] rounded-md bg-white shadow-lg " :class="{'h-48 mt-10 overflow-y-auto':innerHeight<=700,'h-auto mt-0 overflow-y-hidden':innerHeight>=700}">
+  <div
+    class="w-11/12 lg:w-[500px] rounded-md bg-white shadow-lg"
+    :class="{
+      'h-48 mt-10 overflow-y-auto': innerHeight <= 700,
+      'h-auto mt-0 overflow-y-hidden': innerHeight >= 700,
+    }">
     <div class="w-full space-y-4 py-2">
       <div
         class="w-full flex justify-between items-center space-x-4 px-4 py-2 border-b border-gray-600/30 shadow-sm">
@@ -48,7 +53,10 @@ import {
   productTitle,
   showOverlayoutOnOff,
 } from '../../../scripts/public/modal/modal';
-import {innerHeight,innerWidth} from "../../../scripts/Global/innerheightwidth";
+import {
+  innerHeight,
+  innerWidth,
+} from '../../../scripts/Global/innerheightwidth';
 
 export default {
   name: 'ProductDescription',
@@ -59,7 +67,8 @@ export default {
       productComposition,
       productTitle,
       showOverlayoutOnOff,
-      innerHeight,innerWidth
+      innerHeight,
+      innerWidth,
     };
   },
 };

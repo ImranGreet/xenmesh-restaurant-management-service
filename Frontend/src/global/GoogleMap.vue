@@ -9,7 +9,6 @@ import { ref, onMounted } from 'vue';
 import useLocationProperties from '../scripts/Googlemap/map';
 const { lat: latitude, long: longitude } = useLocationProperties();
 
-
 export default {
   setup() {
     const mapContainer = ref(null);
