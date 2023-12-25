@@ -1,10 +1,8 @@
 <template>
- 
-
   <Transition name="slide-fade">
-    <div 
-    v-if="showTransition "
-    class="bg-inherit w-full space-y-5">
+    <div
+      v-if="showTransition"
+      class="bg-inherit w-full space-y-5">
       <div class="w-full flex flex-col justify-between items-center">
         <div class="w-full flex justify-between items-center py-3">
           <div class="text-center">
@@ -13,7 +11,7 @@
               <slot>{{ categoryPage }}</slot>
             </h1>
           </div>
-  
+
           <div class="space-x-2 hidden lg:block">
             <button
               @click="showGridItems('flex')"
@@ -25,7 +23,7 @@
               }">
               <font-awesome-icon icon="fa-solid fa-bars-progress" />
             </button>
-  
+
             <button
               @click="showGridItems('grid')"
               id="gridViewres"
@@ -38,7 +36,7 @@
             </button>
           </div>
         </div>
-  
+
         <div
           class="w-full bg-inherit sapce-y-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           :class="{ 'xl:grid-cols-3': gridView, 'xl:grid-cols-4': !gridView }">
@@ -66,7 +64,7 @@ import {
   gridColor,
 } from '../../../scripts/public/Utility';
 
-import {innerWidth} from "../../../scripts/Global/innerheightwidth";
+import { innerWidth } from '../../../scripts/Global/innerheightwidth';
 
 export default {
   name: 'Menuitemsbycat',
@@ -98,17 +96,15 @@ export default {
           return foodItem.category == categoryPage.value;
         })),
 
-      () =>{
+      () => {
         showTransition.value = false;
-        (itemsByCat.value = items.filter(foodItem => {
+        itemsByCat.value = items.filter(foodItem => {
           return foodItem.category == categoryPage.value;
-        }));
-        nextTick(()=>{
-          showTransition.value = true
         });
-
-      }
-        
+        nextTick(() => {
+          showTransition.value = true;
+        });
+      },
     );
 
     return {
@@ -125,9 +121,4 @@ export default {
 };
 </script>
 
-
-<style>
-
-
-
-</style>
+<style></style>

@@ -1,3 +1,4 @@
+import { useCategoryRoutes } from '../scripts/public/Navs/categoryNav';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -153,6 +154,17 @@ const routes = [
         path: '/menu/:category',
         name: 'category',
         component: () => import('../pages/Public/Menu.vue'),
+        beforeEnter: (to, from, next) => {
+          const exits = useCategoryRoutes.value.find(cat => {
+            return cat.category === to.params.category;
+          });
+
+          if (exits) {
+            next();
+          } else {
+            next({ name: 'notInCategory' });
+          }
+        },
       },
       {
         path: '/offer',
@@ -163,6 +175,16 @@ const routes = [
         path: '/offeritems/:cat',
         name: 'catoffer',
         component: () => import('../pages/Public/RunningOffer.vue'),
+        beforeEnter: (to, from, next) => {
+          const existsOffer = useCategoryRoutes.value.find(offer => {
+            return offer.discount > 0;
+          });
+          if (existsOffer) {
+            next();
+          } else {
+            next({ name: 'notInOffer' });
+          }
+        },
       },
       {
         path: '/user_registration',
@@ -194,11 +216,31 @@ const routes = [
       },
     ],
   },
+
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: () => import('../pages/404.vue'),
+  },
+  {
+    path: '/menu/:category(.+)',
+    name: 'notInCategory',
+    component: () => import('../pages/404.vue'),
+  },
+
+  {
+    path: '/offeritems/:cat(.+)',
+    name: 'notInOffer',
+    component: () => import('../pages/404.vue'),
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    window.scrollTo(0, 0);
+  },
 });
 
 export default router;
