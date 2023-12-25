@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full border h-96 border-gray-100 rounded-md relative">
+  <div class="w-full border h-48 lg:h-96 border-gray-100 rounded-md relative">
     <!-- Slides Container with Transition -->
     <transition
       name="slide-fade"
@@ -20,13 +20,13 @@
       <div class="w-full h-full flex justify-between items-center">
         <button
           @click="previusSlideImage()"
-          class="bg-slate-600/80 lg:hover:bg-slate-900/70 text-white w-12 h-12 shadow rounded-full flex flex-col justify-center items-center">
-          <ChevronLeftIcon class="w-6 h-6 text-white" />
+          class="bg-slate-600/80 lg:hover:bg-slate-900/70 text-white w-10 lg:w-12 h-10 lg:h-12 shadow rounded-full flex flex-col justify-center items-center">
+          <ChevronLeftIcon class="w-5 lg:w-6 lg:h-6 h-5 text-white" />
         </button>
         <button
           @click="nextSlideImage()"
-          class="bg-slate-600/80 lg:hover:bg-slate-900/70 text-white w-12 h-12 shadow rounded-full flex flex-col justify-center items-center">
-          <ChevronRightIcon class="w-4 lg:w-6 lg:h-6 h-4 text-white" />
+          class="bg-slate-600/80 lg:hover:bg-slate-900/70 text-white w-10 lg:w-12 h-10 lg:h-12 shadow rounded-full flex flex-col justify-center items-center">
+          <ChevronRightIcon class="w-5 lg:w-6 lg:h-6 h-5 text-white" />
         </button>
       </div>
     </div>

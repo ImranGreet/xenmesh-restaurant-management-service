@@ -170,6 +170,7 @@ const routes = [
         path: '/offer',
         name: 'offer',
         component: () => import('../pages/Public/OfferInCat.vue'),
+        meta: { title: 'Offer' },
       },
       {
         path: '/offeritems/:cat',
