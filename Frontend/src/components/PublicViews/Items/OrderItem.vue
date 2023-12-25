@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full bg-inherit border-y border-gray-400/20 sapce-y-2 py-2 pr-3">
+    class="w-11/12 lg:w-[380px] bg-inherit border-y border-gray-400/20 sapce-y-2 py-2 pr-3">
     <div class="w-full h-auto flex justify-between space-x-3">
       <div class="w-2/6 flex flex-col justify-center items-center rounded-t-xl">
         <img
@@ -13,8 +13,8 @@
         <div class="w-full space-y-3">
           <h1
             class="text-sm tracking-wide font-semibold text-gray-800"
-            v-if="title.length > 20">
-            {{ title.slice(0, 15) }}...
+            v-if="title.length > 15">
+            {{ title.slice(0, 10) }}...
             <span>
               <button
                 @click="getItemDetails(id)"
