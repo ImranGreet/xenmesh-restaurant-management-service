@@ -6,6 +6,7 @@
         <img
           :src="image"
           alt=""
+          loading="lazy"
           class="w-full h-32 rounded-l-xl object-cover" />
       </div>
       <div class="w-3/5 h-auto flex flex-col justify-between space-y-2">
