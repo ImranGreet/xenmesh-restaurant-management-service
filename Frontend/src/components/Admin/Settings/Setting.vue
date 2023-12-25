@@ -24,7 +24,7 @@
             <div class="w-full flex justif-start items-center gap-6">
               <button class="relative">
                 <img
-                  src="../../assets/images/controllericons/Light.png"
+                  src="../../../assets/images/controllericons/Brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -38,7 +38,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -58,7 +58,7 @@
             <div class="w-full flex justif-start items-center flex-wrap gap-6">
               <button>
                 <img
-                  src="../../assets/images/controllericons/Light.png"
+                  src="../../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -72,7 +72,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -94,7 +94,7 @@
             <div class="w-full flex justif-start items-center flex-wrap gap-6">
               <button>
                 <img
-                  src="../../assets/images/controllericons/Light.png"
+                  src="../../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -108,7 +108,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -122,7 +122,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -144,7 +144,7 @@
                 @click="setTopbarColor('light')"
                 class="relative">
                 <img
-                  src="../../assets/images/controllericons/Light.png"
+                  src="../../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -157,7 +157,7 @@
                 @click="setTopbarColor('brand')"
                 class="relative">
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small class="text-blue-700 bottom-2 right-1 absolute"
@@ -168,10 +168,10 @@
                 @click="setTopbarColor('dark')"
                 class="relative">
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
-                <small class="text-blue-700 bottom-2 right-1 absolute"
+                <small class="text-blue-700 bottom-2 right-1 absolute hidden"
                   ><CheckBadgeIcon class="w-6 h-6"
                 /></small>
               </button>
@@ -183,7 +183,7 @@
             <div class="w-full flex justif-start items-center flex-wrap gap-6">
               <button>
                 <img
-                  src="../../assets/images/controllericons/Light.png"
+                  src="../../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -197,7 +197,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -211,7 +211,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -231,7 +231,7 @@
             <div class="w-full flex justif-start flex-wrap items-center gap-6">
               <button>
                 <img
-                  src="../../assets/images/controllericons/Light.png"
+                  src="../../../assets/images/controllericons/Light.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -245,7 +245,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -259,7 +259,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -273,7 +273,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -287,7 +287,7 @@
               </button>
               <button>
                 <img
-                  src="../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
