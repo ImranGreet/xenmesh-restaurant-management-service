@@ -86,7 +86,7 @@ import AuthModal from '../components/Utilities/modal/AuthModal.vue';
 
 /*order modal*/
 
-import { orderItems, showOrderItems } from '../scripts/public/Utility';
+import { orderItems, showOrderItems } from '../scripts/public/utility';
 import {
   productComposition,
   showOverlayout,
