@@ -38,7 +38,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Brand.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
