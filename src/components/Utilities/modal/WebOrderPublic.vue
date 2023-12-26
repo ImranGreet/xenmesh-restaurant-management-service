@@ -64,7 +64,7 @@
 
 <script>
 import { computed, onMounted, ref, watch } from 'vue';
-import { showOrderItems } from '../../../scripts/public/Utility';
+import { showOrderItems } from '../../../scripts/public/utility';
 import OrderItem from '../../PublicViews/Items/OrderItem.vue';
 import {
   totalPrice,
