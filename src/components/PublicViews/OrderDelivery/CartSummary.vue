@@ -24,7 +24,7 @@
           @click="getGeneratedCode()"
           class="my-3 border border-red-500 rounded p-3">
           <img
-            src="../../../assets/shurjoPay_.jpg"
+            src="../../../assets/cloud-png-image-from-pngfre-15.png"
             alt=""
             class="w-20 h-20 rounded-md" />
         </button>
