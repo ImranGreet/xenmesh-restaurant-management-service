@@ -35,7 +35,7 @@
             @click="showOrderItems()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white">
             <ShoppingCartIcon class="w-4 h-4 inline-block" />
-            {{ Math.floor(totalPrice) }}
+            {{purchasedItems.length}}
           </button>
         </li>
         <li>
@@ -68,7 +68,7 @@ import {
 } from '@heroicons/vue/24/solid';
 
 import { showOrderItems } from '../../../scripts/public/Utility';
-import { totalPrice } from '../../../scripts/public/Order/publicorder';
+import { totalPrice ,purchasedItems} from '../../../scripts/public/Order/publicorder';
 import UseCustomerAuthentication, {
   authorized,
   authorizedProfileCloseDiscloser,
@@ -102,6 +102,7 @@ export default {
       totalPrice,
       authorized,
       searchKeywords,
+      purchasedItems
     };
   },
 };

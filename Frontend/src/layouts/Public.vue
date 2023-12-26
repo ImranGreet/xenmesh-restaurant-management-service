@@ -17,7 +17,10 @@
             block: $route.name == 'public-home',
             hidden: $route.name != 'public-home',
           }" />
-        <CategoryNav />
+        <CategoryNav :class="{
+          block: $route.name != 'processed_order',
+          hidden: $route.name == 'processed_order',
+        }"/>
 
         <router-view />
       </section>
