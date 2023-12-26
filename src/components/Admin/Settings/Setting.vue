@@ -108,7 +108,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -122,7 +122,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -157,7 +157,7 @@
                 @click="setTopbarColor('brand')"
                 class="relative">
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small class="text-blue-700 bottom-2 right-1 absolute"
@@ -168,7 +168,7 @@
                 @click="setTopbarColor('dark')"
                 class="relative">
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small class="text-blue-700 bottom-2 right-1 absolute hidden"
@@ -197,7 +197,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -211,7 +211,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -245,7 +245,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -259,7 +259,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -273,7 +273,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
@@ -287,7 +287,7 @@
               </button>
               <button>
                 <img
-                  src="../../../assets/images/controllericons/brand.png"
+                  src="../../../assets/images/controllericons/Dark.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
