@@ -23,11 +23,11 @@
         <li class="border-b w-full py-2 border-gray-300/25">
           <router-link
             class="lg:hover:text-blue-600"
-            to="#">
+            :to="{name:'admin-home'}">
             <span>
               <adjustments-horizontal-icon class="w-5 h-5 inline" />
             </span>
-            See Order
+            Dashboard
           </router-link>
         </li>
         <li class="border-b w-full py-2 border-gray-300/25">
