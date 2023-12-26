@@ -24,7 +24,7 @@
             <div class="w-full flex justif-start items-center gap-6">
               <button class="relative">
                 <img
-                  src="../../../assets/images/controllericons/Brand.png"
+                  src="../../../assets/images/controllericons/Brand-2.png"
                   alt=""
                   class="w-[100px] h-[70px]" />
                 <small
