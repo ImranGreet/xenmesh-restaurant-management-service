@@ -62,7 +62,7 @@ import {
   showGridItems,
   flexColor,
   gridColor,
-} from '../../../scripts/public/Utility';
+} from '../../../scripts/public/utility';
 
 import { innerWidth } from '../../../scripts/Global/innerheightwidth';
 
