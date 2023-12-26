@@ -67,7 +67,7 @@ import {
   ChevronDownIcon,
 } from '@heroicons/vue/24/solid';
 
-import { showOrderItems } from '../../../scripts/public/Utility';
+import { showOrderItems } from '../../../scripts/public/utility';
 import { totalPrice ,purchasedItems} from '../../../scripts/public/Order/publicorder';
 import UseCustomerAuthentication, {
   authorized,
