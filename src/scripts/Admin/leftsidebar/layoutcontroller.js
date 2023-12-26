@@ -7,6 +7,8 @@ import { ulLinkCloser } from '../../../scripts/Admin/rightsidebar/togglelink';
 const sidebarView = ref(true);
 const mobileView = ref(false);
 
+const TransitionToggler = ref(false);
+
 const sidebarNavigations = ref(false);
 
 const sidebarNavTextController = function () {
@@ -24,6 +26,8 @@ const sidebarController = function () {
   }
   sidebarView.value = !sidebarView.value;
   ulLinkCloser();
+  TransitionToggler.value = !TransitionToggler.value
+
 };
 
 /*call it in initaila state*/
@@ -49,4 +53,5 @@ export {
   sidebarNavigations,
   sidebarController,
   sidebarNavTextController,
+  TransitionToggler
 };

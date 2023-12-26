@@ -48,6 +48,7 @@
               <div
                 class="w-full flex justify-center flex-col items-center px-3 py-1 lg:py-2 rounded-xl border border-gray-600 bg-rose-600">
                 <router-link
+                @click="showOrderItems()"
                   :to="{ name: 'processed_order' }"
                   class="w-full rounded-2xl text-center text-white">
                   Proccesed To Check

@@ -10,7 +10,11 @@
           >Filter</ShowButton
         >
 
-        <div
+        
+
+        <Transition name="nested">
+          <div
+          v-if="searchForm"
           class="w-full flex-col py-3 bg-gary-800/50 lg:bg-gray-600/50 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4 relative"
           :class="{ flex: searchForm, hidden: !searchForm }">
           <div
@@ -79,6 +83,9 @@
             X
           </button>
         </div>
+        </Transition>
+
+
 
         <div class="overflow-x-auto">
           <table
@@ -376,4 +383,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
