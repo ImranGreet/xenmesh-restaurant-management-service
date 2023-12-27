@@ -218,22 +218,22 @@ const routes = [
     ],
   },
 
-  {
-    path: '/:catchAll(.*)',
-    name: 'NotFound',
-    component: () => import('../pages/404.vue'),
-  },
-  {
-    path: '/menu/:category(.+)',
-    name: 'notInCategory',
-    component: () => import('../pages/404.vue'),
-  },
+  // {
+  //   path: '/:catchAll(.*)',
+  //   name: 'NotFound',
+  //   component: () => import('../pages/404.vue'),
+  // },
+  // {
+  //   path: '/menu/:category(.+)',
+  //   name: 'notInCategory',
+  //   component: () => import('../pages/404.vue'),
+  // },
 
-  {
-    path: '/offeritems/:cat(.+)',
-    name: 'notInOffer',
-    component: () => import('../pages/404.vue'),
-  },
+  // {
+  //   path: '/offeritems/:cat(.+)',
+  //   name: 'notInOffer',
+  //   component: () => import('../pages/404.vue'),
+  // },
 ];
 
 const router = createRouter({
