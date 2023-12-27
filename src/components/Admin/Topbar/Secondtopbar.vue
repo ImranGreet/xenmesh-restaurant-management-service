@@ -52,7 +52,7 @@
               alt=""
               class="w-5 md:w-8 h-5 md:h-8 rounded-full" />
             <div class="space-y-1 text-start hidden xl:block">
-              <h1 class="text-xl">John Doe</h1>
+              <h1 class="text-xl">Xennifer Ahmed</h1>
               <small>Admin</small>
             </div>
           </div>
@@ -69,26 +69,26 @@
         hidden: !notificationsDropDown,
       }" />
 
-    
-
-      <div class="px-3 py-2 fixed left-0 right-0 w-full" :class="{
+    <div
+      class="px-3 py-2 fixed left-0 right-0 w-full"
+      :class="{
         'block sm:hidden': searchDropDown,
         hidden: !searchDropDown,
       }">
-        <form class="w-full">
-          <div class="w-full border border-gray-200 p-2">
-            <label
-              for="search"
-              class="sr-only"
-              >Search</label
-            >
-            <input
-              type="text"
-              class="px-4 py-2 focus:outline-none border border-blue-500 rounded-md w-full"
-              placeholder="Search" />
-          </div>
-        </form>
-      </div>
+      <form class="w-full">
+        <div class="w-full border border-gray-200 p-2">
+          <label
+            for="search"
+            class="sr-only"
+            >Search</label
+          >
+          <input
+            type="text"
+            class="px-4 py-2 focus:outline-none border border-blue-500 rounded-md w-full"
+            placeholder="Search" />
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -111,8 +111,6 @@ import {
   settingsViewToggler,
 } from '../../../scripts/Admin/topbar/topbarcontroller';
 
-
-
 import {
   toggleFullScreen,
   fullScreen,
@@ -123,7 +121,7 @@ export default {
   components: {
     Profile,
     Notifications,
-   
+
     Setting,
   },
   setup() {

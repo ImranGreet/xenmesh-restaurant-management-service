@@ -1,11 +1,14 @@
 <template>
-  <transition
-    enter-active-class="transition ease-out duration-100"
-    enter-from-class="transform opacity-0 scale-95"
-    enter-to-class="transform opacity-100 scale-100"
-    leave-active-class="transition ease-in duration-75"
-    leave-from-class="transform opacity-100 scale-100"
-    leave-to-class="transform opacity-0 scale-95">
+  <TransitionRoot
+    appear
+    :show="seetingsView"
+    as="template"
+    enter="transform transition duration-[200ms]"
+    enter-from="opacity-0 rotate-[10deg] scale-50"
+    enter-to="opacity-100 rotate-0 scale-100"
+    leave="transform duration-200 transition ease-in-out"
+    leave-from="opacity-100 rotate-0 scale-100 "
+    leave-to="opacity-0 scale-95 ">
     <div class="w-full bg-white h-full">
       <div class="w-full h-full">
         <div
@@ -318,11 +321,14 @@
         </div>
       </div>
     </div>
-  </transition>
+  </TransitionRoot>
 </template>
 
 <script>
-import { settingsViewToggler } from '../../../scripts/Admin/topbar/topbarcontroller';
+import {
+  settingsViewToggler,
+  seetingsView,
+} from '../../../scripts/Admin/topbar/topbarcontroller';
 import {
   setTopbarColor,
   foundColor,
@@ -332,16 +338,24 @@ import {
 import Toogleswitch from '../../../components/Utilities/Toogleswitch.vue';
 import Settingicon from './Settingicon.vue';
 import Settingtitle from './Settingtitle.vue';
+import { TransitionRoot } from '@headlessui/vue';
 /*heroicons*/
 import { CheckBadgeIcon } from '@heroicons/vue/24/solid';
 
 export default {
   name: 'Setting',
-  components: { Settingicon, Settingtitle, Toogleswitch, CheckBadgeIcon },
+  components: {
+    Settingicon,
+    Settingtitle,
+    Toogleswitch,
+    CheckBadgeIcon,
+    TransitionRoot,
+  },
   setup() {
     return {
       foundColor,
       topbarDefault,
+      seetingsView,
       setTopbarColor,
       settingsViewToggler,
     };

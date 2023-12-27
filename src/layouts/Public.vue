@@ -17,10 +17,11 @@
             block: $route.name == 'public-home',
             hidden: $route.name != 'public-home',
           }" />
-        <CategoryNav :class="{
-          block: $route.name != 'processed_order',
-          hidden: $route.name == 'processed_order',
-        }"/>
+        <CategoryNav
+          :class="{
+            block: $route.name != 'processed_order',
+            hidden: $route.name == 'processed_order',
+          }" />
 
         <router-view />
       </section>
@@ -32,7 +33,7 @@
     <MobileFooter
       class="w-full fixed inset-x-0 bottom-0 bg-white block xl:hidden z-[200]" />
     <WebOrderPublic
-      class=" h-full fixed top-14 lg:top-16 xl:top-14 bottom-0 bg-white"
+      class="h-full fixed top-14 lg:top-16 xl:top-14 bottom-0 bg-white"
       :class="{
         hidden: !orderItems,
         'block  right-0 float-right z-[699]': orderItems,

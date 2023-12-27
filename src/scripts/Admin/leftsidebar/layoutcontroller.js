@@ -26,8 +26,7 @@ const sidebarController = function () {
   }
   sidebarView.value = !sidebarView.value;
   ulLinkCloser();
-  TransitionToggler.value = !TransitionToggler.value
-
+  TransitionToggler.value = !TransitionToggler.value;
 };
 
 /*call it in initaila state*/
@@ -53,5 +52,5 @@ export {
   sidebarNavigations,
   sidebarController,
   sidebarNavTextController,
-  TransitionToggler
+  TransitionToggler,
 };

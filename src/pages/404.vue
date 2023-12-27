@@ -1,7 +1,7 @@
 <template>
   <section class="w-full min-h-screen">
     <div class="w-full min-h-screen flex flex-col justify-center items-center">
-      <div class=" flex flex-col justify-between gap-y-5 items-start">
+      <div class="flex flex-col justify-between gap-y-5 items-start">
         <h1
           class="text-9xl tracking-wider font-bold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
           404
