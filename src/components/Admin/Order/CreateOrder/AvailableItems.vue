@@ -3,9 +3,10 @@
     <div
       class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 h-[550px] overflow-y-scroll custom-overflowscroll rounded-md">
       <button
+        @click="addInCustomerCart(item)"
         v-for="(item, index) in availabelItems"
         :key="index"
-        class="max-w-sm border border-grauy-200 rounded-md">
+        class="max-w-sm border border-grauy-200 rounded-md relative">
         <div class="w-full flex flex-col justify-center items-start">
           <div
             class="w-full flex flex-col justify-center items-center rounded-t-md">
@@ -20,13 +21,6 @@
             class="space-y-1 bg-gray-100 text-gray-950 text-start w-full py-0.5 px-1">
             <h1 class="text-base tracking-wider leading-relax">
               {{ item.title.slice(0, 12) }}
-              <span class=""
-                ><button
-                  @click="getItemDetails(item.id)"
-                  class="bg-gray-700 text-white w-5 h-5 p-1 inline-flex flex-col justify-center items-center rounded-full z-[600]">
-                  i
-                </button></span
-              >
             </h1>
 
             <h3 class="text-base">
@@ -43,6 +37,7 @@
 import { ref } from 'vue';
 import products from '../../../../DB/products';
 import { getItemDetails } from '../../../../scripts/public/modal/modal';
+import { addInCustomerCart } from '../../../../scripts/Admin/Order/createOrder';
 
 export default {
   name: 'AvailableItems',
@@ -55,6 +50,7 @@ export default {
     return {
       availabelItems,
       getItemDetails,
+      addInCustomerCart,
     };
   },
 };

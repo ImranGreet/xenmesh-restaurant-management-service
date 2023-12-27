@@ -1,4 +1,9 @@
 import { onMounted, ref } from 'vue';
+import {
+  addInCustomerCart,
+  itemsToBePurchased,
+  removeItemFromOrderList,
+} from './manager';
 
 const mobileWidth = ref(false);
 const largeScreen = ref(true);
@@ -21,4 +26,11 @@ window.addEventListener('DOMContentLoaded', function () {
   getMobileFooter();
 });
 
-export { mobileWidth, largeScreen, getMobileFooter };
+export {
+  mobileWidth,
+  largeScreen,
+  itemsToBePurchased,
+  getMobileFooter,
+  addInCustomerCart,
+  removeItemFromOrderList,
+};

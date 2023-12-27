@@ -2,10 +2,12 @@
   <section class="w-full dark:bg-gray-900">
     <div class="px-2 xl:px-4 mx-auto w-full">
       <div class="w-full relative overflow-hidden bg-white dark:bg-gray-800">
-        <div class="overflow-x-auto">
+        <div
+          class="overflow-x-auto max-h-[740px] overflow-y-auto custom-overflowscroll">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
-            <thead class="text-xs uppercase text-white bg-blue-900/80">
+            <thead
+              class="text-xs uppercase text-white bg-blue-900/80 sticky top-0 bottom-6">
               <tr>
                 <th
                   scope="col"
@@ -41,12 +43,16 @@
             </thead>
             <tbody>
               <tr
+                v-for="(item, index) in itemsToBePurchased"
+                :key="index"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
+                <th class="w-4 px-4 py-3 border border-slate-300">
+                  {{ Math.floor(index + 1) }}
+                </th>
                 <th
                   scope="row"
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
+                  {{ item.title.slice(0, 10) }}
                 </th>
                 <td class="px-4 py-2 border border-slate-300">
                   <span
@@ -55,253 +61,25 @@
                       type="number"
                       name=""
                       id=""
-                      value="1"
+                      :value="item.quantity"
                       class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
                   </span>
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                   <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
+                    {{ item.price }}
                   </div>
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
+                  {{ item.price * item.quantity }}
                 </td>
                 <td
                   class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
-                    <XMarkIcon class="w-4 h-4 text-pink-600" />
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
-                <th
-                  scope="row"
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      value="1"
-                      class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                  </span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
-                </td>
-                <td
-                  class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
-                    <XMarkIcon class="w-4 h-4 text-pink-600" />
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
-                <th
-                  scope="row"
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      value="1"
-                      class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                  </span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
-                </td>
-                <td
-                  class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
-                    <XMarkIcon class="w-4 h-4 text-pink-600" />
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
-                <th
-                  scope="row"
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      value="1"
-                      class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                  </span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
-                </td>
-                <td
-                  class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
-                    <XMarkIcon class="w-4 h-4 text-pink-600" />
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
-                <th
-                  scope="row"
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      value="1"
-                      class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                  </span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
-                </td>
-                <td
-                  class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
-                    <XMarkIcon class="w-4 h-4 text-pink-600" />
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
-                <th
-                  scope="row"
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      value="1"
-                      class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                  </span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
-                </td>
-                <td
-                  class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
-                    <XMarkIcon class="w-4 h-4 text-pink-600" />
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">1</th>
-                <th
-                  scope="row"
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Apple iMac 27
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      value="1"
-                      class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                  </span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    95
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  1.47
-                </td>
-                <td
-                  class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                  <button class="border border-inherit p-1 rounded-md">
+                  <button
+                    @click="removeItemFromOrderList(item.id)"
+                    class="border border-inherit p-1 rounded-md">
                     <XMarkIcon class="w-4 h-4 text-pink-600" />
                   </button>
                 </td>
@@ -316,11 +94,21 @@
 
 <script>
 import { XMarkIcon } from '@heroicons/vue/24/outline';
+import {
+  itemsToBePurchased,
+  removeItemFromOrderList,
+} from '../../../../scripts/Admin/Order/createOrder';
 
 export default {
   name: 'OrderedList',
   components: {
     XMarkIcon,
+  },
+  setup() {
+    return {
+      itemsToBePurchased,
+      removeItemFromOrderList,
+    };
   },
 };
 </script>
