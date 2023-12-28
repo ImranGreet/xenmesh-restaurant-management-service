@@ -1,10 +1,13 @@
 import { onMounted, ref } from 'vue';
+
 import {
   addInCustomerCart,
   itemsToBePurchased,
   removeItemFromOrderList,
-  increaseItemQuantity
+  increaseItemQuantity,
 } from './manager';
+
+import useOrderPaymentDiscount from './paymentdiscount';
 
 const mobileWidth = ref(false);
 const largeScreen = ref(true);
@@ -34,5 +37,7 @@ export {
   getMobileFooter,
   addInCustomerCart,
   removeItemFromOrderList,
-  increaseItemQuantity
+  increaseItemQuantity,
+  /*payment and discount*/
+  useOrderPaymentDiscount,
 };

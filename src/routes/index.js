@@ -239,7 +239,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  base:'/',
+  base: '/',
   scrollBehavior() {
     window.scrollTo(0, 0);
   },

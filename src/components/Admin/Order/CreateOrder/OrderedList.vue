@@ -97,7 +97,7 @@ import { XMarkIcon } from '@heroicons/vue/24/outline';
 import {
   itemsToBePurchased,
   removeItemFromOrderList,
-  increaseItemQuantity
+  increaseItemQuantity,
 } from '../../../../scripts/Admin/Order/createOrder';
 
 export default {
@@ -109,7 +109,7 @@ export default {
     return {
       itemsToBePurchased,
       removeItemFromOrderList,
-      increaseItemQuantity
+      increaseItemQuantity,
     };
   },
 };

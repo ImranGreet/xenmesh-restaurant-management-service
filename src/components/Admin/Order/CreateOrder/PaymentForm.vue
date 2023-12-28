@@ -4,8 +4,21 @@
       <div
         class="w-full space-y-2 border border-gray-200/25 px-2 py-1 2xl:py-3 bg-pink-600 text-white rounded-t-lg">
         <h1 class="w-full text-base 2xl:text-xl">
-          Payment Amount <span class="ml-3 select-none">0</span>
+          Total <span class="ml-3 select-none">{{ totalPrice }}</span>
         </h1>
+      </div>
+      <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
+        <label
+          for="subtotal"
+          class="w-full text-base"
+          >subtotal</label
+        >
+        <input
+          v-model="subtotalPrice"
+          type="number"
+          name=""
+          id=""
+          class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
@@ -14,36 +27,36 @@
           >Discount Rate (%)</label
         >
         <input
+          v-model="discountRate"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
           for="subtotal"
           class="w-full text-base"
-          >Dis Amount</label
+          >Discounted Amount</label
         >
         <input
+          v-model="discountedAmount"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
           for="subtotal"
           class="w-full text-sm"
-          >Amount After
+          >Amount After Discount
         </label>
         <input
+          v-model="totalPrice"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
@@ -53,24 +66,25 @@
           >Special Discount</label
         >
         <input
+          v-model="specialDiscount"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
           for="subtotal"
           class="w-full text-base"
-          >Special Discount</label
+          >Delivery Way</label
         >
         <input
+          v-model="deliveryWay"
           type="text"
           name=""
           id=""
-          value="450"
-          class="w-full text-center px-4 py-1 focus:outline-none" />
+          class="w-full text-center px-4 py-1 focus:outline-none"
+          readonly />
       </div>
 
       <div
@@ -85,10 +99,10 @@
           >Payable
         </label>
         <input
+          v-model="totalPrice"
           type="text"
           name=""
           id=""
-          value="450"
           readonly
           class="w-full text-center px-4 py-1 focus:outline-none select-none" />
       </div>
@@ -99,10 +113,10 @@
           >Paid Amount</label
         >
         <input
+          v-model="paidAmount"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
@@ -112,10 +126,10 @@
           >Change Amount</label
         >
         <input
+          v-model="changeAmount"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
@@ -125,10 +139,10 @@
           >Due Amount</label
         >
         <input
+          v-model="dueAmount"
           type="text"
           name=""
           id=""
-          value="450"
           class="w-full text-center px-4 py-1 focus:outline-none" />
       </div>
       <!-- confirm button -->
@@ -141,7 +155,61 @@
 </template>
 
 <script>
+import { onMounted, watch } from 'vue';
+import { useOrderPaymentDiscount } from '../../../../scripts/Admin/Order/createOrder';
+
 export default {
   name: 'PaymentForm',
+  setup() {
+    const {
+      //properties
+      subtotalPrice,
+      discountRate,
+      specialDiscount,
+      totalPrice,
+      deliveryWay,
+      payableAmount,
+      paidAmount,
+      changeAmount,
+      dueAmount,
+      discountedAmount,
+      itemsToBePurchased,
+      //methods
+      amountToBePay,
+      selectDeliveryWay,
+      paymentAndChange,
+    } = useOrderPaymentDiscount();
+
+    onMounted(() => {
+      subtotalPrice.value = itemsToBePurchased.value.reduce(
+        (initialSum, product) => {
+          return initialSum + product.price * product.quantity;
+        },
+        0,
+      );
+
+      if (specialDiscount.value === 0 && discountRate.value === 0) {
+        totalPrice.value = subtotalPrice.value;
+      }
+    });
+
+    return {
+      subtotalPrice,
+      discountRate,
+      specialDiscount,
+      totalPrice,
+      deliveryWay,
+      payableAmount,
+      paidAmount,
+      changeAmount,
+      dueAmount,
+      discountedAmount,
+      itemsToBePurchased,
+      //methods
+      amountToBePay,
+      selectDeliveryWay,
+      paymentAndChange,
+    };
+  },
 };
 </script>

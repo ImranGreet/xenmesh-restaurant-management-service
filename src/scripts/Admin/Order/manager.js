@@ -26,13 +26,20 @@ let removeItemFromOrderList = function (itemId) {
   }
 };
 
-let increaseItemQuantity = function(productId){
-  let itemToBeIncrease = itemsToBePurchased.value.find(item=>item.id ===productId);
-  if(itemToBeIncrease){
+let increaseItemQuantity = function (productId) {
+  let itemToBeIncrease = itemsToBePurchased.value.find(
+    item => item.id === productId,
+  );
+  if (itemToBeIncrease) {
     itemToBeIncrease.quantity++;
-  }else{
+  } else {
     return;
   }
-}
+};
 
-export { itemsToBePurchased, addInCustomerCart, removeItemFromOrderList,increaseItemQuantity };
+export {
+  itemsToBePurchased,
+  addInCustomerCart,
+  removeItemFromOrderList,
+  increaseItemQuantity,
+};
