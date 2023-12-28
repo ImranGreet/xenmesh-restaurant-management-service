@@ -3,6 +3,7 @@ import {
   addInCustomerCart,
   itemsToBePurchased,
   removeItemFromOrderList,
+  increaseItemQuantity
 } from './manager';
 
 const mobileWidth = ref(false);
@@ -33,4 +34,5 @@ export {
   getMobileFooter,
   addInCustomerCart,
   removeItemFromOrderList,
+  increaseItemQuantity
 };

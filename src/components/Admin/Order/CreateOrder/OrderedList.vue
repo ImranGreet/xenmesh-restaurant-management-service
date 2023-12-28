@@ -58,7 +58,7 @@
                   <span
                     class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
                     <input
-                      type="number"
+                      type="button"
                       name=""
                       id=""
                       :value="item.quantity"
@@ -97,6 +97,7 @@ import { XMarkIcon } from '@heroicons/vue/24/outline';
 import {
   itemsToBePurchased,
   removeItemFromOrderList,
+  increaseItemQuantity
 } from '../../../../scripts/Admin/Order/createOrder';
 
 export default {
@@ -108,6 +109,7 @@ export default {
     return {
       itemsToBePurchased,
       removeItemFromOrderList,
+      increaseItemQuantity
     };
   },
 };

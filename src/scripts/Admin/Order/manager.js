@@ -26,4 +26,13 @@ let removeItemFromOrderList = function (itemId) {
   }
 };
 
-export { itemsToBePurchased, addInCustomerCart, removeItemFromOrderList };
+let increaseItemQuantity = function(productId){
+  let itemToBeIncrease = itemsToBePurchased.value.find(item=>item.id ===productId);
+  if(itemToBeIncrease){
+    itemToBeIncrease.quantity++;
+  }else{
+    return;
+  }
+}
+
+export { itemsToBePurchased, addInCustomerCart, removeItemFromOrderList,increaseItemQuantity };
