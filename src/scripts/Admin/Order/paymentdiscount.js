@@ -10,17 +10,39 @@ const useOrderPaymentDiscount = function () {
   const specialDiscount = ref(0);
   const totalPrice = ref(0);
   const deliveryWay = ref('');
-  const payableAmount = ref();
+  const payableAmount = ref(0);
   const paidAmount = ref(0);
   const changeAmount = ref(0);
   const dueAmount = ref(0);
   const discountedAmount = ref(0);
 
+  const appliedDiscouontCash = function () {
+    let appliedDiscouont = Number(
+      (subtotalPrice.value * discountRate.value) / 100,
+    );
+    totalPrice.value = Number(
+      subtotalPrice.value - (appliedDiscouont + specialDiscount.value),
+    );
+    discountedAmount.value = Number(appliedDiscouont + specialDiscount.value);
+  };
+
   const amountToBePay = function () {
-    let appliedDiscouont = (subtotalPrice * discountRate.value) / 100;
-    totalPrice.value =
-      subtotalPrice - (appliedDiscouont + specialDiscount.value);
-    discountedAmount.value = appliedDiscouont + specialDiscount.value;
+    if (discountRate.value < 0 || discountRate.value > 100) {
+      window.alert('Input is not okay');
+      discountRate.value = 0;
+      appliedDiscouontCash();
+      return;
+    } else if (specialDiscount.value < 0) {
+      window.alert('Input is not okay');
+      specialDiscount.value = 0;
+      appliedDiscouontCash();
+      return;
+    } else if (totalPrice.value === 0) {
+      window.alert('Input is not okay');
+      specialDiscount.value = 0;
+      appliedDiscouontCash();
+    }
+    appliedDiscouontCash();
   };
 
   const selectDeliveryWay = function (way) {
@@ -48,6 +70,11 @@ const useOrderPaymentDiscount = function () {
     { deep: true },
   );
 
+  watch(
+    () => subtotalPrice.value,
+    () => appliedDiscouontCash(),
+  );
+
   return {
     subtotalPrice,
     discountRate,
@@ -59,10 +86,12 @@ const useOrderPaymentDiscount = function () {
     changeAmount,
     dueAmount,
     discountedAmount,
+    itemsToBePurchased,
+    //methods
     amountToBePay,
     selectDeliveryWay,
     paymentAndChange,
-    itemsToBePurchased,
+    appliedDiscouontCash,
   };
 };
 

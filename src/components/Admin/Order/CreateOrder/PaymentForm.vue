@@ -4,7 +4,7 @@
       <div
         class="w-full space-y-2 border border-gray-200/25 px-2 py-1 2xl:py-3 bg-pink-600 text-white rounded-t-lg">
         <h1 class="w-full text-base 2xl:text-xl">
-          Total <span class="ml-3 select-none">{{ totalPrice }}</span>
+          Total <span class="ml-3 select-none"> {{ totalPrice }} </span>
         </h1>
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
@@ -28,6 +28,7 @@
         >
         <input
           v-model="discountRate"
+          @input="amountToBePay()"
           type="text"
           name=""
           id=""
@@ -66,8 +67,9 @@
           >Special Discount</label
         >
         <input
+          @input="amountToBePay()"
           v-model="specialDiscount"
-          type="text"
+          type="number"
           name=""
           id=""
           class="w-full text-center px-4 py-1 focus:outline-none" />
@@ -114,6 +116,7 @@
         >
         <input
           v-model="paidAmount"
+          @input="paymentAndChange()"
           type="text"
           name=""
           id=""
@@ -213,3 +216,15 @@ export default {
   },
 };
 </script>
+
+<style>
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
