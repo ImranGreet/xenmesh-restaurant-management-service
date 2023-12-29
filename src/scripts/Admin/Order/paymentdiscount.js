@@ -2,8 +2,6 @@ import { ref, watch, watchEffect } from 'vue';
 import { itemsToBePurchased } from './manager';
 
 const useOrderPaymentDiscount = function () {
-  const purchasedItems = itemsToBePurchased.value;
-
   const subtotalPrice = ref(0);
 
   const discountRate = ref(0);
@@ -17,13 +15,15 @@ const useOrderPaymentDiscount = function () {
   const discountedAmount = ref(0);
 
   const appliedDiscouontCash = function () {
-    let appliedDiscouont = Number(
-      (subtotalPrice.value * discountRate.value) / 100,
+    let appliedDiscouont = Math.floor(
+      Number((subtotalPrice.value * discountRate.value) / 100),
     );
-    totalPrice.value = Number(
-      subtotalPrice.value - (appliedDiscouont + specialDiscount.value),
+    totalPrice.value = Math.floor(
+      Number(subtotalPrice.value - (appliedDiscouont + specialDiscount.value)),
     );
-    discountedAmount.value = Number(appliedDiscouont + specialDiscount.value);
+    discountedAmount.value = Math.floor(
+      Number(appliedDiscouont + specialDiscount.value),
+    );
   };
 
   const amountToBePay = function () {
@@ -50,7 +50,17 @@ const useOrderPaymentDiscount = function () {
   };
 
   const paymentAndChange = function () {
-    dueAmount.value = paidAmount.value - changeAmount.value;
+    if (paidAmount.value < 0 && typeof paidAmount.value !== 'number') {
+      window.alert('Input is not correct');
+      paidAmount.value = 0;
+      return;
+    } else {
+      if (paidAmount.value >= totalPrice.value) {
+        dueAmount.value = Math.floor(
+          Number(totalPrice.value - paidAmount.value),
+        );
+      }
+    }
   };
 
   watch(

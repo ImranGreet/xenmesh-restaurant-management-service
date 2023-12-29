@@ -25,7 +25,7 @@
 
         <router-view />
       </section>
-      <div class="max-w-full bg-pink-500 text-white">
+      <div class="max-w-full bg-lime-600 text-white">
         <Footer class="max-w-full xl:max-w-[1130px] mx-auto xl:px-0" />
       </div>
       <div class="my-10 block xl:hidden"></div>
