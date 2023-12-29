@@ -5,6 +5,7 @@ import {
   itemsToBePurchased,
   removeItemFromOrderList,
   increaseItemQuantity,
+  decreaseItemQuantity,
 } from './manager';
 
 import useOrderPaymentDiscount from './paymentdiscount';
@@ -38,6 +39,7 @@ export {
   addInCustomerCart,
   removeItemFromOrderList,
   increaseItemQuantity,
+  decreaseItemQuantity,
   /*payment and discount*/
   useOrderPaymentDiscount,
 };

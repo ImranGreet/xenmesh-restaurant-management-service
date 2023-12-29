@@ -15,6 +15,7 @@
         >
         <input
           v-model="subtotalPrice"
+          readonly
           type="number"
           name=""
           id=""
@@ -217,7 +218,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 input[type='number'] {
   -moz-appearance: textfield;
 }

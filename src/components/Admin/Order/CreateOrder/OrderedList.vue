@@ -68,15 +68,26 @@
                     {{ item.title.slice(0, 10) }}
                   </th>
                   <td class="px-4 py-2 border border-slate-300">
-                    <span
-                      class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        :value="item.quantity"
-                        class="w-full focus:outline-none px-2 py-1 border border-inherit rounded-sm" />
-                    </span>
+                    <div class="w-full flex gap-x-2">
+                      <button
+                        @click="increaseItemQuantity(item.id)"
+                        class="border border-inherit rounded-md shadow-md p-0.5 w-4 h-4 flex flex-col justify-center items-center bg-blue-600 text-white">
+                        +
+                      </button>
+                      <div
+                        class="w-4 h-4 flex flex-col justify-center items-center">
+                        <p class="p-0.5 text-sm">{{ item.quantity }}</p>
+                      </div>
+                      <button
+                        @click="decreaseItemQuantity(item.id)"
+                        class="border border-inherit rounded-md shadow-md p-0.5 w-4 h-4 flex flex-col justify-center items-center bg-rose-600 text-white"
+                        :class="{
+                          hidden: item.quantity < 2,
+                          inline: item.quantity >= 2,
+                        }">
+                        -
+                      </button>
+                    </div>
                   </td>
                   <td
                     class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
@@ -88,6 +99,7 @@
                     class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                     {{ item.price * item.quantity }}
                   </td>
+
                   <td
                     class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
                     <button
@@ -113,6 +125,7 @@ import {
   itemsToBePurchased,
   removeItemFromOrderList,
   increaseItemQuantity,
+  decreaseItemQuantity,
 } from '../../../../scripts/Admin/Order/createOrder';
 
 export default {
@@ -126,12 +139,13 @@ export default {
       itemsToBePurchased,
       removeItemFromOrderList,
       increaseItemQuantity,
+      decreaseItemQuantity,
     };
   },
 };
 </script>
 
-<style>
+<style scoped>
 input[type='number'] {
   -moz-appearance: textfield;
 }
@@ -140,5 +154,15 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>

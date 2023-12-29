@@ -15,13 +15,13 @@ const useOrderPaymentDiscount = function () {
   const discountedAmount = ref(0);
 
   const appliedDiscouontCash = function () {
-    let appliedDiscouont = Math.floor(
+    let appliedDiscouont = Math.round(
       Number((subtotalPrice.value * discountRate.value) / 100),
     );
-    totalPrice.value = Math.floor(
+    totalPrice.value = Math.round(
       Number(subtotalPrice.value - (appliedDiscouont + specialDiscount.value)),
     );
-    discountedAmount.value = Math.floor(
+    discountedAmount.value = Math.round(
       Number(appliedDiscouont + specialDiscount.value),
     );
   };
@@ -32,7 +32,10 @@ const useOrderPaymentDiscount = function () {
       discountRate.value = 0;
       appliedDiscouontCash();
       return;
-    } else if (specialDiscount.value < 0) {
+    } else if (
+      specialDiscount.value < 0 ||
+      specialDiscount.value > totalPrice.value
+    ) {
       window.alert('Input is not okay');
       specialDiscount.value = 0;
       appliedDiscouontCash();
@@ -55,10 +58,16 @@ const useOrderPaymentDiscount = function () {
       paidAmount.value = 0;
       return;
     } else {
-      if (paidAmount.value >= totalPrice.value) {
-        dueAmount.value = Math.floor(
-          Number(totalPrice.value - paidAmount.value),
+      if (totalPrice.value >= paidAmount.value) {
+        dueAmount.value = Math.abs(
+          Math.round(Number(totalPrice.value - paidAmount.value)),
         );
+        changeAmount.value = 0;
+      } else if (totalPrice.value <= paidAmount.value) {
+        changeAmount.value = Math.abs(
+          Math.round(Number(paidAmount.value - totalPrice.value)),
+        );
+        dueAmount.value = 0;
       }
     }
   };
@@ -82,7 +91,14 @@ const useOrderPaymentDiscount = function () {
 
   watch(
     () => subtotalPrice.value,
-    () => appliedDiscouontCash(),
+    () => {
+      appliedDiscouontCash();
+      paymentAndChange();
+    },
+  );
+  watch(
+    () => totalPrice.value,
+    () => paymentAndChange(),
   );
 
   return {

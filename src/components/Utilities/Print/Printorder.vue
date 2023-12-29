@@ -1,11 +1,9 @@
 <template>
-      <section class="w-full max-h-screen min-h-[50vh] bg-slate-100">
-            <div class="w-full h-full flex flex-col justify-center items-center">
-                  <div class="w-48 bg-inherit">
-                   
-                  </div>
-            </div>
-      </section>
+  <section class="w-full max-h-screen min-h-[50vh] bg-slate-100">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <div class="w-48 bg-inherit"></div>
+    </div>
+  </section>
 </template>
 
 <script>

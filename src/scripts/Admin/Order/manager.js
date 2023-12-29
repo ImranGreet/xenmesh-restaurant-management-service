@@ -37,9 +37,21 @@ let increaseItemQuantity = function (productId) {
   }
 };
 
+let decreaseItemQuantity = function (productId) {
+  let itemToBeDecrease = itemsToBePurchased.value.find(
+    item => item.id === productId,
+  );
+  if (itemToBeDecrease) {
+    itemToBeDecrease.quantity--;
+  } else {
+    return;
+  }
+};
+
 export {
   itemsToBePurchased,
   addInCustomerCart,
   removeItemFromOrderList,
   increaseItemQuantity,
+  decreaseItemQuantity,
 };
