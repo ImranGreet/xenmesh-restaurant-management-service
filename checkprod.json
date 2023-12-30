@@ -636,7 +636,7 @@
     "discount": 0,
     "status": "regular",
     "OrderCategory": "Web",
-    "Top": true
+    "Top": false
   },
   {
     "id": 33,
@@ -796,7 +796,7 @@
     "composition": ["Churros", "Chocolate sauce"],
     "discount": 5,
     "status": "popular",
-    "Top": true,
+    "top": true,
     "orderCategory": "Web"
   },
   {
@@ -810,7 +810,7 @@
     "composition": ["Chocolate", "Milk", "Whipped cream", "Marshmallows"],
     "discount": 0,
     "status": "regular",
-    "Top": true,
+    "top": false,
     "orderCategory": "Delivery"
   },
   {
@@ -841,7 +841,7 @@
     "composition": ["Pancakes", "Maple syrup"],
     "discount": 0,
     "status": "popular",
-    "Top": true,
+    "top": false,
     "orderCategory": "references"
   },
   {
@@ -957,7 +957,7 @@
     ],
     "discount": 0,
     "status": "regular",
-    "top": true,
+    "top": false,
     "orderCategory": "references"
   }
 ]

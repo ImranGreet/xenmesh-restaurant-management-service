@@ -21,9 +21,9 @@
     <!-- report annual -->
     <!-- top selling Product -->
     <div
-      class="w-full h-full flex flex-col xl:flex-row justify-between items-center border border-inherit">
+      class="w-full h-full flex flex-col xl:flex-row justify-between items-start border border-inherit">
       <TopSellingProducts class="w-full xl:w-2/5" />
-      <div class="w-full h-full xl:w-1/5 border border-inherit shadow-md">
+      <div class="w-full h-full xl:w-1/5 border border-inherit shadow-md mt-6">
         <TotalSales />
       </div>
       <CurrentWebOrder class="w-full h-full xl:w-2/5" />

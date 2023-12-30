@@ -237,7 +237,7 @@
     "transaction_id": "TRANS491",
     "customer_name": "Evelyn Turner",
     "server_name": "Jack Johnson",
-    "order_type": "foodpanda",
+    "order_type": "web",
     "payment_method": "mastar card",
     "items_ordered": [
       {
@@ -362,7 +362,7 @@
     "transaction_id": "TRANS496",
     "customer_name": "Isabella White",
     "server_name": "Aiden Baker",
-    "order_type": "references",
+    "order_type": "web",
     "payment_method": "visa",
     "items_ordered": [
       {
@@ -612,7 +612,7 @@
     "transaction_id": "TRANS506",
     "customer_name": "Aiden Miller",
     "server_name": "Ava Johnson",
-    "order_type": "takeout",
+    "order_type": "web",
     "payment_method": "paypal",
     "items_ordered": [
       {
