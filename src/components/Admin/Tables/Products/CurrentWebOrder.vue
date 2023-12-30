@@ -36,19 +36,21 @@
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
-                 Payment Method
+                  Payment Method
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr
-               v-for="webOrder,index in orderInWeb" :key="index"
+                v-for="(webOrder, index) in orderInWeb"
+                :key="index"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">{{index+1}}</th>
+                <th class="w-4 px-4 py-3 border border-slate-300">
+                  {{ index + 1 }}
+                </th>
                 <th
                   scope="row"
                   class="flex items-center px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  
                   {{ webOrder.order_number }}
                 </th>
                 <td class="px-4 py-2 border border-slate-300">
@@ -70,7 +72,6 @@
                   {{ webOrder.payment_method }}
                 </td>
               </tr>
-             
             </tbody>
           </table>
         </div>
@@ -80,16 +81,16 @@
 </template>
 
 <script>
-import order from "../../../../DB/order";
+import order from '../../../../DB/order';
 export default {
   name: 'CurrentWebOrder',
-  setup(){
-    const orderInWeb = order.filter((webItem)=>webItem.order_type==='web');
+  setup() {
+    const orderInWeb = order.filter(webItem => webItem.order_type === 'web');
     console.log(orderInWeb);
     return {
-      orderInWeb
-    }
-  }
+      orderInWeb,
+    };
+  },
 };
 </script>
 

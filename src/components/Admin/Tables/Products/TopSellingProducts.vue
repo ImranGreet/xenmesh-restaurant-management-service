@@ -21,7 +21,7 @@
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
-                   Title
+                  Title
                 </th>
                 <th
                   scope="col"
@@ -42,9 +42,12 @@
             </thead>
             <tbody>
               <tr
-               v-for="topItem,index in topProducts" :key="index"
+                v-for="(topItem, index) in topProducts"
+                :key="index"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">{{index+1}}</th>
+                <th class="w-4 px-4 py-3 border border-slate-300">
+                  {{ index + 1 }}
+                </th>
                 <th
                   scope="row"
                   class="flex items-center px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
@@ -52,12 +55,12 @@
                     :src="topItem.image"
                     alt="iMac Front Image"
                     class="w-auto h-8 mr-3" />
-                  {{topItem.title.slice(0,10) }}
+                  {{ topItem.title.slice(0, 10) }}
                 </th>
                 <td class="px-4 py-2 border border-slate-300">
                   <span
                     class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
-                    >{{topItem.category}}</span
+                    >{{ topItem.category }}</span
                   >
                 </td>
                 <td
@@ -70,10 +73,9 @@
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{topItem.rate}}
+                  {{ topItem.rate }}
                 </td>
               </tr>
-             
             </tbody>
           </table>
         </div>
@@ -86,13 +88,15 @@
 import products from '../../../../DB/products';
 export default {
   name: 'TopSellingProducts',
-  setup(){
-    const topProducts = products.filter((product)=>product.Top || product.top ===true);
+  setup() {
+    const topProducts = products.filter(
+      product => product.Top || product.top === true,
+    );
     console.log(topProducts);
     return {
-      topProducts
-    }
-  }
+      topProducts,
+    };
+  },
 };
 </script>
 

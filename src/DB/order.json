@@ -162,7 +162,7 @@
     "transaction_id": "TRANS488",
     "customer_name": "Liam Turner",
     "server_name": "Mia Clark",
-    "order_type": "uber eats",
+    "order_type": "ubereats",
     "payment_method": "american card",
     "items_ordered": [
       {

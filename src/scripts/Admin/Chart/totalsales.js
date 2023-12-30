@@ -1,3 +1,5 @@
+import totalOrder from '../../../DB/order';
+
 export const data = {
   labels: ['Direct Order', 'Web Order', 'Delivery Serices', 'References'],
   datasets: [
