@@ -3,6 +3,11 @@
     <div class="w-full px-1">
       <div
         class="w-full flex justify-end items-center space-x-3 md:space-x-5 lg:space-x-8">
+        <router-link :to="{name:'public-home'}"
+          
+          class="smallSearch border bordr-inherit rounded-sm p-1 bg-lime-600 text-white">
+          View Client Site
+        </router-link>
         <button
           @click="toggleSearchForm()"
           class="smallSearch">

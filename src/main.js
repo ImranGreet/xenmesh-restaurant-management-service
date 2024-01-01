@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp ,version} from 'vue';
 import '../src/assets/tailwind.css';
 import router from './routes';
 import { createPinia } from 'pinia';
@@ -17,10 +17,7 @@ import {
   TrashIcon,
 } from '@heroicons/vue/24/outline';
 
-// import DeleteBtn from "../src/components/Admin/Utilities/actionButtons/DeleteBtn.vue";
-// import EditBtn from "../src/components/Admin/Utilities/actionButtons/EditBtn.vue";
-// import publishBtn from "../src/components/Admin/Utilities/actionButtons/PublishedBtn.vue";
-// import publishNotBtn from "../src/components/Admin/Utilities/actionButtons/PublishedNot.vue";
+
 
 /*Global Components*/
 
@@ -101,3 +98,5 @@ app.use(VueAnimXyz);
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));
 app.mount('#app');
+
+
