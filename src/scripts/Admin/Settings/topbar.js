@@ -5,11 +5,17 @@ const topbarColorIds = ref([]);
 
 let foundColor = ref(true);
 let topbarDefault = ref(true);
+let TopbardesktopColor = ref();
 
 const setTopbarColor = function (colorPaletId) {
   const iconHolder = document.getElementById(colorPaletId);
-  if (topbarColorIds.value.length !== 0) {
-  }
+  
 };
 
-export { setTopbarColor, foundColor, topbarColor, topbarDefault };
+const defaultDesktopColor = function(){
+  TopbardesktopColor.value = topbarColor.value[2];
+}
+
+defaultDesktopColor();
+
+export { setTopbarColor, foundColor, topbarColor, topbarDefault,TopbardesktopColor };

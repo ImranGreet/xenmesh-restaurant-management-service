@@ -1,3 +1,4 @@
-import { foundColor, setTopbarColor, topbarDefault } from './topbar';
+import { foundColor, setTopbarColor, topbarDefault ,TopbardesktopColor} from './topbar';
 
-export { foundColor, setTopbarColor, topbarDefault };
+
+export { foundColor, setTopbarColor, topbarDefault,TopbardesktopColor };

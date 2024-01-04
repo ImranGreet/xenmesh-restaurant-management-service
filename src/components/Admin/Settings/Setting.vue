@@ -314,11 +314,7 @@
           </div>
         </div>
         <!-- screen fixed -->
-        <div
-          class="flex justify-between items-center h-auto absolute bottom-0 bg-blue-200/25 w-full p-6">
-          <button class="bg-slate-600 text-white py-2 px-10">Fixed</button>
-          <button class="bg-red-400 text-white py-2 px-10">Scroll</button>
-        </div>
+        
       </div>
     </div>
   </TransitionRoot>
