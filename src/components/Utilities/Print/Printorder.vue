@@ -12,31 +12,38 @@
         <div class="space-y-2">
           <h3 class="text-xl">Contact Info</h3>
           <div class="w-full divide-y-1">
-            <p><span>Address</span> <span>:</span> <span>{{address.street}}</span> <span>{{city}}</span> </p>
-            <p><span>Email</span> <span>:</span> <span>{{address.email}}</span> </p>
-            <p><span>Email</span> <span>:</span> <span>{{address.phone}}</span> </p>
+            <p>
+              <span>Address</span> <span>:</span>
+              <span>{{ address.street }}</span> <span>{{ city }}</span>
+            </p>
+            <p>
+              <span>Email</span> <span>:</span> <span>{{ address.email }}</span>
+            </p>
+            <p>
+              <span>Email</span> <span>:</span> <span>{{ address.phone }}</span>
+            </p>
           </div>
           <!-- purchased items -->
           <div>
-            <table class="border-separate border border-slate-400 ">
+            <table class="border-separate border border-slate-400">
               <thead>
                 <tr>
-                  <th class="border border-slate-300 ">State</th>
-                  <th class="border border-slate-300 ">City</th>
+                  <th class="border border-slate-300">State</th>
+                  <th class="border border-slate-300">City</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="border border-slate-300 ">Indiana</td>
-                  <td class="border border-slate-300 ">Indianapolis</td>
+                  <td class="border border-slate-300">Indiana</td>
+                  <td class="border border-slate-300">Indianapolis</td>
                 </tr>
                 <tr>
-                  <td class="border border-slate-300 ">Ohio</td>
-                  <td class="border border-slate-300 ">Columbus</td>
+                  <td class="border border-slate-300">Ohio</td>
+                  <td class="border border-slate-300">Columbus</td>
                 </tr>
                 <tr>
-                  <td class="border border-slate-300 ">Michigan</td>
-                  <td class="border border-slate-300 ">Detroit</td>
+                  <td class="border border-slate-300">Michigan</td>
+                  <td class="border border-slate-300">Detroit</td>
                 </tr>
               </tbody>
             </table>
@@ -47,10 +54,8 @@
             <div class="w-full flex justify-between items-center">
               <p>Total <span>:</span> $125</p>
             </div>
-
           </div>
           <!-- greetings -->
-          
         </div>
       </div>
     </div>

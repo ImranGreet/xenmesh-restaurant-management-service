@@ -87,7 +87,6 @@ export default {
 
     onMounted(() => {
       innerHeight.value = window.innerHeight;
-      
     });
 
     return {

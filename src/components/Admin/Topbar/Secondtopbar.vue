@@ -3,10 +3,11 @@
     <div class="w-full px-1">
       <div
         class="w-full flex justify-end items-center space-x-3 md:space-x-5 lg:space-x-8">
-        <router-link :to="{name:'public-home'}" target="_blank"
-          
+        <router-link
+          :to="{ name: 'public-home' }"
+          target="_blank"
           class="smallSearch border bordr-inherit rounded-sm p-1 bg-lime-600 text-white">
-          View Client Site
+          Client
         </router-link>
         <button
           @click="toggleSearchForm()"
@@ -98,12 +99,12 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Profile from '../Dropdown/Profile.vue';
 
 import Notifications from '../Dropdown/Notifications.vue';
 import Setting from '../Settings/Setting.vue';
-
+import { innerWidth } from '../../../scripts/Global/innerheightwidth';
 /*scripts*/
 import {
   profileDropDown,
@@ -133,6 +134,9 @@ export default {
     const profileImage = ref(
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     );
+    onMounted(() => {
+      innerWidth.value = window.innerWidth;
+    });
     return {
       profileImage,
       profileDropDown,
@@ -140,6 +144,7 @@ export default {
       fullScreen,
       seetingsView,
       searchDropDown,
+      innerWidth,
       notificationsToggler,
       profileToggler,
       toggleFullScreen,

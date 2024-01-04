@@ -87,6 +87,11 @@ const routes = [
         name: 'completed',
         component: () => import('../pages/Admin/Order/Completed.vue'),
       },
+      // {
+      //   path: 'order/:order_status',
+      //   name: 'completed',
+      //   component: () => import('../pages/Admin/Order/Completed.vue'),
+      // },
       /*order end*/
       /*stuff start*/
       {

@@ -1,4 +1,4 @@
-import { createApp ,version} from 'vue';
+import { createApp, version } from 'vue';
 import '../src/assets/tailwind.css';
 import router from './routes';
 import { createPinia } from 'pinia';
@@ -16,8 +16,6 @@ import {
   ShieldCheckIcon,
   TrashIcon,
 } from '@heroicons/vue/24/outline';
-
-
 
 /*Global Components*/
 
@@ -98,5 +96,3 @@ app.use(VueAnimXyz);
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));
 app.mount('#app');
-
-
