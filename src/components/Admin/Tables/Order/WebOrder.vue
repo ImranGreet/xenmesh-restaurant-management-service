@@ -68,11 +68,7 @@
           </button>
         </div>
 
-        <XyzTransition xyz="fade">
-          <div
-            class="square"
-            v-if="searchForm"></div>
-        </XyzTransition>
+        
 
         <div class="overflow-x-auto">
           <table

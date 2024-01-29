@@ -3,8 +3,7 @@ import '../src/assets/tailwind.css';
 import router from './routes';
 import { createPinia } from 'pinia';
 import { plugin, defaultConfig } from '@formkit/vue';
-import VueAnimXyz from '@animxyz/vue3';
-import '@animxyz/core'; //
+
 import App from './App.vue';
 
 /*Global Components*/
@@ -92,7 +91,7 @@ app.component('PencilSquareIcon', PencilSquareIcon);
 app.component('ShieldCheckIcon', ShieldCheckIcon);
 app.component('TrashIcon', TrashIcon);
 
-app.use(VueAnimXyz);
+
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));
 app.mount('#app');
