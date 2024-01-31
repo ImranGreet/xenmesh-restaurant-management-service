@@ -6,7 +6,7 @@
         <div class="overflow-x-auto">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
-            <caption class="caption-top py-5 bg-lime-600 text-white text-xl">
+            <caption class="caption-top py-2 bg-lime-600 text-white px-2 text-start text-xl">
               Table 1: Top Selling Products
             </caption>
 
