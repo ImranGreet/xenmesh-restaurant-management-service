@@ -5,12 +5,11 @@
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
         <div class="overflow-x-auto">
           <table
-            class="w-full text-sm text-left text-gray-500 dark:text-gray-400  border border-slate-100">
-
-            <caption class="caption-top py-2 bg-lime-600 text-white text-xl text-start px-3">
+            class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-slate-100">
+            <caption
+              class="caption-top py-2 bg-lime-600 text-white text-xl text-start px-3">
               Recent Customer Order from Web
             </caption>
-            
 
             <thead
               class="text-xs text-gray-700 uppercase bg-[#F8FAFC] dark:bg-gray-700 dark:text-gray-400 rounded-lg">
@@ -22,22 +21,22 @@
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Order Number
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Transaction Id
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Customer Name
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Order Items
                 </th>
                 <th
@@ -60,9 +59,9 @@
                 <td class="w-4 px-4 py-8 border border-slate-300">
                   {{ index + 1 }}
                 </td>
-                <td 
+                <td
                   scope="row"
-                  class="flex items-center py-8 px-4  font-medium text-gray-900 whitespace-nowrap dark:text-white ">
+                  class="flex items-center py-8 px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   {{ webOrder.order_number }}
                 </td>
                 <td class="px-4 py-2 border border-slate-300">
@@ -74,19 +73,24 @@
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                   <div class="flex items-center">
-                    
-                      <i class="w-4 h-4 mr-2 text-gray-700"><UserCircleIcon/></i> {{ webOrder.customer_name }}
+                    <i class="w-4 h-4 mr-2 text-gray-700"><UserCircleIcon /></i>
+                    {{ webOrder.customer_name }}
                   </div>
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex flex-col items-start   gap-y-2">
-                    <div v-for="(items,index) in webOrder.items_ordered " :key="index">
-                        
-                        <div class="w-full flex gap-x-2">
-                          <img :src="items.image" alt="" loading="lazy" class="w-10 h-10 object-cover rounded-md shadow-md">
-                          <h4>{{items.quantity}}</h4>
-                        </div>
+                  <div class="flex flex-col items-start gap-y-2">
+                    <div
+                      v-for="(items, index) in webOrder.items_ordered"
+                      :key="index">
+                      <div class="w-full flex gap-x-2">
+                        <img
+                          :src="items.image"
+                          alt=""
+                          loading="lazy"
+                          class="w-10 h-10 object-cover rounded-md shadow-md" />
+                        <h4>{{ items.quantity }}</h4>
+                      </div>
                     </div>
                   </div>
                 </td>
@@ -95,10 +99,16 @@
                   {{ webOrder.payment_method }}
                 </td>
                 <td
-                  class="px-4  py-10 font-medium text-gray-900 whitespace-nowrap dark:text-white  flex justify-center items-center gap-x-2 capitalize">
-                  <button><EyeIcon class="w-6 h-6 bg-blue-300 rounded-md p-1"/></button>
-                  <button><PencilIcon class="w-6 h-6 bg-red-200 p-1 rounded-md"/></button>
-                  <button><TrashIcon class="w-6 h-6 bg-green-300 p-1 rounded-md"/></button>
+                  class="px-4 py-10 font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-center items-center gap-x-2 capitalize">
+                  <button>
+                    <EyeIcon class="w-6 h-6 bg-blue-300 rounded-md p-1" />
+                  </button>
+                  <button>
+                    <PencilIcon class="w-6 h-6 bg-red-200 p-1 rounded-md" />
+                  </button>
+                  <button>
+                    <TrashIcon class="w-6 h-6 bg-green-300 p-1 rounded-md" />
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -111,10 +121,15 @@
 
 <script>
 import order from '../../../../DB/order';
-import { EyeIcon ,PencilIcon, TrashIcon,UserCircleIcon} from '@heroicons/vue/24/outline';
+import {
+  EyeIcon,
+  PencilIcon,
+  TrashIcon,
+  UserCircleIcon,
+} from '@heroicons/vue/24/outline';
 export default {
   name: 'CurrentWebOrder',
-  components:{EyeIcon,PencilIcon, TrashIcon,UserCircleIcon},
+  components: { EyeIcon, PencilIcon, TrashIcon, UserCircleIcon },
   setup() {
     const orderInWeb = order.filter(webItem => webItem.order_type === 'web');
     console.log(orderInWeb);

@@ -23,8 +23,6 @@
     <TopSellingProducts class="w-full" />
     <div
       class="w-full h-full flex flex-col xl:flex-row justify-between items-start border border-inherit">
-      
-
       <CurrentWebOrder class="w-full" />
     </div>
   </div>

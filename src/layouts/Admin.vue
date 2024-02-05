@@ -3,17 +3,12 @@
     ref="fullscreenElement"
     class="h-screen bg-gray-100">
     <Topbardesktop
-    
-      class="float-right top-0 right-0  w-full static px-2 z-[699]"
+      class="float-right top-0 right-0 w-full static px-2 z-[699]"
       :class="{
         'sm:w-[70%] xl:w-[85%] fixed': !sidebarView,
         'sm:w-[90%] xl:w-[95%] fixed': sidebarView,
-        'bg-white text-gray-800':TopbardesktopColor ==='default'
-        
-        
-      }" 
-      
-      />
+        'bg-white text-gray-800': TopbardesktopColor === 'default',
+      }" />
     <Rightsidebar
       class="fixed float-left h-full hidden sm:block"
       :class="{
@@ -77,8 +72,7 @@ import {
 } from '../scripts/Admin/Layout/layoutonresize';
 import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink';
 import { showOverlayout } from '../scripts/public/modal/modal';
-import {TopbardesktopColor} from "../scripts/Admin/Settings/settingcontroller"
-
+import { TopbardesktopColor } from '../scripts/Admin/Settings/settingcontroller';
 
 export default {
   name: 'Admin',

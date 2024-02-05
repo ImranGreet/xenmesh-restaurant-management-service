@@ -91,7 +91,6 @@ app.component('PencilSquareIcon', PencilSquareIcon);
 app.component('ShieldCheckIcon', ShieldCheckIcon);
 app.component('TrashIcon', TrashIcon);
 
-
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));
 app.mount('#app');
