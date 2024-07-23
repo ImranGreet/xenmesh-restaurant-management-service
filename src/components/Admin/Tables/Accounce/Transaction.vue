@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
+  <section class="w-full dark:bg-gray-900 py-1 sm:py-5">
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
@@ -11,7 +11,7 @@
         >
 
         <div
-          class="w-full flex flex-col py-3 bg-gary-800/50 lg:bg-gray-600/50 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4 relative"
+          class="w-full flex flex-col py-1 bg-gary-800/50 lg:bg-gray-600/50 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4 relative"
           :class="{ '': searchForm, hidden: !searchForm }">
           <div
             class="w-full lg:w-4/5 mx-auto border border-pink-500/30 rounded-lg py-5 px-5 shadow-sm shadow-white">
@@ -68,40 +68,40 @@
           </button>
         </div>
 
-        <div class="overflow-x-auto">
+        <div class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              class="text-xs text-white sticky top-0 bg-lime-600 uppercase  dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300 ">
                   Sr No
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   TRANSACTION ID
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   PAYMENT METHOD
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   ORDER SERIAL NO
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Amount
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300 ">
                   Date
                 </th>
               </tr>
@@ -111,7 +111,7 @@
                 v-for="(order, index) in totalOrder"
                 :key="index"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">
+                <th class="w-4 px-4 py-2 border border-slate-300">
                   {{ index + 1 }}
                 </th>
                 <td class="px-4 py-2 border border-slate-300">

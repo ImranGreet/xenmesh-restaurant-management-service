@@ -13,59 +13,16 @@
   .product-hover {
     @apply lg:hover:shadow-lg overflow-hidden lg:hover:delay-100 lg:hover:duration-200 lg:hover:ease-in-out;
   }
+
+
 }
 
-.topbarLayout {
-  width: 83% !important;
-}
-.topbarLayoutSidebar {
-  width: 95% !important;
-}
-.topbarWithSide {
-  width: 17% !important;
-}
 
-.topbarWithoutSide {
-  width: 5% !important;
-}
-
-/* topbar in variants devices */
-.topbarLayoutInTab {
-  width: 60% !important;
-}
-
-:fullscreen {
-  background: #ffffff;
-}
-
-.custom-overflowscroll::-webkit-scrollbar {
-  width: 6px;
-}
-
-.custom-overflowscroll::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.custom-overflowscroll::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-.custom-overflowscroll::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 /* transitions */
 
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+.toggle-screen-animation {
+  @apply transition-all duration-500;
 }
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}

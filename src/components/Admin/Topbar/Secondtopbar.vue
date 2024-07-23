@@ -7,7 +7,7 @@
           :to="{ name: 'public-home' }"
           target="_blank"
           class="smallSearch border bordr-inherit rounded-sm p-1 bg-lime-600 text-white">
-          Client
+          Client Site
         </router-link>
         <button
           @click="toggleSearchForm()"

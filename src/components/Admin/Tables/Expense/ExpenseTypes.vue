@@ -10,7 +10,7 @@
             :amount="450"
             class="text-gray-950 bg-white/50">
             <CalculatorIcon
-              class="w-12 h-12 border border-pink-200 rounded-md p-2" />
+              class="w-12 h-12 border border-pink-200 inline-block rounded-md p-2" />
           </TableCard>
           <TableCard
             heading=" Total Expense Types"
@@ -27,56 +27,56 @@
               class="w-12 h-12 border border-pink-200 rounded-md p-2" />
           </TableCard>
         </div>
-        <div class="overflow-x-auto">
+        <div class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg bg-white z-50">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Sr No
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Category
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Note
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Amount
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   FixedVariable
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   PaymentMethod
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Description
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Date
                 </th>
 
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Action
                 </th>
               </tr>

@@ -4,15 +4,15 @@
       <Logo
         class="fixed left-0 top-0 hidden sm:block"
         :class="{
-          'w-[30%] xl:w-[15%]': !mobileView && !sidebarView,
-          'w-[10%] xl:w-[5%]': !mobileView && sidebarView,
+          'w-[30%] xl:w-[15%] toggle-screen-animation': !mobileView && !sidebarView,
+          'w-[10%] xl:w-[5%] toggle-screen-animation': !mobileView && sidebarView,
         }" />
 
       <div
         class="mt-[20px] md:mt-[45px] lg:mt-[48px] xl:mt-[45.5px] fixed float-right h-screen border-r-2 border-red-700/50"
         :class="{
-          'w-[30%] xl:w-[15%]': !sidebarView,
-          'w-[10%] xl:w-[5%]': sidebarView,
+          'w-[30%] xl:w-[15%] toggle-screen-animation': !sidebarView,
+          'w-[10%] xl:w-[5%] toggle-screen-animation': sidebarView,
         }">
         <Transition name="slide-fade">
           <router-link

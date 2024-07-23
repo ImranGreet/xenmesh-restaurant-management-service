@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-screen relative">
     <div
-      class="w-full lg:px-4 py-2 bg-white shadow-sm fixed inset-x-0 top-0 z-[999]">
+      class="w-full lg:px-4 py-2 bg-white shadow-md fixed inset-x-0 top-0 z-[999]">
       <div
         class="hidden xl:flex w-full justify-between items-center mx-auto bg-inherit max-w-[1130px]">
         <Firsttopbar />
@@ -43,7 +43,7 @@
       :class="{ hidden: !orderItems, block: orderItems }"></div>
 
     <div
-      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen [z-1000]"
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen  z-[1000]"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
     </div>

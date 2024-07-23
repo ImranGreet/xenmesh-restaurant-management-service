@@ -6,7 +6,7 @@
         to="#"
         v-for="(cat, index) in useCategoryRoutes"
         :key="index"
-        class="bg-blue-900/80 px-2 py-1 text-white rounded-sm"
+        class="bg-lime-600 px-2 py-1 text-white rounded-sm"
         >{{ cat.category }}</router-link
       >
     </div>

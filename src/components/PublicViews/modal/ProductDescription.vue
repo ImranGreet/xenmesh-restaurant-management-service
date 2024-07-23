@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-11/12 lg:w-[500px] rounded-md bg-white shadow-lg"
+    class="w-11/12 lg:w-[500px] rounded-md bg-white shadow-lg disclose-modal"
     :class="{
       'h-48 mt-10 overflow-y-auto': innerHeight <= 700,
       'h-auto mt-0 overflow-y-hidden': innerHeight >= 700,
@@ -14,8 +14,8 @@
         </h1>
         <button
           @click="showOverlayoutOnOff()"
-          class="border border-stone-800 rounded-full text-base lg:hover:text-gray-800 lg:hover:shadow-2xl lg:hover:shadow-red-700">
-          <XMarkIcon class="w-4 h-4 text-gray-950" />
+          class="border border-stone-800 rounded-full text-base lg:hover:text-gray-800 group hover:bg-red-600/70 hover:border-none hover:shadow-sm">
+          <XMarkIcon class="w-4 h-4 text-gray-950 group-hover:text-white" />
         </button>
       </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full h-full flex flex-col justify-center items-center">
     <AddStuff />
   </div>
 </template>

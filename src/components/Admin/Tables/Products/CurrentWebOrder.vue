@@ -2,21 +2,23 @@
   <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
     <div class="px-4 mx-auto w-full">
       <div
-        class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <div class="overflow-x-auto">
+        class="w-full relative overflow-auto bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+       
+        <div class="overflow-auto max-h-[450px] min-h-[220px] table-container rounded-t-lg">
+          
           <table
-            class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-slate-100">
+            class="w-full text-sm h-full text-left text-gray-500 dark:text-gray-400 border border-slate-100">
             <caption
-              class="caption-top py-2 bg-lime-600 text-white text-xl text-start px-3">
-              Recent Customer Order from Web
-            </caption>
+            class="caption-top py-2 bg-gray-800 overflow-auto text-white px-2 text-start text-xl">
+            Table 2: Recent Customer Order from Web
+          </caption>
 
             <thead
-              class="text-xs text-gray-700 uppercase bg-[#F8FAFC] dark:bg-gray-700 dark:text-gray-400 rounded-lg">
+              class="text-xs  uppercase sticky top-0 bg-lime-600 text-white dark:bg-gray-700 dark:text-gray-400  overflow-hidden">
               <tr>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 rounded-l-lg">
+                  class="px-4 py-1 border border-slate-300 rounded-tl-lg">
                   Sr No
                 </th>
                 <th
@@ -41,12 +43,12 @@
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 rounded-r-lg">
+                  class="px-4 py-1 border border-slate-300 ">
                   Payment Method
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 rounded-r-lg">
+                  class="px-4 py-1 border border-slate-300 rounded-rl-lg">
                   Action
                 </th>
               </tr>
@@ -56,7 +58,7 @@
                 v-for="(webOrder, index) in orderInWeb"
                 :key="index"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <td class="w-4 px-4 py-8 border border-slate-300">
+                <td class="w-8 px-4 py-8 border border-slate-300">
                   {{ index + 1 }}
                 </td>
                 <td
@@ -99,7 +101,7 @@
                   {{ webOrder.payment_method }}
                 </td>
                 <td
-                  class="px-4 py-10 font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-center items-center gap-x-2 capitalize">
+                  class="px-4 py-10 font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-start items-center gap-x-2 capitalize">
                   <button>
                     <EyeIcon class="w-6 h-6 bg-blue-300 rounded-md p-1" />
                   </button>
@@ -132,7 +134,7 @@ export default {
   components: { EyeIcon, PencilIcon, TrashIcon, UserCircleIcon },
   setup() {
     const orderInWeb = order.filter(webItem => webItem.order_type === 'web');
-    console.log(orderInWeb);
+    
     return {
       orderInWeb,
     };

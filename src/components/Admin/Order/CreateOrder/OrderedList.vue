@@ -20,36 +20,36 @@
             <table
               class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
               <thead
-                class="text-xs uppercase text-white bg-blue-900/80 sticky top-0 bottom-6">
+                class="text-xs uppercase text-white bg-lime-600 overflow-hidden sticky top-0 bottom-6">
                 <tr>
                   <th
                     scope="col"
-                    class="px-4 py-1.5 border border-slate-300">
+                    class="px-4 py-1 border border-slate-300">
                     Sr No
                   </th>
                   <th
                     scope="col"
-                    class="px-4 py-1.5 border border-slate-300">
+                    class="px-4 py-1 border border-slate-300">
                     Product Title
                   </th>
                   <th
                     scope="col"
-                    class="px-4 py-1.5 border border-slate-300">
+                    class="px-4 py-1 border border-slate-300">
                     Quantity
                   </th>
                   <th
                     scope="col"
-                    class="px-4 py-1.5 border border-slate-300">
+                    class="px-4 py-1 border border-slate-300">
                     Unit Prices
                   </th>
                   <th
                     scope="col"
-                    class="px-4 py-1.5 border border-slate-300">
+                    class="px-4 py-1 border border-slate-300">
                     Line Total
                   </th>
                   <th
                     scope="col"
-                    class="px-4 py-1.5 border border-slate-300">
+                    class="px-4 py-1 border border-slate-300">
                     Delete
                   </th>
                 </tr>
@@ -59,7 +59,7 @@
                   v-for="(item, index) in itemsToBePurchased"
                   :key="index"
                   class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <th class="w-4 px-4 py-3 border border-slate-300">
+                  <th class="w-4 px-4 py-2 border border-slate-300">
                     {{ Math.floor(index + 1) }}
                   </th>
                   <th
@@ -71,7 +71,7 @@
                     <div class="w-full flex gap-x-2">
                       <button
                         @click="increaseItemQuantity(item.id)"
-                        class="border border-inherit rounded-md shadow-md p-0.5 w-4 h-4 flex flex-col justify-center items-center bg-blue-600 text-white">
+                        class="border border-inherit rounded-md shadow-md p-0.5 w-4 h-4 flex flex-col justify-center items-center bg-lime-600 text-white">
                         +
                       </button>
                       <div
@@ -101,7 +101,7 @@
                   </td>
 
                   <td
-                    class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
+                    class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
                     <button
                       @click="removeItemFromOrderList(item.id)"
                       class="border border-inherit p-1 rounded-md">

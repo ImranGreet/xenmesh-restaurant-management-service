@@ -21,7 +21,7 @@
       <div class="w-full">
         <ul class="flex flex-col justify-center items-start gap-y-2 w-full">
           <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
-            <router-link to="#"
+            <router-link to="#" class="block"
               ><i class="px-1 sm:px-1.5 lg:px-2"
                 ><font-awesome-icon icon="fa-regular fa-credit-card"
               /></i>
@@ -30,7 +30,7 @@
           </li>
 
           <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
-            <router-link to="#"
+            <router-link to="#" class="block"
               ><i class="px-1 sm:px-1.5 lg:px-2"
                 ><font-awesome-icon icon="fa-solid fa-user" /></i
               >Support</router-link
@@ -44,19 +44,20 @@
           </li>
           <li
             class="lg:hover:bg-gray-500/20 w-full px-4 py-2 flex justify-start gap-x-2 items-center">
-            <img
-              :src="reviewrProfile.profileImage"
-              alt=""
-              class="w-12 h-12 rounded-full object-center" />
+           
             <router-link
               to="#"
-              class=""
-              >{{ reviewrProfile.name }}</router-link
+              class="block"
+              >  <img
+              :src="reviewrProfile.profileImage"
+              alt=""
+              class="w-12 h-12 rounded-full object-center inline-block" /> {{ reviewrProfile.name }}</router-link
             >
           </li>
 
           <li class="lg:hover:bg-gray-500/20 block w-full px-4 py-2">
             <router-link to="#"
+            class="block"
               ><i class="px-1 sm:px-1.5 lg:px-2"
                 ><font-awesome-icon icon="fa-solid fa-comment" /></i
               >Support</router-link
@@ -65,14 +66,14 @@
 
           <li
             class="lg:hover:bg-gray-500/20 w-full px-4 py-2 flex justify-start gap-x-2 items-center">
-            <img
-              :src="commentarProfile.profileImage"
-              alt=""
-              class="w-12 h-12 rounded-full object-center" />
+            
             <router-link
               to="#"
-              class=""
-              >{{ commentarProfile.name }}</router-link
+              class="block"
+              > <img
+              :src="commentarProfile.profileImage"
+              alt=""
+              class="w-12 h-12 rounded-full object-center inline-block" /> {{ commentarProfile.name }}</router-link
             >
           </li>
         </ul>

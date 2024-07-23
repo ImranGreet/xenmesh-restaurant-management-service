@@ -2,41 +2,43 @@
   <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
     <div class="px-4 mx-auto w-full">
       <div
-        class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <div class="overflow-x-auto">
+        class="w-full relative overflow-auto bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+        <div class="overflow-auto min-h-[220px] max-h-[450px] table-container">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
             <caption
-              class="caption-top py-2 bg-lime-600 text-white px-2 text-start text-xl">
+              class="caption-top py-2 bg-gray-800 overflow-auto text-white px-2 text-start text-xl">
               Table 1: Top Selling Products
             </caption>
 
             <thead
-              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            
+            class="text-xs  uppercase sticky top-0 bg-lime-600 text-white dark:bg-gray-700 dark:text-gray-400  overflow-hidden">
+           
               <tr>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300 rounded-tl-lg">
                   Sr No
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Title
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Category
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Price
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300 rounded-rl-lg">
                   Ratings
                 </th>
               </tr>

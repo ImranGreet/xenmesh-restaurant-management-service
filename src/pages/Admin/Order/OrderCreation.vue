@@ -11,7 +11,7 @@
 
           <div class="w-full">
             <form class="w-full">
-              <div>
+              <div class="w-full">
                 <label
                   for="item_title"
                   class="sr-only"
@@ -22,13 +22,13 @@
                   name=""
                   id=""
                   placeholder="Search Item"
-                  class="w-full p-2 focus:outline-none px-4 border border-gray-400/20" />
+                  class="w-full p-2 focus:outline-none focus:outline-gray-200 px-4 border-2 border-gray-400/50 rounded-sm  placeholder:font-extrabold text-gray-800 " />
               </div>
             </form>
           </div>
 
           <div class="w-full">
-            <AvailableItems />
+            <AvailableItems  />
           </div>
         </div>
         <div class="w-1/2">
@@ -70,7 +70,7 @@
                     name=""
                     id=""
                     placeholder="Search Item"
-                    class="w-full p-2 focus:outline-none px-4 border border-gray-400/20" />
+                    class="w-full p-2 focus:outline-none px-4 border border-gray-400/20"/>
                 </div>
               </form>
             </div>

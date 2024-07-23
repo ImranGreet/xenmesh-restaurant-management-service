@@ -83,63 +83,66 @@
           </div>
         </Transition>
 
-        <div class="overflow-x-auto">
+        <div
+          class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg bg-white z-50">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
               <tr>
+                <th class="bg-white"></th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Sr No
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Category
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Amount
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Payment Methods
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Vendor
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Currency
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Description
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Recipet Attach
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Date
                 </th>
 
                 <th
                   scope="col"
-                  class="px-4 py-3 border border-slate-300">
+                  class="px-4 py-1 border border-slate-300">
                   Action
                 </th>
+                <th class="bg-white"></th>
               </tr>
             </thead>
             <tbody>
@@ -147,6 +150,7 @@
                 v-for="(expense, index) in expensesToShow"
                 :key="expense.id"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                <th></th>
                 <th class="w-4 px-4 py-3 border border-slate-300">
                   {{ index + 1 }}
                 </th>
@@ -195,8 +199,19 @@
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <button>X</button>
+                  <div class="flex justify-center items-center gap-x-2">
+                    <button class="text-gray-900">
+                      <PencilSquareIcon class="inline-block w-4 h-4" />
+                    </button>
+                    <button class="text-green-800">
+                      <ShieldCheckIcon class="inline-block w-4 h-4" />
+                    </button>
+                    <button class="text-pink-600">
+                      <TrashIcon class="inline-block w-4 h-4" />
+                    </button>
+                  </div>
                 </td>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -356,7 +371,7 @@ export default {
       filterProducts(
         currentDate.value,
         lastdate.value,
-        selectedPaymentOption.value,
+        selectedPaymentOption.value
       );
     };
 
@@ -382,7 +397,7 @@ export default {
 <style>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .v-enter-from,

@@ -18,12 +18,14 @@ const getItemDetails = function (idParam) {
   productComposition.value = composition;
 
   showOverlayout.value = true;
+  document.body.classList.add('body-scroll-hide');
 };
 
 const showOverlayoutOnOff = function () {
   if (showOverlayout.value) {
     showOverlayout.value = false;
   }
+  document.body.classList.remove('body-scroll-hide');
 };
 
 export {

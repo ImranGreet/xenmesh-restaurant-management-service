@@ -1,5 +1,6 @@
 import { createApp, version } from 'vue';
 import '../src/assets/tailwind.css';
+import '../src/assets/custom.css';
 import router from './routes';
 import { createPinia } from 'pinia';
 import { plugin, defaultConfig } from '@formkit/vue';
