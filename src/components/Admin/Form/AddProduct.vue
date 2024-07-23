@@ -2,14 +2,14 @@
   <section
     class="w-full min-h-screen bg-inherit flex flex-col justify-center items-center">
     <div
-      class="max-w-full lg:max-w-7xl mx-auto border border-inherit p-3 rounded-md shadow-sm shadow-gray-300">
+      class="max-w-full lg:max-w-7xl mx-auto border border-inherit p-3 rounded-md shadow-sm shadow-gray-300 bg-white">
       <div class="w-full text-center border border-inherit p-2">
         <h2 class="text-xl tracking-wider leading-relax">
           Enter Product Information
         </h2>
       </div>
       <div class="bg-inherit w-full">
-        <form class="w-full flex flex-col justify-between items-center gap-y-2">
+        <form @submit.prevent="" class="w-full flex flex-col justify-between items-center gap-y-2">
           <div class="w-full border border-inherit p-2 space-y-2">
             <label for="product_title">Product Title</label>
             <input
@@ -17,7 +17,7 @@
               name=""
               id=""
               placeholder="Enter Product Title or name"
-              class="w-full px-3 py-2 focus:outline-none placeholder:capitalize" />
+              class="w-full px-3 py-2 focus:outline-none placeholder:capitalize border border-gray-300 rounded-sm" />
           </div>
 
           <div
@@ -31,11 +31,11 @@
               <select
                 id="countries"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm px-3 py-2 focus:outline-none accent-pink-500">
-                <option selected>Choose a country</option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option selected>Choose a Category</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Desert">Desert</option>
+                <option value="appitizer">Appitizer</option>
+                <option value="Fruits">Fruits</option>
               </select>
             </div>
             <div class="w-full border p-2 space-y-2">
@@ -45,7 +45,7 @@
                 name=""
                 id=""
                 placeholder="Enter Product price"
-                class="w-full px-3 py-2 focus:outline-none placeholder:capitalize" />
+                class="w-full px-3 py-2 focus:outline-none placeholder:capitalize border border-gray-300 rounded-sm" />
             </div>
           </div>
 
@@ -101,7 +101,7 @@
             <textarea
               id="message"
               rows="4"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 border focus:outline-none border-gray-300 rounded-sm"
               placeholder="Write your thoughts here..."></textarea>
           </div>
 
@@ -133,13 +133,13 @@ export default {
   },
   setup() {
     const imageOne = ref(
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     );
     const imageTwo = ref(
-      'https://images.unsplash.com/photo-1515041761709-f9fc96e04cd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1515041761709-f9fc96e04cd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     );
     const imageThree = ref(
-      'https://plus.unsplash.com/premium_photo-1663855531876-579d7016bb1e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1663855531876-579d7016bb1e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     );
 
     return {

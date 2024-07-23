@@ -132,7 +132,7 @@
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
-                  ReorderPoint
+                  Reorder Point
                 </th>
                 <th
                   scope="col"
@@ -142,7 +142,7 @@
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300 break-words">
-                  MinimumOrderQuantity
+                  Minimum Order Quantity
                 </th>
                 <th
                   scope="col"
@@ -152,17 +152,17 @@
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
-                  PreferredSupplier
+                  Preferred Supplier
                 </th>
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
-                  IngredientUse
+                  Ingredient Use
                 </th>
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
-                  ExpirationDate
+                  Expiration Date
                 </th>
                 <th
                   scope="col"

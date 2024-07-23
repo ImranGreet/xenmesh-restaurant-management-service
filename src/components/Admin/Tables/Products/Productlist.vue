@@ -50,7 +50,7 @@
                 <th class="bg-white"></th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Sr No
                 </th>
                 <th
@@ -91,7 +91,7 @@
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Action
                 </th>
                 <th class="bg-white"></th>
@@ -195,7 +195,7 @@
                 </td>
 
                 <td
-                  class="px-4 py-2 font-medium text-gray-900  whitespace-nowrap dark:text-white border border-slate-300">
+                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                   <div class="flex justify-center items-center gap-x-2">
                     <button class="text-gray-900">
                       <PencilSquareIcon class="inline-block w-4 h-4" />
@@ -203,7 +203,9 @@
                     <button class="text-green-800">
                       <ShieldCheckIcon class="inline-block w-4 h-4" />
                     </button>
-                    <button class="text-pink-600">
+                    <button
+                      class="text-pink-600"
+                      @click="deleteProductFromStore(item.id)">
                       <TrashIcon class="inline-block w-4 h-4" />
                     </button>
                   </div>
@@ -307,19 +309,13 @@
   </section>
 </template>
 
-<script>
+
+
+<script setup>
 import products from '../../../../DB/products';
-
-export default {
-  name: 'Stuff',
-  setup() {
-    const availableProducts = products;
-
-    return {
-      availableProducts,
-    };
-  },
+const availableProducts = products;
+const deleteProductFromStore = function (id) {
+  let confirmToDelete = window.confirm('Are You Sure?');
+  confirmToDelete ? console.log(id) : console.log('Not Okay');
 };
 </script>
-
-<style></style>

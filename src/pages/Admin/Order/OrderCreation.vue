@@ -49,10 +49,10 @@
       :class="{ block: mobileWidth, hidden: largeScreen }">
       <TabGroup>
         <TabList
-          class="bg-red-600 w-full rounded-sm px-3 py-1.5 flex justify-start space-x-3 items-center">
-          <Tab>Pick Item</Tab>
-          <Tab>Ordered Items</Tab>
-          <Tab>Payment Form</Tab>
+          class="bg-gray-600/80 text-white w-full rounded-sm px-3 py-1.5 flex justify-start space-x-3 items-center">
+          <Tab class="border-r border-white pr-5">Pick Item</Tab>
+          <Tab class="border-r border-white pr-5">Ordered Items</Tab>
+          <Tab class="border-r border-white pr-5">Payment Form</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>

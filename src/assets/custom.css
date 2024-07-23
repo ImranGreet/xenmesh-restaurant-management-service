@@ -52,32 +52,22 @@
 .custom-overflowscroll::-webkit-scrollbar {
   width: 6px;
 }
-
-.custom-overflowscroll::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.custom-overflowscroll::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-.custom-overflowscroll::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 /*table scroller*/
 .table-container::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
+.custom-overflowscroll::-webkit-scrollbar-track,
 .table-container::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
+.custom-overflowscroll::-webkit-scrollbar-thumb,
 .table-container::-webkit-scrollbar-thumb {
   background: #888;
 }
 
+.custom-overflowscroll::-webkit-scrollbar-thumb:hover,
 .table-container::-webkit-scrollbar-thumb:hover {
   background: #555;
 }

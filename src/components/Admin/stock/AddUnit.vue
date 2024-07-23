@@ -4,7 +4,7 @@
       <div
         class="w-full h-full flex flex-col lg:flex-row justify-between items-center">
         <form
-          class="w-full lg:w-2/5 mx-auto border border-gray-800/20 p-4 rounded-md space-y-3">
+          class="w-full lg:w-2/5 mx-auto border border-gray-800/20 p-4 rounded-md space-y-3 bg-white">
           <div
             class="w-full space-y-3 border border-inherit text-center text-gray-600 p-2">
             <h2 class="text-xl tracking-wide">Add Unit</h2>

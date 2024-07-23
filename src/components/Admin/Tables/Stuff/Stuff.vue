@@ -3,11 +3,12 @@
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <div class="relative overflow-auto min-h-[220px] max-h-[690px] table-container rounded-t-lg bg-white z-50">
+        <div
+          class="relative overflow-auto min-h-[220px] max-h-[690px] table-container rounded-t-lg bg-white z-50">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-            class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
+              class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th class="bg-white"></th>
                 <th
@@ -30,11 +31,7 @@
                   class="px-4 py-3 border border-slate-300">
                   Start From
                 </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Contact No
-                </th>
+
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
@@ -48,22 +45,18 @@
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
-                  SalaryWage
+                  Salary Wage
                 </th>
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
                   Vacation Period
                 </th>
+               
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
-                  Benefits
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  TrainingRecords
+                  Training Records
                 </th>
                 <th
                   scope="col"
@@ -105,29 +98,33 @@
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ stuff.ContactInformation }}
+                  <span class="font-bold">Regular </span> {{ stuff.ContactInformation }}
+                  <br />
+                 <span class="font-bold">Emergency</span> {{ stuff.EmergencyContactInformation }}
                 </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ stuff.EmergencyContactInformation }}
-                </td>
+
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                   {{ stuff.Address }}
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  $ {{ stuff.SalaryWage }}
+                  
+                  <span class="flex flex-col">
+                    <span>  <span class="font-bold">Sallary</span>  ${{ stuff.SalaryWage }}</span>
+                    <span>  <span class="font-bold">Benifits</span> {{ stuff.Benefits }}</span>
+                  </span>
                 </td>
-                <td class="px-4 py-2 border border-slate-300">
-                  {{ stuff.VacationTime }}
+                <td class="px-4 py-2 border border-slate-300 text-center">
+                  {{ stuff.VacationTime }} 
+                  <span> Day
+                    <span :class="{'inline-block':stuff.VacationTime>1,'hidden':stuff.VacationTime===1||stuff.VacationTime===0}"> s</span> 
+                </span>
                 </td>
+                
                 <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <span>{{ stuff.Benefits }}</span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 flex flex-col gap-y-1">
+                  class="px-4 py-2 h-full  font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 "
+                  :class="{'flex flex-col gap-y-1':stuff.TrainingRecords.length>1}">
                   <span
                     v-for="(record, index) in stuff.TrainingRecords"
                     :key="index"
@@ -139,19 +136,19 @@
                   <span>{{ stuff.Notes }}</span>
                 </td>
                 <td
-                class="px-4 py-2 font-medium text-gray-900  whitespace-nowrap dark:text-white border border-slate-300">
-                <div class="flex justify-center items-center gap-x-2">
-                  <button class="text-gray-900">
-                    <PencilSquareIcon class="inline-block w-4 h-4" />
-                  </button>
-                  <button class="text-green-800">
-                    <ShieldCheckIcon class="inline-block w-4 h-4" />
-                  </button>
-                  <button class="text-pink-600">
-                    <TrashIcon class="inline-block w-4 h-4" />
-                  </button>
-                </div>
-              </td>
+                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
+                  <div class="flex justify-center items-center gap-x-2">
+                    <button class="text-gray-900">
+                      <PencilSquareIcon class="inline-block w-4 h-4" />
+                    </button>
+                    <button class="text-green-800">
+                      <ShieldCheckIcon class="inline-block w-4 h-4" />
+                    </button>
+                    <button class="text-pink-600">
+                      <TrashIcon class="inline-block w-4 h-4" />
+                    </button>
+                  </div>
+                </td>
                 <td></td>
               </tr>
             </tbody>

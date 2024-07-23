@@ -33,6 +33,8 @@
             <thead
             class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
               <tr>
+                <th class="bg-white"></th>
+                <th class="bg-white"></th>
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
@@ -56,12 +58,12 @@
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
-                  FixedVariable
+                  Fixed Variable
                 </th>
                 <th
                   scope="col"
                   class="px-4 py-1 border border-slate-300">
-                  PaymentMethod
+                  Payment Method
                 </th>
                 <th
                   scope="col"
@@ -79,6 +81,7 @@
                   class="px-4 py-1 border border-slate-300">
                   Action
                 </th>
+                <th class="bg-white"></th>
               </tr>
             </thead>
             <tbody>
@@ -86,6 +89,8 @@
                 v-for="(type, index) in typesOfExpenses"
                 :key="type.id"
                 class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                <th></th>
+                <th></th>
                 <th class="w-4 px-4 py-3 border border-slate-300">
                   {{ index + 1 }}
                 </th>
@@ -125,9 +130,20 @@
                   <span>{{ type.Date }}</span>
                 </td>
                 <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Delete
-                </td>
+                class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
+                <div class="flex justify-center items-center gap-x-2">
+                  <button class="text-gray-900">
+                    <PencilSquareIcon class="inline-block w-4 h-4" />
+                  </button>
+                  <button class="text-green-800">
+                    <ShieldCheckIcon class="inline-block w-4 h-4" />
+                  </button>
+                  <button class="text-pink-600">
+                    <TrashIcon class="inline-block w-4 h-4" />
+                  </button>
+                </div>
+              </td>
+              <td></td>
               </tr>
             </tbody>
           </table>

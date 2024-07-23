@@ -2,8 +2,8 @@
   <div class="w-full h-full bg-inherit">
     <div class="w-full h-full">
       <div
-        class="w-3/4 h-full mx-auto flex flex-col lg:flex-row justify-between items-center">
-        <form class="w-full space-y-3 border border-gray-800/20 p-4 rounded-md">
+        class="w-3/5 h-full mx-auto flex flex-col lg:flex-row justify-between items-center ">
+        <form class="w-full space-y-3 border border-gray-800/20 p-4 rounded-md bg-white">
           <div
             class="w-full space-y-3 border border-inherit text-center text-gray-600 p-2">
             <h2 class="text-xl tracking-wide">Add Item Stock</h2>
