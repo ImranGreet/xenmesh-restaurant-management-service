@@ -1,16 +1,18 @@
 <template>
   <section
-    class="w-full min-h-screen bg-inherit flex flex-col justify-center items-center">
+    class="w-full min-h-screen bg-inherit flex flex-col justify-center items-center ">
     <div
-      class="max-w-full lg:max-w-7xl mx-auto border border-inherit p-3 rounded-md shadow-sm shadow-gray-300 bg-white">
-      <div class="w-full text-center border border-inherit p-2">
+      class="max-w-full lg:max-w-7xl mx-auto border border-inherit p-3 rounded-md shadow-sm shadow-gray-300 bg-white relative">
+      <div class="w-full text-center  p-2">
         <h2 class="text-xl tracking-wider leading-relax">
           Enter Product Information
         </h2>
       </div>
       <div class="bg-inherit w-full">
-        <form @submit.prevent="" class="w-full flex flex-col justify-between items-center gap-y-2">
-          <div class="w-full border border-inherit p-2 space-y-2">
+        <form
+          @submit.prevent=""
+          class="w-full flex flex-col justify-between items-center gap-y-2 ">
+          <div class="w-full  p-2 space-y-2">
             <label for="product_title">Product Title</label>
             <input
               type="text"
@@ -21,8 +23,8 @@
           </div>
 
           <div
-            class="w-full flex justify-between items-center border border-inherit p-2 gap-x-2">
-            <div class="w-full border p-2 space-y-2">
+            class="w-full flex justify-between items-center  p-3 gap-x-2">
+            <div class="w-full  p-2 space-y-2">
               <label
                 for="countries"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -38,7 +40,7 @@
                 <option value="Fruits">Fruits</option>
               </select>
             </div>
-            <div class="w-full border p-2 space-y-2">
+            <div class="w-full  space-y-2">
               <label for="product_title">Price</label>
               <input
                 type="number"
@@ -105,7 +107,7 @@
               placeholder="Write your thoughts here..."></textarea>
           </div>
 
-          <div class="w-full border p-2 space-y-2">
+          <div class="w-full  p-2 space-y-2">
             <label
               for="submit_button"
               class="sr-only"
@@ -118,6 +120,11 @@
           </div>
         </form>
       </div>
+      <button
+        @click="showOverlayoutOnOff()"
+        class="absolute top-0 right-0 animate-pulse border border-stone-800 rounded-full text-base lg:hover:text-gray-800 group hover:bg-red-600/70 hover:border-none hover:shadow-sm">
+        <XMarkIcon class="w-6 h-6 text-gray-950 group-hover:text-white" />
+      </button>
     </div>
   </section>
 </template>
@@ -125,11 +132,14 @@
 <script>
 import { ref } from 'vue';
 import ProductImage from '../../../pages/Admin/Form/ProductImage.vue';
+import { XMarkIcon } from '@heroicons/vue/24/solid';
+import { showOverlayoutOnOff } from '../../../scripts/public/modal/modal';
 
 export default {
   name: 'AddProduct',
   components: {
     ProductImage,
+    XMarkIcon,
   },
   setup() {
     const imageOne = ref(
@@ -146,6 +156,8 @@ export default {
       imageOne,
       imageTwo,
       imageThree,
+      /*methods*/
+      showOverlayoutOnOff,
     };
   },
 };

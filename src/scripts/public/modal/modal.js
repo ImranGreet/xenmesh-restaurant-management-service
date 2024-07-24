@@ -6,6 +6,7 @@ const productDetails = ref('');
 const productComposition = ref([]);
 const productTitle = ref('');
 const showOverlayout = ref(false);
+const showOverlayoutAdmin = ref(false);
 
 const getItemDetails = function (idParam) {
   const getProductToShowDesc = items.find(item => item.id == idParam);
@@ -21,9 +22,18 @@ const getItemDetails = function (idParam) {
   document.body.classList.add('body-scroll-hide');
 };
 
+
+/*Admin Modal Show*/
+const showProductAddForm = function(){
+  showOverlayoutAdmin.value = true;
+  document.body.classList.add('body-scroll-hide');
+}
+
 const showOverlayoutOnOff = function () {
   if (showOverlayout.value) {
     showOverlayout.value = false;
+  }else if(showOverlayoutAdmin.value){
+    showOverlayoutAdmin.value=false;
   }
   document.body.classList.remove('body-scroll-hide');
 };
@@ -34,6 +44,9 @@ export {
   productComposition,
   showOverlayout,
   productTitle,
+  showOverlayoutAdmin,
+  /*Methods*/
   showOverlayoutOnOff,
   getItemDetails,
+  showProductAddForm
 };

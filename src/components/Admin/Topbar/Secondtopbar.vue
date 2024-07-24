@@ -6,7 +6,7 @@
         <router-link
           :to="{ name: 'public-home' }"
           target="_blank"
-          class="smallSearch border bordr-inherit rounded-sm p-1 bg-lime-600 text-white">
+          class="smallSearch border bordr-inherit rounded-sm p-1 bg-blue-600 text-white">
           Client Site
         </router-link>
         <button

@@ -63,12 +63,7 @@ const useLeftSideBarRouterLink = ref([
         uri: 'products',
         name: 'products house',
       },
-      {
-        id: 2,
-        params: 'Add Products',
-        uri: 'insert_product',
-        name: 'insert_product',
-      },
+     
     ],
   },
 

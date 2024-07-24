@@ -23,11 +23,7 @@ const routes = [
         name: 'products house',
         component: () => import('../pages/Admin/Products/ProductHouse.vue'),
       },
-      {
-        path: 'insert_product',
-        name: 'insert_product',
-        component: () => import('../pages/Admin/Form/InsertProduct.vue'),
-      },
+
       {
         path: 'insert_categories',
         name: 'insert category',

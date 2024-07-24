@@ -170,8 +170,7 @@
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                   <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
+                    
                     {{ expense.paymentMethod }}
                   </div>
                 </td>

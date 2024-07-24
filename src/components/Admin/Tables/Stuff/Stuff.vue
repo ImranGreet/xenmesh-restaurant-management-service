@@ -8,7 +8,7 @@
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-              class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
+              class="text-md text-white sticky top-0 bg-lime-600 capitalize  dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th class="bg-white"></th>
                 <th
@@ -35,7 +35,7 @@
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
-                  Emrgency Contact
+                   Contact
                 </th>
                 <th
                   scope="col"

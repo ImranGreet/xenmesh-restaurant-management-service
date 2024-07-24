@@ -3,7 +3,7 @@
     ref="fullscreenElement"
     class="h-screen bg-gray-100">
     <Topbardesktop
-      class="float-right top-0 right-0 w-full static px-2 z-[699]"
+      class="float-right top-0 right-0 w-full static px-2 z-[50]"
       :class="{
         'sm:w-[70%] xl:w-[85%] fixed toggle-screen-animation': !sidebarView,
         'sm:w-[90%] xl:w-[95%] fixed toggle-screen-animation': sidebarView,
@@ -47,6 +47,11 @@
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
     </div>
+    <div
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
+      :class="{ hidden: !showOverlayoutAdmin, block: showOverlayoutAdmin }">
+      <AddProduct />
+    </div>
   </section>
 </template>
 
@@ -57,6 +62,8 @@ import Rightsidebar from './Rightsidebar.vue';
 import Logo from '../components/Admin/Topbar/Logo.vue';
 import Footer from '../components/Admin/Footer/Footer.vue';
 import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
+import AddProduct from "../components/Admin/Form/AddProduct.vue"
+
 
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
@@ -71,8 +78,9 @@ import {
   customWidth,
 } from '../scripts/Admin/Layout/layoutonresize';
 import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink';
-import { showOverlayout } from '../scripts/public/modal/modal';
+import { showOverlayout,showOverlayoutAdmin } from '../scripts/public/modal/modal';
 import { TopbardesktopColor } from '../scripts/Admin/Settings/settingcontroller';
+
 
 export default {
   name: 'Admin',
@@ -83,6 +91,7 @@ export default {
     Logo,
     Footer,
     ProductDescription,
+    AddProduct
   },
   setup() {
     return {
@@ -93,6 +102,7 @@ export default {
       mobileView,
       showOverlayout,
       TopbardesktopColor,
+      showOverlayoutAdmin,
       /*compose function*/
       sidebarController,
       discloseMenuBarOnHover,
