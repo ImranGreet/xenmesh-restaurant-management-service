@@ -29,18 +29,18 @@
 
         <div>
           <label class="block text-sm font-medium text-gray-700">Product Images</label>
-          <div class="mt-2 flex space-x-4">
+          <div class="mt-2 flex space-x-4 justify-between">
             <div class="relative">
               <img :src="imageOne" alt="" class="w-36 h-24 object-cover rounded-md border border-gray-300"/>
-              <button class="absolute top-1 right-1 text-red-500 bg-white rounded-full p-1 shadow-md hover:bg-red-100 focus:outline-none">x</button>
+              <button class="absolute top-0 right-0 text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none">x</button>
             </div>
             <div class="relative">
               <img :src="imageTwo" alt="" class="w-36 h-24 object-cover rounded-md border border-gray-300"/>
-              <button class="absolute top-1 right-1 text-red-500 bg-white rounded-full p-1 shadow-md hover:bg-red-100 focus:outline-none">x</button>
+              <button class="absolute top-0 right-0 text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none">x</button>
             </div>
             <div class="relative">
               <img :src="imageThree" alt="" class="w-36 h-24 object-cover rounded-md border border-gray-300"/>
-              <button class="absolute top-1 right-1 text-red-500 bg-white rounded-full p-1 shadow-md hover:bg-red-100 focus:outline-none">x</button>
+              <button class="absolute top-0 right-0 text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none">x</button>
             </div>
           </div>
           <div class="mt-4">
