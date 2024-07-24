@@ -32,7 +32,7 @@
           @click="createPaymentId()"
           class="my-3 border border-red-500 rounded p-3">
           <img
-            src="../../../assets/BKash_logo.svg.png"
+            src="../../../assets/images/BKash_logo.svg.png"
             alt=""
             class="w-20 h-20 rounded-md" />
         </button>
