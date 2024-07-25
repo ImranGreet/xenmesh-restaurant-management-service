@@ -17,7 +17,7 @@
               @click="showGridItems('flex')"
               id="flexViweres"
               :class="{
-                'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md':
+                'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md toggle-screen-animation':
                   flexColor,
                 'bg-auto ': !flexColor,
               }">
@@ -28,7 +28,7 @@
               @click="showGridItems('grid')"
               id="gridViewres"
               :class="{
-                'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md':
+                'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md toggle-screen-animation':
                   gridColor,
                 'bg-auto': !gridColor,
               }">

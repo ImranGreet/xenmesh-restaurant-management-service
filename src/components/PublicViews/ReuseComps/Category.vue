@@ -51,5 +51,8 @@ export default {
     0 4px 6px -4px rgb(0 0 0 / 0.8);
   --tw-shadow-color: #b91c1c;
   opacity: 0.9;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+  transition-duration: 500ms;
 }
 </style>
