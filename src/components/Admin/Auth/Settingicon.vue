@@ -1,69 +1,49 @@
 <template>
-  <div class="bg-inherit px-3 py-2 w-full">
-    <div
-      class="w-full md:w-4/5 lg:3/4 xl:w-1/2 mx-auto border border-gray-600/25 rounded-lg bg-white p-5">
-      <FormHeadLine>Add Setting Image</FormHeadLine>
+  <div class="bg-gray-100 px-4 py-6 w-full h-full flex justify-center items-center">
+    <div class="w-full md:w-4/5 lg:w-3/4 xl:w-1/2 mx-auto border border-gray-300 rounded-lg bg-white p-6 shadow-lg">
+      <FormHeadLine class="text-2xl font-semibold text-gray-700 mb-6">Add Setting Image</FormHeadLine>
       <form
         @submit.prevent="addSetting()"
-        class="w-full flex flex-col justify-between items-center gap-y-5 shadow-sm shadow-gray-300 p-5">
-        <div
-          class="px-2 w-full space-y-3 border border-gray-200 py-3 rounded-md">
-          <label for="icon">Icon Name</label>
+        class="w-full flex flex-col gap-y-6"
+      >
+        <div class="w-full">
+          <label for="icon" class="block text-gray-600 font-medium mb-2">Icon Name</label>
           <input
             type="text"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-200 rounded-lg px-4 py-2"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-indigo-200 transition duration-200"
             name="icon"
-            placeholder="Enter Icon Name" />
+            placeholder="Enter Icon Name"
+          />
         </div>
-        <div
-          class="px-2 w-full space-y-3 border border-gray-200 py-3 rounded-md">
-          <label for="icon">Category</label>
+        <div class="w-full">
+          <label for="category" class="block text-gray-600 font-medium mb-2">Category</label>
           <input
             type="text"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-200 rounded-lg px-4 py-2"
-            name="icon"
-            placeholder="Enter Icon Category" />
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-indigo-200 transition duration-200"
+            name="category"
+            placeholder="Enter Icon Category"
+          />
         </div>
-        <div
-          class="px-2 py-3 w-full space-y-3 border border-gray-200 rounded-md">
-          <label for="icon">Icon Image</label>
+        <div class="w-full">
+          <label for="iconImage" class="block text-gray-600 font-medium mb-2">Icon Image</label>
           <input
             type="file"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-200 rounded-lg px-4 py-2"
-            name="icon" />
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-indigo-200 transition duration-200"
+            name="iconImage"
+          />
         </div>
-        <div class="px-2 py-1 w-full">
-          <authsubmitBtn>Submit</authsubmitBtn>
+        <div class="w-full">
+          <authsubmitBtn >Submit</authsubmitBtn>
         </div>
       </form>
     </div>
   </div>
 </template>
 
-<!-- <script>
-import FormHeadLine from './FormHeadLine.vue';
-export default {
-  name: 'Settingicon',
-  components: { FormHeadLine },
-  setup() {
-    const addSetting = function () {
-      console.log('Settings');
-    };
-    return {
-      addSetting,
-    };
-  },
-};
-</script> -->
-
-
 <script setup>
 import FormHeadLine from './FormHeadLine.vue';
-name: 'Settingicon';
 
-const addSetting = function () {
+const addSetting = () => {
   console.log('Settings');
 };
 </script>
-
-
