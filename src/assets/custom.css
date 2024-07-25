@@ -26,6 +26,28 @@
 
 
 
+.disclose-modal-form {
+  animation-name: movingTheModalForm;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movingTheModalForm {
+  0% {
+    margin-top: -50px;
+    --tw-shadow-color: #fde3e3;
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+
+  100% {
+    margin-top: 100px;
+    background-color: white;
+  }
+}
+
+
+
 .topbarLayout {
   width: 83% !important;
 }

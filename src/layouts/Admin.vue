@@ -50,7 +50,7 @@
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
       :class="{ hidden: !showOverlayoutAdmin, block: showOverlayoutAdmin }">
-      <AddProduct />
+      <AddProduct :AnimationProperty="showOverlayoutAdmin" />
     </div>
   </section>
 </template>
