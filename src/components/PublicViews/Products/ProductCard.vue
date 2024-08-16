@@ -7,7 +7,10 @@
     }">
     <div
       class="flex flex-col justify-center items-center rounded-t-2xl"
-      :class="{ 'w-full toggle-screen-animation': !gridView, 'w-3/5 toggle-screen-animation': gridView }">
+      :class="{
+        'w-full toggle-screen-animation': !gridView,
+        'w-3/5 toggle-screen-animation': gridView,
+      }">
       <img
         :src="image"
         loading="lazy"
@@ -21,7 +24,8 @@
     <div
       class="px-1 md:px-2 xl:px-3 w-full"
       :class="{
-        'py-1 md:py-2 lg:py-3 xl:py-5 space-y-3 toggle-screen-animation': !gridView,
+        'py-1 md:py-2 lg:py-3 xl:py-5 space-y-3 toggle-screen-animation':
+          !gridView,
         'py-1 space-y-0 toggle-screen-animation': gridView,
       }">
       <div class="py-0 space-y-2">

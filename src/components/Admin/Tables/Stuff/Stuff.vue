@@ -8,7 +8,7 @@
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-              class="text-md text-white sticky top-0 bg-lime-600 capitalize  dark:bg-gray-700 dark:text-gray-400">
+              class="text-md text-white sticky top-0 bg-lime-600 capitalize dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th class="bg-white"></th>
                 <th
@@ -35,7 +35,7 @@
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
-                   Contact
+                  Contact
                 </th>
                 <th
                   scope="col"
@@ -52,7 +52,7 @@
                   class="px-4 py-3 border border-slate-300">
                   Vacation Period
                 </th>
-               
+
                 <th
                   scope="col"
                   class="px-4 py-3 border border-slate-300">
@@ -98,9 +98,11 @@
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <span class="font-bold">Regular </span> {{ stuff.ContactInformation }}
+                  <span class="font-bold">Regular </span>
+                  {{ stuff.ContactInformation }}
                   <br />
-                 <span class="font-bold">Emergency</span> {{ stuff.EmergencyContactInformation }}
+                  <span class="font-bold">Emergency</span>
+                  {{ stuff.EmergencyContactInformation }}
                 </td>
 
                 <td
@@ -109,22 +111,38 @@
                 </td>
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  
                   <span class="flex flex-col">
-                    <span>  <span class="font-bold">Sallary</span>  ${{ stuff.SalaryWage }}</span>
-                    <span>  <span class="font-bold">Benifits</span> {{ stuff.Benefits }}</span>
+                    <span>
+                      <span class="font-bold">Sallary</span> ${{
+                        stuff.SalaryWage
+                      }}</span
+                    >
+                    <span>
+                      <span class="font-bold">Benifits</span>
+                      {{ stuff.Benefits }}</span
+                    >
                   </span>
                 </td>
                 <td class="px-4 py-2 border border-slate-300 text-center">
-                  {{ stuff.VacationTime }} 
-                  <span> Day
-                    <span :class="{'inline-block':stuff.VacationTime>1,'hidden':stuff.VacationTime===1||stuff.VacationTime===0}"> s</span> 
-                </span>
+                  {{ stuff.VacationTime }}
+                  <span>
+                    Day
+                    <span
+                      :class="{
+                        'inline-block': stuff.VacationTime > 1,
+                        hidden:
+                          stuff.VacationTime === 1 || stuff.VacationTime === 0,
+                      }">
+                      s</span
+                    >
+                  </span>
                 </td>
-                
+
                 <td
-                  class="px-4 py-2 h-full  font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 "
-                  :class="{'flex flex-col gap-y-1':stuff.TrainingRecords.length>1}">
+                  class="px-4 py-2 h-full font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300"
+                  :class="{
+                    'flex flex-col gap-y-1': stuff.TrainingRecords.length > 1,
+                  }">
                   <span
                     v-for="(record, index) in stuff.TrainingRecords"
                     :key="index"

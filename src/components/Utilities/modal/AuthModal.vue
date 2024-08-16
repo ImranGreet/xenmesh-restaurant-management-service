@@ -22,7 +22,7 @@
         class="w-full flex flex-col justify-start items-start px-4 space-y-4 py-6">
         <li class="border-b w-full py-2 border-gray-300/25">
           <router-link
-           target="_blank"
+            target="_blank"
             class="lg:hover:text-blue-600"
             :to="{ name: 'admin' }">
             <span>

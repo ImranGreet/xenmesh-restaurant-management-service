@@ -9,20 +9,48 @@
 }
 
 /* components of tailwindcss */
+
 @layer components {
   .product-hover {
     @apply lg:hover:shadow-lg overflow-hidden lg:hover:delay-100 lg:hover:duration-200 lg:hover:ease-in-out;
   }
 
+  .full-screen-center {
+    @apply w-full min-h-screen flex flex-col justify-center items-center;
+  }
 
+  /* form */
+  .form-container {
+    @apply w-full md:w-4/5 lg:w-3/4 xl:w-1/2 mx-auto border border-gray-800/25 rounded-lg bg-white;
+  }
+  .form-title-box {
+    @apply w-full text-center  rounded-t-xl;
+  }
+  .form-title {
+    @apply text-2xl font-semibold text-gray-800;
+  }
+  .form-element-container {
+    @apply w-full flex flex-col justify-between items-center gap-y-5;
+  }
+  .form__input--field,
+  .form__input--file {
+    @apply block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  .form-submit-btn {
+    @apply w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  }
+  .message-box {
+    @apply block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500;
+  }
+  /* image preview */
+  .preview-image-item {
+    @apply text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none;
+  }
 }
-
-
 
 /* transitions */
 
 .toggle-screen-animation {
   @apply transition-all duration-500;
 }
-
-

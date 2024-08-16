@@ -22,18 +22,17 @@ const getItemDetails = function (idParam) {
   document.body.classList.add('body-scroll-hide');
 };
 
-
 /*Admin Modal Show*/
-const showProductAddForm = function(){
+const showProductAddForm = function () {
   showOverlayoutAdmin.value = true;
   document.body.classList.add('body-scroll-hide');
-}
+};
 
 const showOverlayoutOnOff = function () {
   if (showOverlayout.value) {
     showOverlayout.value = false;
-  }else if(showOverlayoutAdmin.value){
-    showOverlayoutAdmin.value=false;
+  } else if (showOverlayoutAdmin.value) {
+    showOverlayoutAdmin.value = false;
   }
   document.body.classList.remove('body-scroll-hide');
 };
@@ -48,5 +47,5 @@ export {
   /*Methods*/
   showOverlayoutOnOff,
   getItemDetails,
-  showProductAddForm
+  showProductAddForm,
 };

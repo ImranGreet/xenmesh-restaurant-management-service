@@ -17,8 +17,13 @@
       </div>
       <div
         class="text-center"
-        :class="{ 'hidden toggle-screen-animation': mobileView || sidebarView }">
-        <h1 class="tracking-wide font-semibold lg:text-base toggle-screen-animation">Xenmesh</h1>
+        :class="{
+          'hidden toggle-screen-animation': mobileView || sidebarView,
+        }">
+        <h1
+          class="tracking-wide font-semibold lg:text-base toggle-screen-animation">
+          Xenmesh
+        </h1>
       </div>
     </router-link>
     <button class="inline-block md:hidden">

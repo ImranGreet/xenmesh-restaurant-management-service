@@ -1,15 +1,14 @@
 <template>
-  <section
-    class="w-full min-h-screen bg-gray-100/60 flex flex-col justify-center items-center p-6">
+  <section class="full-screen-center bg-gray-100/60 p-6">
     <div
       class="w-full max-w-3xl bg-white border border-gray-200 p-6 rounded-lg shadow-lg relative"
       :class="{
-        'disclose-modal-form': showAnimation,
-        '': !showAnimation,
+        'toggle-screen-animation': showAnimation,
+        'toggle-screen-animation': !showAnimation,
       }">
       <div class="text-center mb-6">
         <h2 class="text-2xl font-semibold text-gray-800">
-          Enter Product Information 
+          Enter Product Information
         </h2>
       </div>
       <form
@@ -25,7 +24,7 @@
             type="text"
             id="product_title"
             placeholder="Enter Product Title or name"
-            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+            class="mt-1 form__input--field" />
         </div>
 
         <div class="flex space-x-4">
@@ -37,7 +36,7 @@
             </label>
             <select
               id="category"
-              class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+              class="mt-1 form__input--field">
               <option selected>Choose a Category</option>
               <option value="Pasta">Pasta</option>
               <option value="Dessert">Dessert</option>
@@ -55,7 +54,7 @@
               type="number"
               id="price"
               placeholder="Enter Product price"
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+              class="mt-1 form__input--field" />
           </div>
         </div>
 
@@ -69,8 +68,7 @@
                 :src="imageOne"
                 alt=""
                 class="w-36 h-24 object-cover rounded-md border border-gray-300" />
-              <button
-                class="absolute top-0 right-0 text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none">
+              <button class="absolute top-0 right-0 preview-image-item">
                 x
               </button>
             </div>
@@ -79,8 +77,7 @@
                 :src="imageTwo"
                 alt=""
                 class="w-36 h-24 object-cover rounded-md border border-gray-300" />
-              <button
-                class="absolute top-0 right-0 text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none">
+              <button class="absolute top-0 right-0 preview-image-item">
                 x
               </button>
             </div>
@@ -89,8 +86,7 @@
                 :src="imageThree"
                 alt=""
                 class="w-36 h-24 object-cover rounded-md border border-gray-300" />
-              <button
-                class="absolute top-0 right-0 text-white bg-slate-600 rounded-full w-5 h-5 flex flex-col justify-center items-center p-1 shadow-md hover:bg-red-600 focus:outline-none">
+              <button class="absolute top-0 right-0 preview-image-item">
                 x
               </button>
             </div>
@@ -98,7 +94,7 @@
           <div class="mt-4">
             <input
               type="file"
-              class="block w-full text-sm text-gray-700 bg-gray-50 border border-gray-300 rounded-md cursor-pointer focus:outline-none" />
+              class="form__input--file" />
           </div>
         </div>
 
@@ -111,14 +107,14 @@
           <textarea
             id="message"
             rows="4"
-            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            class="mt-1 message-box"
             placeholder="Write your thoughts here..."></textarea>
         </div>
 
         <div>
           <button
             type="submit"
-            class="w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            class="form-submit-btn">
             Submit
           </button>
         </div>
@@ -150,13 +146,13 @@ export default {
   },
   setup(props) {
     const imageOne = ref(
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     );
     const imageTwo = ref(
-      'https://images.unsplash.com/photo-1515041761709-f9fc96e04cd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      'https://images.unsplash.com/photo-1515041761709-f9fc96e04cd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     );
     const imageThree = ref(
-      'https://plus.unsplash.com/premium_photo-1663855531876-579d7016bb1e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      'https://plus.unsplash.com/premium_photo-1663855531876-579d7016bb1e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     );
 
     const showAnimation = ref(props.AnimationProperty);
@@ -165,7 +161,7 @@ export default {
       () => props.AnimationProperty,
       (newVal, oldVal) => {
         showAnimation.value = newVal;
-      }
+      },
     );
 
     return {

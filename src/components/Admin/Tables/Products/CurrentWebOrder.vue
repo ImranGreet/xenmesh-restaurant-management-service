@@ -3,18 +3,17 @@
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-auto bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-       
-        <div class="overflow-auto max-h-[450px] min-h-[220px] table-container rounded-t-lg">
-          
+        <div
+          class="overflow-auto max-h-[450px] min-h-[220px] table-container rounded-t-lg">
           <table
             class="w-full text-sm h-full text-left text-gray-500 dark:text-gray-400 border border-slate-100">
             <caption
-            class="caption-top py-2 bg-gray-800 overflow-auto text-white px-2 text-start text-xl">
-            Table 2: Recent Customer Order from Web
-          </caption>
+              class="caption-top py-2 bg-gray-800 overflow-auto text-white px-2 text-start text-xl">
+              Table 2: Recent Customer Order from Web
+            </caption>
 
             <thead
-              class="text-xs  uppercase sticky top-0 bg-lime-600 text-white dark:bg-gray-700 dark:text-gray-400  overflow-hidden">
+              class="text-xs uppercase sticky top-0 bg-lime-600 text-white dark:bg-gray-700 dark:text-gray-400 overflow-hidden">
               <tr>
                 <th
                   scope="col"
@@ -43,7 +42,7 @@
                 </th>
                 <th
                   scope="col"
-                  class="px-4 py-1 border border-slate-300 ">
+                  class="px-4 py-1 border border-slate-300">
                   Payment Method
                 </th>
                 <th
@@ -134,7 +133,7 @@ export default {
   components: { EyeIcon, PencilIcon, TrashIcon, UserCircleIcon },
   setup() {
     const orderInWeb = order.filter(webItem => webItem.order_type === 'web');
-    
+
     return {
       orderInWeb,
     };

@@ -43,7 +43,7 @@
       :class="{ hidden: !orderItems, block: orderItems }"></div>
 
     <div
-      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen  z-[1000]"
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[1000]"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
     </div>

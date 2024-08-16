@@ -1,7 +1,8 @@
 <template>
   <div class="bg-gray-700 xl:bg-inherit w-ful">
-    <form @submit.prevent="submitOrderFromHouse()"
-         class="w-full flex flex-col justify-between items-center">
+    <form
+      @submit.prevent="submitOrderFromHouse()"
+      class="w-full flex flex-col justify-between items-center">
       <div
         class="w-full space-y-2 border border-gray-200/25 px-2 py-1 2xl:py-3 bg-pink-600 text-white rounded-t-lg">
         <h1 class="w-full text-base 2xl:text-xl">
@@ -47,7 +48,8 @@
           type="text"
           name=""
           id=""
-          class="w-full text-center px-4 py-1 focus:outline-none" readonly/>
+          class="w-full text-center px-4 py-1 focus:outline-none"
+          readonly />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
@@ -60,7 +62,8 @@
           type="text"
           name=""
           id=""
-          class="w-full text-center px-4 py-1 focus:outline-none" readonly />
+          class="w-full text-center px-4 py-1 focus:outline-none"
+          readonly />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
@@ -135,7 +138,8 @@
           type="text"
           name=""
           id=""
-          class="w-full text-center px-4 py-1 focus:outline-none" readonly />
+          class="w-full text-center px-4 py-1 focus:outline-none"
+          readonly />
       </div>
       <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
         <label
@@ -148,7 +152,8 @@
           type="text"
           name=""
           id=""
-          class="w-full text-center px-4 py-1 focus:outline-none" readonly />
+          class="w-full text-center px-4 py-1 focus:outline-none"
+          readonly />
       </div>
       <!-- confirm button -->
       <button
@@ -198,9 +203,9 @@ export default {
       }
     });
 
-    const submitOrderFromHouse = async function(){
-      console.log("Order Submitted");
-    }
+    const submitOrderFromHouse = async function () {
+      console.log('Order Submitted');
+    };
 
     return {
       subtotalPrice,
@@ -218,7 +223,7 @@ export default {
       amountToBePay,
       selectDeliveryWay,
       paymentAndChange,
-      submitOrderFromHouse
+      submitOrderFromHouse,
     };
   },
 };

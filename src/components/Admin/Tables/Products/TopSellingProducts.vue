@@ -12,9 +12,7 @@
             </caption>
 
             <thead
-            
-            class="text-xs  uppercase sticky top-0 bg-lime-600 text-white dark:bg-gray-700 dark:text-gray-400  overflow-hidden">
-           
+              class="text-xs uppercase sticky top-0 bg-lime-600 text-white dark:bg-gray-700 dark:text-gray-400 overflow-hidden">
               <tr>
                 <th
                   scope="col"

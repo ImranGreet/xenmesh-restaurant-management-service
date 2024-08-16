@@ -19,9 +19,7 @@
         <input
           type="text"
           placeholder="Search"
-          class="px-3 sm:px-8 md:px-10 lg:px-12 py-1.5 lg:py-2.5 border
-           border-blue-100 placeholder:text-bold placeholder:text-gray-950
-            placeholder:pl-6 focus:outline-none rounded-sm hidden sm:inline" />
+          class="px-3 sm:px-8 md:px-10 lg:px-12 py-1.5 lg:py-2.5 border border-blue-100 placeholder:text-bold placeholder:text-gray-950 placeholder:pl-6 focus:outline-none rounded-sm hidden sm:inline" />
         <button
           class="p-1 sm:p-1.5 md:p-2 bg-blue-600 text-white rounded-sm hidden sm:inline">
           Search

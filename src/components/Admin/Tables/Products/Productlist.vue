@@ -328,8 +328,6 @@
   </section>
 </template>
 
-
-
 <script setup>
 import { showProductAddForm } from '../../../../scripts/public/modal/modal';
 import products from '../../../../DB/products';

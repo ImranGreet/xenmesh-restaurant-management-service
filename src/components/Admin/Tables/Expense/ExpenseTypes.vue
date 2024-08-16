@@ -27,11 +27,12 @@
               class="w-12 h-12 border border-pink-200 rounded-md p-2" />
           </TableCard>
         </div>
-        <div class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg bg-white z-50">
+        <div
+          class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg bg-white z-50">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-            class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
+              class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th class="bg-white"></th>
                 <th class="bg-white"></th>
@@ -130,20 +131,20 @@
                   <span>{{ type.Date }}</span>
                 </td>
                 <td
-                class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                <div class="flex justify-center items-center gap-x-2">
-                  <button class="text-gray-900">
-                    <PencilSquareIcon class="inline-block w-4 h-4" />
-                  </button>
-                  <button class="text-green-800">
-                    <ShieldCheckIcon class="inline-block w-4 h-4" />
-                  </button>
-                  <button class="text-pink-600">
-                    <TrashIcon class="inline-block w-4 h-4" />
-                  </button>
-                </div>
-              </td>
-              <td></td>
+                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
+                  <div class="flex justify-center items-center gap-x-2">
+                    <button class="text-gray-900">
+                      <PencilSquareIcon class="inline-block w-4 h-4" />
+                    </button>
+                    <button class="text-green-800">
+                      <ShieldCheckIcon class="inline-block w-4 h-4" />
+                    </button>
+                    <button class="text-pink-600">
+                      <TrashIcon class="inline-block w-4 h-4" />
+                    </button>
+                  </div>
+                </td>
+                <td></td>
               </tr>
             </tbody>
           </table>

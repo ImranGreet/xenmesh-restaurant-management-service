@@ -2,50 +2,6 @@
   overflow: hidden !important;
 }
 
-/* animation */
-
-.disclose-modal {
-  animation-name: movingTheModal;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes movingTheModal {
-  0% {
-    margin-bottom: 20px;
-    --tw-shadow-color: #fde3e3;
-    --tw-shadow: var(--tw-shadow-colored);
-  }
-
-  100% {
-    margin-bottom: 200px;
-    background-color: white;
-  }
-}
-
-.disclose-modal-form {
-  animation-name: movingTheModalForm;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes movingTheModalForm {
-  0% {
-    margin-top: -50px;
-    --tw-shadow-color: #fde3e3;
-    --tw-shadow: var(--tw-shadow-colored);
-  }
-
-  100% {
-    margin-top: 100px;
-    background-color: white;
-  }
-}
-
-
-
 .topbarLayout {
   width: 83% !important;
 }
@@ -91,7 +47,6 @@
 .table-container::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;

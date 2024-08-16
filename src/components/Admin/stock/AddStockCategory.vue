@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-inherit h-full">
-    <div class="w-full h-full ">
+    <div class="w-full h-full">
       <div
         class="w-full h-full flex flex-col lg:flex-row justify-between items-center">
         <form

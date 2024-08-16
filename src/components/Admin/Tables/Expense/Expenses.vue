@@ -170,7 +170,6 @@
                 <td
                   class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
                   <div class="flex items-center">
-                    
                     {{ expense.paymentMethod }}
                   </div>
                 </td>
@@ -370,7 +369,7 @@ export default {
       filterProducts(
         currentDate.value,
         lastdate.value,
-        selectedPaymentOption.value
+        selectedPaymentOption.value,
       );
     };
 

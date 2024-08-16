@@ -9,7 +9,7 @@
           <label for="icon">Icon Name</label>
           <input
             type="text"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-600 rounded-lg px-4 py-2"
+            class="form__input--field"
             name="icon"
             placeholder="Enter Icon Name" />
         </div>
@@ -17,7 +17,7 @@
           <label for="icon">Category</label>
           <input
             type="text"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-600 rounded-lg px-4 py-2"
+            class="form__input--field"
             name="icon"
             placeholder="Enter Icon Category" />
         </div>
@@ -25,7 +25,7 @@
           <label for="icon">Icon Image</label>
           <input
             type="file"
-            class="w-full focus:outline-none text-start placeholder:text-gray-950 bg-inherit border border-gray-600 rounded-lg px-4 py-2"
+            class="form__input--file"
             name="icon" />
         </div>
         <div class="px-2 py-1 w-full">
