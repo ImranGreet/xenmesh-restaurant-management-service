@@ -13,12 +13,7 @@ const useLeftSideBarRouterLink = ref([
         uri: '#',
         name: 'expense',
       },
-      {
-        id: 2,
-        params: 'expense types',
-        uri: '#',
-        name: 'expense types',
-      },
+      
     ],
   },
 

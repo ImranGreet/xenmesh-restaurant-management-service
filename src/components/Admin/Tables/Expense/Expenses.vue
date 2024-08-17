@@ -1,88 +1,9 @@
 <template>
   <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
     <div class="px-4 mx-auto w-full">
+      <SearchFormUtility />
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <ShowButton
-          @click="searchFormShower()"
-          class="my-3 ml-2 tracking-widest"
-          :class="{ inline: !searchForm, hidden: searchForm }"
-          >Filter</ShowButton
-        >
-
-        <Transition name="nested">
-          <div
-            v-if="searchForm"
-            class="w-full flex-col py-3 bg-gary-800/50 lg:bg-gray-600/50 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4 relative"
-            :class="{ flex: searchForm, hidden: !searchForm }">
-            <div
-              class="w-full lg:w-4/5 mx-auto border border-pink-500/30 rounded-lg py-5 px-5 shadow-sm shadow-white">
-              <form
-                @submit.prevent="submitForm()"
-                class="w-full flex flex-col lg:flex-row justify-between items-center gap-y-3 gap-x-0 lg:gap-x-3 lg:gap-y-0">
-                <div class="space-y-2 w-full lg:w-auto">
-                  <label
-                    for="start_date"
-                    class="text-white"
-                    >Start Date</label
-                  >
-                  <input
-                    v-model="currentDate"
-                    type="date"
-                    name=""
-                    id=""
-                    min="2023-01-01"
-                    max="2024-12-31"
-                    class="w-full focus:outline-none px-4 py-2" />
-                </div>
-                <div class="space-y-2 w-full lg:w-auto">
-                  <label
-                    for="start_date"
-                    class="text-white"
-                    >End Date</label
-                  >
-                  <input
-                    v-model="lastdate"
-                    type="date"
-                    name=""
-                    id=""
-                    class="w-full focus:outline-none px-4 py-2" />
-                </div>
-                <div class="space-y-2 w-full lg:w-auto">
-                  <label
-                    for="start_date"
-                    class="text-white"
-                    >Category</label
-                  >
-                  <select
-                    v-model="selectedPaymentOption"
-                    id="countries"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option selected>Select a method</option>
-                    <option
-                      :value="method"
-                      v-for="(method, index) in arrayofMethods"
-                      :key="index">
-                      {{ method }}
-                    </option>
-                  </select>
-                </div>
-                <div class="space-y-2 w-full lg:w-auto">
-                  <TableButton
-                    class="w-full mt-auto lg:mt-8 lg:w-auto bg-blue-600 text-white"
-                    >Search</TableButton
-                  >
-                </div>
-              </form>
-            </div>
-            <button
-              @click="searchFormShower()"
-              class="w-8 h-8 flex flex-col justify-center items-center absolute top-2 right-2 text-white bg-red-500 rounded-full">
-              X
-            </button>
-          </div>
-        </Transition>
-
         <div class="layout">
           <div class="layout__inner">
             <div class="table-wrapper custom-overflowscroll">
@@ -296,6 +217,7 @@
 <script>
 import { onMounted, onUnmounted, ref } from 'vue';
 import TableButton from '../../../Utilities/actionButtons/TableButton.vue';
+import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
 import {
   searchForm,
   searchFormShower,
@@ -312,6 +234,7 @@ export default {
   name: 'Expenses',
   components: {
     TableButton,
+    SearchFormUtility,
   },
   setup() {
     let expensesToShow = ref([]);
@@ -355,7 +278,7 @@ export default {
       filterProducts(
         currentDate.value,
         lastdate.value,
-        selectedPaymentOption.value,
+        selectedPaymentOption.value
       );
     };
 
