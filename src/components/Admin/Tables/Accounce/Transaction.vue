@@ -68,122 +68,110 @@
           </button>
         </div>
 
-        <div
-          class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg">
-          <table>
-            <thead
-              class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
-              <tr>
-                <th class="bg-white"></th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  Sr No
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  TRANSACTION ID
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  PAYMENT METHOD
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  ORDER SERIAL NO
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  Amount
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  Date
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-1 border border-slate-300">
-                  Action
-                </th>
-                <th class="bg-white"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(order, index) in totalOrder"
-                :key="index"
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th></th>
-                <th class="w-4 px-4 py-2 border border-slate-300">
-                  {{ index + 1 }}
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
-                    >{{ order.transaction_id }}</span
-                  >
-                </td>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
-                    >{{ order.payment_method }}</span
-                  >
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ order.order_number }}
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  450
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ order.time_placed }}
-                </td>
+        <div class="layout">
+          <div class="layout__inner">
+            <div class="table-wrapper custom-overflowscroll">
+              <table class="table">
+                <thead class="table__header">
+                  <tr class="table__row">
+                    <th class="bg-white"></th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Sr No
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      TRANSACTION ID
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      PAYMENT METHOD
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      ORDER SERIAL NO
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Amount
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Date
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Action
+                    </th>
+                    <th class="bg-white"></th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr
+                    v-for="(order, index) in totalOrder"
+                    :key="index"
+                    class="table__body-row table__body-row--hover">
+                    <th></th>
+                    <td class="w-4 px-4 py-2 border border-slate-300">
+                      {{ index + 1 }}
+                    </td>
+                    <td class="table__cell table__cell--title">
+                      <span class="badge">{{ order.transaction_id }}</span>
+                    </td>
+                    <td class="table__cell table__cell--title">
+                      <span class="badge">{{ order.payment_method }}</span>
+                    </td>
+                    <td class="table__cell table__cell--title">
+                      {{ order.order_number }}
+                    </td>
+                    <td class="table__cell table__cell--title">450</td>
+                    <td class="table__cell table__cell--title">
+                      {{ order.time_placed }}
+                    </td>
 
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex justify-center items-center gap-x-2">
-                    <button class="text-gray-900">
-                      <PencilSquareIcon class="inline-block w-4 h-4" />
-                    </button>
-                    <button class="text-green-800">
-                      <ShieldCheckIcon class="inline-block w-4 h-4" />
-                    </button>
-                    <button class="text-pink-600">
-                      <TrashIcon class="inline-block w-4 h-4" />
-                    </button>
-                  </div>
-                </td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+                    <td class="table__cell table__cell--title">
+                      <div class="flex justify-center items-center gap-x-2">
+                        <button class="text-gray-900">
+                          <PencilSquareIcon class="inline-block w-4 h-4" />
+                        </button>
+                        <button class="text-green-800">
+                          <ShieldCheckIcon class="inline-block w-4 h-4" />
+                        </button>
+                        <button class="text-pink-600">
+                          <TrashIcon class="inline-block w-4 h-4" />
+                        </button>
+                      </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
+
+        <!-- pagination -->
         <nav
-          class="flex flex-col items-start justify-between p-4 space-y-3 md:flex-row md:items-center md:space-y-0"
+          class="pagination"
           aria-label="Table navigation">
-          <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
+          <span class="pagination__info">
             Showing
-            <span class="font-semibold text-gray-900 dark:text-white"
-              >1-10</span
-            >
+            <span class="pagination__info--highlight">1-10</span>
             of
-            <span class="font-semibold text-gray-900 dark:text-white"
-              >1000</span
-            >
+            <span class="pagination__info--highlight">1000</span>
           </span>
-          <ul class="inline-flex items-stretch -space-x-px">
+          <ul class="pagination__list">
             <li>
               <a
                 href="#"
-                class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                class="pagination__prev pagination__prev-next">
                 <span class="sr-only">Previous</span>
                 <svg
                   class="w-5 h-5"
@@ -201,14 +189,14 @@
             <li>
               <a
                 href="#"
-                class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                class="pagination__item"
                 >1</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                class="pagination__item"
                 >2</a
               >
             </li>
@@ -216,28 +204,28 @@
               <a
                 href="#"
                 aria-current="page"
-                class="z-10 flex items-center justify-center px-3 py-2 text-sm leading-tight border text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                class="pagination__item pagination__item--active"
                 >3</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                class="pagination__item"
                 >...</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                class="pagination__item"
                 >100</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                class="pagination__next pagination__prev-next">
                 <span class="sr-only">Next</span>
                 <svg
                   class="w-5 h-5"

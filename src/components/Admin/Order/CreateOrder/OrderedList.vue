@@ -31,15 +31,20 @@
                 <tr
                   v-for="(item, index) in itemsToBePurchased"
                   :key="index"
-                  class="table__body-row table__body-row--hover"
-                >
+                  class="table__body-row table__body-row--hover">
                   <td class="table__cell">
                     <div class="table__checkbox-wrapper">
-                      <label class="custom-checkbox" :for="'checkbox-' + index">
-                        <input type="checkbox" :id="'checkbox-' + index"  />
+                      <label
+                        class="custom-checkbox"
+                        :for="'checkbox-' + index">
+                        <input
+                          type="checkbox"
+                          :id="'checkbox-' + index" />
                         <span class="checkmark"></span>
                       </label>
-                      <span class="table__serial">{{ Math.floor(index + 1) }}</span>
+                      <span class="table__serial">{{
+                        Math.floor(index + 1)
+                      }}</span>
                     </div>
                   </td>
                   <td class="table__cell table__cell--title">
@@ -49,8 +54,7 @@
                     <div class="table__quantity-controls">
                       <button
                         @click="increaseItemQuantity(item.id)"
-                        class="button button--increase"
-                      >
+                        class="button button--increase">
                         +
                       </button>
                       <div class="table__quantity">{{ item.quantity }}</div>
@@ -60,8 +64,7 @@
                         :class="{
                           'button--hidden': item.quantity < 2,
                           'button--inline': item.quantity >= 2,
-                        }"
-                      >
+                        }">
                         -
                       </button>
                     </div>
@@ -69,7 +72,9 @@
                   <td class="table__cell">{{ item.price }}</td>
                   <td class="table__cell">{{ item.price * item.quantity }}</td>
                   <td class="table__cell table__cell--delete">
-                    <button @click="removeItemFromOrderList(item.id)" class="border border-inherit p-1 rounded-md">
+                    <button
+                      @click="removeItemFromOrderList(item.id)"
+                      class="border border-inherit p-1 rounded-md">
                       <XMarkIcon class="button__icon" />
                     </button>
                   </td>
@@ -79,7 +84,6 @@
           </div>
         </div>
       </div>
-      
     </section>
   </section>
 </template>
@@ -130,57 +134,5 @@ input[type='number']::-webkit-outer-spin-button {
 .list-leave-to {
   opacity: 0;
   transform: translateX(30px);
-}
-
-/* Container style */
-.custom-checkbox {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  user-select: none;
-}
-
-/* Hide the default checkbox */
-.custom-checkbox input[type='checkbox'] {
-  display: none;
-}
-
-/* Create a custom checkbox */
-.custom-checkbox .checkmark {
-  width: 20px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 4px;
-  position: relative;
-  margin-right: 10px;
-  transition: background-color 0.3s;
-}
-
-/* Style the checkmark when checked */
-.custom-checkbox input[type='checkbox']:checked + .checkmark {
-  background-color: #4caf50;
-}
-
-/* Add a tick icon when checked */
-.custom-checkbox .checkmark::after {
-  content: '';
-  position: absolute;
-  display: none;
-}
-
-.custom-checkbox input[type='checkbox']:checked + .checkmark::after {
-  display: block;
-}
-
-/* Style the tick icon */
-.custom-checkbox .checkmark::after {
-  left: 7px;
-  top: 3px;
-  width: 6px;
-  height: 12px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }
 </style>

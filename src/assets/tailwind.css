@@ -57,7 +57,7 @@
     @apply w-full relative overflow-hidden bg-white dark:bg-gray-800;
   }
   .table-wrapper {
-    @apply overflow-x-auto max-h-[740px] overflow-y-auto ;
+    @apply overflow-x-auto max-h-[740px] overflow-y-auto;
   }
   .table {
     @apply w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100;
@@ -83,9 +83,11 @@
   .table__cell--title {
     @apply font-medium text-gray-900 whitespace-nowrap dark:text-white;
   }
+  .badge {
+    @apply text-xs font-medium px-2 py-0.5 rounded;
+  }
   .table__cell--delete {
     @apply text-center flex justify-center items-center;
-     
   }
   .table__checkbox-wrapper {
     @apply flex;
@@ -93,7 +95,7 @@
   .table__serial {
     @apply ml-2;
   }
- 
+
   .table__quantity-controls {
     @apply flex gap-x-2;
   }
@@ -117,10 +119,45 @@
   }
   .button--delete {
     @apply border border-inherit p-1 rounded-md;
-    
   }
   .button__icon {
     @apply w-4 h-4 text-pink-600;
+  }
+  /* pagination */
+  .pagination {
+    @apply flex flex-col items-start justify-between p-4 space-y-3 md:flex-row md:items-center md:space-y-0;
+  }
+
+  .pagination__info {
+    @apply text-sm font-normal text-gray-500 dark:text-gray-400;
+  }
+
+  .pagination__info--highlight {
+    @apply font-semibold text-gray-900 dark:text-white;
+  }
+
+  .pagination__list {
+    @apply inline-flex items-stretch -space-x-px;
+  }
+
+  .pagination__item {
+    @apply flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white;
+  }
+
+  .pagination__item--active {
+    @apply z-10 border  dark:border-gray-700 dark:bg-gray-700 dark:text-white;
+  }
+
+  .pagination__prev-next {
+    @apply flex items-center justify-center h-full py-1.5 px-3 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white;
+  }
+
+  .pagination__prev {
+    @apply rounded-l-lg;
+  }
+
+  .pagination__next {
+    @apply rounded-r-lg;
   }
 }
 
