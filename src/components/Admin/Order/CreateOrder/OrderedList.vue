@@ -13,105 +13,64 @@
         hidden: itemsToBePurchased.length === 0,
         block: itemsToBePurchased.length > 0,
       }">
-      <div class="px-2 xl:px-4 mx-auto w-full">
-        <div class="w-full relative overflow-hidden bg-white dark:bg-gray-800">
-          <div
-            class="overflow-x-auto max-h-[740px] overflow-y-auto custom-overflowscroll">
-            <table
-              class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-100">
-              <thead
-                class="text-xs uppercase text-white bg-lime-600 overflow-hidden sticky top-0 bottom-6">
-                <tr>
-                  <th
-                    scope="col"
-                    class="px-4 py-1 border border-slate-300">
-                    Sr No
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-1 border border-slate-300">
-                    Product Title
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-1 border border-slate-300">
-                    Quantity
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-1 border border-slate-300">
-                    Unit Prices
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-1 border border-slate-300">
-                    Line Total
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-1 border border-slate-300">
-                    Delete
-                  </th>
+      <div class="layout">
+        <div class="layout__inner">
+          <div class="table-wrapper custom-overflowscroll">
+            <table class="table">
+              <thead class="table__header">
+                <tr class="table__row">
+                  <th class="table__header-cell">Sr No</th>
+                  <th class="table__header-cell">Product Title</th>
+                  <th class="table__header-cell">Quantity</th>
+                  <th class="table__header-cell">Unit Prices</th>
+                  <th class="table__header-cell">Line Total</th>
+                  <th class="table__header-cell">Delete</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="table__body">
                 <tr
                   v-for="(item, index) in itemsToBePurchased"
                   :key="index"
-                  class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <th class="w-4 px-4 py-2 border border-slate-300">
-                    <div class="flex">
-                      <label class="custom-checkbox">
-                        <input type="checkbox" />
+                  class="table__body-row table__body-row--hover"
+                >
+                  <td class="table__cell">
+                    <div class="table__checkbox-wrapper">
+                      <label class="custom-checkbox" :for="'checkbox-' + index">
+                        <input type="checkbox" :id="'checkbox-' + index"  />
                         <span class="checkmark"></span>
                       </label>
-                      <span> {{ Math.floor(index + 1) }}</span>
+                      <span class="table__serial">{{ Math.floor(index + 1) }}</span>
                     </div>
-                  </th>
-                  <th
-                    scope="row"
-                    class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
+                  </td>
+                  <td class="table__cell table__cell--title">
                     {{ item.title.slice(0, 10) }}
-                  </th>
-                  <td class="px-4 py-2 border border-slate-300">
-                    <div class="w-full flex gap-x-2">
+                  </td>
+                  <td class="table__cell">
+                    <div class="table__quantity-controls">
                       <button
                         @click="increaseItemQuantity(item.id)"
-                        class="border border-inherit rounded-md shadow-md p-0.5 w-4 h-4 flex flex-col justify-center items-center bg-lime-600 text-white">
+                        class="button button--increase"
+                      >
                         +
                       </button>
-                      <div
-                        class="w-4 h-4 flex flex-col justify-center items-center">
-                        <p class="p-0.5 text-sm">{{ item.quantity }}</p>
-                      </div>
+                      <div class="table__quantity">{{ item.quantity }}</div>
                       <button
                         @click="decreaseItemQuantity(item.id)"
-                        class="border border-inherit rounded-md shadow-md p-0.5 w-4 h-4 flex flex-col justify-center items-center bg-rose-600 text-white"
+                        class="button button--decrease"
                         :class="{
-                          hidden: item.quantity < 2,
-                          inline: item.quantity >= 2,
-                        }">
+                          'button--hidden': item.quantity < 2,
+                          'button--inline': item.quantity >= 2,
+                        }"
+                      >
                         -
                       </button>
                     </div>
                   </td>
-                  <td
-                    class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                    <div class="flex items-center">
-                      {{ item.price }}
-                    </div>
-                  </td>
-                  <td
-                    class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                    {{ item.price * item.quantity }}
-                  </td>
-
-                  <td
-                    class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300 text-center flex justify-center items-center">
-                    <button
-                      @click="removeItemFromOrderList(item.id)"
-                      class="border border-inherit p-1 rounded-md">
-                      <XMarkIcon class="w-4 h-4 text-pink-600" />
+                  <td class="table__cell">{{ item.price }}</td>
+                  <td class="table__cell">{{ item.price * item.quantity }}</td>
+                  <td class="table__cell table__cell--delete">
+                    <button @click="removeItemFromOrderList(item.id)" class="border border-inherit p-1 rounded-md">
+                      <XMarkIcon class="button__icon" />
                     </button>
                   </td>
                 </tr>
@@ -120,6 +79,7 @@
           </div>
         </div>
       </div>
+      
     </section>
   </section>
 </template>
@@ -182,7 +142,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 /* Hide the default checkbox */
-.custom-checkbox input[type="checkbox"] {
+.custom-checkbox input[type='checkbox'] {
   display: none;
 }
 
@@ -198,18 +158,18 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 /* Style the checkmark when checked */
-.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+.custom-checkbox input[type='checkbox']:checked + .checkmark {
   background-color: #4caf50;
 }
 
 /* Add a tick icon when checked */
 .custom-checkbox .checkmark::after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
 
-.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+.custom-checkbox input[type='checkbox']:checked + .checkmark::after {
   display: block;
 }
 
@@ -223,5 +183,4 @@ input[type='number']::-webkit-outer-spin-button {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-
 </style>
