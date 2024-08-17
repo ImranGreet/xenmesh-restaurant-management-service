@@ -70,8 +70,7 @@
 
         <div
           class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg">
-          <table
-            class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
+          <table>
             <thead
               class="text-xs text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
               <tr>

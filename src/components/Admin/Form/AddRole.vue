@@ -3,8 +3,7 @@
     <div
       class="w-full md:w-4/5 lg:3/4 xl:w-1/2 mx-auto border border-gray-800/25 rounded-lg bg-white p-5">
       <formTitle>Add Roles Of Your Services</formTitle>
-      <form
-        class="w-full flex flex-col justify-between items-center gap-y-5 shadow-xl shadow-gray-300 p-5">
+      <form class="w-full flex flex-col justify-between items-center gap-y-5">
         <div class="px-2 py-1 w-full space-y-3">
           <label for="icon">Icon Name</label>
           <input

@@ -60,7 +60,13 @@
                   :key="index"
                   class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <th class="w-4 px-4 py-2 border border-slate-300">
-                    {{ Math.floor(index + 1) }}
+                    <div class="flex">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <span> {{ Math.floor(index + 1) }}</span>
+                    </div>
                   </th>
                   <th
                     scope="row"
@@ -165,4 +171,57 @@ input[type='number']::-webkit-outer-spin-button {
   opacity: 0;
   transform: translateX(30px);
 }
+
+/* Container style */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Style the checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #4caf50;
+}
+
+/* Add a tick icon when checked */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+
+/* Style the tick icon */
+.custom-checkbox .checkmark::after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 </style>
