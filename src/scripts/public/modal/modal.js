@@ -8,6 +8,7 @@ const productTitle = ref('');
 const showOverlayout = ref(false);
 const showOverlayoutAdmin = ref(false);
 const addStockModal = ref(false);
+const addRoleModal = ref(false);
 
 const getItemDetails = function (idParam) {
   const getProductToShowDesc = items.find(item => item.id == idParam);
