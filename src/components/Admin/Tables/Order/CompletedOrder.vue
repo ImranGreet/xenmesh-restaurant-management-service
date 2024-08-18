@@ -3,9 +3,7 @@
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        
-        <SearchFormUtility/>
-
+        <SearchFormUtility />
 
         <div class="overflow-x-auto">
           <table
@@ -1307,19 +1305,19 @@
           </table>
         </div>
         <!-- pagination -->
-        <Pagination/>
+        <Pagination />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import SearchFormUtility from "../../../Utilities/FormUtility/SearchFormComp.vue"
+import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
 export default {
   name: 'Completed Order',
-  components:{
-    SearchFormUtility
-  }
+  components: {
+    SearchFormUtility,
+  },
 };
 </script>
 

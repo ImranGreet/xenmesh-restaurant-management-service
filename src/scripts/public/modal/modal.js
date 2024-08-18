@@ -55,5 +55,5 @@ export {
   showOverlayoutOnOff,
   getItemDetails,
   showProductAddForm,
-  showAddStockForm
+  showAddStockForm,
 };

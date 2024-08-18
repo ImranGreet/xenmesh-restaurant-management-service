@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="offer-card">
+  <div class="offer-card">
     <div class="w-full flex justify-around items-center px-4 h-40">
       <div class="py-2 space-y-2">
         <div class="w-full flex justify-between items-center gap-x-0.5">

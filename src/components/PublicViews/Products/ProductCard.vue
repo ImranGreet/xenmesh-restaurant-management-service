@@ -2,8 +2,7 @@
   <div
     class="product-card-container"
     :class="gridView ? 'grid-view' : 'block-view'">
-    <div
-      :class="gridView ? 'image-container-grid' : 'image-container-full'">
+    <div :class="gridView ? 'image-container-grid' : 'image-container-full'">
       <img
         :src="image"
         loading="lazy"
@@ -68,8 +67,7 @@
           ${{ price }}
         </Price>
 
-        <Price
-          :class="discountAmount ? 'price-block' : 'price-hidden'">
+        <Price :class="discountAmount ? 'price-block' : 'price-hidden'">
           ${{ Math.floor(Math.abs(price - (discountAmount * price) / 100)) }}
         </Price>
 

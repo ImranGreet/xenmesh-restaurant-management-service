@@ -3,7 +3,7 @@
     <div class="px-4 mx-auto w-full">
       <SearchFormUtility />
       <div
-        class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 ">
+        class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800">
         <div class="layout">
           <div class="layout__inner">
             <div class="table-wrapper custom-overflowscroll">

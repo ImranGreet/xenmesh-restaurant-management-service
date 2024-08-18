@@ -1091,7 +1091,7 @@
 
 <script>
 import TableButton from '../../../Utilities/actionButtons/TableButton.vue';
-import SearchFormUtility from "../../../Utilities/FormUtility/SearchFormComp.vue"
+import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
 import {
   searchForm,
   searchFormShower,
@@ -1101,7 +1101,8 @@ import { onUnmounted } from 'vue';
 export default {
   name: 'Web Order',
   components: {
-    TableButton,SearchFormUtility
+    TableButton,
+    SearchFormUtility,
   },
   setup() {
     onUnmounted(() => {

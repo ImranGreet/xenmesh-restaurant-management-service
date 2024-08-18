@@ -3,9 +3,7 @@
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <SearchFormUtility/>
-
-       
+        <SearchFormUtility />
 
         <div
           class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg bg-white z-50">
@@ -133,7 +131,7 @@
           </table>
         </div>
         <!-- pagination -->
-        <Pagination/>
+        <Pagination />
       </div>
     </div>
   </section>
@@ -141,7 +139,7 @@
 
 <script>
 import TableButton from '../../../Utilities/actionButtons/TableButton.vue';
-import SearchFormUtility from "../../../Utilities/FormUtility/SearchFormComp.vue"
+import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
 import Orderdata from '../../../../DB/order';
 import {
   searchForm,
@@ -152,7 +150,7 @@ export default {
   name: 'OrderList',
   components: {
     TableButton,
-    SearchFormUtility
+    SearchFormUtility,
   },
   setup() {
     onUnmounted(() => {

@@ -278,7 +278,7 @@ export default {
       filterProducts(
         currentDate.value,
         lastdate.value,
-        selectedPaymentOption.value
+        selectedPaymentOption.value,
       );
     };
 

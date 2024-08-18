@@ -6,8 +6,7 @@
           :src="image"
           alt=""
           loading="lazy"
-          class="image-grid"
-        />
+          class="image-grid" />
       </div>
       <div class="content-container">
         <div class="title-container">
@@ -71,8 +70,7 @@ export default {
     },
   },
   setup(props) {
-    const { title, price, image, description, id } =
-      props.productInformation;
+    const { title, price, image, description, id } = props.productInformation;
     return {
       title,
       price,

@@ -3,7 +3,7 @@
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <SearchFormUtility/>
+        <SearchFormUtility />
         <div class="overflow-x-auto">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
@@ -136,17 +136,16 @@
             </tbody>
           </table>
         </div>
-       <!-- pagination -->
-        <Pagination/>
+        <!-- pagination -->
+        <Pagination />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-
 import order from '../../../../DB/order';
-import SearchFormUtility from "../../../Utilities/FormUtility/SearchFormComp.vue"
+import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
 export default {
   components: { SearchFormUtility },
   name: 'Kitchen Order',

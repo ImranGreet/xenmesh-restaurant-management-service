@@ -11,13 +11,12 @@
 /* components of tailwindcss */
 
 @layer components {
-
   /* universal start */
 
   .flex-center {
     @apply flex justify-center items-center;
   }
-  
+
   .flex-between {
     @apply flex justify-between items-center;
   }
@@ -260,10 +259,10 @@
   .info-button {
     @apply bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full lg:hover:bg-pink-700;
   }
-  .offer-card{
+  .offer-card {
     @apply w-full bg-inherit space-y-2 max-w-full lg:max-w-2xl shadow-xl shadow-slate-200 bg-lime-200 rounded-2xl overflow-hidden;
   }
-  .offer-title{
+  .offer-title {
     @apply text-lg text-red-500 tracking-wide font-semibold;
   }
 

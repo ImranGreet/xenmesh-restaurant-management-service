@@ -61,9 +61,6 @@
       :class="{ hidden: !addStockModal, block: addStockModal }">
       <AddStock :AnimationProperty="addStockModal" />
     </div>
-
-
-
   </section>
 </template>
 
@@ -77,9 +74,9 @@ import ProductDescription from '../components/PublicViews/modal/ProductDescripti
 import AddProduct from '../components/Admin/Form/AddProduct.vue';
 
 /*modal*/
-import AddStock from "../components/Utilities/modal/Stock/AddStock.vue"; 
-import AddUnit from "../components/Utilities/modal/Stock/AddUnit.vue"; 
-import AddStockCategory from "../components/Utilities/modal/Stock/Category.vue"; 
+import AddStock from '../components/Utilities/modal/Stock/AddStock.vue';
+import AddUnit from '../components/Utilities/modal/Stock/AddUnit.vue';
+import AddStockCategory from '../components/Utilities/modal/Stock/Category.vue';
 
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
@@ -97,7 +94,7 @@ import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink
 import {
   showOverlayout,
   showOverlayoutAdmin,
-  addStockModal
+  addStockModal,
 } from '../scripts/public/modal/modal';
 import { TopbardesktopColor } from '../scripts/Admin/Settings/settingcontroller';
 
@@ -109,13 +106,12 @@ export default {
     Rightsidebar,
     Logo,
     Footer,
-    //modal 
+    //modal
     ProductDescription,
     AddProduct,
     AddStock,
     AddUnit,
-    AddStockCategory
-
+    AddStockCategory,
   },
   setup() {
     return {

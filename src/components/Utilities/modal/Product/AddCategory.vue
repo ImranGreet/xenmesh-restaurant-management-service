@@ -56,8 +56,8 @@
     </div>
   </section>
 </template>
-    
-    <script>
+
+<script>
 import { ref, watch } from 'vue';
 import { XMarkIcon } from '@heroicons/vue/24/solid';
 import { showOverlayoutOnOff } from '../../../scripts/public/modal/modal';
@@ -76,4 +76,3 @@ export default {
   },
 };
 </script>
-    
