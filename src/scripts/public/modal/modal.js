@@ -6,7 +6,7 @@ const productDetails = ref('');
 const productComposition = ref([]);
 const productTitle = ref('');
 const showOverlayout = ref(false);
-const showOverlayoutAdmin = ref(false);
+const showOverlayoutAdmin = ref(true);
 const addStockModal = ref(false);
 
 const getItemDetails = function (idParam) {

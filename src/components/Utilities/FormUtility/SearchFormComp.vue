@@ -135,7 +135,7 @@
                     action="#">
                     <MenuItem v-slot="{ active }">
                       <button
-                        type="submit"
+                        type="button"
                         :class="[
                           active
                             ? 'bg-gray-100 text-gray-900'
