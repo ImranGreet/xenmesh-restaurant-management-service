@@ -71,7 +71,7 @@ import Rightsidebar from './Rightsidebar.vue';
 import Logo from '../components/Admin/Topbar/Logo.vue';
 import Footer from '../components/Admin/Footer/Footer.vue';
 import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
-import AddProduct from '../components/Admin/Form/AddProduct.vue';
+import AddProduct from '../components/Utilities/modal/Product/AddProduct.vue';
 
 /*modal*/
 import AddStock from '../components/Utilities/modal/Stock/AddStock.vue';
@@ -131,3 +131,4 @@ export default {
   },
 };
 </script>
+

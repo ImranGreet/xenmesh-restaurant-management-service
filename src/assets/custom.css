@@ -82,16 +82,18 @@
 .custom-checkbox .checkmark {
   width: 20px;
   height: 20px;
-  background-color: #ccc;
+  background-color: #fff;
   border-radius: 4px;
   position: relative;
   margin-right: 10px;
   transition: background-color 0.3s;
+  border: 1px solid pink;
 }
 
 /* Style the checkmark when checked */
 .custom-checkbox input[type='checkbox']:checked + .checkmark {
   background-color: #4caf50;
+  border-color: inherit;
 }
 
 /* Add a tick icon when checked */
@@ -114,4 +116,5 @@
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+  
 }
