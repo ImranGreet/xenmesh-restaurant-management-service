@@ -1,31 +1,27 @@
 <template>
-  <div class="w-full bg-inherit h-full">
-    <div class="w-full h-full bg-gray-200">
-      <div
-        class="w-full h-full flex flex-col lg:flex-row justify-between items-center">
-        <form
-          class="w-full lg:w-2/5 mx-auto border border-gray-800/20 p-4 rounded-md space-y-3 bg-white">
-          <div
-            class="w-full space-y-3 border border-inherit text-center text-gray-600 p-2">
-            <h2 class="text-xl tracking-wide">Add Unit</h2>
-          </div>
-          <div class="w-full space-y-3 border border-inherit p-3">
-            <label for="category">Item Unit</label>
-            <input
-              type="text"
-              name=""
-              id=""
-              class="w-full px-3 py-2 focus:outline-none border-2 border-inherit"
-              placeholder="Like KG,CM,Pieces" />
-          </div>
-
-          <div class="w-full space-y-3">
-            <button class="w-full px-3 py-2 bg-blue-600 text-white">
-              Submit
-            </button>
-          </div>
-        </form>
+  <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+    <div class="w-full lg:w-2/5 bg-white border border-gray-300 rounded-md shadow-lg p-4">
+      <div class="text-center text-gray-600 mb-4">
+        <h2 class="text-xl font-semibold tracking-wide">Add Unit</h2>
       </div>
+      <form class="space-y-4">
+        <div class="space-y-2">
+          <label for="unit" class="block text-sm font-medium text-gray-700">
+            Item Unit
+          </label>
+          <input
+            type="text"
+            id="unit"
+            placeholder="Like KG, CM, Pieces"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <button type="submit" class="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
@@ -39,4 +35,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+/* Additional styles if needed */
+</style>

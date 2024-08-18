@@ -1,36 +1,38 @@
 <template>
-  <div class="w-full bg-inherit h-full">
-    <div class="w-full h-full flex flex-col justify-center items-center">
-      <div class="form-container p-5">
-        <form class="form-element-container">
-          <div
-            class="w-full space-y-3 border border-inherit text-center text-gray-600 p-2">
-            <formTitle>Add Item Category</formTitle>
-          </div>
-          <div class="w-full space-y-3 border border-inherit p-3">
-            <label for="category">Item Category</label>
+  <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+    <div class="w-full max-w-lg bg-white border border-gray-300 rounded-md shadow-lg p-5">
+      <form class="space-y-4">
+        <div class="text-center text-gray-600 mb-4">
+          <h2 class="text-xl font-semibold">Add Item Category</h2>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label for="category" class="block text-sm font-medium text-gray-700">
+              Item Category
+            </label>
             <input
               type="text"
-              name=""
-              id=""
-              class="form__input--field"
-              placeholder="Enter Item Category" />
+              id="category"
+              placeholder="Enter Item Category"
+              class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
-          <div class="w-full space-y-3 border border-inherit p-3">
-            <label for="category">Subcategory Category</label>
+          <div>
+            <label for="subcategory" class="block text-sm font-medium text-gray-700">
+              Subcategory Category
+            </label>
             <input
               type="text"
-              name=""
-              id=""
-              class="form__input--field"
-              placeholder="Enter Item Subcategory" />
+              id="subcategory"
+              placeholder="Enter Item Subcategory"
+              class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
-
-          <div class="w-full space-y-3">
-            <authsubmitBtn>Submit</authsubmitBtn>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div>
+          <button type="submit" class="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
@@ -44,4 +46,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+/* Additional styles if needed */
+</style>
