@@ -49,11 +49,21 @@
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
     </div>
+
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
       :class="{ hidden: !showOverlayoutAdmin, block: showOverlayoutAdmin }">
       <AddProduct :AnimationProperty="showOverlayoutAdmin" />
     </div>
+
+    <div
+      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
+      :class="{ hidden: !addStockModal, block: addStockModal }">
+      <AddStock :AnimationProperty="addStockModal" />
+    </div>
+
+
+
   </section>
 </template>
 
@@ -65,6 +75,11 @@ import Logo from '../components/Admin/Topbar/Logo.vue';
 import Footer from '../components/Admin/Footer/Footer.vue';
 import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
 import AddProduct from '../components/Admin/Form/AddProduct.vue';
+
+/*modal*/
+import AddStock from "../components/Utilities/modal/Stock/AddStock.vue"; 
+import AddUnit from "../components/Utilities/modal/Stock/AddUnit.vue"; 
+import AddStockCategory from "../components/Utilities/modal/Stock/Category.vue"; 
 
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
@@ -82,6 +97,7 @@ import { discloseMenuBarOnHover } from '../scripts/Admin/rightsidebar/togglelink
 import {
   showOverlayout,
   showOverlayoutAdmin,
+  addStockModal
 } from '../scripts/public/modal/modal';
 import { TopbardesktopColor } from '../scripts/Admin/Settings/settingcontroller';
 
@@ -93,8 +109,13 @@ export default {
     Rightsidebar,
     Logo,
     Footer,
+    //modal 
     ProductDescription,
     AddProduct,
+    AddStock,
+    AddUnit,
+    AddStockCategory
+
   },
   setup() {
     return {
@@ -106,6 +127,7 @@ export default {
       showOverlayout,
       TopbardesktopColor,
       showOverlayoutAdmin,
+      addStockModal,
       /*compose function*/
       sidebarController,
       discloseMenuBarOnHover,
