@@ -6,172 +6,179 @@
         <SearchFormUtility/>
         <div
           class="relative overflow-auto min-h-[220px] max-h-[690px] table-container rounded-t-lg bg-white z-50">
-          <table
-            class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
-            <thead
-              class="text-md text-white sticky top-0 bg-lime-600 capitalize dark:bg-gray-700 dark:text-gray-400">
-              <tr>
-                <th class="bg-white"></th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Sr No
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Name
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Position
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Start From
-                </th>
-
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Contact
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Address
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Salary Wage
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Vacation Period
-                </th>
-
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Training Records
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Notes
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Action
-                </th>
-                <th class="bg-white"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(stuff, index) in ourStuff"
-                :key="stuff.id"
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th></th>
-                <th class="w-4 px-4 py-3 border border-slate-300">
-                  {{ index + 1 }}
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
-                    >{{ stuff.Name }}</span
-                  >
-                </td>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
-                    >{{ stuff.Position }}</span
-                  >
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <span>{{ stuff.StartDate }}</span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <span class="font-bold">Regular </span>
-                  {{ stuff.ContactInformation }}
-                  <br />
-                  <span class="font-bold">Emergency</span>
-                  {{ stuff.EmergencyContactInformation }}
-                </td>
-
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ stuff.Address }}
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <span class="flex flex-col">
-                    <span>
-                      <span class="font-bold">Sallary</span> ${{
-                        stuff.SalaryWage
-                      }}</span
-                    >
-                    <span>
-                      <span class="font-bold">Benifits</span>
-                      {{ stuff.Benefits }}</span
-                    >
-                  </span>
-                </td>
-                <td class="px-4 py-2 border border-slate-300 text-center">
-                  {{ stuff.VacationTime }}
-                  <span>
-                    Day
-                    <span
+          <div class="layout">
+            <div class="layout__inner">
+              <div class="table-wrapper custom-overflowscroll">
+                <table
+                class="table">
+                <thead
+                  class="table__header">
+                  <tr>
+                    <th class="bg-white"></th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Sr No
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Name
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Position
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Start From
+                    </th>
+    
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Contact
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Address
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Salary Wage
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Vacation Period
+                    </th>
+    
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Training Records
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Notes
+                    </th>
+                    <th
+                      scope="col"
+                      class="table__header-cell">
+                      Action
+                    </th>
+                    <th class="bg-white"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="(stuff, index) in ourStuff"
+                    :key="stuff.id"
+                    class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <th></th>
+                    <th class="w-4 table__header-cell">
+                      {{ index + 1 }}
+                    </th>
+                    <td class="table__cell table__cell--title">
+                      <span
+                        class="span"
+                        >{{ stuff.Name }}</span
+                      >
+                    </td>
+                    <td class="table__cell table__cell--title">
+                      <span
+                        class="span"
+                        >{{ stuff.Position }}</span
+                      >
+                    </td>
+                    <td
+                      class="table__cell table__cell--title">
+                      <span>{{ stuff.StartDate }}</span>
+                    </td>
+                    <td
+                      class="table__cell table__cell--title">
+                      <span class="font-bold">Regular </span>
+                      {{ stuff.ContactInformation }}
+                      <br />
+                      <span class="font-bold">Emergency</span>
+                      {{ stuff.EmergencyContactInformation }}
+                    </td>
+    
+                    <td
+                      class="table__cell table__cell--title">
+                      {{ stuff.Address }}
+                    </td>
+                    <td
+                      class="table__cell table__cell--title">
+                      <span class="flex flex-col">
+                        <span>
+                          <span class="font-bold">Sallary</span> ${{
+                            stuff.SalaryWage
+                          }}</span
+                        >
+                        <span>
+                          <span class="font-bold">Benifits</span>
+                          {{ stuff.Benefits }}</span
+                        >
+                      </span>
+                    </td>
+                    <td class="table__cell table__cell--title text-center">
+                      {{ stuff.VacationTime }}
+                      <span>
+                        Day
+                        <span
+                          :class="{
+                            'inline-block': stuff.VacationTime > 1,
+                            hidden:
+                              stuff.VacationTime === 1 || stuff.VacationTime === 0,
+                          }">
+                          s</span
+                        >
+                      </span>
+                    </td>
+    
+                    <td
+                      class="table__cell table__cell--title"
                       :class="{
-                        'inline-block': stuff.VacationTime > 1,
-                        hidden:
-                          stuff.VacationTime === 1 || stuff.VacationTime === 0,
+                        'flex flex-col gap-y-1': stuff.TrainingRecords.length > 1,
                       }">
-                      s</span
-                    >
-                  </span>
-                </td>
-
-                <td
-                  class="px-4 py-2 h-full font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300"
-                  :class="{
-                    'flex flex-col gap-y-1': stuff.TrainingRecords.length > 1,
-                  }">
-                  <span
-                    v-for="(record, index) in stuff.TrainingRecords"
-                    :key="index"
-                    >{{ record }},</span
-                  >
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <span>{{ stuff.Notes }}</span>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex justify-center items-center gap-x-2">
-                    <button class="text-gray-900">
-                      <PencilSquareIcon class="inline-block w-4 h-4" />
-                    </button>
-                    <button class="text-green-800">
-                      <ShieldCheckIcon class="inline-block w-4 h-4" />
-                    </button>
-                    <button class="text-pink-600">
-                      <TrashIcon class="inline-block w-4 h-4" />
-                    </button>
-                  </div>
-                </td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+                      <span
+                        v-for="(record, index) in stuff.TrainingRecords"
+                        :key="index"
+                        >{{ record }},</span
+                      >
+                    </td>
+                    <td
+                      class="table__cell table__cell--title">
+                      <span>{{ stuff.Notes }}</span>
+                    </td>
+                    <td
+                      class="table__cell table__cell--title">
+                      <div class="flex justify-center items-center gap-x-2">
+                        <button class="text-gray-900">
+                          <PencilSquareIcon class="inline-block w-4 h-4" />
+                        </button>
+                        <button class="text-green-800">
+                          <ShieldCheckIcon class="inline-block w-4 h-4" />
+                        </button>
+                        <button class="text-pink-600">
+                          <TrashIcon class="inline-block w-4 h-4" />
+                        </button>
+                      </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+         
         </div>
         <!-- pagination -->
         <Pagination/>
