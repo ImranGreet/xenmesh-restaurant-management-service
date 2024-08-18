@@ -1,95 +1,75 @@
 <template>
   <div
-    class="w-full bg-inherit space-y-1 md:sapce-y-2 max-w-lg shadow-sm shadow-slate-200 rounded-2xl product-hover py-1.5"
-    :class="{
-      'flex justify-between items-center': gridView,
-      block: !gridView,
-    }">
+    class="product-card-container"
+    :class="gridView ? 'grid-view' : 'block-view'">
     <div
-      class="flex flex-col justify-center items-center rounded-t-2xl"
-      :class="{
-        'w-full toggle-screen-animation': !gridView,
-        'w-3/5 toggle-screen-animation': gridView,
-      }">
+      :class="gridView ? 'image-container-grid' : 'image-container-full'">
       <img
         :src="image"
         loading="lazy"
         :alt="title"
         class="w-full object-cover"
-        :class="{
-          'h-[182px] rounded-t-xl toggle-screen-animation': !gridView,
-          'h-[132px] rounded-l-xl toggle-screen-animation': gridView,
-        }" />
+        :class="gridView ? 'image-grid' : 'image-full'" />
     </div>
     <div
-      class="px-1 md:px-2 xl:px-3 w-full"
-      :class="{
-        'py-1 md:py-2 lg:py-3 xl:py-5 space-y-3 toggle-screen-animation':
-          !gridView,
-        'py-1 space-y-0 toggle-screen-animation': gridView,
-      }">
+      class="content-container"
+      :class="gridView ? 'content-grid' : 'content-full'">
       <div class="py-0 space-y-2">
-        <div class="w-full flex justify-start items-center gap-x-1 md:gap-x-2">
+        <div class="title-container">
           <h1
-            class="text-base tracking-wide font-semibold text-gray-800"
-            v-if="title.length > 10 && innerWidth >= 300 && innerWidth <= 767">
+            v-if="title.length > 10 && innerWidth >= 300 && innerWidth <= 767"
+            class="title">
             {{ title.slice(0, 8) }} ...
           </h1>
 
           <h1
-            class="text-base tracking-wide font-semibold text-gray-800"
             v-else-if="
               title.length > 20 && innerWidth >= 768 && innerWidth <= 1023
-            ">
+            "
+            class="title">
             {{ title.slice(0, 15) }} ...
           </h1>
 
           <h1
-            class="text-base tracking-wide font-semibold text-gray-800"
-            v-else-if="title.length >= 20 && innerWidth >= 1025">
+            v-else-if="title.length >= 20 && innerWidth >= 1025"
+            class="title">
             {{ title.slice(0, 18) }} ...
           </h1>
 
           <h1
-            class="text-base tracking-wide font-semibold text-gray-800"
-            v-else>
+            v-else
+            class="title">
             {{ title }}
           </h1>
 
           <button
             @click="getItemDetails(id)"
-            class="bg-slate-800/70 text-white w-5 h-5 text-center text-sm rounded-full lg:hover:bg-pink-700">
+            class="info-button">
             !
           </button>
         </div>
 
         <p
-          class="text-sm tracking-wide leading-relaxed"
-          v-if="description.length > 50">
+          v-if="description.length > 50"
+          class="description">
           {{ description.slice(0, 50) }} ...
         </p>
 
         <p
-          class="text-sm tracking-wide leading-relaxed"
-          v-else>
+          v-else
+          class="description">
           {{ description }}
         </p>
       </div>
 
-      <div class="w-full flex justify-between items-center">
+      <div class="price-container">
         <Price
-          :class="{
-            'line-through': discountAmount,
-            'no-underline': !discountAmount,
-          }"
-          >${{ price }}</Price
-        >
+          :class="discountAmount ? 'price-line-through' : 'price-no-underline'">
+          ${{ price }}
+        </Price>
 
         <Price
-          :class="{
-            'no-underline block': discountAmount,
-            hidden: !discountAmount,
-          }">
+          :class="discountAmount ? 'price-block' : 'price-hidden'">
           ${{ Math.floor(Math.abs(price - (discountAmount * price) / 100)) }}
         </Price>
 
@@ -112,6 +92,7 @@ import {
   innerHeight,
   innerWidth,
 } from '../../../scripts/Global/innerheightwidth';
+
 export default {
   name: 'ProductCard',
   components: {

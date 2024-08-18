@@ -1,10 +1,10 @@
 <template>
   <div
-    class="w-full bg-inherit sapce-y-2 max-w-full lg:max-w-2xl shadow-xl shadow-slate-200 bg-lime-200 rounded-2xl overflow-hidden">
+    class="offer-card">
     <div class="w-full flex justify-around items-center px-4 h-40">
       <div class="py-2 space-y-2">
         <div class="w-full flex justify-between items-center gap-x-0.5">
-          <h1 class="text-lg text-red-500 tracking-wide font-semibold">
+          <h1 class="offer-title">
             {{ title }}
           </h1>
         </div>
@@ -18,7 +18,7 @@
           {{ category }}
         </p>
         <p
-          class="p-1 border border-gray-700 rounded-2xl text-center shadow-lg shadow-gray-400/25">
+          class="p-1 border border-gray-700/40 rounded-2xl text-center shadow-lg shadow-gray-400/25">
           Order Now
         </p>
       </div>
