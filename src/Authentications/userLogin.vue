@@ -79,7 +79,7 @@
           Sign UP
         </router-link>
       </p>
-      <div class="w-full flex justify-between items-center">
+      <div class="w-full flex-between">
         <button
           @click="setusernameAndPassword('Xennifer', 'xen789456')"
           class="bg-teal-600 text-white px-3 py-1 rounded-sm border border-gray-800">

@@ -27,6 +27,12 @@
    @apply w-full min-h-screen;
   }
 
+  /* grid */
+  .product-grid--columns {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  
+
   /* universal end */
   .product-hover {
     @apply lg:hover:shadow-lg overflow-hidden lg:hover:delay-100 lg:hover:duration-200 lg:hover:ease-in-out;
@@ -285,6 +291,15 @@
     @apply absolute top-0 right-0 bg-gray-500 text-white rounded-full p-1 hover:bg-red-600 focus:outline-none; 
   }
   /* modal end */
+
+  /* utilities*/
+  .view-toggle__button {
+    @apply bg-auto px-1 rounded-md;
+  }
+  .view-toggle__button--active {
+    @apply bg-gray-600 text-pink-200 animate-pulse;
+  }
+  /* utilities*/
 }
 
 /* transitions */

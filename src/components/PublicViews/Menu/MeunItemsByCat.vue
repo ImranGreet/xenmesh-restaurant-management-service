@@ -3,8 +3,8 @@
     <div
       v-if="showTransition"
       class="bg-inherit w-full space-y-5">
-      <div class="w-full flex flex-col justify-between items-center">
-        <div class="w-full flex justify-between items-center py-3">
+      <div class="w-full flex-between flex-col ">
+        <div class="w-full flex-between py-3">
           <div class="text-center">
             <h1
               class="text-gray-800 tracking-wider leading-7 text-xl font-semibold">
@@ -17,7 +17,7 @@
               @click="showGridItems('flex')"
               id="flexViweres"
               :class="{
-                'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md toggle-screen-animation':
+                'view-toggle__button  view-toggle__button--active   toggle-screen-animation':
                   flexColor,
                 'bg-auto ': !flexColor,
               }">
@@ -28,7 +28,7 @@
               @click="showGridItems('grid')"
               id="gridViewres"
               :class="{
-                'bg-gray-600 text-pink-200 animate-pulse px-1 rounded-md toggle-screen-animation':
+                'view-toggle__button view-toggle__button--active  toggle-screen-animation':
                   gridColor,
                 'bg-auto': !gridColor,
               }">
@@ -38,7 +38,7 @@
         </div>
 
         <div
-          class="w-full bg-inherit sapce-y-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          class="w-full bg-inherit sapce-y-2 product-grid--columns gap-6"
           :class="{ 'xl:grid-cols-3': gridView, 'xl:grid-cols-4': !gridView }">
           <ProductCard
             :productInformation="product"
