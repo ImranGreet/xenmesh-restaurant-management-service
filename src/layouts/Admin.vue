@@ -5,23 +5,23 @@
     <Topbardesktop
       class="float-right top-0 right-0 w-full static px-2 z-[50]"
       :class="{
-        'sm:w-[70%] xl:w-[85%] fixed toggle-screen-animation': !sidebarView,
-        'sm:w-[90%] xl:w-[95%] fixed toggle-screen-animation': sidebarView,
+        'sm:w-[70%] xl:w-[85%] fixed ': !sidebarView,
+        'sm:w-[90%] xl:w-[95%] fixed ': sidebarView,
         'bg-white text-gray-800': TopbardesktopColor === 'default',
       }" />
     <Rightsidebar
       class="fixed float-left h-full hidden sm:block"
       :class="{
-        ' w-[30%] xl:w-[10%] toggle-screen-animation': !sidebarView,
-        'w-[10%] xl:w-[5%] toggle-screen-animation': sidebarView,
+        ' w-[30%] xl:w-[10%] ': !sidebarView,
+        'w-[10%] xl:w-[5%] ': sidebarView,
       }" />
     <!-- main -->
     <div
       class="float-right mt-[60px] px-1 right-0 h-full z-0 overflow-y-auto"
       :class="{
-        'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto toggle-screen-animation':
+        'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto ':
           !sidebarView,
-        'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto toggle-screen-animation':
+        'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto ':
           sidebarView,
       }">
       <div class="h-[90%] w-full overflow-y-auto">
@@ -41,8 +41,8 @@
     <Footer
       class="w-full fixed bottom-0 z-[599] bg-white float-right right-0"
       :class="{
-        'sm:w-[70%] xl:w-[85%] fixed toggle-screen-animation': !sidebarView,
-        'sm:w-[90%] xl:w-[95%] fixed toggle-screen-animation': sidebarView,
+        'sm:w-[70%] xl:w-[85%] fixed ': !sidebarView,
+        'sm:w-[90%] xl:w-[95%] fixed ': sidebarView,
       }" />
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
