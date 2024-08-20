@@ -16,7 +16,7 @@
                 active
                   ? 'ring-2 ring-white/60 ring-offset-2 ring-offset-sky-300'
                   : '',
-                checked ? 'bg-sky-900/75 text-white ' : 'bg-white ',
+                checked ? 'bg-lime-900/75 text-white ' : 'bg-white ',
               ]"
               class="relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none"
             >
