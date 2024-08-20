@@ -1,14 +1,34 @@
 <template>
   <TabGroup>
     <TabList
-      class="w-full mx-auto flex justify-between items-center text-gray-700 my-2 rounded-sm py-1.5">
-      <Tab class="border border-gray-600/60 px-2 py-1.5 rounded-sm"
-        >Delivery Ways</Tab
-      >
-      <Tab class="border border-gray-600/60 px-2 py-1.5 rounded-sm">Table</Tab>
-      <Tab class="border border-gray-600/60 px-2 py-1.5 rounded-sm"
-        >Pay Ways</Tab
-      >
+      class="w-full mx-auto flex justify-between items-center text-gray-700 my-2 rounded-sm py-1.5 bg-gray-200/80">
+      <Tab v-slot="{ selected }">
+        <button
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none"
+          :class="{
+            ' border-b-2 border-blue-500 font-semibold': selected,
+          }">
+          Delivery Ways
+        </button>
+      </Tab>
+      <Tab v-slot="{ selected }">
+        <button
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none"
+          :class="{
+            ' border-b-2 border-blue-500 font-semibold': selected,
+          }">
+          Table
+        </button>
+      </Tab>
+      <Tab v-slot="{ selected }">
+        <button
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none font-semibold"
+          :class="{
+            ' border-b-2 border-blue-500 ': selected,
+          }">
+          Pay Ways
+        </button>
+      </Tab>
     </TabList>
     <TabPanels>
       <TabPanel>
