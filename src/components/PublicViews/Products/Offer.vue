@@ -17,7 +17,7 @@
           {{ category }}
         </p>
         <p
-          class="p-1 border border-gray-700/40 rounded-2xl text-center shadow-lg shadow-gray-400/25">
+          class="p-1 border border-gray-700/20 rounded-2xl text-center">
           Order Now
         </p>
       </div>
