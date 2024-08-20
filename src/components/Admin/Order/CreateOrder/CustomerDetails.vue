@@ -1,10 +1,10 @@
 <template>
-  <TabGroup>
+  <TabGroup >
     <TabList
-      class="w-full mx-auto flex justify-between items-center text-gray-700 my-2 rounded-sm py-1.5 bg-gray-200/80">
+      class="w-full mx-auto flex justify-between items-center text-gray-700  rounded-sm ">
       <Tab v-slot="{ selected }">
         <button
-          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none"
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none focus-visible:outline-none"
           :class="{
             ' border-b-2 border-blue-500 font-semibold': selected,
           }">
@@ -13,7 +13,7 @@
       </Tab>
       <Tab v-slot="{ selected }">
         <button
-          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none"
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none focus-visible:outline-none"
           :class="{
             ' border-b-2 border-blue-500 font-semibold': selected,
           }">
@@ -22,22 +22,22 @@
       </Tab>
       <Tab v-slot="{ selected }">
         <button
-          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none font-semibold"
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none  focus-visible:outline-none"
           :class="{
-            ' border-b-2 border-blue-500 ': selected,
+            ' border-b-2 border-blue-500 font-semibold': selected,
           }">
           Pay Ways
         </button>
       </Tab>
     </TabList>
     <TabPanels>
-      <TabPanel>
+      <TabPanel class="toggle-screen-animation">
         <Deliveryways />
       </TabPanel>
-      <TabPanel>
+      <TabPanel class="toggle-screen-animation">
         <AvailableTable />
       </TabPanel>
-      <TabPanel>
+      <TabPanel class="toggle-screen-animation">
         <PaymentCards />
       </TabPanel>
     </TabPanels>

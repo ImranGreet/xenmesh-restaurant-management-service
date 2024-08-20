@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full flex justify-between gap-2 flex-wrap py-2 border border-gray-700/25 p-2 mb-3 rounded-sm">
+    class="w-full flex justify-between gap-2 flex-wrap py-2  p-2 mb-3 rounded-sm">
     <button class="border p-1 line-through">25</button>
     <button>25</button>
     <button>25</button>
