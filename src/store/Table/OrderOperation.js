@@ -1,10 +1,13 @@
 import axios from 'axios';
 import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
 const useOrderOperation = defineStore('orderOps', () => {
   let alertMessage = ref('');
   let orderStore = ref([]);
   let showSkillital = ref(false);
+  let deliveryWaySelect = ref(null);
+  let paymentMethodSelect = ref(null);
 
   const createOrder = async () => {
     try {
@@ -54,15 +57,26 @@ const useOrderOperation = defineStore('orderOps', () => {
     }
   };
 
+  const selectPaymentOption = function (option) {
+    paymentMethodSelect.value = option;
+    console.log(paymentMethodSelect.value);
+  };
+
   return {
     alertMessage,
     orderStore,
     showSkillital,
+    deliveryWaySelect,
+    paymentMethodSelect,
     /*methods*/
     createOrder,
     passOrderToKitchen,
     orderInStore,
     updateOrder,
     deleteOrderFromOrderList,
+    selectPaymentOption
   };
 });
+
+
+export default useOrderOperation;

@@ -1,13 +1,13 @@
 <template>
   <div class="w-full py-2">
     <div class="mx-auto w-full max-w-md">
-      <RadioGroup v-model="selected">
+      <RadioGroup v-model="selected" >
         <RadioGroupLabel class="sr-only">Server size</RadioGroupLabel>
         <div class="grid grid-cols-3 gap-2 overflow-y-auto py-2">
           <RadioGroupOption
             as="template"
-            v-for="plan in plans"
-            :key="plan.name"
+            v-for="plan,index in plans"
+            :key="index"
             :value="plan"
             v-slot="{ active, checked }">
             <div
@@ -16,8 +16,10 @@
                   ? 'ring-2 ring-white/60 ring-offset-2 ring-offset-sky-300'
                   : '',
                 checked ? 'bg-lime-900/75 text-white ' : 'bg-white ',
+               
               ]"
-              class="relative flex cursor-pointer rounded-lg px-2 shadow-md focus:outline-none">
+              class="relative flex cursor-pointer rounded-lg px-2 shadow-md focus:outline-none"
+              @click="chooseId(index)">
               <div class="flex w-full items-center justify-between">
                 <div class="flex items-center py-2">
                   <div class="text-sm">
@@ -85,5 +87,9 @@ const plans = [
   },
 ];
 
-const selected = ref(plans[0]);
+const selected = ref(null);
+const chooseId = function(id){
+  selected.value = id;
+  console.log("Selected plan:", id);
+}
 </script>
