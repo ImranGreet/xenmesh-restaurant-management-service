@@ -59,14 +59,12 @@
                       </button>
                       <div class="table__quantity">{{ item.quantity }}</div>
                       <button
-                        @click="decreaseItemQuantity(item.id)"
-                        class="button button--decrease"
-                        :class="{
-                          'button--hidden': item.quantity < 2,
-                          'button--inline': item.quantity >= 2,
-                        }">
-                        -
-                      </button>
+                      @click="decreaseItemQuantity(item.id)"
+                      v-if="item.quantity >= 2" 
+                      class="button button--decrease button--inline">
+                      -
+                     </button>
+
                     </div>
                   </td>
                   <td class="table__cell">{{ item.price }}</td>
