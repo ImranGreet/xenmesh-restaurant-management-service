@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "formate": "yarn prettier . --write",
+    "format": "yarn prettier . --write",
     "compose":"npx tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/compilecss.css --watch"
   },
   "dependencies": {
