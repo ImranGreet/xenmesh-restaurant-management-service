@@ -8,8 +8,13 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
+<<<<<<< Updated upstream
     "format": "yarn prettier . --write",
     "compose":"npx tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/compilecss.css --watch"
+=======
+    "formate": "yarn prettier . --write",
+    // "compose":"npx tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/compilecss.css --watch"
+>>>>>>> Stashed changes
   },
   "dependencies": {
     "@formkit/vue": "^1.3.0",
