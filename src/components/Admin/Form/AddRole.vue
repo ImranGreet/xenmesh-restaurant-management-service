@@ -3,30 +3,54 @@
     <div
       class="w-full md:w-4/5 lg:3/4 xl:w-1/2 mx-auto border border-gray-800/25 rounded-lg bg-white p-5">
       <formTitle>Add Roles Of Your Services</formTitle>
-      <form class="w-full flex flex-col justify-between items-center gap-y-5">
+      <form
+        @submit.prevent="createRole"
+        class="w-full flex flex-col justify-between items-center gap-y-5">
         <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Icon Name</label>
+          <label for="icon">Role Name</label>
           <input
             type="text"
             class="form__input--field"
-            name="icon"
-            placeholder="Enter Icon Name" />
+            v-model="role"
+            placeholder="Enter Role Name" />
         </div>
         <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Category</label>
-          <input
-            type="text"
-            class="form__input--field"
-            name="icon"
-            placeholder="Enter Icon Category" />
+          <h4>Permissions</h4>
+          <div class="w-full h-36 overflow-y-auto">
+            <div class="flex justify-start gap-x-2">
+              <label for="create order">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="" />
+                <span class="ml-1">Create Order</span>
+              </label>
+              <label for="create order">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="" />
+                <span class="ml-1">Create Order</span>
+              </label>
+              <label for="create order">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="" />
+                <span class="ml-1">Create Order</span>
+              </label>
+              <label for="create order">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="" />
+                <span class="ml-1">Create Order</span>
+              </label>
+              
+            </div>
+          </div>
         </div>
-        <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Icon Image</label>
-          <input
-            type="file"
-            class="form__input--file"
-            name="icon" />
-        </div>
+
         <div class="px-2 py-1 w-full">
           <authsubmitBtn>Submit</authsubmitBtn>
         </div>
@@ -36,10 +60,18 @@
 </template>
 
 <script>
+import { storeToRefs } from 'pinia';
+import useRoleToManage from '../../../store/RolePermission/role';
 export default {
   name: 'AddRole',
   setup() {
-    return {};
+    const roleStore = useRoleToManage();
+    /*property*/
+    const { role } = storeToRefs(roleStore);
+    /*methods*/
+    const { createRole } = roleStore;
+
+    return { role, createRole };
   },
 };
 </script>

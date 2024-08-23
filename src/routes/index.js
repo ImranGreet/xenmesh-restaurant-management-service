@@ -113,11 +113,11 @@ const routes = [
         name: 'add_stuff',
         component: () => import('../pages/Admin/Form/InsertStuff.vue'),
       },
-      {
-        path: '/add_role',
-        name: 'add_role',
-        component: () => import('../pages/Admin/Form/InsertRole.vue'),
-      },
+      // {
+      //   path: '/add_role',
+      //   name: 'add_role',
+      //   component: () => import('../pages/Admin/Form/InsertRole.vue'),
+      // },
       /*stocks*/
       {
         path: '/add_stock_category',
