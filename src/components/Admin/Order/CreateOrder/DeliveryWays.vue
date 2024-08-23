@@ -6,9 +6,9 @@
         <div class="grid grid-cols-3 gap-2 overflow-y-auto py-2">
           <RadioGroupOption
             as="template"
-            v-for="plan,index in plans"
+            v-for="deliveyWay,index in deliveryWays"
             :key="index"
-            :value="plan"
+            :value="deliveyWay"
             v-slot="{ active, checked }">
             <div
               :class="[
@@ -27,7 +27,7 @@
                       as="p"
                       :class="checked ? 'text-white' : 'text-gray-900'"
                       class="font-medium">
-                      {{ plan.name }}
+                      {{ deliveyWay.name }}
                     </RadioGroupLabel>
                     <RadioGroupDescription
                       as="span"
@@ -75,21 +75,21 @@ import {
   RadioGroupOption,
 } from '@headlessui/vue';
 
-const plans = [
+const deliveryWays = [
   {
-    name: 'Credit ',
+    name: 'Food Panda ',
   },
   {
-    name: 'PayPal',
+    name: 'Foodie',
   },
   {
-    name: 'Apple',
+    name: 'Uber',
   },
 ];
 
 const selected = ref(null);
 const chooseId = function(id){
   selected.value = id;
-  console.log("Selected plan:", id);
+  console.log("Selected deliveyWay:", id);
 }
 </script>
