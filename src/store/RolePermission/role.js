@@ -5,7 +5,7 @@ import { ref } from 'vue';
 const useRoleToManage = defineStore('set_role', () => {
   let alertMessage = ref('');
   let role = ref('');
-  let showSkillital = ref(false);
+  let showSkillital = ref(true);
   let permissions = ref([]);
   let permissionToRole = ref([]);
   let errors = ref({});
@@ -41,7 +41,7 @@ const useRoleToManage = defineStore('set_role', () => {
         permissions.value.forEach((permission)=>{
           permission.allowed = false;
         });
-        console.log(permissions.value);
+       showSkillital.value = false;
       }
     } catch (error) {
       console.error('Error fetching permissions:', error); // Log the error for debugging
@@ -53,6 +53,7 @@ const useRoleToManage = defineStore('set_role', () => {
     errors,
     permissions,
     permissionToRole,
+    showSkillital,
     createRole,
     getPermissions,
   };

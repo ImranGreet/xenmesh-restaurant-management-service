@@ -31,7 +31,10 @@
             </label>
           </div>
           <div class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll">
-            <div class="grid grid-cols-3 border border-gray-300 rounded-md">
+            <div v-if="showSkillital" class="w-full h-full flex justify-center items-center">
+              <div class="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full animate-spin" style="border-top-color: #3490dc;"></div>
+            </div>
+            <div class="grid grid-cols-3 border border-gray-300 rounded-md" v-else>
               <label
                 v-for="(permission, index) in permissions"
                 :key="index"
@@ -71,7 +74,7 @@ export default {
   setup() {
     const roleStore = useRoleToManage();
     /*property*/
-    const { role, errors, permissions, permissionToRole } =
+    const { role, errors, permissions, permissionToRole,showSkillital } =
       storeToRefs(roleStore);
     /*methods*/
     const { createRole, getPermissions } = roleStore;
@@ -96,6 +99,7 @@ export default {
       permissions,
       errors,
       permissionToRole,
+      showSkillital,
       createRole,
       getPermissions,
       setPermissionToRole,
