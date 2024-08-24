@@ -30,9 +30,9 @@
               Check All
             </label>
           </div>
-          <div class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll">
+          <div class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
             <div v-if="showSkillital" class="w-full h-full flex justify-center items-center">
-              <div class="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full animate-spin" style="border-top-color: #3490dc;"></div>
+              <Loader/>
             </div>
             <div class="grid grid-cols-3 border border-gray-300 rounded-md" v-else>
               <label
@@ -66,11 +66,15 @@
 </template>
 
 <script>
+import Loader from "../../../components/Utilities/Loader.vue"
 import { storeToRefs } from 'pinia';
 import useRoleToManage from '../../../store/RolePermission/role';
 import { onMounted } from 'vue';
 export default {
   name: 'AddRole',
+  components:{
+    Loader
+  },
   setup() {
     const roleStore = useRoleToManage();
     /*property*/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillTalk-like Loader</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    .bounce {
+      animation: bounce 1s infinite;
+    }
+    .bounce1 {
+      animation-delay: 0s;
+    }
+    .bounce2 {
+      animation-delay: 0.2s;
+    }
+    .bounce3 {
+      animation-delay: 0.4s;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <!-- Loader -->
+  <div class="flex space-x-2">
+    <div class="w-4 h-4 bg-blue-500 rounded-full bounce bounce1"></div>
+    <div class="w-4 h-4 bg-blue-500 rounded-full bounce bounce2"></div>
+    <div class="w-4 h-4 bg-blue-500 rounded-full bounce bounce3"></div>
+  </div>
+</body>
+</html>
