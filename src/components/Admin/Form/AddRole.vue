@@ -25,27 +25,30 @@
             <label class="custom-checkbox-label p-1">
               <input
                 type="checkbox"
-                class="custom-checkbox"
-                 />
+                class="custom-checkbox" />
               <span class="custom-checkbox-box"></span>
               Check All
             </label>
           </div>
           <div class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll">
             <div class="grid grid-cols-3 border border-gray-300 rounded-md">
-
               <label
-              v-for="permission,index in permissions" :key="index"
-               :for="'permission-' + index"
-              class="custom-checkbox-label border border-gray-300 capitalize"
-              :class="{'rounded-tr-md':index===2,'rounded-tl-md':index===0}">
+                v-for="(permission, index) in permissions"
+                :key="index"
+                :for="'permission-' + index"
+                class="custom-checkbox-label border border-gray-300 capitalize"
+                :class="{
+                  'rounded-tr-md': index === 2,
+                  'rounded-tl-md': index === 0,
+                }">
                 <input
+                  @change="setPermissionToRole(permission)"
                   type="checkbox"
                   class="custom-checkbox"
                   :checked="permission.allowed"
-                  :id="'permission-' + index"/>
+                  :id="'permission-' + index" />
                 <span class="custom-checkbox-box"></span>
-                {{ permission.permissionName }}
+                {{ permission.name }}
               </label>
             </div>
           </div>
@@ -62,29 +65,41 @@
 <script>
 import { storeToRefs } from 'pinia';
 import useRoleToManage from '../../../store/RolePermission/role';
+import { onMounted } from 'vue';
 export default {
   name: 'AddRole',
   setup() {
     const roleStore = useRoleToManage();
     /*property*/
-    const { role, errors } = storeToRefs(roleStore);
+    const { role, errors, permissions, permissionToRole } =
+      storeToRefs(roleStore);
     /*methods*/
-    const { createRole } = roleStore;
+    const { createRole, getPermissions } = roleStore;
 
-    const permissions = [
-      { id: 1, permissionName: 'view menu', allowed: true },
-      { id: 2, permissionName: 'edit menu', allowed: true },
-      { id: 3, permissionName: 'view orders', allowed: false },
-      { id: 4, permissionName: 'edit orders', allowed: true },
-      { id: 5, permissionName: 'manage reservations', allowed: false },
-      { id: 6, permissionName: 'process payments', allowed: true },
-      { id: 7, permissionName: 'manage_staff', allowed: false },
-      { id: 8, permissionName: 'view reports', allowed: true },
-      { id: 9, permissionName: 'manage inventory', allowed: true },
-      { id: 10, permissionName: 'customer feedback', allowed: false },
-    ];
+    onMounted(async () => {
+      await getPermissions();
+    });
 
-    return { role, permissions, errors, createRole };
+    const setPermissionToRole = function (permission) {
+      const index = permissionToRole.value.indexOf(permission.name);
+      permission.allowed = true;
+
+      if (index === -1) {
+        permissionToRole.value.push(permission);
+      } else {
+        permissionToRole.value.splice(index, 1);
+      }
+    };
+
+    return {
+      role,
+      permissions,
+      errors,
+      permissionToRole,
+      createRole,
+      getPermissions,
+      setPermissionToRole,
+    };
   },
 };
 </script>

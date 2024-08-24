@@ -6,8 +6,6 @@ const usePermissionToManage = defineStore('set_permissions', () => {
   let alertMessage = ref('');
   let showSkillital = ref(false);
   let permission = ref('');
- 
-    
 
   let createPermission = async () => {
     try {
@@ -20,7 +18,6 @@ const usePermissionToManage = defineStore('set_permissions', () => {
 
   return {
     permission,
-    permissions,
     createPermission,
   };
 });
