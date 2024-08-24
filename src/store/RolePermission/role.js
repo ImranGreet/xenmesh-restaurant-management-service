@@ -13,10 +13,12 @@ const useRoleToManage = defineStore('set_role', () => {
   const createRole = async () => {
     try {
       await axios
-        .post('http://127.0.0.1:8000/api/create_role', { name: role.value,permissions:permissionToRole.value })
+        .post('http://127.0.0.1:8000/api/create_role', {
+          name: role.value,
+          permissions: permissionToRole.value,
+        })
         .then(response => {
           if (response.data.success) {
-            console.log('Role Created ', response.data.role);
             role.value = '';
             errors.value = {};
           }
@@ -37,11 +39,11 @@ const useRoleToManage = defineStore('set_role', () => {
       );
 
       if (response.data.success) {
-        permissions.value = response.data.permission; 
-        permissions.value.forEach((permission)=>{
+        permissions.value = response.data.permission;
+        permissions.value.forEach(permission => {
           permission.allowed = false;
         });
-       showSkillital.value = false;
+        showSkillital.value = false;
       }
     } catch (error) {
       console.error('Error fetching permissions:', error); // Log the error for debugging

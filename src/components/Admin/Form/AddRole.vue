@@ -40,10 +40,7 @@
                 :key="index"
                 :for="'permission-' + index"
                 class="custom-checkbox-label border border-gray-300 capitalize"
-                :class="{
-                  'rounded-tr-md': index === 2,
-                  'rounded-tl-md': index === 0,
-                }">
+                >
                 <input
                   @change="setPermissionToRole(permission)"
                   type="checkbox"
