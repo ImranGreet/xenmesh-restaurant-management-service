@@ -6,6 +6,7 @@ const useRoleToManage = defineStore('set_role', () => {
   let alertMessage = ref('');
   let role = ref('');
   let showSkillital = ref(false);
+  let errors = ref({});
 
   const createRole = async () => {
     try {
@@ -15,15 +16,21 @@ const useRoleToManage = defineStore('set_role', () => {
           if (response.data.success) {
             console.log('Role Created ', response.data.role);
             role.value = '';
+            errors.value = {};
           }
         });
     } catch (error) {
-      console.log('Error', error);
+      if (error.response && error.response.status === 422) {
+        errors.value = error.response.data.errors;
+      } else {
+        console.log('Error', error);
+      }
     }
   };
 
   return {
     role,
+    errors,
     createRole,
   };
 });

@@ -132,6 +132,12 @@ const useLeftSideBarRouterLink = ref([
         uri: 'add_role',
         name: 'add_role',
       },
+      {
+        id: 4,
+        params: 'Add Permission',
+        uri: 'add_permission',
+        name: 'add_permission',
+      },
     ],
   },
   {

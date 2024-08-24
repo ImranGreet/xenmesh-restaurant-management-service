@@ -3,7 +3,7 @@
     <div class="mx-auto w-full max-w-md">
       <RadioGroup v-model="selected">
         <RadioGroupLabel class="sr-only">Server size</RadioGroupLabel>
-        <div class="grid grid-cols-3 gap-2 max-h-[180px] overflow-y-auto py-2">
+        <div class="grid grid-cols-3 gap-2 max-h-[180px] overflow-y-auto p-2">
           <RadioGroupOption
             as="template"
             v-for="plan in plans"
@@ -79,7 +79,7 @@ import { storeToRefs } from 'pinia';
 
 const plans = [
   {
-    name: 'Credit ',
+    name: 'Visa',
   },
   {
     name: 'PayPal',
@@ -88,14 +88,12 @@ const plans = [
     name: 'Apple',
   },
   {
-    name: 'Google',
-  },
-  {
     name: 'Cash',
   },
   {
-    name: 'Bank',
+    name: 'Bkash',
   },
+  
 ];
 
 const selected = ref(null);

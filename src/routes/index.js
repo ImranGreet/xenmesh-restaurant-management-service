@@ -107,6 +107,11 @@ const routes = [
         name: 'add_role',
         component: () => import('../pages/Admin/Form/InsertRole.vue'),
       },
+      {
+        path: '/add_permission',
+        name: 'add_permission',
+        component: () => import('../pages/Admin/Form/InsertPermission.vue'),
+      },
 
       {
         path: '/add_stuff',
