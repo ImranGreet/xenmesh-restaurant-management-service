@@ -1,7 +1,7 @@
 <template>
   <div class="px-4 py-6 w-full h-full flex justify-center items-center">
     <div
-      class="w-full md:w-4/5 lg:w-3/4 xl:w-1/2 mx-auto border border-gray-300 rounded-xl bg-white p-8 shadow">
+      class="w-full md:w-4/5 lg:w-3/4 xl:w-1/2 mx-auto border border-gray-300 rounded-xl bg-white p-8 ">
       <FormHeadLine class="text-3xl font-bold text-gray-800 mb-8"
         >Add Setting Image</FormHeadLine
       >

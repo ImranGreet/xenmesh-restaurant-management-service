@@ -77,7 +77,10 @@ import {
 
 const deliveryWays = [
   {
-    name: 'Food Panda ',
+    name: 'Dine In',
+  },
+  {
+    name: 'Food Pan ',
   },
   {
     name: 'Foodie',
