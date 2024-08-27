@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-700 xl:bg-inherit w-ful">
+  <div class="bg-gray-700 xl:bg-inherit w-full border-l border-gray-300/25 pl-2">
     <form
       @submit.prevent="submitOrderFromHouse()"
       class="w-full flex flex-col justify-between items-center">
