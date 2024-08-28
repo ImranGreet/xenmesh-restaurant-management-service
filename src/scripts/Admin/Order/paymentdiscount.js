@@ -8,6 +8,7 @@ const useOrderPaymentDiscount = function () {
   const specialDiscount = ref(0);
   const totalPrice = ref(0);
   const deliveryWay = ref('');
+  const tableNumber = ref(null);
   const payableAmount = ref(0);
   const paidAmount = ref(0);
   const changeAmount = ref(0);
@@ -51,6 +52,10 @@ const useOrderPaymentDiscount = function () {
   const selectDeliveryWay = function (way) {
     deliveryWay.value = way;
   };
+
+  const selectTable = function(tabNumber){
+    tableNumber.value = tabNumber;
+  }
 
   const paymentAndChange = function () {
     if (paidAmount.value < 0 && typeof paidAmount.value !== 'number') {
@@ -107,6 +112,7 @@ const useOrderPaymentDiscount = function () {
     specialDiscount,
     totalPrice,
     deliveryWay,
+    tableNumber,
     payableAmount,
     paidAmount,
     changeAmount,
@@ -118,6 +124,7 @@ const useOrderPaymentDiscount = function () {
     selectDeliveryWay,
     paymentAndChange,
     appliedDiscouontCash,
+    selectTable
   };
 };
 

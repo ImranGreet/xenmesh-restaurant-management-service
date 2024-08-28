@@ -93,6 +93,20 @@
           class="w-full text-center px-4 py-1 focus:outline-none"
           readonly />
       </div>
+      <div class="w-full flex justify-between items-center space-x-3 pl-2 py-1">
+        <label
+          for="subtotal"
+          class="w-full text-base"
+          >Table Number</label
+        >
+        <input
+          v-model="tableNumber"
+          type="text"
+          name=""
+          id=""
+          class="w-full text-center px-4 py-1 focus:outline-none"
+          readonly />
+      </div>
 
       <div
         class="bg-stone-600 text-start text-white px-2 py-1 2xl:py-3 w-full rounded-t-lg">
@@ -178,6 +192,7 @@ export default {
       specialDiscount,
       totalPrice,
       deliveryWay,
+      tableNumber,
       payableAmount,
       paidAmount,
       changeAmount,
@@ -188,6 +203,7 @@ export default {
       amountToBePay,
       selectDeliveryWay,
       paymentAndChange,
+      selectTable
     } = useOrderPaymentDiscount();
 
     onMounted(() => {
@@ -213,6 +229,7 @@ export default {
       specialDiscount,
       totalPrice,
       deliveryWay,
+      tableNumber,
       payableAmount,
       paidAmount,
       changeAmount,
@@ -224,6 +241,7 @@ export default {
       selectDeliveryWay,
       paymentAndChange,
       submitOrderFromHouse,
+      selectTable,
     };
   },
 };
@@ -232,6 +250,7 @@ export default {
 <style scoped>
 input[type='number'] {
   -moz-appearance: textfield;
+  appearance: textfiled;
 }
 
 input[type='number']::-webkit-inner-spin-button,
