@@ -240,6 +240,11 @@ const routes = [
   //   name: 'notInOffer',
   //   component: () => import('../pages/404.vue'),
   // },
+  {
+    path:"/printOrderInvoice",
+    name:"PrintInvoice",
+    component:()=>import('../pages/Admin/Order/PrintInvoice.vue')
+  }
 ];
 
 const router = createRouter({
