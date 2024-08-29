@@ -46,7 +46,7 @@
     
         <!-- Total Amount -->
         <div class="text-right mt-8">
-          <p class="text-xl font-semibold">Total: {{ formatPrice(totalAmount) }}</p>
+          <p class="text-xl font-semibold print:text-lg">Total: {{ formatPrice(totalAmount) }}</p>
           <p class="text-lg font-normal">Discount: 5.00</p>
           <p class="text-lg font-normal inline-block text-right">------------</p>
           <p class="text-lg font-normal">Payable  {{ formatPrice(totalAmount -5) }}</p>
