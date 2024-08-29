@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-gray-700 xl:bg-inherit w-full border-l border-gray-300/25 pl-2">
+  <div
+    class="bg-gray-700 xl:bg-inherit w-full border-l border-gray-300/25 pl-2">
     <form
       @submit.prevent="submitOrderFromHouse()"
       class="w-full flex flex-col justify-between items-center">
@@ -171,6 +172,7 @@
       </div>
       <!-- confirm button -->
       <button
+        type="submit"
         class="px-2 py-3 text-base 2xl:text-xl tracking-wider bg-blue-700 text-white w-full">
         Confirm
       </button>
@@ -181,6 +183,8 @@
 <script>
 import { onMounted, watch } from 'vue';
 import { useOrderPaymentDiscount } from '../../../../scripts/Admin/Order/createOrder';
+import { useRouter } from 'vue-router';
+
 
 export default {
   name: 'PaymentForm',
@@ -203,15 +207,17 @@ export default {
       amountToBePay,
       selectDeliveryWay,
       paymentAndChange,
-      selectTable
+      selectTable,
     } = useOrderPaymentDiscount();
+
+    const router = useRouter();
 
     onMounted(() => {
       subtotalPrice.value = itemsToBePurchased.value.reduce(
         (initialSum, product) => {
           return initialSum + product.price * product.quantity;
         },
-        0,
+        0
       );
 
       if (specialDiscount.value === 0 && discountRate.value === 0) {
@@ -221,6 +227,9 @@ export default {
 
     const submitOrderFromHouse = async function () {
       console.log('Order Submitted');
+      router.push({
+        name:'PrintInvoice'
+      });
     };
 
     return {
