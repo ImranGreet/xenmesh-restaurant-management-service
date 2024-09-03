@@ -38,23 +38,29 @@ import Settingicon from '../../../components/Admin/Auth/Settingicon.vue';
 import Shoplogo from '../../../components/Admin/Auth/Shoplogo.vue';
 import UserProfile from '../../../components/Admin/Auth/UserProfile.vue';
 import ContactDetails from '../../../components/Admin/Auth/ContactDetails.vue';
+import PaymentMethods from "../../../components/Admin/Auth/PaymentMethods.vue"
+import DeliveryWays from "../../../components/Admin/Auth/DeliveryWays.vue"
 import Tab from '../../../components/Utilities/Tab.vue';
 
 export default {
   name: 'Storesettingicons',
-  components: { Settingicon, UserProfile, Shoplogo, ContactDetails, Tab },
+  components: { Settingicon, UserProfile, Shoplogo, ContactDetails, Tab ,PaymentMethods,DeliveryWays},
   setup() {
     const componentsTitle = ref([
       'Setting icon',
       'User Profile',
       'Shop logo',
       'Contact Details',
+      'Payment Methods',
+      'Delivery Ways'
     ]);
     const componentContainer = ref([
       'Settingicon',
       'UserProfile',
       'Shoplogo',
       'ContactDetails',
+      'PaymentMethods',
+      'DeliveryWays'
     ]);
     return {
       componentsTitle,
