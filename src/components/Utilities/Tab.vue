@@ -1,7 +1,7 @@
 <template>
   <button
     :id="tabDetectionId"
-    class="bg-blue-700 lg:hover:bg-blue-600 text-white px-3 md:px-4 lg:px-6 xl:px-10 py-2 tracking-wider leading-relaxed rounded-3xl ">
+    class="text-gray-900 px-2  tracking-wider leading-relaxed  hover:text-blue-500 hover:border-blue-500/50">
     <slot></slot>
   </button>
 </template>

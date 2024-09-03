@@ -2,12 +2,13 @@
   <div class="w-full">
     <div class="w-full px-5 py-6 bg-gray-500/10 text-white">
       <div
-        class="w-full xl:w-3/4 mx-auto flex justify-between flex-wrap items-center gap-x-0.5 md:gap-x-0 gap-y-2 sm:gap-y-0">
+        class="w-full gap-x-10 mx-auto flex  flex-wrap items-center   gap-y-2 sm:gap-y-0">
         <Tab
           @click="tabcontroller(index)"
           v-for="(compoTitle, index) in componentsTitle"
           :key="index"
-          :tabId="index + 1">
+          :tabId="index + 1"
+          :class="{'border-b border-gray-900/70 ': activeIndex === index}">
           {{ compoTitle }}
         </Tab>
       </div>
