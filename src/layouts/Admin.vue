@@ -19,10 +19,8 @@
     <div
       class="float-right mt-[60px] px-1 right-0 h-full z-0 overflow-y-auto"
       :class="{
-        'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto ':
-          !sidebarView,
-        'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto ':
-          sidebarView,
+        'w-full sm:w-[70%] xl:w-[85%] fixed mx-auto ': !sidebarView,
+        'w-full sm:w-[90%] xl:w-[95%] fixed mx-auto ': sidebarView,
       }">
       <div class="h-[90%] w-full overflow-y-auto">
         <router-view />
@@ -131,4 +129,3 @@ export default {
   },
 };
 </script>
-

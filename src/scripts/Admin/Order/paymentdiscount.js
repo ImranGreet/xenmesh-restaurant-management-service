@@ -53,9 +53,9 @@ const useOrderPaymentDiscount = function () {
     deliveryWay.value = way;
   };
 
-  const selectTable = function(tabNumber){
+  const selectTable = function (tabNumber) {
     tableNumber.value = tabNumber;
-  }
+  };
 
   const paymentAndChange = function () {
     if (paidAmount.value < 0 && typeof paidAmount.value !== 'number') {
@@ -124,7 +124,7 @@ const useOrderPaymentDiscount = function () {
     selectDeliveryWay,
     paymentAndChange,
     appliedDiscouontCash,
-    selectTable
+    selectTable,
   };
 };
 

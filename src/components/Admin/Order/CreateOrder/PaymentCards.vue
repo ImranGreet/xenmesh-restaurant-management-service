@@ -93,7 +93,6 @@ const plans = [
   {
     name: 'Bkash',
   },
-  
 ];
 
 const selected = ref(null);
@@ -101,7 +100,4 @@ const selectPaymentOption = function (option) {
   selected.value = option;
   console.log(selected.value);
 };
-
-
-
 </script>

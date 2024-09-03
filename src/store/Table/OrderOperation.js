@@ -74,9 +74,8 @@ const useOrderOperation = defineStore('orderOps', () => {
     orderInStore,
     updateOrder,
     deleteOrderFromOrderList,
-    selectPaymentOption
+    selectPaymentOption,
   };
 });
-
 
 export default useOrderOperation;

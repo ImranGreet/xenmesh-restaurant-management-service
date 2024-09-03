@@ -6,13 +6,15 @@
         'toggle-screen-animation': showAnimation,
       }">
       <div class="text-center mb-6">
-        <h2 class="text-2xl font-semibold text-gray-800">
-          Add Item Stock
-        </h2>
+        <h2 class="text-2xl font-semibold text-gray-800">Add Item Stock</h2>
       </div>
-      <form @submit.prevent class="space-y-4">
+      <form
+        @submit.prevent
+        class="space-y-4">
         <div>
-          <label for="item_name" class="block text-sm font-medium text-gray-700">
+          <label
+            for="item_name"
+            class="block text-sm font-medium text-gray-700">
             Item Name Or Code
           </label>
           <input
@@ -24,7 +26,9 @@
 
         <div class="flex space-x-4">
           <div class="w-1/3">
-            <label for="category" class="block text-sm font-medium text-gray-700">
+            <label
+              for="category"
+              class="block text-sm font-medium text-gray-700">
               Item Category
             </label>
             <input
@@ -34,7 +38,9 @@
               class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
           <div class="w-1/3">
-            <label for="subcategory" class="block text-sm font-medium text-gray-700">
+            <label
+              for="subcategory"
+              class="block text-sm font-medium text-gray-700">
               Subcategory
             </label>
             <input
@@ -44,7 +50,9 @@
               class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
           <div class="w-1/3">
-            <label for="unit" class="block text-sm font-medium text-gray-700">
+            <label
+              for="unit"
+              class="block text-sm font-medium text-gray-700">
               Unit
             </label>
             <input
@@ -56,7 +64,9 @@
         </div>
 
         <div>
-          <label for="invoice" class="block text-sm font-medium text-gray-700">
+          <label
+            for="invoice"
+            class="block text-sm font-medium text-gray-700">
             Invoice
           </label>
           <input
@@ -66,7 +76,9 @@
         </div>
 
         <div>
-          <button type="submit" class="w-full px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button
+            type="submit"
+            class="w-full px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
             Submit
           </button>
         </div>
@@ -100,7 +112,7 @@ export default {
 
     watch(
       () => props.AnimationProperty,
-      (newVal) => {
+      newVal => {
         showAnimation.value = newVal;
       },
     );

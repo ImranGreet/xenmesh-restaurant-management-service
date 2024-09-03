@@ -1,38 +1,38 @@
 <template>
-      <div class="bg-inherit px-3 py-2 w-full">
-        <div
-          class="w-full md:w-4/5 lg:3/4 xl:w-1/2 mx-auto border border-gray-800/25 rounded-lg bg-white p-5">
-          <formTitle>Add Permission Of Your Services</formTitle>
-          <form
-            @submit.prevent="createPermission"
-            class="w-full flex flex-col justify-between items-center gap-y-5">
-            <div class="px-2 py-1 w-full space-y-3">
-              <label for="icon">Permission Name</label>
+  <div class="bg-inherit px-3 py-2 w-full">
+    <div
+      class="w-full md:w-4/5 lg:3/4 xl:w-1/2 mx-auto border border-gray-800/25 rounded-lg bg-white p-5">
+      <formTitle>Add Permission Of Your Services</formTitle>
+      <form
+        @submit.prevent="createPermission"
+        class="w-full flex flex-col justify-between items-center gap-y-5">
+        <div class="px-2 py-1 w-full space-y-3">
+          <label for="icon">Permission Name</label>
+          <input
+            type="text"
+            class="form__input--field"
+            v-model="permission"
+            placeholder="Enter Role Name" />
+        </div>
+        <div class="px-2 py-1 w-full space-y-3">
+          <div class="flex justify-between items-center">
+            <h4>Roles</h4>
+            <label class="custom-checkbox-label p-1">
               <input
-                type="text"
-                class="form__input--field"
-                v-model="permission"
-                placeholder="Enter Role Name" />
-            </div>
-            <div class="px-2 py-1 w-full space-y-3">
-              <div class="flex justify-between items-center">
-                <h4>Roles</h4>
-                <label class="custom-checkbox-label p-1">
-                  <input
-                    type="checkbox"
-                    class="custom-checkbox" />
-                  <span class="custom-checkbox-box"></span>
-                  Check All
-                </label>
-              </div>
-              <div class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
-                <div class="grid grid-cols-3 border border-gray-300 rounded-md">
-                  <label
+                type="checkbox"
+                class="custom-checkbox" />
+              <span class="custom-checkbox-box"></span>
+              Check All
+            </label>
+          </div>
+          <div
+            class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
+            <div class="grid grid-cols-3 border border-gray-300 rounded-md">
+              <label
                 v-for="(role, index) in roles"
                 :key="index"
                 :for="'role-' + index"
-                class="custom-checkbox-label border border-gray-300 capitalize"
-                >
+                class="custom-checkbox-label border border-gray-300 capitalize">
                 <input
                   @change="setRoleToPermission(role)"
                   type="checkbox"
@@ -42,48 +42,51 @@
                 <span class="custom-checkbox-box"></span>
                 {{ role.name }}
               </label>
-                 
-                  
-                </div>
-              </div>
             </div>
-    
-            <div class="px-2 py-1 w-full">
-              <authsubmitBtn>Submit</authsubmitBtn>
-            </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </template>
-    
-    <script>
-    import { storeToRefs } from 'pinia';
-     import usePermissionToManage from "../../../store/RolePermission/Permission"
+
+        <div class="px-2 py-1 w-full">
+          <authsubmitBtn>Submit</authsubmitBtn>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
+
+<script>
+import { storeToRefs } from 'pinia';
+import usePermissionToManage from '../../../store/RolePermission/Permission';
 import { onMounted } from 'vue';
-    export default {
-      name: 'AddPermission',
-      setup() {
-        const permissionStore = usePermissionToManage();
-        /*property*/
-        const { permission,roles } = storeToRefs(permissionStore);
-        /*methods*/
-        const { createPermission ,getRoles} = permissionStore;
+export default {
+  name: 'AddPermission',
+  setup() {
+    const permissionStore = usePermissionToManage();
+    /*property*/
+    const { permission, roles } = storeToRefs(permissionStore);
+    /*methods*/
+    const { createPermission, getRoles } = permissionStore;
 
-        onMounted(async()=>{
-          await getRoles();
-        });
+    onMounted(async () => {
+      await getRoles();
+    });
 
-        const setRoleToPermission = function(role){
-          console.log("Okay");
-        }
-    
-        return { permission,roles, createPermission,getRoles,setRoleToPermission };
-      },
+    const setRoleToPermission = function (role) {
+      console.log('Okay');
     };
-    </script>
-    
 
-    <style scoped>
+    return {
+      permission,
+      roles,
+      createPermission,
+      getRoles,
+      setRoleToPermission,
+    };
+  },
+};
+</script>
+
+<style scoped>
 /* Hide the default checkbox */
 .custom-checkbox {
   display: none;

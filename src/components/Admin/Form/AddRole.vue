@@ -30,17 +30,21 @@
               Check All
             </label>
           </div>
-          <div class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
-            <div v-if="showSkillital" class="w-full h-full flex justify-center items-center">
-              <Loader/>
+          <div
+            class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
+            <div
+              v-if="showSkillital"
+              class="w-full h-full flex justify-center items-center">
+              <Loader />
             </div>
-            <div class="grid grid-cols-3 border border-gray-300 rounded-md" v-else>
+            <div
+              class="grid grid-cols-3 border border-gray-300 rounded-md"
+              v-else>
               <label
                 v-for="(permission, index) in permissions"
                 :key="index"
                 :for="'permission-' + index"
-                class="custom-checkbox-label border border-gray-300 capitalize"
-                >
+                class="custom-checkbox-label border border-gray-300 capitalize">
                 <input
                   @change="setPermissionToRole(permission)"
                   type="checkbox"
@@ -63,19 +67,19 @@
 </template>
 
 <script>
-import Loader from "../../../components/Utilities/Loader.vue"
+import Loader from '../../../components/Utilities/Loader.vue';
 import { storeToRefs } from 'pinia';
 import useRoleToManage from '../../../store/RolePermission/role';
 import { onMounted } from 'vue';
 export default {
   name: 'AddRole',
-  components:{
-    Loader
+  components: {
+    Loader,
   },
   setup() {
     const roleStore = useRoleToManage();
     /*property*/
-    const { role, errors, permissions, permissionToRole,showSkillital } =
+    const { role, errors, permissions, permissionToRole, showSkillital } =
       storeToRefs(roleStore);
     /*methods*/
     const { createRole, getPermissions } = roleStore;
@@ -108,7 +112,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 /* Hide the default checkbox */

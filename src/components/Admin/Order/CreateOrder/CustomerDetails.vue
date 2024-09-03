@@ -1,7 +1,7 @@
 <template>
-  <TabGroup >
+  <TabGroup>
     <TabList
-      class="w-full mx-auto flex justify-between items-center text-gray-700  rounded-sm ">
+      class="w-full mx-auto flex justify-between items-center text-gray-700 rounded-sm">
       <Tab v-slot="{ selected }">
         <button
           class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none focus-visible:outline-none"
@@ -22,7 +22,7 @@
       </Tab>
       <Tab v-slot="{ selected }">
         <button
-          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none  focus-visible:outline-none"
+          class="px-4 py-2 rounded-sm cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 focus:outline-none focus-visible:outline-none"
           :class="{
             ' border-b-2 border-blue-500 font-semibold': selected,
           }">

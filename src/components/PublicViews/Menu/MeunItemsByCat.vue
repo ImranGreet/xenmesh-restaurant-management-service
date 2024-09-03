@@ -3,7 +3,7 @@
     <div
       v-if="showTransition"
       class="bg-inherit w-full space-y-5">
-      <div class="w-full flex-between flex-col ">
+      <div class="w-full flex-between flex-col">
         <div class="w-full flex-between py-3">
           <div class="text-center">
             <h1

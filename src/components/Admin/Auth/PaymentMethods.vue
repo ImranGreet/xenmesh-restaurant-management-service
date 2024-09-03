@@ -92,7 +92,7 @@
     </div>
   </div>
 </template>
-    <script setup>
+<script setup>
 import { ref } from 'vue';
 import FormHeadLine from './FormHeadLine.vue';
 import Visa from '../../../assets/images/images.png';
@@ -137,4 +137,3 @@ const paymentMethods = ref([
   },
 ]);
 </script>
-    

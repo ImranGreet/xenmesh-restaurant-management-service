@@ -185,7 +185,6 @@ import { onMounted, watch } from 'vue';
 import { useOrderPaymentDiscount } from '../../../../scripts/Admin/Order/createOrder';
 import { useRouter } from 'vue-router';
 
-
 export default {
   name: 'PaymentForm',
   setup() {
@@ -217,7 +216,7 @@ export default {
         (initialSum, product) => {
           return initialSum + product.price * product.quantity;
         },
-        0
+        0,
       );
 
       if (specialDiscount.value === 0 && discountRate.value === 0) {
@@ -228,7 +227,7 @@ export default {
     const submitOrderFromHouse = async function () {
       console.log('Order Submitted');
       router.push({
-        name:'PrintInvoice'
+        name: 'PrintInvoice',
       });
     };
 

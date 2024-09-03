@@ -2,7 +2,9 @@
   <div class="p-6 bg-white rounded-lg max-w-3xl mx-auto">
     <!-- Restaurant Header -->
     <div class="text-center mb-8">
-      <h1 class="text-4xl font-bold mb-2 print:text-2xl print:text-gray-700/60">Xenmesh</h1>
+      <h1 class="text-4xl font-bold mb-2 print:text-2xl print:text-gray-700/60">
+        Xenmesh
+      </h1>
       <p class="text-sm text-gray-500">Fine Dining Experience</p>
     </div>
 
@@ -23,7 +25,6 @@
 
     <!-- Order Details -->
     <div class="mb-8">
-      
       <h2 class="text-xl font-semibold mb-4">Order Details</h2>
       <table class="w-full border-collapse print:border-none">
         <thead>
@@ -35,11 +36,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="order in itemsToBePurchased" :key="order.id" class="border-b">
-            <td class="border print:border-none px-4 py-2">{{ order.title }}</td>
-            <td class="border print:border-none px-4 py-2">{{ order.quantity }}</td>
-            <td class="border print:border-none px-4 py-2">{{ formatPrice(order.price) }}</td>
-            <td class="border print:border-none px-4 py-2">{{ formatPrice(order.quantity * order.price) }}</td>
+          <tr
+            v-for="order in itemsToBePurchased"
+            :key="order.id"
+            class="border-b">
+            <td class="border print:border-none px-4 py-2">
+              {{ order.title }}
+            </td>
+            <td class="border print:border-none px-4 py-2">
+              {{ order.quantity }}
+            </td>
+            <td class="border print:border-none px-4 py-2">
+              {{ formatPrice(order.price) }}
+            </td>
+            <td class="border print:border-none px-4 py-2">
+              {{ formatPrice(order.quantity * order.price) }}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -47,10 +59,14 @@
 
     <!-- Total Amount -->
     <div class="text-right mt-8">
-      <p class="text-xl font-semibold print:text-lg">Total: {{ formatPrice(totalAmount) }}</p>
+      <p class="text-xl font-semibold print:text-lg">
+        Total: {{ formatPrice(totalAmount) }}
+      </p>
       <p class="text-lg font-normal">Discount: 5.00</p>
       <p class="text-lg font-normal inline-block text-right">------------</p>
-      <p class="text-lg font-normal">Payable {{ formatPrice(totalAmount - 5) }}</p>
+      <p class="text-lg font-normal">
+        Payable {{ formatPrice(totalAmount - 5) }}
+      </p>
       <p class="text-lg font-normal inline-block text-right">------------</p>
       <p class="text-lg font-normal">5% VAT on 81.00: 6.17</p>
       <p class="text-lg font-normal inline-block text-right">------------</p>
@@ -60,7 +76,9 @@
     </div>
 
     <!-- Print Button -->
-    <button @click="printInvoice" class="mt-6 text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded print:hidden">
+    <button
+      @click="printInvoice"
+      class="mt-6 text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded print:hidden">
       Print Invoice
     </button>
   </div>
@@ -69,7 +87,6 @@
 <script>
 import { ref, computed } from 'vue';
 import { itemsToBePurchased } from '../../../scripts/Admin/Order/manager';
-
 
 export default {
   name: 'OrderInvoice',
@@ -87,11 +104,17 @@ export default {
     ]);
 
     const totalAmount = computed(() =>
-    itemsToBePurchased.value.reduce((total, order) => total + order.quantity * order.price, 0)
+      itemsToBePurchased.value.reduce(
+        (total, order) => total + order.quantity * order.price,
+        0,
+      ),
     );
 
-    const formatPrice = (value) => {
-      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+    const formatPrice = value => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      }).format(value);
     };
 
     const printInvoice = () => {
@@ -106,7 +129,7 @@ export default {
       totalAmount,
       formatPrice,
       printInvoice,
-      itemsToBePurchased
+      itemsToBePurchased,
     };
   },
 };

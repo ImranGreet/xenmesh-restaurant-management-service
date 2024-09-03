@@ -4,10 +4,8 @@
       <Logo
         class="fixed left-0 top-0 hidden sm:block"
         :class="{
-          'w-[30%] xl:w-[15%] ':
-            !mobileView && !sidebarView,
-          'w-[10%] xl:w-[5%] ':
-            !mobileView && sidebarView,
+          'w-[30%] xl:w-[15%] ': !mobileView && !sidebarView,
+          'w-[10%] xl:w-[5%] ': !mobileView && sidebarView,
         }" />
 
       <div
