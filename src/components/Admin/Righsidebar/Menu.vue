@@ -15,7 +15,7 @@
         </span>
 
         <span
-          class="self-start text-gray-900 text-xl font-medium"
+          class="self-start text-gray-900 text-xl font-normal"
           :class="{ hidden: sidebarView }"
           ><slot></slot
         ></span>
