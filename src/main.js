@@ -45,14 +45,22 @@ import {
   faTableCells,
   faBarsProgress,
   faUtensils,
+  faCalculator,
+  faSliders,
+  faGears,
+  faCoins,
+  faUsers,
+  faLayerGroup
+  
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faBell, faCreditCard } from '@fortawesome/free-regular-svg-icons';
+import { faBell, faCreditCard,faNewspaper } from '@fortawesome/free-regular-svg-icons';
 import {
   faFacebook,
   faTwitter,
   faYoutube,
   faInstagram,
+  faProductHunt
 } from '@fortawesome/free-brands-svg-icons';
 
 /* add icons to the library */
@@ -80,6 +88,14 @@ library.add(
   faTableCells,
   faBarsProgress,
   faUtensils,
+  faCalculator,
+  faSliders,
+  faGears,
+  faCoins,
+  faProductHunt,
+  faNewspaper,
+  faUsers,
+  faLayerGroup
 );
 
 const app = createApp(App);
