@@ -36,12 +36,7 @@
       class="fixed right-0 inset-y-0 bg-gray-900/30 w-full h-screen"
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
 
-    <!-- <Footer
-      class="w-full fixed bottom-0 z-[599] bg-white float-right right-0"
-      :class="{
-        'sm:w-[70%] xl:w-[85%] fixed ': !sidebarView,
-        'sm:w-[90%] xl:w-[95%] fixed ': sidebarView,
-      }" /> -->
+   
     <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
