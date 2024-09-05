@@ -39,13 +39,139 @@
             }">
             <font-awesome-icon
               icon="fa-solid fa-utensils"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-semibold" />
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
                 hidden: sidebarView,
               }"
               >Create Order</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'expense' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Expenses</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'setting' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Settings</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'banktransaction' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >transaction</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'products house' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Products</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'order_house' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Order</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'stuff' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Stuff</span
+            >
+          </router-link>
+          <router-link
+            :to="{ name: 'stock_check' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-utensils"
+              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Stock</span
             >
           </router-link>
           <span></span>
