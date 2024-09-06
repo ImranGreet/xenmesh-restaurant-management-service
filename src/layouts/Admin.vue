@@ -37,23 +37,28 @@
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
 
    
-    <div
+    <!-- <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
       <ProductDescription />
-    </div>
+    </div> -->
 
-    <div
+    <!-- <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
       :class="{ hidden: !showOverlayoutAdmin, block: showOverlayoutAdmin }">
       <AddProduct :AnimationProperty="showOverlayoutAdmin" />
-    </div>
+    </div> -->
 
-    <div
+    
+
+    <teleport to="#teleportElement">
+      <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
-      :class="{ hidden: !addStockModal, block: addStockModal }">
-      <AddStock :AnimationProperty="addStockModal" />
+      v-if="showOverlayout">
+      <component :is="componentName"/>
     </div>
+    </teleport>
+
   </section>
 </template>
 
@@ -70,6 +75,9 @@ import AddProduct from '../components/Utilities/modal/Product/AddProduct.vue';
 import AddStock from '../components/Utilities/modal/Stock/AddStock.vue';
 import AddUnit from '../components/Utilities/modal/Stock/AddUnit.vue';
 import AddStockCategory from '../components/Utilities/modal/Stock/Category.vue';
+/*role*/
+import  AddRole from "../components/Utilities/modal/Role/AddRole.vue"
+
 
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
@@ -88,6 +96,7 @@ import {
   showOverlayout,
   showOverlayoutAdmin,
   addStockModal,
+  componentName
 } from '../scripts/public/modal/modal';
 import { TopbardesktopColor } from '../scripts/Admin/Settings/settingcontroller';
 
@@ -105,6 +114,7 @@ export default {
     AddStock,
     AddUnit,
     AddStockCategory,
+    AddRole
   },
   setup() {
     return {
@@ -117,6 +127,7 @@ export default {
       TopbardesktopColor,
       showOverlayoutAdmin,
       addStockModal,
+      componentName,
       /*compose function*/
       sidebarController,
       discloseMenuBarOnHover,

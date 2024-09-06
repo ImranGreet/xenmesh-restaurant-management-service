@@ -2,10 +2,7 @@
   <section class="full-screen-center bg-gray-100/60 p-6">
     <div
       class="w-full max-w-3xl bg-white border border-gray-200 p-6 rounded-lg shadow-lg relative"
-      :class="{
-        'toggle-screen-animation': showAnimation,
-        'toggle-screen-animation': !showAnimation,
-      }">
+      >
       <div class="text-center mb-6">
         <h2 class="text-2xl font-semibold text-gray-800">
           Enter Product Information
@@ -60,7 +57,7 @@
 <script>
 import { ref, watch } from 'vue';
 import { XMarkIcon } from '@heroicons/vue/24/solid';
-import { showOverlayoutOnOff } from '../../../scripts/public/modal/modal';
+import { showOverlayoutOnOff } from '../../../../scripts/public/modal/modal';
 
 export default {
   name: 'AddRole',
@@ -70,7 +67,7 @@ export default {
 
   setup() {
     return {
-      showAnimation,
+     
       showOverlayoutOnOff,
     };
   },

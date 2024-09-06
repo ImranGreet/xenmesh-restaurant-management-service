@@ -39,7 +39,7 @@
             }">
             <font-awesome-icon
               icon="fa-solid fa-utensils"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -48,7 +48,7 @@
               >Create Order</span
             >
           </router-link>
-          
+
           <router-link
             :to="{ name: 'expense' }"
             class="w-full h-5 flex items-center mb-4"
@@ -58,7 +58,7 @@
             }">
             <font-awesome-icon
               icon="fa-solid fa-calculator"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -67,7 +67,7 @@
               >Expenses</span
             >
           </router-link>
-          
+
           <router-link
             :to="{ name: 'setting' }"
             class="w-full h-5 flex items-center mb-4"
@@ -77,7 +77,7 @@
             }">
             <font-awesome-icon
               icon="fa-solid fa-gears"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -93,10 +93,9 @@
               'justify-center': !sidebarView,
               'justify-center': sidebarView,
             }">
-            
             <font-awesome-icon
               icon="fa-solid fa-coins"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -113,8 +112,8 @@
               'justify-center': sidebarView,
             }">
             <font-awesome-icon
-            icon="fa-brands fa-product-hunt" 
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              icon="fa-brands fa-product-hunt"
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -123,7 +122,7 @@
               >Products</span
             >
           </router-link>
-          
+
           <router-link
             :to="{ name: 'order_house' }"
             class="w-full h-5 flex items-center mb-4"
@@ -133,7 +132,7 @@
             }">
             <font-awesome-icon
               icon="fa-regular fa-newspaper"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -151,7 +150,7 @@
             }">
             <font-awesome-icon
               icon="fa-solid fa-users"
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -160,7 +159,7 @@
               >Stuff</span
             >
           </router-link>
-          
+
           <router-link
             :to="{ name: 'stock_check' }"
             class="w-full h-5 flex items-center mb-4"
@@ -169,8 +168,8 @@
               'justify-center': sidebarView,
             }">
             <font-awesome-icon
-            icon="fa-solid fa-layer-group" 
-              class="w-5 h-5 text-blue-600 tracking-wider text-3xl font-normal" />
+              icon="fa-solid fa-layer-group"
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
             <span
               :class="{
                 'inline-block text-xl ml-5': !sidebarView,
@@ -241,5 +240,4 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-
 </style>

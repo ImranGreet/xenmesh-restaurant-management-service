@@ -1,31 +1,48 @@
 <template>
-  <div class="bg-inherit px-3 py-2 w-full">
-    <div class="form-container p-5">
+  <div class="layout__full-height flex-center flex-col bg-gray-100/60 p-6">
+    <div class="modal__container">
       <formTitle>Add Stuff To Run Your Business</formTitle>
-      <form class="form-element-container p-5">
+      <form
+        @submit.prevent=""
+        class="space-y-4 form-element-container">
         <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Icon Name</label>
+          <label
+            for="icon"
+            class="form-label"
+            >Icon Name</label
+          >
           <input
             type="text"
+            id="icon"
             class="form__input--field"
-            name="icon"
             placeholder="Enter Icon Name" />
         </div>
+
         <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Category</label>
+          <label
+            for="category"
+            class="form-label"
+            >Category</label
+          >
           <input
             type="text"
+            id="category"
             class="form__input--field"
-            name="icon"
             placeholder="Enter Icon Category" />
         </div>
+
         <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Icon Image</label>
+          <label
+            for="icon-image"
+            class="form-label"
+            >Icon Image</label
+          >
           <input
             type="file"
-            class="form__input--file"
-            name="icon" />
+            id="icon-image"
+            class="form__input--file" />
         </div>
+
         <div class="px-2 py-1 w-full">
           <authsubmitBtn>Submit</authsubmitBtn>
         </div>

@@ -152,11 +152,14 @@
           </Menu>
         </div>
       </form>
+      <button @click="showModalContainer()">ShowModal</button>
     </div>
   </div>
 </template>
 
 <script setup>
+import { showModalContainer } from '../../../scripts/public/modal/modal';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
 import { ChevronDownIcon } from '@heroicons/vue/20/solid';
+
 </script>
