@@ -18,7 +18,9 @@ import {
   TrashIcon,
 } from '@heroicons/vue/24/outline';
 
-/*Global Components*/
+import FormContainerModal from "./components/Utilities/modal/ModalContainer.vue";
+
+/*Global Components end*/
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -112,6 +114,7 @@ app.component('ShowButton', ShowButton);
 app.component('PencilSquareIcon', PencilSquareIcon);
 app.component('ShieldCheckIcon', ShieldCheckIcon);
 app.component('TrashIcon', TrashIcon);
+app.component('FormContainerModal', FormContainerModal);
 
 app.use(plugin, defaultConfig);
 app.use(createPinia(App));

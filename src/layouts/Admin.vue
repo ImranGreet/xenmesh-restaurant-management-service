@@ -72,11 +72,13 @@ import ProductDescription from '../components/PublicViews/modal/ProductDescripti
 import AddProduct from '../components/Utilities/modal/Product/AddProduct.vue';
 
 /*modal*/
-import AddStock from '../components/Utilities/modal/Stock/AddStock.vue';
+
 import AddUnit from '../components/Utilities/modal/Stock/AddUnit.vue';
 import AddStockCategory from '../components/Utilities/modal/Stock/Category.vue';
 /*role*/
-import  AddRole from "../components/Utilities/modal/Role/AddRole.vue"
+import  AddRole from "../components/Utilities/modal/Role/AddRole.vue";
+/*stock*/
+import AddStock from "../components/Utilities/modal/Stock/AddStock.vue" 
 
 
 /*script*/
