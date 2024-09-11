@@ -70,6 +70,7 @@ import Logo from '../components/Admin/Topbar/Logo.vue';
 import Footer from '../components/Admin/Footer/Footer.vue';
 import ProductDescription from '../components/PublicViews/modal/ProductDescription.vue';
 import AddProduct from '../components/Utilities/modal/Product/AddProduct.vue';
+import AddProductCategory from '../components/Utilities/modal/Product/AddCategory.vue';
 
 /*modal*/
 
@@ -78,7 +79,10 @@ import AddStockCategory from '../components/Utilities/modal/Stock/Category.vue';
 /*role*/
 import  AddRole from "../components/Utilities/modal/Role/AddRole.vue";
 /*stock*/
-import AddStock from "../components/Utilities/modal/Stock/AddStock.vue" 
+import AddStock from "../components/Utilities/modal/Stock/AddStock.vue" ;
+
+/*table Modal*/
+import ExpenseTypes from "../components/Admin/Tables/Expense/ExpenseTypes.vue" 
 
 
 /*script*/
@@ -113,10 +117,13 @@ export default {
     //modal
     ProductDescription,
     AddProduct,
+    AddProductCategory,
     AddStock,
     AddUnit,
     AddStockCategory,
-    AddRole
+    AddRole,
+    /*table modal*/
+    ExpenseTypes 
   },
   setup() {
     return {

@@ -3,6 +3,7 @@
     class="w-full flex flex-col bg-white lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4 relative border-b-2 border-pink-800/30">
     <div class="w-full md:w-11/12 mx-auto py-5 px-6">
       <form
+        @submit.prevent=""
         class="w-full flex flex-col lg:flex-row justify-between items-center gap-y-4 lg:gap-x-4">
         <div class="flex flex-col items-center">
           <div class="dark:bg-gray-900 rounded-lg">
@@ -58,32 +59,17 @@
             id="end_date"
             class="form__input--field" />
         </div>
-        <div class="w-full lg:w-auto">
-          <form class="max-w-sm mx-auto">
-            <label
-              for="countries"
-              class="block text-gray-700 mb-2 sr-only"
-              >Select an option</label
-            >
-            <select
-              id="countries"
-              class="form__input--field py-2">
-              <option selected>Choose a country</option>
-              <option value="US">United States</option>
-              <option value="CA">Canada</option>
-              <option value="FR">France</option>
-              <option value="DE">Germany</option>
-            </select>
-          </form>
-        </div>
+       
         <div class="w-full lg:w-auto z-[600]">
           <Menu
             as="div"
+            v-if="productUtilityContainer"
             class="relative inline-block text-left">
             <div>
               <MenuButton
+               v-if="productUtilityContainer"
                 class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-none">
-                Stocks
+                Product Utility
                 <ChevronDownIcon
                   class="-mr-1 h-5 w-5 text-gray-400"
                   aria-hidden="true" />
@@ -100,66 +86,90 @@
               <MenuItems
                 class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div class="py-1">
-                  <MenuItem v-slot="{ active }">
-                    <a
-                      href="#"
-                      :class="[
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'block px-4 py-2 text-sm',
-                      ]"
-                      >Add Category</a
-                    >
-                  </MenuItem>
-                  <MenuItem v-slot="{ active }">
-                    <a
-                      href="#"
-                      :class="[
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'block px-4 py-2 text-sm',
-                      ]"
-                      >Add Stock</a
-                    >
-                  </MenuItem>
-                  <MenuItem v-slot="{ active }">
-                    <a
-                      href="#"
-                      :class="[
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'block px-4 py-2 text-sm',
-                      ]"
-                      >Add Unit</a
-                    >
-                  </MenuItem>
-                  <form
-                    method="POST"
-                    action="#">
+                  <div>
                     <MenuItem v-slot="{ active }">
-                      <button
-                        type="button"
+                      <a
+                        @click="showModalContainer('AddProduct')"
+                        href="#"
                         :class="[
-                          active
-                            ? 'bg-gray-100 text-gray-900'
-                            : 'text-gray-700',
-                          'block w-full px-4 py-2 text-left text-sm',
-                        ]">
-                        Sign out
-                      </button>
+                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Add Product</a
+                      >
                     </MenuItem>
-                  </form>
+                    <MenuItem v-slot="{ active }">
+                      <a
+                      @click="showModalContainer('AddProductCategory')"
+                        href="#"
+                        :class="[
+                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Add Product Category</a
+                      >
+                    </MenuItem>
+                    <MenuItem v-slot="{ active }">
+                      <a
+                      
+                        href="#"
+                        :class="[
+                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Add Unit</a
+                      >
+                    </MenuItem>
+                  </div>
+                 
+                  
                 </div>
               </MenuItems>
             </transition>
           </Menu>
         </div>
+        <div>
+          <button
+        class="form__input--field"
+        v-if="expenseReport"
+        @click="showModalContainer()">Expensess Types</button>
+        </div>
       </form>
-      <button @click="showModalContainer()">ShowModal</button>
     </div>
   </div>
 </template>
 
-<script setup>
+
+
+<script>
 import { showModalContainer } from '../../../scripts/public/modal/modal';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
 import { ChevronDownIcon } from '@heroicons/vue/20/solid';
-
+export default {
+  name: 'SearchForm',
+  components: { Menu, MenuButton, MenuItem, MenuItems, ChevronDownIcon },
+  props:{
+    expenseReport:{
+      type:Boolean,
+      Required:false
+    },
+   productUtilityContainer: {
+      type:Boolean,
+      Required:false
+    },
+   stockUtilityContainer:{
+    type:Boolean,
+    Required:false,
+   } 
+  },
+  setup(props) {
+    const {expenseReport,productUtilityContainer,stockUtilityContainer} = props;
+    return {
+      showModalContainer,
+      expenseReport,
+      productUtilityContainer,
+      stockUtilityContainer
+    };
+  },
+};
 </script>

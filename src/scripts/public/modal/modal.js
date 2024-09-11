@@ -13,7 +13,7 @@ const addRoleModal = ref(false);
 let componentName = ref(""); 
 
 const modalContainer = ref([
-  { id: 1, name: 'AddCategory' },
+  { id: 1, name: 'AddProductCategory' },
   { id: 2, name: 'AddProduct' },
   { id: 3, name: 'EditProduct' },
   { id: 4, name: 'AddRole' },
@@ -23,6 +23,7 @@ const modalContainer = ref([
   { id: 8, name: 'Category' },
   { id: 9, name: 'AddStuff' },
   { id: 10, name: 'EditStuff' },
+  { id: 11, name: 'ExpenseTypes' },
 ]);
 
 const getItemDetails = function (idParam) {
@@ -59,10 +60,12 @@ const showOverlayoutOnOff = function () {
   document.body.classList.remove('body-scroll-hide');
 };
 
-const showModalContainer = function(){
+const showModalContainer = function(modalName){
   showOverlayout.value=true;
   showOverlayoutAdmin.value = true;
-  componentName.value =modalContainer.value[6].name;
+  let indexOfComponent = modalContainer.value.findIndex((item)=>item.name===modalName.trim());
+  console.log(indexOfComponent,'compo');
+  componentName.value =modalContainer.value[indexOfComponent].name;
   document.body.classList.add('body-scroll-hide');
   console.log(componentName.value);
 }
