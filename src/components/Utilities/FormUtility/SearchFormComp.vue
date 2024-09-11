@@ -59,17 +59,25 @@
             id="end_date"
             class="form__input--field" />
         </div>
-       
+
         <div class="w-full lg:w-auto z-[600]">
           <Menu
             as="div"
-            v-if="productUtilityContainer"
             class="relative inline-block text-left">
             <div>
               <MenuButton
-               v-if="productUtilityContainer"
+                v-if="productUtilityContainer"
                 class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-none">
                 Product Utility
+                <ChevronDownIcon
+                  class="-mr-1 h-5 w-5 text-gray-400"
+                  aria-hidden="true" />
+              </MenuButton>
+
+              <MenuButton
+                v-if="stockUtilityContainer"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-none">
+                Stock Utility
                 <ChevronDownIcon
                   class="-mr-1 h-5 w-5 text-gray-400"
                   aria-hidden="true" />
@@ -87,42 +95,52 @@
                 class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div class="py-1">
                   <div>
-                    <MenuItem v-slot="{ active }">
+                    <MenuItem
+                      v-slot="{ active }"
+                      v-if="productUtilityContainer">
                       <a
                         @click="showModalContainer('AddProduct')"
                         href="#"
                         :class="[
-                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
                           'block px-4 py-2 text-sm',
                         ]"
                         >Add Product</a
                       >
                     </MenuItem>
-                    <MenuItem v-slot="{ active }">
+                    <MenuItem
+                      v-slot="{ active }"
+                      v-if="productUtilityContainer">
                       <a
-                      @click="showModalContainer('AddProductCategory')"
+                        @click="showModalContainer('AddProductCategory')"
                         href="#"
                         :class="[
-                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
                           'block px-4 py-2 text-sm',
                         ]"
                         >Add Product Category</a
                       >
                     </MenuItem>
-                    <MenuItem v-slot="{ active }">
+                    <MenuItem
+                      v-slot="{ active }"
+                      v-if="stockUtilityContainer">
                       <a
-                      
+                      @click="showModalContainer('AddStock')"
                         href="#"
                         :class="[
-                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
                           'block px-4 py-2 text-sm',
                         ]"
-                        >Add Unit</a
+                        >Add Stock</a
                       >
                     </MenuItem>
                   </div>
-                 
-                  
                 </div>
               </MenuItems>
             </transition>
@@ -130,9 +148,11 @@
         </div>
         <div>
           <button
-        class="form__input--field"
-        v-if="expenseReport"
-        @click="showModalContainer()">Expensess Types</button>
+            class="form__input--field"
+            v-if="expenseReport"
+            @click="showModalContainer('ExpenseTypes')">
+            Expensess Types
+          </button>
         </div>
       </form>
     </div>
@@ -148,27 +168,28 @@ import { ChevronDownIcon } from '@heroicons/vue/20/solid';
 export default {
   name: 'SearchForm',
   components: { Menu, MenuButton, MenuItem, MenuItems, ChevronDownIcon },
-  props:{
-    expenseReport:{
-      type:Boolean,
-      Required:false
+  props: {
+    expenseReport: {
+      type: Boolean,
+      Required: false,
     },
-   productUtilityContainer: {
-      type:Boolean,
-      Required:false
+    productUtilityContainer: {
+      type: Boolean,
+      Required: false,
     },
-   stockUtilityContainer:{
-    type:Boolean,
-    Required:false,
-   } 
+    stockUtilityContainer: {
+      type: Boolean,
+      Required: false,
+    },
   },
   setup(props) {
-    const {expenseReport,productUtilityContainer,stockUtilityContainer} = props;
+    const { expenseReport, productUtilityContainer, stockUtilityContainer } =
+      props;
     return {
       showModalContainer,
       expenseReport,
       productUtilityContainer,
-      stockUtilityContainer
+      stockUtilityContainer,
     };
   },
 };
