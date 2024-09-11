@@ -101,7 +101,7 @@
                 'inline-block text-xl ml-5': !sidebarView,
                 hidden: sidebarView,
               }"
-              >transaction</span
+              >Transaction</span
             >
           </router-link>
           <router-link
