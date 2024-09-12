@@ -163,26 +163,23 @@
             </transition>
           </Menu>
         </div>
-        <div>
+        <div v-if="expenseReport">
           <button
             class="form__input--field"
-            v-if="expenseReport"
             @click="showModalContainer('ExpenseTypes')">
             Expensess Types
           </button>
         </div>
-        <div>
+        <div v-if="stuffUtility">
           <button
             class="form__input--field"
-            v-if="stuffUtility"
             @click="showModalContainer('AddStuff')">
             Add Stuff
           </button>
         </div>
-        <div>
+        <div v-if="stockUtilityContainer">
           <button
             class="form__input--field"
-            v-if="stockUtilityContainer"
             @click="showModalContainer('AddStock')">
             Add Stock
           </button>
