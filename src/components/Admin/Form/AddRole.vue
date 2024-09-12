@@ -1,114 +1,59 @@
 <template>
-  <div class="bg-inherit px-3 py-2 w-full">
-    <div
-      class="w-full md:w-4/5 lg:3/4 xl:w-1/2 mx-auto border border-gray-800/25 rounded-lg bg-white p-5">
-      <formTitle>Add Roles Of Your Services</formTitle>
-      <form
-        @submit.prevent="createRole"
-        class="w-full flex flex-col justify-between items-center gap-y-5">
-        <div class="px-2 py-1 w-full space-y-3">
-          <label for="icon">Role Name</label>
-          <input
-            type="text"
-            class="form__input--field"
-            v-model="role"
-            placeholder="Enter Role Name" />
-          <small
-            v-if="errors.name?.length > 0"
-            class="text-red-500/60"
-            >{{ errors.name[0] }}</small
-          >
+  <FormContainerModal
+    :ModalTitle="'Add Roles Of Your Services'"
+    :showAnimation="true">
+    <form
+      @submit.prevent=""
+      class="w-full flex flex-col justify-between items-center gap-y-5">
+      <div class="px-2 py-1 w-full space-y-3">
+        <label for="icon">Role Name</label>
+        <input
+          type="text"
+          class="form__input--field"
+         
+          placeholder="Enter Role Name" />
+       
+      </div>
+      <div class="px-2 py-1 w-full space-y-3">
+        <div class="flex justify-between items-center">
+          <h4>Permissions</h4>
+          <label class="custom-checkbox-label p-1">
+            <input
+              type="checkbox"
+              class="custom-checkbox" />
+            <span class="custom-checkbox-box"></span>
+            Check All
+          </label>
         </div>
-        <div class="px-2 py-1 w-full space-y-3">
-          <div class="flex justify-between items-center">
-            <h4>Permissions</h4>
-            <label class="custom-checkbox-label p-1">
+        <div
+          class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
+          <div class="grid grid-cols-3 border border-gray-300 rounded-md">
+            <label
+              for="permission"
+              class="custom-checkbox-label border border-gray-300 capitalize">
               <input
                 type="checkbox"
-                class="custom-checkbox" />
+                class="custom-checkbox"
+                checked />
               <span class="custom-checkbox-box"></span>
-              Check All
             </label>
           </div>
-          <div
-            class="w-full h-48 overflow-y-auto px-2 custom-overflowscroll border border-gray-400/30 p-2 rounded-md">
-            <div
-              v-if="showSkillital"
-              class="w-full h-full flex justify-center items-center">
-              <Loader />
-            </div>
-            <div
-              class="grid grid-cols-3 border border-gray-300 rounded-md"
-              v-else>
-              <label
-                v-for="(permission, index) in permissions"
-                :key="index"
-                :for="'permission-' + index"
-                class="custom-checkbox-label border border-gray-300 capitalize">
-                <input
-                  @change="setPermissionToRole(permission)"
-                  type="checkbox"
-                  class="custom-checkbox"
-                  :checked="permission.allowed"
-                  :id="'permission-' + index" />
-                <span class="custom-checkbox-box"></span>
-                {{ permission.name }}
-              </label>
-            </div>
-          </div>
         </div>
+      </div>
 
-        <div class="px-2 py-1 w-full">
-          <authsubmitBtn>Submit</authsubmitBtn>
-        </div>
-      </form>
-    </div>
-  </div>
+      <div class="px-2 py-1 w-full">
+        <authsubmitBtn>Submit</authsubmitBtn>
+      </div>
+    </form>
+  </FormContainerModal>
 </template>
 
 <script>
-import Loader from '../../../components/Utilities/Loader.vue';
-import { storeToRefs } from 'pinia';
-import useRoleToManage from '../../../store/RolePermission/role';
-import { onMounted } from 'vue';
 export default {
   name: 'AddRole',
-  components: {
-    Loader,
-  },
+
   setup() {
-    const roleStore = useRoleToManage();
-    /*property*/
-    const { role, errors, permissions, permissionToRole, showSkillital } =
-      storeToRefs(roleStore);
-    /*methods*/
-    const { createRole, getPermissions } = roleStore;
-
-    onMounted(async () => {
-      await getPermissions();
-    });
-
-    const setPermissionToRole = function (permission) {
-      const index = permissionToRole.value.indexOf(permission.name);
-      permission.allowed = true;
-
-      if (index === -1) {
-        permissionToRole.value.push(permission);
-      } else {
-        permissionToRole.value.splice(index, 1);
-      }
-    };
-
-    return {
-      role,
-      permissions,
-      errors,
-      permissionToRole,
-      showSkillital,
-      createRole,
-      getPermissions,
-      setPermissionToRole,
-    };
+    return {};
   },
 };
 </script>

@@ -178,6 +178,24 @@
               >Stock</span
             >
           </router-link>
+          <router-link
+            :to="{ name: 'roles_stock' }"
+            class="w-full h-5 flex items-center mb-4"
+            :class="{
+              'justify-center': !sidebarView,
+              'justify-center': sidebarView,
+            }">
+            <font-awesome-icon
+              icon="fa-solid fa-layer-group"
+              class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
+            <span
+              :class="{
+                'inline-block text-xl ml-5': !sidebarView,
+                hidden: sidebarView,
+              }"
+              >Roles</span
+            >
+          </router-link>
           <span></span>
           <!-- <div
             v-for="(sidebarLink, index) in useLeftSideBarRouterLink"

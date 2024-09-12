@@ -75,9 +75,9 @@
               </MenuButton>
 
               <MenuButton
-                v-if="stockUtilityContainer"
+                v-if="roleUtility"
                 class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-none">
-                Stock Utility
+                Role Permission
                 <ChevronDownIcon
                   class="-mr-1 h-5 w-5 text-gray-400"
                   aria-hidden="true" />
@@ -125,11 +125,12 @@
                         >Add Product Category</a
                       >
                     </MenuItem>
+
                     <MenuItem
                       v-slot="{ active }"
-                      v-if="stockUtilityContainer">
+                      v-if="roleUtility">
                       <a
-                      @click="showModalContainer('AddStock')"
+                        @click="showModalContainer('AddRole')"
                         href="#"
                         :class="[
                           active
@@ -137,7 +138,23 @@
                             : 'text-gray-700',
                           'block px-4 py-2 text-sm',
                         ]"
-                        >Add Stock</a
+                        >Add Role</a
+                      >
+                    </MenuItem>
+
+                    <MenuItem
+                      v-slot="{ active }"
+                      v-if="roleUtility">
+                      <a
+                        @click="showModalContainer('AddPermission')"
+                        href="#"
+                        :class="[
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Add Permission</a
                       >
                     </MenuItem>
                   </div>
@@ -152,6 +169,22 @@
             v-if="expenseReport"
             @click="showModalContainer('ExpenseTypes')">
             Expensess Types
+          </button>
+        </div>
+        <div>
+          <button
+            class="form__input--field"
+            v-if="stuffUtility"
+            @click="showModalContainer('AddStuff')">
+            Add Stuff
+          </button>
+        </div>
+        <div>
+          <button
+            class="form__input--field"
+            v-if="stockUtilityContainer"
+            @click="showModalContainer('AddStock')">
+            Add Stock
           </button>
         </div>
       </form>
@@ -178,6 +211,14 @@ export default {
       Required: false,
     },
     stockUtilityContainer: {
+      type: Boolean,
+      Required: false,
+    },
+    roleUtility: {
+      type: Boolean,
+      Required: false,
+    },
+    stuffUtility: {
       type: Boolean,
       Required: false,
     },

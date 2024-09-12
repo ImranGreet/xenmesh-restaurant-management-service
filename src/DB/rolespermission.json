@@ -1,0 +1,53 @@
+[
+      {
+        "id": 1,
+        "role": "Admin",
+        "assignedPermission": ["create_user", "delete_user", "update_user", "view_reports", "manage_settings"]
+      },
+      {
+        "id": 2,
+        "role": "Editor",
+        "assignedPermission": ["create_post", "edit_post", "delete_post", "view_reports", "publish_post"]
+      },
+      {
+        "id": 3,
+        "role": "Viewer",
+        "assignedPermission": ["view_reports", "view_posts", "comment_on_posts"]
+      },
+      {
+        "id": 4,
+        "role": "Manager",
+        "assignedPermission": ["create_project", "edit_project", "view_reports", "manage_teams", "assign_tasks"]
+      },
+      {
+        "id": 5,
+        "role": "HR",
+        "assignedPermission": ["view_reports", "manage_hiring", "view_employee_details", "approve_leaves"]
+      },
+      {
+        "id": 6,
+        "role": "Developer",
+        "assignedPermission": ["create_code", "edit_code", "commit_code", "merge_pull_requests", "view_task_board"]
+      },
+      {
+        "id": 7,
+        "role": "QA",
+        "assignedPermission": ["run_tests", "report_bugs", "view_task_board", "approve_release"]
+      },
+      {
+        "id": 8,
+        "role": "Support",
+        "assignedPermission": ["view_tickets", "resolve_tickets", "view_user_feedback", "escalate_issues"]
+      },
+      {
+        "id": 9,
+        "role": "Marketing",
+        "assignedPermission": ["create_campaigns", "view_reports", "manage_social_media", "approve_ads"]
+      },
+      {
+        "id": 10,
+        "role": "Finance",
+        "assignedPermission": ["view_reports", "manage_invoices", "approve_expenses", "generate_financial_reports"]
+      }
+    ]
+    

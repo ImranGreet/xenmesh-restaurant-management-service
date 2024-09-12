@@ -78,8 +78,11 @@ import AddUnit from '../components/Utilities/modal/Stock/AddUnit.vue';
 import AddStockCategory from '../components/Utilities/modal/Stock/Category.vue';
 /*role*/
 import  AddRole from "../components/Utilities/modal/Role/AddRole.vue";
+import  AddPermission from "../components/Utilities/modal/Role/AddPermission.vue";
 /*stock*/
 import AddStock from "../components/Utilities/modal/Stock/AddStock.vue" ;
+/*stuff*/
+import AddStuff from "../components/Utilities/modal/Stuff/AddStuff.vue" ;
 
 /*table Modal*/
 import ExpenseTypes from "../components/Admin/Tables/Expense/ExpenseTypes.vue" 
@@ -119,9 +122,11 @@ export default {
     AddProduct,
     AddProductCategory,
     AddStock,
+    AddStuff,
     AddUnit,
     AddStockCategory,
     AddRole,
+    AddPermission,
     /*table modal*/
     ExpenseTypes 
   },

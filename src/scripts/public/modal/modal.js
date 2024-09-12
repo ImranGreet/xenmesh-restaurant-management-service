@@ -24,6 +24,8 @@ const modalContainer = ref([
   { id: 9, name: 'AddStuff' },
   { id: 10, name: 'EditStuff' },
   { id: 11, name: 'ExpenseTypes' },
+  { id: 12, name: 'AddPermission'},
+  { id: 13, name: 'AddStuff'},
 ]);
 
 const getItemDetails = function (idParam) {

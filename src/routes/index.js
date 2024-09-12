@@ -144,6 +144,11 @@ const routes = [
         name: 'stock_check',
         component: () => import('../pages/Admin/Stock/StocksCheck.vue'),
       },
+      {
+        path: 'roles',
+        name: 'roles_stock',
+        component: () => import('../components/Admin/Tables/RolesAndPermission/Roles.vue'),
+      },
     ],
   },
 
