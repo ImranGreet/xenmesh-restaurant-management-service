@@ -9,7 +9,8 @@
         <font-awesome-icon icon="fa-solid fa-bars " />
       </i>
     </button>
-    <form>
+    <form
+    @submit.prevent="">
       <div class="-space-x-0.5 relative flex">
         <label
           for="search"
