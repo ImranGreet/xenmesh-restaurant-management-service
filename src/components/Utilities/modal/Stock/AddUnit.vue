@@ -1,6 +1,4 @@
 <template>
- 
-
   <FormContainerModal :ModalTitle="'Add Unit'">
     <form class="space-y-4">
       <div class="space-y-2">
@@ -25,7 +23,6 @@
       </div>
     </form>
   </FormContainerModal>
-
 </template>
 
 <script>

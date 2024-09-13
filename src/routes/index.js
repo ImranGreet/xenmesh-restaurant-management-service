@@ -147,7 +147,8 @@ const routes = [
       {
         path: 'roles',
         name: 'roles_stock',
-        component: () => import('../components/Admin/Tables/RolesAndPermission/Roles.vue'),
+        component: () =>
+          import('../components/Admin/Tables/RolesAndPermission/Roles.vue'),
       },
     ],
   },

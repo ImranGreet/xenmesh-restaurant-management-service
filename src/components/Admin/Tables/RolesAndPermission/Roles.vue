@@ -3,8 +3,7 @@
     <div class="px-4 mx-auto w-full">
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <SearchFormUtility
-        :roleUtility="true" />
+        <SearchFormUtility :roleUtility="true" />
 
         <div
           class="relative overflow-auto min-h-[220px] max-h-[640px] table-container rounded-t-lg bg-white z-50">
@@ -95,11 +94,10 @@
     </div>
   </section>
 </template>
-    
-    <script setup>
+
+<script setup>
 import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
 import roles from '../../../../DB/rolespermission.json';
 
 const availableRoles = roles;
 </script>
-    

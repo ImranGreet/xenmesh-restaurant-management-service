@@ -1,4 +1,4 @@
-<template >
+<template>
   <teleport
     to="#teleportElement"
     v-if="showOverlayout">

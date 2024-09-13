@@ -1,7 +1,7 @@
 <template>
   <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
     <div class="px-4 mx-auto w-full">
-      <SearchFormUtility :expenseReport="true" />
+      <SearchFormUtility  />
       <div
         class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
         <div class="layout">

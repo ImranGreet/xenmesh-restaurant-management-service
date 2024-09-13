@@ -37,27 +37,29 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-auto">
-          <label
-            for="start_date"
-            class="block text-gray-700 mb-2 sr-only">
-            Start Date
-          </label>
-          <input
-            type="date"
-            id="start_date"
-            class="form__input--field" />
-        </div>
-        <div class="w-full lg:w-auto">
-          <label
-            for="end_date"
-            class="block text-gray-700 mb-2 sr-only">
-            End Date
-          </label>
-          <input
-            type="date"
-            id="end_date"
-            class="form__input--field" />
+        <div class=" flex gap-x-6 px-2 md:px-0">
+          <div class="w-full lg:w-auto">
+            <label
+              for="start_date"
+              class="block text-gray-700 mb-2 sr-only">
+              Start Date
+            </label>
+            <input
+              type="date"
+              id="start_date"
+              class="form__input--field" />
+          </div>
+          <div class="w-full lg:w-auto">
+            <label
+              for="end_date"
+              class="block text-gray-700 mb-2 sr-only">
+              End Date
+            </label>
+            <input
+              type="date"
+              id="end_date"
+              class="form__input--field" />
+          </div>
         </div>
 
         <div class="w-full lg:w-auto z-[600]">
@@ -188,8 +190,6 @@
     </div>
   </div>
 </template>
-
-
 
 <script>
 import { showModalContainer } from '../../../scripts/public/modal/modal';

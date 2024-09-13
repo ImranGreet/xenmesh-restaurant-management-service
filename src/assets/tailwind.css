@@ -296,6 +296,13 @@
   .view-toggle__button--active {
     @apply bg-gray-600 text-pink-200 animate-pulse;
   }
+
+  .modal-medium{
+    width: 50rem !important;
+  }
+  .modal-large{
+    width: 120rem !important;
+  }
   /*end  utilities*/
 
   /* print data or page */

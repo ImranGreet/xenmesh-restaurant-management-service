@@ -10,7 +10,7 @@ const showOverlayoutAdmin = ref(false);
 const addStockModal = ref(false);
 const addRoleModal = ref(false);
 /*teleport on modal*/
-let componentName = ref(""); 
+let componentName = ref('');
 
 const modalContainer = ref([
   { id: 1, name: 'AddProductCategory' },
@@ -24,8 +24,8 @@ const modalContainer = ref([
   { id: 9, name: 'AddStuff' },
   { id: 10, name: 'EditStuff' },
   { id: 11, name: 'ExpenseTypes' },
-  { id: 12, name: 'AddPermission'},
-  { id: 13, name: 'AddStuff'},
+  { id: 12, name: 'AddPermission' },
+  { id: 13, name: 'AddStuff' },
 ]);
 
 const getItemDetails = function (idParam) {
@@ -62,15 +62,17 @@ const showOverlayoutOnOff = function () {
   document.body.classList.remove('body-scroll-hide');
 };
 
-const showModalContainer = function(modalName){
-  showOverlayout.value=true;
+const showModalContainer = function (modalName) {
+  showOverlayout.value = true;
   showOverlayoutAdmin.value = true;
-  let indexOfComponent = modalContainer.value.findIndex((item)=>item.name===modalName.trim());
-  console.log(indexOfComponent,'compo');
-  componentName.value =modalContainer.value[indexOfComponent].name;
+  let indexOfComponent = modalContainer.value.findIndex(
+    item => item.name === modalName.trim(),
+  );
+  console.log(indexOfComponent, 'compo');
+  componentName.value = modalContainer.value[indexOfComponent].name;
   document.body.classList.add('body-scroll-hide');
   console.log(componentName.value);
-}
+};
 
 export {
   productId,
@@ -87,5 +89,5 @@ export {
   getItemDetails,
   showProductAddForm,
   showAddStockForm,
-  showModalContainer
+  showModalContainer,
 };

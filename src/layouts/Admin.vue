@@ -36,7 +36,6 @@
       class="fixed right-0 inset-y-0 bg-gray-900/30 w-full h-screen"
       :class="{ 'block z-[500]': seetingsView, hidden: !seetingsView }"></div>
 
-   
     <!-- <div
       class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen"
       :class="{ hidden: !showOverlayout, block: showOverlayout }">
@@ -49,16 +48,13 @@
       <AddProduct :AnimationProperty="showOverlayoutAdmin" />
     </div> -->
 
-    
-
     <teleport to="#teleportElement">
       <div
-      class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
-      v-if="showOverlayout">
-      <component :is="componentName"/>
-    </div>
+        class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
+        v-if="showOverlayout">
+        <component :is="componentName" />
+      </div>
     </teleport>
-
   </section>
 </template>
 
@@ -77,16 +73,15 @@ import AddProductCategory from '../components/Utilities/modal/Product/AddCategor
 import AddUnit from '../components/Utilities/modal/Stock/AddUnit.vue';
 import AddStockCategory from '../components/Utilities/modal/Stock/Category.vue';
 /*role*/
-import  AddRole from "../components/Utilities/modal/Role/AddRole.vue";
-import  AddPermission from "../components/Utilities/modal/Role/AddPermission.vue";
+import AddRole from '../components/Utilities/modal/Role/AddRole.vue';
+import AddPermission from '../components/Utilities/modal/Role/AddPermission.vue';
 /*stock*/
-import AddStock from "../components/Utilities/modal/Stock/AddStock.vue" ;
+import AddStock from '../components/Utilities/modal/Stock/AddStock.vue';
 /*stuff*/
-import AddStuff from "../components/Utilities/modal/Stuff/AddStuff.vue" ;
+import AddStuff from '../components/Utilities/modal/Stuff/AddStuff.vue';
 
 /*table Modal*/
-import ExpenseTypes from "../components/Admin/Tables/Expense/ExpenseTypes.vue" 
-
+import ExpenseTypes from '../components/Admin/Tables/Expense/ExpenseTypes.vue';
 
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
@@ -105,7 +100,7 @@ import {
   showOverlayout,
   showOverlayoutAdmin,
   addStockModal,
-  componentName
+  componentName,
 } from '../scripts/public/modal/modal';
 import { TopbardesktopColor } from '../scripts/Admin/Settings/settingcontroller';
 
@@ -128,7 +123,7 @@ export default {
     AddRole,
     AddPermission,
     /*table modal*/
-    ExpenseTypes 
+    ExpenseTypes,
   },
   setup() {
     return {

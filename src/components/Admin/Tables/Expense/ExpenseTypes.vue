@@ -1,7 +1,6 @@
 <template>
- 
-  <FormContainerModal>
-    <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
+  <FormContainerModal :ModalTitle="'Type Of Expenses'">
+    <section class="w-full dark:bg-gray-900 py-3 sm:py-5 min-h-[650px]">
       <div class="px-4 mx-auto w-full">
         <div
           class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
@@ -36,7 +35,7 @@
                   <thead class="table__header">
                     <tr class="table__row">
                       <th class="bg-white"></th>
-  
+
                       <th
                         scope="col"
                         class="table__header-cell">
@@ -77,7 +76,7 @@
                         class="table__header-cell">
                         Date
                       </th>
-  
+
                       <th
                         scope="col"
                         class="table__header-cell">
@@ -92,7 +91,7 @@
                       :key="type.id"
                       class="table__body-row table__body-row--hover">
                       <th></th>
-  
+
                       <td class="table__cell table__cell--title">
                         {{ index + 1 }}
                       </td>

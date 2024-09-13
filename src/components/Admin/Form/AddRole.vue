@@ -10,9 +10,7 @@
         <input
           type="text"
           class="form__input--field"
-         
           placeholder="Enter Role Name" />
-       
       </div>
       <div class="px-2 py-1 w-full space-y-3">
         <div class="flex justify-between items-center">

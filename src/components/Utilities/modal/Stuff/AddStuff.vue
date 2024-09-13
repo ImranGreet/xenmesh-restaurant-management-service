@@ -1,6 +1,4 @@
 <template>
-  
-
   <FormContainerModal :ModalTitle="'Add Stuff To Run Your Business'">
     <form class="form-element-container p-5">
       <div class="px-2 py-1 w-full space-y-3">
@@ -38,5 +36,3 @@ export default {
   name: 'AddStuff',
 };
 </script>
-
-

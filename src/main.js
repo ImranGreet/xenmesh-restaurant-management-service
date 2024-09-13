@@ -18,7 +18,7 @@ import {
   TrashIcon,
 } from '@heroicons/vue/24/outline';
 
-import FormContainerModal from "./components/Utilities/modal/ModalContainer.vue";
+import FormContainerModal from './components/Utilities/modal/ModalContainer.vue';
 
 /*Global Components end*/
 
