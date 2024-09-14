@@ -197,16 +197,7 @@
             >
           </router-link>
           <span></span>
-          <!-- <div
-            v-for="(sidebarLink, index) in useLeftSideBarRouterLink"
-            :key="index">
-            <Menu
-              :routerLinkId="sidebarLink.id"
-              :routerLink="sidebarLink.paths"
-              :componentText="sidebarLink.largeIcon">
-              {{ sidebarLink.name }}
-            </Menu>
-          </div> -->
+          
         </div>
       </div>
     </div>

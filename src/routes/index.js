@@ -24,33 +24,14 @@ const routes = [
         component: () => import('../pages/Admin/Products/ProductHouse.vue'),
       },
 
-      {
-        path: 'insert_categories',
-        name: 'insert category',
-        component: () => import('../pages/Admin/Form/AddCategories.vue'),
-      },
-      {
-        path: 'draw_role',
-        name: 'insert role',
-        component: () => import('../pages/Admin/Form/InsertRole.vue'),
-      },
-
-      {
-        path: 'insert_stuff',
-        name: 'insert stuff',
-        component: () => import('../pages/Admin/Form/InsertStuff.vue'),
-      },
+  
       /*start expense*/
       {
         path: 'expenses',
         name: 'expense',
         component: () => import('../pages/Admin/Expense/Expenselist.vue'),
       },
-      {
-        path: 'expenses-types',
-        name: 'expense types',
-        component: () => import('../pages/Admin/Expense/ExpenseTypeList.vue'),
-      },
+      
       {
         path: 'transaction',
         name: 'banktransaction',
@@ -68,26 +49,7 @@ const routes = [
         name: 'order_house',
         component: () => import('../pages/Admin/Order/OrderHouse.vue'),
       },
-      {
-        path: 'inkitchen',
-        name: 'orderin_kitchen',
-        component: () => import('../pages/Admin/Order/InKitchen.vue'),
-      },
-      {
-        path: 'website',
-        name: 'weborder',
-        component: () => import('../pages/Admin/Order/PublicOrder.vue'),
-      },
-      {
-        path: 'completed_order',
-        name: 'completed',
-        component: () => import('../pages/Admin/Order/Completed.vue'),
-      },
-      // {
-      //   path: 'order/:order_status',
-      //   name: 'completed',
-      //   component: () => import('../pages/Admin/Order/Completed.vue'),
-      // },
+ 
       /*order end*/
       /*stuff start*/
       {
@@ -97,48 +59,10 @@ const routes = [
       },
       /*stuff end*/
       /*insertions and deletations*/
-      {
-        path: '/add_category',
-        name: 'add_cat',
-        component: () => import('../pages/Admin/Form/AddCategories.vue'),
-      },
-      {
-        path: '/add_role',
-        name: 'add_role',
-        component: () => import('../pages/Admin/Form/InsertRole.vue'),
-      },
-      {
-        path: '/add_permission',
-        name: 'add_permission',
-        component: () => import('../pages/Admin/Form/InsertPermission.vue'),
-      },
-
-      {
-        path: '/add_stuff',
-        name: 'add_stuff',
-        component: () => import('../pages/Admin/Form/InsertStuff.vue'),
-      },
-      // {
-      //   path: '/add_role',
-      //   name: 'add_role',
-      //   component: () => import('../pages/Admin/Form/InsertRole.vue'),
-      // },
+  
+      
       /*stocks*/
-      {
-        path: '/add_stock_category',
-        name: 'add_stock_cat',
-        component: () => import('../pages/Admin/Stock/AddStockCategory.vue'),
-      },
-      {
-        path: '/add_stock',
-        name: 'add_stock_store',
-        component: () => import('../pages/Admin/Stock/AddStockToStore.vue'),
-      },
-      {
-        path: '/add_unit',
-        name: 'add_items_unit',
-        component: () => import('../pages/Admin/Stock/AddItemUnit.vue'),
-      },
+     
       {
         path: '/stocks',
         name: 'stock_check',
@@ -235,17 +159,7 @@ const routes = [
     name: 'NotFound',
     component: () => import('../pages/404.vue'),
   },
-  // {
-  //   path: '/menu/:category(.+)',
-  //   name: 'notInCategory',
-  //   component: () => import('../pages/404.vue'),
-  // },
-
-  // {
-  //   path: '/offeritems/:cat(.+)',
-  //   name: 'notInOffer',
-  //   component: () => import('../pages/404.vue'),
-  // },
+  
   {
     path: '/printOrderInvoice',
     name: 'PrintInvoice',
