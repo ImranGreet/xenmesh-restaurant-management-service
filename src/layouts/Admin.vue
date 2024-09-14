@@ -83,6 +83,11 @@ import AddStuff from '../components/Utilities/modal/Stuff/AddStuff.vue';
 /*table Modal*/
 import ExpenseTypes from '../components/Admin/Tables/Expense/ExpenseTypes.vue';
 
+/*order modal*/
+import CompletedOrder from '../components/Admin/Tables/Order/CompletedOrder.vue';
+import OrderInKitchen from '../components/Admin/Tables/Order/OrderInKitchen.vue';
+import WebOrder from '../components/Admin/Tables/Order/WebOrder.vue';
+
 /*script*/
 import { fullscreenElement } from '../scripts/Admin/screen/Fullscreen';
 import { seetingsView } from '../scripts/Admin/topbar/topbarcontroller';
@@ -124,6 +129,9 @@ export default {
     AddPermission,
     /*table modal*/
     ExpenseTypes,
+    WebOrder,
+    OrderInKitchen,
+    CompletedOrder
   },
   setup() {
     return {

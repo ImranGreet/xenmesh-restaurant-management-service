@@ -5,12 +5,16 @@
       :class="{
         'toggle-screen-animation': showAnimation,
         'toggle-screen-animation': !showAnimation,
+        'max-w-[120rem]':modalSizeLarge,
+        'max-w-3xl':!modalSizeLarge
       }">
       <div class="form-title-box">
         <h2 class="form-title">{{ Title }}</h2>
       </div>
 
-      <slot></slot>
+      <div class="w-full max-h-[650px] flex flex-col">
+        <slot></slot>
+      </div>
 
       <button
         @click="showOverlayoutOnOff"
@@ -40,6 +44,10 @@ export default {
       type: String,
       required: false,
     },
+    modalSizeLarge:{
+      type:Boolean,
+      required:false
+    }
   },
   setup(props) {
     const showAnimation = ref(props.AnimationProperty);
@@ -49,7 +57,7 @@ export default {
       () => props.AnimationProperty,
       (newVal, oldVal) => {
         showAnimation.value = newVal;
-      },
+      }
     );
 
     return {

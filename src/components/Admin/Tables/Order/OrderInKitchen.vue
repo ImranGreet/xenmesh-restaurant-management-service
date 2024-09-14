@@ -1,161 +1,227 @@
 <template>
-  <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
-    <div class="px-4 mx-auto w-full">
-      <div
-        class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <SearchFormUtility />
-        <div class="overflow-x-auto">
-          <table
-            class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
-            <thead
-              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-              <tr>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Sr No
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Ordered Items
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Order Number
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Order Type
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Served BY
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Transaction Id
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Payment Methods
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Customer Name
-                </th>
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Order Palced In
-                </th>
+  <FormContainerModal :ModalTitle="'Order In Kitchen'" :modalSizeLarge="true">
+    <section class="w-full dark:bg-gray-900 py-3 sm:py-5 ">
+      <div class="px-4 mx-auto w-full">
+        <div
+          class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+         
+          <div class="layout">
+            <div class="layout__inner">
+              <div class="table-wrapper custom-overflowscroll" style="max-height:450px !important;">
+                <table class="table">
+                  <thead class="table__header">
+                    <tr class="table__row">
+                      <th class="bg-white"></th>
 
-                <th
-                  scope="col"
-                  class="px-4 py-3 border border-slate-300">
-                  Action
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(order, index) in orderInKitchen"
-                :key="index"
-                class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                <th class="w-4 px-4 py-3 border border-slate-300">
-                  {{ index + 1 }}
-                </th>
-                <th
-                  scope="row"
-                  class="flex items-center px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex gap-x-1">
-                    <div
-                      class="w-full flex flex-col justify-center items-center"
-                      v-for="(itemImage, index) in order.items_ordered"
-                      :key="index">
-                      <img
-                        :src="itemImage.image"
-                        alt="iMac Front Image"
-                        class="w-auto h-8 mr-3" />
-                    </div>
-                  </div>
-                </th>
-                <td class="px-4 py-2 border border-slate-300">
-                  <span
-                    class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
-                    >{{ order.order_number }}</span
-                  >
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    <div
-                      class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-                    {{ order.order_type }}
-                  </div>
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ order.server_name }}
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{ order.transaction_id }}
-                </td>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Sr No
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Category
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Note
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Amount
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Fixed Variable
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Payment Method
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Description
+                      </th>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Date
+                      </th>
 
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  <div class="flex items-center">
-                    {{ order.payment_method }}
-                  </div>
-                </td>
-                <td class="px-4 py-2 border border-slate-300">
-                  {{ order.customer_name }}
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  {{
-                    new Date(order.time_placed).getDate() +
-                    '-' +
-                    new Date(order.time_placed).getMonth() +
-                    '-' +
-                    new Date(order.time_placed).getFullYear()
-                  }}
-                </td>
-                <td
-                  class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white border border-slate-300">
-                  Delete
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                      <th
+                        scope="col"
+                        class="table__header-cell">
+                        Action
+                      </th>
+                      <th class="bg-white"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body">
+                    <tr
+                      v-for="(type, index) in typesOfExpenses"
+                      :key="type.id"
+                      class="table__body-row table__body-row--hover">
+                      <th></th>
+
+                      <td class="table__cell table__cell--title">
+                        {{ index + 1 }}
+                      </td>
+                      <td class="px-4 py-2 border border-slate-300">
+                        <span class="badge">{{ type.ExpenseCategory }}</span>
+                      </td>
+                      <td class="px-4 py-2 border border-slate-300">
+                        <span class="badge">{{ type.Notes }}</span>
+                      </td>
+                      <td class="table__cell table__cell--title">
+                        <div class="flex items-center">
+                          $
+                          {{ type.Amount }}
+                        </div>
+                      </td>
+                      <td class="table__cell table__cell--title">
+                        {{ type.FixedVariable }}
+                      </td>
+                      <td class="table__cell table__cell--title">
+                        <span>{{ type.PaymentMethod }}</span>
+                      </td>
+                      <td class="table__cell table__cell--title">
+                        <span>{{ type.Description }}</span>
+                      </td>
+                      <td class="table__cell table__cell--title">
+                        <span>{{ type.Date }}</span>
+                      </td>
+                      <td class="table__cell table__cell--title">
+                        <div class="flex justify-center items-center gap-x-2">
+                          <button class="text-gray-900">
+                            <PencilSquareIcon class="inline-block w-4 h-4" />
+                          </button>
+                          <button class="text-green-800">
+                            <ShieldCheckIcon class="inline-block w-4 h-4" />
+                          </button>
+                          <button class="text-pink-600">
+                            <TrashIcon class="inline-block w-4 h-4" />
+                          </button>
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- pagination -->
+          <nav
+            class="pagination"
+            aria-label="Table navigation">
+            <span class="pagination__info">
+              Showing
+              <span class="pagination__info--highlight">1-10</span>
+              of
+              <span class="pagination__info--highlight">1000</span>
+            </span>
+            <ul class="pagination__list">
+              <li>
+                <a
+                  href="#"
+                  class="pagination__prev pagination__prev-next">
+                  <span class="sr-only">Previous</span>
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewbox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="pagination__item"
+                  >1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="pagination__item"
+                  >2</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-current="page"
+                  class="pagination__item pagination__item--active"
+                  >3</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="pagination__item"
+                  >...</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="pagination__item"
+                  >100</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="pagination__next pagination__prev-next">
+                  <span class="sr-only">Next</span>
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewbox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <!-- pagination -->
-        <Pagination />
       </div>
-    </div>
-  </section>
+    </section>
+  </FormContainerModal>
 </template>
 
 <script>
-import order from '../../../../DB/order';
-import SearchFormUtility from '../../../Utilities/FormUtility/SearchFormComp.vue';
-export default {
-  components: { SearchFormUtility },
-  name: 'Kitchen Order',
-  setup() {
-    const orderInKitchen = order.filter(
-      item => item.order_status === 'kitchen',
-    );
+import { CalculatorIcon } from '@heroicons/vue/24/outline';
+import TableCard from '../../../Utilities/TableCard.vue';
+import expenseTypes from '../../../../DB/expenseTypes';
 
+export default {
+  name: 'Expense Types',
+  components: {
+    TableCard,
+    CalculatorIcon,
+  },
+  setup() {
+    const typesOfExpenses = expenseTypes;
     return {
-      orderInKitchen,
+      typesOfExpenses,
     };
   },
 };

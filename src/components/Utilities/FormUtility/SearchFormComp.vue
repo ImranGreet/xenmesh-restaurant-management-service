@@ -84,6 +84,15 @@
                   class="-mr-1 h-5 w-5 text-gray-400"
                   aria-hidden="true" />
               </MenuButton>
+              <MenuButton
+                v-if="orderUtility"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-none">
+                OrderUtilities
+                <ChevronDownIcon
+                  class="-mr-1 h-5 w-5 text-gray-400"
+                  aria-hidden="true" />
+              </MenuButton>
+
             </div>
 
             <transition
@@ -159,6 +168,53 @@
                         >Add Permission</a
                       >
                     </MenuItem>
+
+                    <MenuItem
+                    v-slot="{ active }"
+                    v-if="orderUtility">
+                    <a
+                      @click="showModalContainer('OrderInKitchen')"
+                      href="#"
+                      :class="[
+                        active
+                          ? 'bg-gray-100 text-gray-900'
+                          : 'text-gray-700',
+                        'block px-4 py-2 text-sm',
+                      ]"
+                      >Order In Kitchen</a
+                    >
+                  </MenuItem>
+                   
+                    <MenuItem
+                      v-slot="{ active }"
+                      v-if="orderUtility">
+                      <a
+                        @click="showModalContainer('CompletedOrder')"
+                        href="#"
+                        :class="[
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Completed Order</a
+                      >
+                    </MenuItem>
+                    <MenuItem
+                      v-slot="{ active }"
+                      v-if="orderUtility">
+                      <a
+                        @click="showModalContainer('WebOrder')"
+                        href="#"
+                        :class="[
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Web order</a
+                      >
+                    </MenuItem>
                   </div>
                 </div>
               </MenuItems>
@@ -216,6 +272,10 @@ export default {
       Required: false,
     },
     stuffUtility: {
+      type: Boolean,
+      Required: false,
+    },
+    orderUtility: {
       type: Boolean,
       Required: false,
     },
