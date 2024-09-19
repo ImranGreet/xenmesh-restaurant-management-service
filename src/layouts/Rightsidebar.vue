@@ -29,7 +29,7 @@
           :class="{ inline: !showUserProfile, hidden: showUserProfile }"></div>
 
         <div
-          class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative">
+          class="w-full overflow-x-hidden custom-overflowscroll h-[80%] px-0 md:px-2 lg:px-3 xl:px-4 relative flex flex-col">
           <router-link
             :to="{ name: 'order_creation' }"
             class="w-full h-5 flex items-center mb-4"
@@ -197,6 +197,27 @@
             >
           </router-link>
           <span></span>
+
+         
+          <router-link
+          :to="{ name: 'public-home' }"
+           target="_blank"
+          class="w-full h-5 flex items-center mb-4 bg-blue-400 text-gray-600 py-5 rounded-md self-end"
+          :class="{
+            'justify-center': !sidebarView,
+            'justify-center': sidebarView,
+          }">
+          <font-awesome-icon
+            icon="fa-solid fa-layer-group"
+            class="w-5 h-5 text-gray-600 tracking-wider text-3xl font-normal" />
+          <span
+            :class="{
+              'inline-block text-xl ml-5': !sidebarView,
+              hidden: sidebarView,
+            }"
+            >Client SIte</span
+          >
+        </router-link>
           
         </div>
       </div>
