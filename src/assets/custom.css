@@ -25,8 +25,11 @@
   background: #ffffff;
 }
 
+
+
 .custom-overflowscroll::-webkit-scrollbar {
   width: 6px;
+  height: 8px;
 }
 /*table scroller*/
 .table-container::-webkit-scrollbar {
@@ -36,11 +39,13 @@
 .custom-overflowscroll::-webkit-scrollbar-track,
 .table-container::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-radius: 10px;
 }
 
-.custom-overflowscroll::-webkit-scrollbar-thumb,
+.custom-overflowscroll::-webkit-scrollbar-thumb,  
 .table-container::-webkit-scrollbar-thumb {
   background: #888;
+  border-radius: 10px;
 }
 
 .custom-overflowscroll::-webkit-scrollbar-thumb:hover,

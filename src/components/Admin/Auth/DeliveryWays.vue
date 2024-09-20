@@ -3,7 +3,7 @@
     <div
       class="w-full md:w-4/5 lg:w-3/5 xl:w-1/2 mx-auto border border-gray-300 rounded-xl bg-white p-8">
       <FormHeadLine class="text-3xl font-bold text-gray-800 mb-8"
-        >Add Delivery Way</FormHeadLine
+        >Delivery Ways</FormHeadLine
       >
 
       <div class="relative overflow-x-auto">
