@@ -33,7 +33,7 @@
         <li>
           <button
             @click="showOrderItems()"
-            class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white">
+            class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white inline-flex items-center gap-2">
             <ShoppingCartIcon class="w-4 h-4 inline-block" />
             {{ purchasedItems.length }}
           </button>
@@ -42,7 +42,7 @@
           <button
             @click="authorizedProfileCloseDiscloser()"
             class="border border-gray-300 rounded-2xl px-3 py-0.5 bg-gray-800 text-white"
-            :class="{ inline: authorized, hidden: !authorized }">
+            :class="{ 'inline-flex items-center gap-2': authorized, 'hidden': !authorized }">
             Customer
             <ChevronDownIcon class="w-4 h-4 inline-block" />
           </button>

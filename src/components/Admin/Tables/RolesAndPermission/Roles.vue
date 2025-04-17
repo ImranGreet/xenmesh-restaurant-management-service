@@ -10,7 +10,7 @@
           <table
             class="w-full text-sm sm:text-xs text-left text-gray-500 dark:text-gray-400 border-separate border border-slate-400">
             <thead
-              class="text-xs sm:text-[10px] text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400">
+              class="text-xs sm:text-[10px] text-white sticky top-0 bg-lime-600 uppercase dark:bg-gray-700 dark:text-gray-400 z-50">
               <tr>
                 <th class="bg-white"></th>
                 <th
