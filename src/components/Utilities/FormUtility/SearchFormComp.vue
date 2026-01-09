@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <div class=" flex gap-x-6 px-2 md:px-0">
+        <div class="flex gap-x-6 px-2 md:px-0">
           <div class="w-full lg:w-auto">
             <label
               for="start_date"
@@ -92,7 +92,6 @@
                   class="-mr-1 h-5 w-5 text-gray-400"
                   aria-hidden="true" />
               </MenuButton>
-
             </div>
 
             <transition
@@ -170,21 +169,21 @@
                     </MenuItem>
 
                     <MenuItem
-                    v-slot="{ active }"
-                    v-if="orderUtility">
-                    <a
-                      @click="showModalContainer('OrderInKitchen')"
-                      href="#"
-                      :class="[
-                        active
-                          ? 'bg-gray-100 text-gray-900'
-                          : 'text-gray-700',
-                        'block px-4 py-2 text-sm',
-                      ]"
-                      >Order In Kitchen</a
-                    >
-                  </MenuItem>
-                   
+                      v-slot="{ active }"
+                      v-if="orderUtility">
+                      <a
+                        @click="showModalContainer('OrderInKitchen')"
+                        href="#"
+                        :class="[
+                          active
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-700',
+                          'block px-4 py-2 text-sm',
+                        ]"
+                        >Order In Kitchen</a
+                      >
+                    </MenuItem>
+
                     <MenuItem
                       v-slot="{ active }"
                       v-if="orderUtility">

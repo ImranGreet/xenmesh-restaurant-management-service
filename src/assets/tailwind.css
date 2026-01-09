@@ -297,15 +297,15 @@
     @apply bg-gray-600 text-pink-200 animate-pulse;
   }
 
-  .modal-medium{
+  .modal-medium {
     width: 50rem !important;
   }
-  .modal-large{
+  .modal-large {
     width: 120rem !important;
   }
 
   /* search form component */
-  
+
   /*end  utilities*/
 
   /* print data or page */

@@ -3,7 +3,6 @@
     <div class="w-full px-1">
       <div
         class="w-full flex justify-end items-center space-x-3 md:space-x-5 lg:space-x-8">
-       
         <button
           @click="toggleSearchForm()"
           class="smallSearch">

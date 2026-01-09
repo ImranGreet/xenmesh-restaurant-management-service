@@ -42,8 +42,6 @@
       <ProductDescription />
     </div> -->
 
-    
-
     <teleport to="#teleportElement">
       <div
         class="fixed inset-x-0 inset-y-0 bg-gray-300/50 w-full flex justify-center items-center h-screen z-[999]"
@@ -127,7 +125,7 @@ export default {
     ExpenseTypes,
     WebOrder,
     OrderInKitchen,
-    CompletedOrder
+    CompletedOrder,
   },
   setup() {
     return {

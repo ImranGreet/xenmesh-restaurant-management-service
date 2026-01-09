@@ -1,13 +1,16 @@
 <template>
-  <FormContainerModal :ModalTitle="'Order Completed'" :modalSizeLarge="true">
-    <section class="w-full dark:bg-gray-900 py-3 sm:py-5 ">
+  <FormContainerModal
+    :ModalTitle="'Order Completed'"
+    :modalSizeLarge="true">
+    <section class="w-full dark:bg-gray-900 py-3 sm:py-5">
       <div class="px-4 mx-auto w-full">
         <div
           class="w-full relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-         
           <div class="layout">
             <div class="layout__inner">
-              <div class="table-wrapper custom-overflowscroll" style="max-height:450px !important;">
+              <div
+                class="table-wrapper custom-overflowscroll"
+                style="max-height: 450px !important">
                 <table class="table">
                   <thead class="table__header">
                     <tr class="table__row">

@@ -104,10 +104,6 @@ import roles from '../../../../DB/rolespermission.json';
 const availableRoles = roles;
 </script>
 
-
-
-
-
 <style scoped>
 /* Hide the default checkbox */
 .custom-checkbox {

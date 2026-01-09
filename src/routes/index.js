@@ -24,14 +24,13 @@ const routes = [
         component: () => import('../pages/Admin/Products/ProductHouse.vue'),
       },
 
-  
       /*start expense*/
       {
         path: 'expenses',
         name: 'expense',
         component: () => import('../pages/Admin/Expense/Expenselist.vue'),
       },
-      
+
       {
         path: 'transaction',
         name: 'banktransaction',
@@ -49,7 +48,7 @@ const routes = [
         name: 'order_house',
         component: () => import('../pages/Admin/Order/OrderHouse.vue'),
       },
- 
+
       /*order end*/
       /*stuff start*/
       {
@@ -59,10 +58,9 @@ const routes = [
       },
       /*stuff end*/
       /*insertions and deletations*/
-  
-      
+
       /*stocks*/
-     
+
       {
         path: '/stocks',
         name: 'stock_check',
@@ -159,7 +157,7 @@ const routes = [
     name: 'NotFound',
     component: () => import('../pages/404.vue'),
   },
-  
+
   {
     path: '/printOrderInvoice',
     name: 'PrintInvoice',
